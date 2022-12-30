@@ -1,0 +1,15 @@
+#box1{
+    border:0.5px solid rgb(241, 241, 241);
+}
+#box2{
+    border:0.5px solid rgb(241, 241, 241); 
+    width: 100%; height: 300px;
+}
+
+#btn0{
+    width: 17%; margin: 2px 84%;
+}
+
+#btn1, #btn2, #btn3{
+    border:0.5px solid rgb(241, 241, 241); width: 80px;
+}
