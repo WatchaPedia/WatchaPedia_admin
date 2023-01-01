@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/admin/Myinfo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/admin/Myinfomodify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/Myinfo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/Myinfomodify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/myInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/myInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/myinfo2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/accountdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/accountdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/createaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/createaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/modifyaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/modifyaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/searchaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/searchaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/fragment/topbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/myInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/myinfo2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/accountdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/accountdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/createaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/createaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/modifyaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/modifyaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/searchaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/searchaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/topbar.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JctzGkRj56I0ehE7Y1mzGnZFLa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/jaewon/Desktop/onedrive/study/프로젝트/watchapedia_springproject/WatchaPedia/src/main/resources/static/css/8_admin/admin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "79e953d81b6d1bdc4bacfcc31dcdea0d",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css/8_admin/admin" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/6_member" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css/6_member" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="WatchaPediaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="WatchaPedia.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.watcha.watchapedia.WatchaPediaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="" />
+      <created>1672389459323</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672389459323</updated>
+      <workItem from="1672389460853" duration="846000" />
+      <workItem from="1672477401448" duration="9086000" />
+      <workItem from="1672537548642" duration="3622000" />
+      <workItem from="1672548631750" duration="30000" />
+      <workItem from="1672548696706" duration="4000" />
+      <workItem from="1672549448407" duration="7437000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
