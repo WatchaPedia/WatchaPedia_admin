@@ -109,6 +109,17 @@ public class PageController {
     public ModelAndView characterregister(){
         return new ModelAndView("/5_character/characterregister");
     }
+    @GetMapping(path="/member_detail")
+    public ModelAndView memberdetail(){
+        return new ModelAndView("/6_member/memberdetail");
+    }
+    @GetMapping(path="/member_manage")
+    public ModelAndView membermanage(){
+        return new ModelAndView("/6_member/membermanage");
+    }
+
+
+
     @GetMapping(path="/advertisement_main")
     public ModelAndView admain(){
         return new ModelAndView("/7_advertisement/adMain");
