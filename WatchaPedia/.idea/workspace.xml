@@ -11,64 +11,28 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice_View.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice_View.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/2_qna/QnA_Edit.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/5_character/character_enroll.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/5_character/character_enroll.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/0_login/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/0_login/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_Edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_View.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_Edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/6_member/userpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/6_member/userpage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/accountdetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/accountdetail.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/Movie_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/Movie_Edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/report_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/report_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/reportdetail_comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/reportdetail_comment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/reportdetail_reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/reportdetail_reply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/search/commentSearchDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/search/commentSearchDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/search/commentSearchList.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/search/commentSearchList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/5_character/characterdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/5_character/characterdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/5_character/charactermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/5_character/charactermanage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/5_character/characterregister.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/5_character/characterregister.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/6_member/membermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/6_member/membermanage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/Myinfomodify.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/Myinfomodify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/myInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/myInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/accountdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/accountdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/createaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/createaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/modifyaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/modifyaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/searchaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/searchaccount.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_View.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_View.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/2_qna/QnA_Edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/2_qna/QnA_Reply.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_enroll.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_enroll.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/0_login/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/0_login/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_Edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_View.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/Movie_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/Movie_Edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/reported/report_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/reported/report_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/reported/reportdetail_comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/reported/reportdetail_comment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/reported/reportdetail_reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/reported/reportdetail_reply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/5_character/characterdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/5_character/characterdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/5_character/charactermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/5_character/charactermanage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/5_character/characterregister.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/5_character/characterregister.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/6_member/userpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/6_member/userpage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/hradmin/accountdetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/hradmin/accountdetail.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/6_member/memberdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/6_member/memberdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/6_member/membermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/6_member/membermanage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/Myinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/Myinfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/Myinfomodify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/Myinfomodify.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/accountdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/accountdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/createaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/createaccount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/modifyaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/modifyaccount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/searchaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/searchaccount.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +43,14 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -93,6 +65,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -101,12 +74,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/jaewon/Desktop/onedrive/study/프로젝트/watchapedia_springproject/WatchaPedia/src/main/resources/static/css/8_admin/admin",
+    "last_opened_file_path": "C:/Users/gnstj/OneDrive/바탕 화면/송훈섭/watchapedia_springproject/WatchaPedia",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "79e953d81b6d1bdc4bacfcc31dcdea0d",
+    "spring.configuration.checksum": "a76983afbf8cf4a11aae498b4e1085af",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -122,7 +96,14 @@
       <recent name="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.WatchaPediaApplication (1)">
+    <configuration name="WatchaPediaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="com.watcha.WatchaPedia.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.watcha.watchapedia.WatchaPediaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WatchaPediaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="WatchaPedia.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.watcha.watchapedia.WatchaPediaApplication" />
@@ -145,6 +126,7 @@
       <workItem from="1672548631750" duration="30000" />
       <workItem from="1672548696706" duration="4000" />
       <workItem from="1672549448407" duration="18793000" />
+      <workItem from="1672587652701" duration="3095000" />
     </task>
     <servers />
   </component>
