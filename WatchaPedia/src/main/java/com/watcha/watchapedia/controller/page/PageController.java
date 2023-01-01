@@ -39,9 +39,9 @@ public class PageController {
         return new ModelAndView("/2_qna/QnA");
     }
 
-    @GetMapping(path="/qna_edit")
-    public ModelAndView qnaedit(){
-        return new ModelAndView("/2_qna/QnA_Edit");
+    @GetMapping(path="/qna_reply")
+    public ModelAndView qnareply(){
+        return new ModelAndView("/2_qna/QnA_Reply");
     }
 
     @GetMapping(path="/qna_view")

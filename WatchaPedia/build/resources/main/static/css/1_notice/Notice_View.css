@@ -7,9 +7,9 @@
 }
 
 #btn0{
-    width: 17%; margin: 2px 84%;
+ margin: 2px 84%;
 }
 
-#btn1, #btn2, #btn3{
+.btn{
     border:0.5px solid rgb(241, 241, 241); width: 80px;
 }
