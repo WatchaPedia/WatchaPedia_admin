@@ -146,7 +146,15 @@ public class PageController {
         return new ModelAndView("/8_admin/hradmin/searchaccount");
     }
 
+    @GetMapping(path="/admin_myinfo")
+    public ModelAndView myinfo(){
+        return new ModelAndView("/8_admin/admin/Myinfo");
+    }
 
+    @GetMapping(path="/admin_myinfomodify")
+    public ModelAndView myinfomodify(){
+        return new ModelAndView("/8_admin/admin/Myinfomodify");
+    }
 
 
 
