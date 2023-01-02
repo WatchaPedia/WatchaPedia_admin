@@ -16,8 +16,8 @@
 // }
 
 // ------------------------------------------------------------------------------
-let fileLists = []; // 전체 파일 리스트 객체
-const exte = ["jpg", "jpeg", "png", "gif"]; // 확장명
+let fileLists = [];                             // 전체 파일 리스트 객체 
+const exte = ["jpg", "jpeg", "png", "gif"];  // 확장명
 
 const inputFile = document.querySelector("#inputFile");
 const resultFile = document.querySelector("#resultFile");
@@ -33,23 +33,21 @@ inputFile.addEventListener(
 );
 
 const readURL = (input) => {
-  if (fileLists.length == 0) {
-    // 최초 파일 업로드
-    for (let i = 0; i < input.length; i++) {
-      fileLists.push(input[i]);
+
+  if(fileLists.length == 0){ // 최초 파일 업로드
+    for(let i = 0; i < input.length; i++){
+      fileLists.push(input[i])
     }
-  } else {
-    // 리스트에 추가적으로 파일 업로드
-    for (let i = 0; i < input.length; i++) {
-      // 중복된 파일 검사(이름 기준)
+  }else{ // 리스트에 추가적으로 파일 업로드
+    for(let i = 0; i < input.length; i++){ // 중복된 파일 검사(이름 기준)
       var isExist = false;
-      for (let j = 0; j < fileLists.length; j++) {
-        if (input[i].name == fileLists[j].name) {
+      for(let j = 0; j < fileLists.length; j++){
+        if(input[i].name == fileLists[j].name){
           isExist = true;
         }
       }
-      if (isExist == false) {
-        fileLists.push(input[i]);
+      if(isExist == false){
+        fileLists.push(input[i])
       }
     }
   }
@@ -77,9 +75,7 @@ const readURL = (input) => {
       return (resultFile.innerHTML += `
                 <dl>
                     <dt class='total_size_kb'>${total_size}</dt>
-                    <dd>${fileLists[i].name} ${
-        Math.round(fileLists[i].size / 1024) + "kb"
-      } <span onclick="deleteBtn(${i})" style="color: red;cursor: pointer;">[X]</span></dd>
+                    <dd>${fileLists[i].name} ${Math.round(fileLists[i].size / 1024) + "kb"} <span onclick="deleteBtn(${i})" style="color: red;cursor: pointer;">[X]</span></dd>
                 </dl>
                 `);
     };
@@ -91,40 +87,41 @@ const readURL = (input) => {
   total_sizes.innerHTML = total_size + " ";
 
   // 파일 리스트가 비어있으면 input[:file]의 value 값 초기화 ==> input[:file] event 자체 이슈임.
-  if (fileLists.length == 0) {
-    inputFile.value = "";
+  if(fileLists.length == 0){
+    inputFile.value = ""
   }
 };
 
+
 /* 박스 안에서 Drag를 Drop했을 때 */
 resultFile.ondrop = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  // 드롭된 파일 데이터를 파일 리스트에 넣음. (중복 제거, 다중파일 업로드 가능)
-  var data = e.dataTransfer.files;
-  console.log(data);
-  for (let i = 0; i < data.length; i++) {
-    var isExist = false;
-    var isExistExt = false;
-    for (let j = 0; j < fileLists.length; j++) {
-      if (data[i].name == fileLists[j].name) {
-        isExist = true;
+    // 드롭된 파일 데이터를 파일 리스트에 넣음. (중복 제거, 다중파일 업로드 가능)
+    var data = e.dataTransfer.files;
+    console.log(data)
+    for(let i = 0; i < data.length; i++){
+      var isExist = false;
+      var isExistExt = false;
+      for(let j = 0; j < fileLists.length; j++){
+        if(data[i].name == fileLists[j].name){
+          isExist = true;
+        }
+      }
+
+      var fileName = data[i].name;
+      var fileNameArr = fileName.split("\.");
+      var ext = fileNameArr[fileNameArr.length - 1];
+
+      if($.inArray(ext, exte) == -1){
+        alert(`등록 불가 확장자 ${ext}가 포함되었습니다.`);
+        isExistExt = true;
+      }
+      if(!isExist && !isExistExt){
+        fileLists.push(data[i])
       }
     }
-
-    var fileName = data[i].name;
-    var fileNameArr = fileName.split(".");
-    var ext = fileNameArr[fileNameArr.length - 1];
-
-    if ($.inArray(ext, exte) == -1) {
-      alert(`등록 불가 확장자 ${ext}가 포함되었습니다.`);
-      isExistExt = true;
-    }
-    if (!isExist && !isExistExt) {
-      fileLists.push(data[i]);
-    }
-  }
-  readURL(fileLists);
+    readURL(fileLists);
 };
 
 resultFile.ondragover = (e) => {
@@ -150,32 +147,31 @@ pobtn.addEventListener(
   },
   false
 );
-const readURL2 = (input) => {
-  // html 에 그리려고 만든 화살표함수
+const readURL2 = (input) => { // html 에 그리려고 만든 화살표함수
 
-  if (input.length == 0) {
-    document.getElementById("poBox2").innerHTML = `파일 끌어다 추가하기`;
-  } else {
-    document.getElementById("poBox2").innerHTML = `<dd>${input[0].name} ${
-      Math.round(input[0].size / 1024) + "kb"
-    } <span onclick="deleteBtn2()" style="color: red;cursor: pointer;">[X]</span></dd>`;
+
+  if(input.length == 0){
+    document.getElementById('poBox2').innerHTML = `파일 끌어다 추가하기`;
+  }else{
+    document.getElementById('poBox2').innerHTML = `<dd>${input[0].name} ${Math.round(input[0].size / 1024) + "kb"} <span onclick="deleteBtn2()" style="color: red;cursor: pointer;">[X]</span></dd>`
   }
 
   console.log(input);
-};
+}
+
 
 poBox2.ondrop = (e) => {
   e.preventDefault();
 
   var data = e.dataTransfer.files;
-  console.log(data);
+  console.log(data)
 
-  if (pobtn.files.length != 0) {
-    pobtn.value = ""; // input  태그에서 받은 값
+  if(pobtn.files.length != 0){
+    pobtn.value = ""          // input  태그에서 받은 값
   }
-  pobtn.files = data; // 드래그엔 드롭으로 받아온 값을  input 태그에서 받은 값과 같게 하기 위해서 넘김
-  readURL2(pobtn.files);
-};
+  pobtn.files = data;         // 드래그엔 드롭으로 받아온 값을  input 태그에서 받은 값과 같게 하기 위해서 넘김
+  readURL2(pobtn.files);      
+}
 
 poBox2.ondragover = (e) => {
   e.preventDefault(); // 이 부분이 없으면 ondrop 이벤트가 발생하지 않습니다.
@@ -183,7 +179,7 @@ poBox2.ondragover = (e) => {
 
 function deleteBtn2() {
   // 파일 리스트에서 인덱스에 부합한 배열 제거
-  pobtn.value = "";
+  pobtn.value = ""
 
   // 리스트 다시 그려주기
   readURL2(pobtn.files);
@@ -198,32 +194,30 @@ babtn.addEventListener(
   },
   false
 );
-const readURL3 = (input) => {
-  // html 에 그리려고 만든 화살표함수
+const readURL3 = (input) => { // html 에 그리려고 만든 화살표함수
 
-  if (input.length == 0) {
-    document.getElementById("baBox2").innerHTML = `파일 끌어다 추가하기`;
-  } else {
-    document.getElementById("baBox2").innerHTML = `<dd>${input[0].name} ${
-      Math.round(input[0].size / 1024) + "kb"
-    } <span onclick="deleteBtn3()" style="color: red;cursor: pointer;">[X]</span></dd>`;
+  if(input.length == 0){
+    document.getElementById('baBox2').innerHTML = `파일 끌어다 추가하기`;
+  }else{
+    document.getElementById('baBox2').innerHTML = `<dd>${input[0].name} ${Math.round(input[0].size / 1024) + "kb"} <span onclick="deleteBtn3()" style="color: red;cursor: pointer;">[X]</span></dd>`
   }
 
   console.log(input);
-};
+}
+
 
 baBox2.ondrop = (e) => {
   e.preventDefault();
 
   var data = e.dataTransfer.files;
-  console.log(data);
+  console.log(data)
 
-  if (babtn.files.length != 0) {
-    babtn.value = ""; // input  태그에서 받은 값
+  if(babtn.files.length != 0){
+    babtn.value = ""          // input  태그에서 받은 값
   }
-  babtn.files = data; // 드래그엔 드롭으로 받아온 값을  input 태그에서 받은 값과 같게 하기 위해서 넘김
-  readURL3(babtn.files);
-};
+  babtn.files = data;         // 드래그엔 드롭으로 받아온 값을  input 태그에서 받은 값과 같게 하기 위해서 넘김
+  readURL3(babtn.files);      
+}
 
 baBox2.ondragover = (e) => {
   e.preventDefault(); // 이 부분이 없으면 ondrop 이벤트가 발생하지 않습니다.
@@ -231,21 +225,17 @@ baBox2.ondragover = (e) => {
 
 function deleteBtn3() {
   // 파일 리스트에서 인덱스에 부합한 배열 제거
-  babtn.value = "";
+  babtn.value = ""
 
   // 리스트 다시 그려주기
   readURL3(babtn.files);
 }
 
 // ----------------------------------------------------------------------
-function add() {
-  const vBox = document.getElementById("vBox");
-
-  const plusAndminus = document.getElementById("only_flex_box");
-
-  const newNode = document.createElement("p");
-
-  newNode.innerHTML += `<div class="vBox1">
+function add(e){
+  const vBox = document.getElementById('vBox')
+  vBox.innerHTML+=
+  `<div class="vBox1">
       <div>
         <input type="text" placeholder="제목(ex.메인예고편, 현장예고편)" class="vBox2">
       </div>
@@ -253,18 +243,6 @@ function add() {
         <input type="text" placeholder="URL주소"  class="vBox2">
       </div>
     </div>`; // 파일명 출력
-
-  vBox.insertBefore(newNode, plusAndminus);
-}
-
-function minus() {
-  const vBox = document.getElementById("vBox");
-  console.log(vBox);
-
-  const removeNode = document.querySelector("#vBox > p");
-  console.log(removeNode);
-
-  vBox.removeChild(removeNode);
 }
 
 // ----------------------------------------------------------------------

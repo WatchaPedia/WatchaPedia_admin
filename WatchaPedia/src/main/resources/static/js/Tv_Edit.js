@@ -271,3 +271,61 @@ function minus() {
 function search() {
   window.open("https://www.naver.com/", "", "_blank");
 }
+// ----------------------------------------------------------------------
+
+// ----------------------------------------------------------------------
+
+function createOtt(ott) {
+  console.log(ott);
+  if (ott == "티빙") {
+    console.log("티빙 if문 발동!");
+    const tving_box = document.getElementById("tving_box");
+    //tving_box =
+    tving_box.classList.add("visible");
+  }
+  if (ott == "웨이브") {
+    const wave_box = document.getElementById("wave_box");
+    wave_box.classList.add("visible");
+  }
+  if (ott == "디즈니플러스") {
+    const disney_box = document.getElementById("disney_box");
+    disney_box.classList.add("visible");
+  }
+  if (ott == "왓챠") {
+    console.log("왓챠 if문 발동!");
+    const watcha_box = document.getElementById("watcha_box");
+    watcha_box.classList.add("visible");
+  }
+  if (ott == "넷플릭스") {
+    console.log("넷플릭스 if문 발동!");
+    const netflix_box = document.getElementById("netflix_box");
+    netflix_box.classList.add("visible");
+  }
+  if (ott == "쿠팡플레이") {
+    console.log("쿠팡플레이 if문 발동!");
+    const coupang_box = document.getElementById("coupang_box");
+    coupang_box.classList.add("visible");
+  }
+}
+
+// ----------------------------------------------------------------------
+// 티빙 박스 none으로 만들기
+const tving_box_X = document.getElementById("tving_box_X");
+console.log(tving_box_X);
+
+tving_box_X.addEventListener("click", pop_out);
+
+function pop_out() {
+  console.log("pop 메소드 발동!");
+  const tving_big_box = document.getElementById("tving_box");
+  tving_big_box.classList.remove("visible");
+}
+
+/*
+<option value="티빙">티빙</option>
+<option value="웨이브">웨이브</option>
+<option value="디즈니플러스">디즈니플러스</option>
+<option value="쿠팡플레이 ">쿠팡플레이</option>
+<option value="왓챠">왓챠</option>
+<option value="넷플릭스">넷플릭스</option>
+*/

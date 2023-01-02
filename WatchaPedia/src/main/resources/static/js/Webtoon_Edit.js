@@ -1,20 +1,3 @@
-// window.onload=function(){
-//     document.addEventListener('change', fileUpload)
-// }
-
-// function fileUpload(e) {
-//     let fileInput = document.getElementsByClassName("ex_file");
-//     let text =document.getElementById("mbox")
-//     for (let i = 0; i < fileInput.length; i++) {
-//         if (fileInput[i].files.length > 0) {
-//             for (let j = 0; j < fileInput[i].files.length; j++) {
-//                 text.innerHTML+=`<p>${fileInput[i].files[j].name}</p>`; // 파일명 출력
-//             }
-//         }
-//     }
-//     text=null;
-// }
-
 // ------------------------------------------------------------------------------
 let fileLists = []; // 전체 파일 리스트 객체
 const exte = ["jpg", "jpeg", "png", "gif"]; // 확장명
@@ -270,4 +253,42 @@ function minus() {
 // ----------------------------------------------------------------------
 function search() {
   window.open("https://www.naver.com/", "", "_blank");
+}
+// ----------------------------------------------------------------------
+function createOtt(ott) {
+  console.log(ott);
+  // const naverWebtoon_box = document.getElementById("naverWebtoon_box");
+  // naverWebtoon_box.classList.add("visible");
+  // console.log(naverWebtoon_box);
+
+  if (ott == "카카오웹툰") {
+    const kakaoWeb_box = document.getElementById("kakaoWeb_box");
+    kakaoWeb_box.classList.add("visible");
+  }
+
+  if (ott == "네이버웹툰") {
+    const naverWebtoon_box = document.getElementById("naverWebtoon_box");
+    naverWebtoon_box.classList.add("visible");
+  }
+
+  if (ott == "레진코믹스") {
+    const reginComics_box = document.getElementById("reginComics_box");
+    reginComics_box.classList.add("visible");
+  }
+  if (ott == "왓챠") {
+    const watcha_box = document.getElementById("watcha_box");
+    watcha_box.classList.add("visible");
+  }
+  if (ott == "카카오페이지") {
+    const kakaoPage_box = document.getElementById("kakaoPage_box");
+    kakaoPage_box.classList.add("visible");
+  }
+  if (ott == "봄툰") {
+    const bomtoon_box = document.getElementById("bomtoon_box");
+    bomtoon_box.classList.add("visible");
+  }
+  if (ott == "리디") {
+    const ready_box = document.getElementById("ready_box");
+    ready_box.classList.add("visible");
+  }
 }
