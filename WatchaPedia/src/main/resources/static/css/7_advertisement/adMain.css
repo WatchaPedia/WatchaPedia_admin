@@ -1,25 +1,93 @@
-#advertise {
-    text-align: center;
-    margin:2px;
-    width: 400px;
-    height: 400px;
-    float: left;
-    }
+.advertise {
+  text-align: center;
+  margin: 2px;
+  width: 30%;
+  height: 400px;
+  float: left;
+}
 
-
-.adbody{
-    margin: 10px 50px 20px 50px;
-    width: 300px;
-    height: 300px;
-    border: 1px solid black;
-    }
+.adbody {
+  width: 100%;
+  height: 300px;
+  border: 1px solid black;
+}
 #sentence {
-    color: gray; 
-    font-weight: bold;
-    text-align: center;
-    margin-top: 135px;
+  color: gray;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 135px;
 }
 .optad {
-    margin: 80px auto;
-    text-align: center;
+  margin: 80px auto;
+  text-align: center;
+}
+.optad > button {
+  margin: 0 2px;
+}
+
+.a_font_hide {
+  color: black;
+  text-decoration: initial;
+}
+
+button {
+  border-radius: 5px;
+}
+
+.modal-wrap {
+  position: fixed;
+  background: rgba(37, 37, 37, 0.4);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal1 {
+  width: 250px;
+  background: #fff;
+  border-radius: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal h5 {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+}
+
+.modal1 button {
+  background: none;
+  border: none;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: pointer;
+  height: 50px;
+  color: rgb(234, 33, 66);
+  font-weight: bold;
+}
+
+.modal1 button:first-child {
+  border-right: 1px solid #eee;
+}
+
+.modal1 button:hover {
+  background: #e1eef6;
+}
+
+.modal1 .button-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-around;
 }

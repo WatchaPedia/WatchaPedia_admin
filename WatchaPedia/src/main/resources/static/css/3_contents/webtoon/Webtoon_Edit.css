@@ -121,13 +121,14 @@ img {
   background: url(../image/watch.png) no-repeat 95% 50% #c4c4c4;
   background-size: contain;
   border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
   margin: 5px 10px;
   color: white;
 }
 #authorBox {
   margin: 5px 10px;
   width: 95%;
-  height: 115px;
+  height: 125px;
   border: 1px solid rgb(228, 223, 223);
   overflow: auto;
 }
@@ -195,7 +196,6 @@ img {
   height: 290px;
   align-items: center;
 }
-
 .file {
   margin: auto 0;
   width: 250px;
@@ -222,7 +222,7 @@ img {
 #content {
   margin: 0 auto 0 10px;
   width: 95%;
-  height: 200px;
+  height: 80px;
   border: 1px solid rgb(228, 223, 223);
 }
 .total_size_kb {
@@ -313,7 +313,6 @@ img {
   width: 95%;
   border: 1px solid rgb(228, 223, 223);
 }
-
 /* -------------------------------- */
 .conBox2 {
   display: flex;
@@ -329,7 +328,7 @@ img {
 #poBox {
   margin: 5px 10px;
   width: 95%;
-  height: 150px;
+  height: 140px;
   border: 1px solid rgb(228, 223, 223);
 }
 #pobtn {
@@ -357,14 +356,14 @@ img {
 #poBox2 {
   margin: 1px auto;
   width: 320px;
-  height: 80px;
+  height: 70px;
   border: 1px solid rgb(228, 223, 223);
 }
 
 #baBox {
   margin: 5px 10px;
   width: 95%;
-  height: 150px;
+  height: 140px;
   border: 1px solid rgb(228, 223, 223);
 }
 
@@ -394,7 +393,7 @@ img {
 #baBox2 {
   margin: 1px auto;
   width: 320px;
-  height: 80px;
+  height: 70px;
   border: 1px solid rgb(228, 223, 223);
 }
 
@@ -410,6 +409,52 @@ img {
   border: 0.5px solid rgb(228, 223, 223);
 }
 
+#plusbox {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* ------------------------------------ */
+
+#wgo {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#wgo > div:first-child {
+  margin-left: 10px;
+}
+
+.wgo2 {
+  margin: 0 auto 0 0;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+}
+
+.wBox {
+  margin: 10px;
+  border: 1px solid rgb(228, 223, 223);
+  width: 47%;
+  height: 100px;
+  overflow: scroll;
+}
+
+.wBox2 {
+  margin: 10px;
+  border: 1px solid rgb(228, 223, 223);
+  width: 95%;
+  height: 80px;
+  padding-top: 15px;
+}
+
+.wBox3 {
+  margin: 5px 10px;
+  width: 95%;
+  border: 1px solid rgb(228, 223, 223);
+}
+
 #plus_img {
   position: relative;
 }
@@ -417,4 +462,97 @@ img {
 #only_flex_box {
   display: flex;
   justify-content: center;
+}
+
+#kakaoWeb_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#kakaoWeb_box.visible {
+  display: flex;
+}
+
+#naverWebtoon_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#naverWebtoon_box.visible {
+  display: flex;
+}
+
+#kakaoPage_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#kakaoPage_box.visible {
+  display: flex;
+}
+
+#watcha_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#watcha_box.visible {
+  display: flex;
+}
+
+#reginComics_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#reginComics_box.visible {
+  display: flex;
+}
+
+#bomtoon_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#bomtoon_box.visible {
+  display: flex;
+}
+
+#ready_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#ready_box.visible {
+  display: flex;
+}
+
+.ott_img {
+  position: static;
+  margin: initial;
+  width: 40px;
+}
+
+.ott_name {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  width: 80%;
+  margin: 0 4px 0 7px;
+  border-bottom: 1px solid rgb(188, 188, 188);
+}
+
+.x_icon {
+  position: static;
+  margin: initial;
+  width: 20px;
+}
+
+#platform_contain {
+  width: initial;
+}
+#platform {
+  width: 95%;
+  position: relative;
+  left: 9px;
 }
