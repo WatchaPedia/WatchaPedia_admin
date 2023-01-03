@@ -5,31 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/4_comment/commentSearchDetail.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movieEdit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movieEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/4_comment/reported/reportdetail_comment.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/4_comment/reported/reportdetail_reply.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice_Edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice_Edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice_View.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice_View.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/Movie.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/Movie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_Edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/search/commentSearchDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/search/commentSearchDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/5_character/characterdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/5_character/characterdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/5_character/charactermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/5_character/charactermanage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/5_character/characterregister.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/5_character/characterregister.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/6_member/membermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/6_member/membermanage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/Movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/Movie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_Edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_Edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_View.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_View.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/book.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/book.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movie.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movie.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movieEdit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movieEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/4_comment/reported/reportdetail_comment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/4_comment/reportdetail_comment.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/4_comment/reported/reportdetail_reply.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/4_comment/reportdetail_reply.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_enroll.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_enroll.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_look.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_look.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_manage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_manage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/tv/tv.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/tv/tv.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/webtoon/webtoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/webtoon/webtoon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_Edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/5_character/characterdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/5_character/characterdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/5_character/charactermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/5_character/charactermanage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/5_character/characterregister.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/5_character/characterregister.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/topbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,13 +78,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/watchapedia_springproject/WatchaPedia/src/main/resources/static/css/0_login",
+    "last_opened_file_path": "C:/Users/gnstj/OneDrive/바탕 화면/송훈섭/watchapedia_springproject/WatchaPedia",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "a9845ed5cb4f555d8bf3130cbca3cb05",
+    "spring.configuration.checksum": "a76983afbf8cf4a11aae498b4e1085af",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -95,7 +102,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WatchaPediaApplication (2)">
+  <component name="RunManager" selected="Spring Boot.WatchaPediaApplication (1)">
     <configuration name="WatchaPediaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="com.watcha.WatchaPedia.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.watcha.watchapedia.WatchaPediaApplication" />
@@ -135,6 +142,7 @@
       <workItem from="1672587652701" duration="3095000" />
       <workItem from="1672637524387" duration="2956000" />
       <workItem from="1672702573153" duration="27305000" />
+      <workItem from="1672755745909" duration="1479000" />
     </task>
     <servers />
   </component>

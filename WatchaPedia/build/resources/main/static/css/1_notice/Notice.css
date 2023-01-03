@@ -3,11 +3,11 @@
   margin: 0px 90%;
 }
 #btn1 {
-  border: 0.5px solid rgb(241, 241, 241);
-  width: 80px;
+  border: solid 1px;
+  width: 70px;
 }
 #btn2 {
-  border: 0.5px solid rgb(241, 241, 241);
+  border: solid 1px;
 }
 
 #status_btn {
