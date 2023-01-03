@@ -47,7 +47,7 @@
   background: #e1eef6;
 }
 #box1 {
-  border: 0.5px solid rgb(241, 241, 241);
+  border: solid 1px;
 }
 #box2 {
   border: 0.5px solid rgb(241, 241, 241);
@@ -60,6 +60,7 @@
   right: 50px;
   width: 25%;
   margin: 2px 80%;
+  border: solid 1px;
 }
 
 #btn1,
