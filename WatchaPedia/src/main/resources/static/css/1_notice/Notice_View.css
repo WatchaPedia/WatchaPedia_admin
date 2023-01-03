@@ -36,6 +36,7 @@
   height: 50px;
   color: rgb(234, 33, 66);
   font-weight: bold;
+  padding: 18px;
 }
 
 .modal1 button:first-child {
