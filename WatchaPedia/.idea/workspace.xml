@@ -5,97 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/Naver_Webtoon_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/minus_outline_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/plus_outline_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/watch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/watch10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/watch4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/watch5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/watch6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/watch7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/x_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/그림1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/그림2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/0_login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/0_login/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice_View.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice_View.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/Movie.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/Movie.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/Movie_Edit.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/6_member/userpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/6_member/userpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/7_advertisement/adMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/7_advertisement/adMain.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/admin/Myinfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/admin/Myinfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/accountdetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/accountdetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/createaccount.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/createaccount.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/modifyaccount.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/modifyaccount.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/searchaccount.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/searchaccount.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Notice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/0_login/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/0_login/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_Edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_View.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/Movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/Movie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/Movie_Edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tv.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoon.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/reportdetail_comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/reportdetail_comment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/reportdetail_reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/reportdetail_reply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/7_advertisement/adMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/7_advertisement/adMain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/Myinfomodify.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/Myinfomodify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/accountdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/accountdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/fragment/topbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_View.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_View.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/Book_Edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/bookEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/Movie.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movie.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/Movie_Edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movieEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/tv/Tv_Edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/tv/tvEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/webtoon/Webtoon_Edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/webtoon/webtoonEdit.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/6_member/userpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/6_member/userpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/admin/Myinfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/admin/Myinfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/hradmin/accountdetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/hradmin/accountdetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/hradmin/createaccount.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/hradmin/createaccount.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/hradmin/modifyaccount.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/hradmin/modifyaccount.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/hradmin/searchaccount.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/8_admin/hradmin/searchaccount.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Book_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Book_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/0_login/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/0_login/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_Edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_View.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/Book Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/bookEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/Movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/Movie_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movieEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/Tv Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tvEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/Webtoon Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoonEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoon.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/reported/reportdetail_comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/reported/reportdetail_comment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/reported/reportdetail_reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/reported/reportdetail_reply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/6_member/memberdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/6_member/memberdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/Myinfomodify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/Myinfomodify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/accountdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/accountdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/topbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +119,7 @@
       <workItem from="1672549448407" duration="18793000" />
       <workItem from="1672587652701" duration="3095000" />
       <workItem from="1672637524387" duration="2956000" />
-      <workItem from="1672702573153" duration="22280000" />
+      <workItem from="1672702573153" duration="24349000" />
     </task>
     <servers />
   </component>
