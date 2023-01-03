@@ -11321,7 +11321,7 @@ body {
 }
 
 #layoutSidenav {
-  display: flex;
+  /*display: flex;*/
 }
 #layoutSidenav #layoutSidenav_nav {
   flex-basis: 225px;
@@ -11759,7 +11759,7 @@ flex-direction: column;
   justify-content: center;
 }
 .graytd{
-  background-color: gray;
+  background-color: #ddd;
   width:250px;
   border: black solid 1px;
   border-width: 1px;
@@ -11820,4 +11820,16 @@ flex-direction: column;
 .modal1 .button-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+body{
+  font-family: 'LINESeedKR-Bd';
+}
+button{
+  border: solid 1px;
 }

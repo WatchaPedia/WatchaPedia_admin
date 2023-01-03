@@ -455,7 +455,10 @@ img {
   border: 1px solid rgb(228, 223, 223);
 }
 
-#plus_img {
+#plus_img1 {
+  position: relative;
+}
+#plus_img2 {
   position: relative;
 }
 

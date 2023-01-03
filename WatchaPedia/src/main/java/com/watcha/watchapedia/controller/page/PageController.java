@@ -53,25 +53,40 @@ public class PageController {
     public ModelAndView cbook(){
         return new ModelAndView("/3_contents/book/book");
     }
+    @GetMapping(path="/contents/bookEdit")
+    public ModelAndView bookEdit(){
+        return new ModelAndView("/3_contents/book/bookEdit");
+    }
 
     @GetMapping(path="/contents/movie")
     public ModelAndView cmovie(){
-        return new ModelAndView("/3_contents/movie/Movie");
+        return new ModelAndView("/3_contents/movie/movie");
     }
 
-    @GetMapping(path="/contents/movie_edit")
-    public ModelAndView cmovieedit(){
-        return new ModelAndView("/3_contents/movie/Movie_Edit");
+    @GetMapping(path="/contents/movieEdit")
+    public ModelAndView cmovieeEit(){
+        return new ModelAndView("/3_contents/movie/movieEdit");
     }
+
 
     @GetMapping(path="/contents/tv")
     public ModelAndView ctv(){
         return new ModelAndView("/3_contents/tv/tv");
     }
 
+    @GetMapping(path="/contents/tvEdit")
+    public ModelAndView tvEdit(){
+        return new ModelAndView("/3_contents/tv/tvEdit");
+    }
+
     @GetMapping(path="/contents/webtoon")
     public ModelAndView cwebtoon(){
         return new ModelAndView("/3_contents/webtoon/webtoon");
+    }
+
+    @GetMapping(path="/contents/webtoonEdit")
+    public ModelAndView webtoonEdit(){
+        return new ModelAndView("/3_contents/webtoon/webtoonEdit");
     }
 
     @GetMapping(path="/comment/report_page")

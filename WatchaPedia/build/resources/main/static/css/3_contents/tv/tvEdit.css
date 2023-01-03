@@ -124,10 +124,11 @@ img {
   margin: 5px 10px;
   color: white;
 }
+
 #authorBox {
   margin: 5px 10px;
   width: 95%;
-  height: 115px;
+  height: 105px;
   border: 1px solid rgb(228, 223, 223);
   overflow: auto;
 }
@@ -173,7 +174,6 @@ img {
 
 #resultFile {
   flex-direction: column;
-  min-width: 0;
   background-clip: border-box;
   border: 1px solid rgb(228, 223, 223);
   border-radius: 0.25rem;
@@ -222,7 +222,7 @@ img {
 #content {
   margin: 0 auto 0 10px;
   width: 95%;
-  height: 200px;
+  height: 50px;
   border: 1px solid rgb(228, 223, 223);
 }
 .total_size_kb {
@@ -268,8 +268,8 @@ img {
   background-color: #c4c4c4;
   cursor: pointer;
   /* display: flex;
-  align-items: center;
-  justify-content: center; */
+    align-items: center;
+    justify-content: center; */
 }
 /* ------------------------------------------------- */
 #vBox {
@@ -329,7 +329,7 @@ img {
 #poBox {
   margin: 5px 10px;
   width: 95%;
-  height: 150px;
+  height: 140px;
   border: 1px solid rgb(228, 223, 223);
 }
 #pobtn {
@@ -357,14 +357,14 @@ img {
 #poBox2 {
   margin: 1px auto;
   width: 320px;
-  height: 80px;
+  height: 70px;
   border: 1px solid rgb(228, 223, 223);
 }
 
 #baBox {
   margin: 5px 10px;
   width: 95%;
-  height: 150px;
+  height: 140px;
   border: 1px solid rgb(228, 223, 223);
 }
 
@@ -394,7 +394,7 @@ img {
 #baBox2 {
   margin: 1px auto;
   width: 320px;
-  height: 80px;
+  height: 70px;
   border: 1px solid rgb(228, 223, 223);
 }
 
@@ -410,11 +410,133 @@ img {
   border: 0.5px solid rgb(228, 223, 223);
 }
 
-#plus_img {
+#plusbox {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+/* ------------------------------------ */
+
+#wgo {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#wgo > div:first-child {
+  margin-left: 10px;
+}
+
+.wgo2 {
+  margin: 0 auto 0 0;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+}
+
+.wBox {
+  margin: 10px;
+  border: 1px solid rgb(228, 223, 223);
+  width: 47%;
+  height: 100px;
+  overflow: scroll;
+}
+
+.wBox2 {
+  margin: 10px;
+  border: 1px solid rgb(228, 223, 223);
+  width: 95%;
+  height: 80px;
+  padding-top: 15px;
+}
+
+.wBox3 {
+  margin: 5px 10px;
+  width: 95%;
+  border: 1px solid rgb(228, 223, 223);
+}
+
+#plus_img1 {
+  position: relative;
+}
+#plus_img2 {
   position: relative;
 }
 
 #only_flex_box {
   display: flex;
   justify-content: center;
+}
+
+#tving_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#tving_box.visible {
+  display: flex;
+}
+
+#wave_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#wave_box.visible {
+  display: flex;
+}
+
+#disney_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#disney_box.visible {
+  display: flex;
+}
+
+#watcha_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#watcha_box.visible {
+  display: flex;
+}
+
+#netflix_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#netflix_box.visible {
+  display: flex;
+}
+#coupang_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#coupang_box.visible {
+  display: flex;
+}
+
+.ott_img {
+  position: static;
+  margin: initial;
+  width: 40px;
+}
+
+.ott_name {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  width: 80%;
+  margin: 0 4px 0 7px;
+  border-bottom: 1px solid rgb(188, 188, 188);
+}
+
+.x_icon {
+  position: static;
+  margin: initial;
+  width: 20px;
 }

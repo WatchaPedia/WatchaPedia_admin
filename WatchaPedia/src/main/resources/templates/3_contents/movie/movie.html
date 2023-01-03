@@ -9,7 +9,7 @@
         <title>Dashboard - SB Admin</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="../../css/styles.css" rel="stylesheet" />
-        <link href="../../css/3_contents/Movie.css" rel="stylesheet"/>
+        <link href="../../css/3_contents/movie/movie.css" rel="stylesheet"/>
         <script src="../../js/Movie.js"></script>
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
@@ -30,7 +30,8 @@
             </nav>
         </div>
 
-            <div id="layoutSidenav_content">
+
+        <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">영화</h1>
@@ -524,7 +525,7 @@
                             </div>
                         </div>
                         <div id="MBox">
-                            <button id="btn1">영화등록</button>
+                            <button id="btn1" onclick="location.href='/contents/movieEdit'">영화등록</button>
                         </div>
                     </div>
                 </main>

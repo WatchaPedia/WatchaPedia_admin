@@ -8,7 +8,7 @@ tr{
 }
 th{
     width: 200px;
-    background-color: rgb(199, 199, 199);
+    background-color: #ddd;
     border: 1px solid black;
     text-align: left;
     padding:  0px  0px 0px 10px;
@@ -79,4 +79,7 @@ table{
 .modal1 .button-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+button{
+    border: solid 1px;
 }
