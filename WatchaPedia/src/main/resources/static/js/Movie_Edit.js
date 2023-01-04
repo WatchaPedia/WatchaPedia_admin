@@ -15,6 +15,32 @@
 //     text=null;
 // }
 
+const { createApp } = Vue;
+
+createApp({
+  data() {
+    return {
+      search_msg: "",
+    };
+  },
+  methods: {
+    search_db() {
+      console.log(this.search_msg);
+      //이전 검색 데이터 내용을 지우기
+      const person_box = document.getElementById("modal_search_result");
+      const child_all = document.querySelectorAll("#modal_search_result > *");
+      for (i = 0; i < child_all.length; i++) {
+        person_box.removeChild(child_all[i]);
+      }
+
+      // unfilled : 리턴값에 의해 반복 돌려야함
+      for (i = 0; i < 5; i++) {
+        search_person(this.search_msg);
+      }
+    },
+  },
+}).mount(".sb-nav-fixed");
+
 // ------------------------------------------------------------------------------
 let fileLists = []; // 전체 파일 리스트 객체
 const exte = ["jpg", "jpeg", "png", "gif"]; // 확장명
@@ -270,4 +296,36 @@ function minus() {
 // ----------------------------------------------------------------------
 function search() {
   window.open("https://www.naver.com/", "", "_blank");
+}
+
+// ----------------------------------------------------------------------
+function person_search_visible() {
+  const search_input = document.getElementById("modal_search_bar")
+  search_input.value = ""
+  const person_box = document.getElementById("modal_search_result");
+  const child_all = document.querySelectorAll("#modal_search_result > *");
+  for (i = 0; i < child_all.length; i++) {
+    person_box.removeChild(child_all[i]);
+  }
+
+  const person_search_modal = document.getElementById("person_search_modal");
+  person_search_modal.classList.add("visible");
+}
+
+function search_cancel() {
+  const person_search_modal = document.getElementById("person_search_modal");
+  person_search_modal.classList.remove("visible");
+}
+
+// ----------------------------------------------------------------------
+
+// unfilled : 반복문에 의해 불려질 인물 한사람의 정보를 담은 div 생성
+function search_person(person) {
+  console.log("검색어가 바뀌어서 테이블 탐색!");
+  const person_box = document.getElementById("modal_search_result");
+
+  const newNode = document.createElement("div");
+  newNode.innerHTML = `${person}님의 인물정보를 시각화한div`;
+
+  person_box.appendChild(newNode);
 }
