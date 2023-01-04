@@ -26,7 +26,6 @@ createApp({
   methods: {
     search_db() {
       console.log(this.search_msg);
-
       //이전 검색 데이터 내용을 지우기
       const person_box = document.getElementById("modal_search_result");
       const child_all = document.querySelectorAll("#modal_search_result > *");
