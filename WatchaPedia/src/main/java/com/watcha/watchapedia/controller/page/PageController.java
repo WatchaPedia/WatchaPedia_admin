@@ -53,6 +53,7 @@ public class PageController {
     public ModelAndView cbook(){
         return new ModelAndView("/3_contents/book/book");
     }
+
     @GetMapping(path="/contents/bookEdit")
     public ModelAndView bookEdit(){
         return new ModelAndView("/3_contents/book/bookEdit");
