@@ -235,7 +235,7 @@ sup {
 }
 
 a {
-  color: #0d6efd;
+  color: black;
   text-decoration: underline;
 }
 a:hover {
@@ -11321,7 +11321,7 @@ body {
 }
 
 #layoutSidenav {
-  display: flex;
+  /*display: flex;*/
 }
 #layoutSidenav #layoutSidenav_nav {
   flex-basis: 225px;
@@ -11698,4 +11698,14 @@ body {
   width: 20px !important;
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
+}
+
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+body{
+  font-family: 'LINESeedKR-Bd';
 }
