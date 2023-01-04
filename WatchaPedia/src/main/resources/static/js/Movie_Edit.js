@@ -300,6 +300,14 @@ function search() {
 
 // ----------------------------------------------------------------------
 function person_search_visible() {
+  const search_input = document.getElementById("modal_search_bar")
+  search_input.value = ""
+  const person_box = document.getElementById("modal_search_result");
+  const child_all = document.querySelectorAll("#modal_search_result > *");
+  for (i = 0; i < child_all.length; i++) {
+    person_box.removeChild(child_all[i]);
+  }
+
   const person_search_modal = document.getElementById("person_search_modal");
   person_search_modal.classList.add("visible");
 }
