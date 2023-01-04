@@ -16,6 +16,35 @@
 // }
 
 // ------------------------------------------------------------------------------
+
+const { createApp } = Vue;
+
+createApp({
+  data() {
+    return {
+      search_msg: "",
+    };
+  },
+  methods: {
+    search_db() {
+      console.log(this.search_msg);
+
+      //이전 검색 데이터 내용을 지우기
+      const person_box = document.getElementById("modal_search_result");
+      const child_all = document.querySelectorAll("#modal_search_result > *");
+      for (i = 0; i < child_all.length; i++) {
+        person_box.removeChild(child_all[i]);
+      }
+
+      // unfilled : 리턴값에 의해 반복 돌려야함
+      for (i = 0; i < 5; i++) {
+        search_person(this.search_msg);
+      }
+    },
+  },
+}).mount(".sb-nav-fixed");
+
+// ------------------------------------------------------------------------------
 let fileLists = []; // 전체 파일 리스트 객체
 const exte = ["jpg", "jpeg", "png", "gif"]; // 확장명
 
@@ -275,34 +304,38 @@ function search() {
 
 // ----------------------------------------------------------------------
 
+//전역변수 배열에 select해서 넘어온 ott명 저장
+let ottSave = "";
+
 function createOtt(ott) {
   console.log(ott);
-  if (ott == "티빙") {
-    console.log("티빙 if문 발동!");
+
+  ottSave = ott;
+}
+
+function ottVisible() {
+  if (ottSave == "티빙") {
     const tving_box = document.getElementById("tving_box");
     //tving_box =
     tving_box.classList.add("visible");
   }
-  if (ott == "웨이브") {
+  if (ottSave == "웨이브") {
     const wave_box = document.getElementById("wave_box");
     wave_box.classList.add("visible");
   }
-  if (ott == "디즈니플러스") {
+  if (ottSave == "디즈니플러스") {
     const disney_box = document.getElementById("disney_box");
     disney_box.classList.add("visible");
   }
-  if (ott == "왓챠") {
-    console.log("왓챠 if문 발동!");
+  if (ottSave == "왓챠") {
     const watcha_box = document.getElementById("watcha_box");
     watcha_box.classList.add("visible");
   }
-  if (ott == "넷플릭스") {
-    console.log("넷플릭스 if문 발동!");
+  if (ottSave == "넷플릭스") {
     const netflix_box = document.getElementById("netflix_box");
     netflix_box.classList.add("visible");
   }
-  if (ott == "쿠팡플레이") {
-    console.log("쿠팡플레이 if문 발동!");
+  if (ottSave == "쿠팡플레이") {
     const coupang_box = document.getElementById("coupang_box");
     coupang_box.classList.add("visible");
   }
@@ -311,21 +344,47 @@ function createOtt(ott) {
 // ----------------------------------------------------------------------
 // 티빙 박스 none으로 만들기
 const tving_box_X = document.getElementById("tving_box_X");
-console.log(tving_box_X);
-
 tving_box_X.addEventListener("click", pop_out);
 
-function pop_out() {
-  console.log("pop 메소드 발동!");
-  const tving_big_box = document.getElementById("tving_box");
-  tving_big_box.classList.remove("visible");
+const wave_box_X = document.getElementById("wave_box_X");
+wave_box_X.addEventListener("click", pop_out);
+
+const disney_box_X = document.getElementById("disney_box_X");
+disney_box_X.addEventListener("click", pop_out);
+
+const watcha_box_X = document.getElementById("watcha_box_X");
+watcha_box_X.addEventListener("click", pop_out);
+
+const netflix_box_X = document.getElementById("netflix_box_X");
+netflix_box_X.addEventListener("click", pop_out);
+
+const coupang_box_X = document.getElementById("coupang_box_X");
+coupang_box_X.addEventListener("click", pop_out);
+
+function pop_out(e) {
+  e.target.parentNode.parentNode.classList.remove("visible");
 }
 
-/*
-<option value="티빙">티빙</option>
-<option value="웨이브">웨이브</option>
-<option value="디즈니플러스">디즈니플러스</option>
-<option value="쿠팡플레이 ">쿠팡플레이</option>
-<option value="왓챠">왓챠</option>
-<option value="넷플릭스">넷플릭스</option>
-*/
+// ----------------------------------------------------------------------
+function person_search_visible() {
+  const person_search_modal = document.getElementById("person_search_modal");
+  person_search_modal.classList.add("visible");
+}
+
+function search_cancel() {
+  const person_search_modal = document.getElementById("person_search_modal");
+  person_search_modal.classList.remove("visible");
+}
+
+// ----------------------------------------------------------------------
+
+// unfilled : 반복문에 의해 불려질 인물 한사람의 정보를 담은 div 생성
+function search_person(person) {
+  console.log("검색어가 바뀌어서 테이블 탐색!");
+  const person_box = document.getElementById("modal_search_result");
+
+  const newNode = document.createElement("div");
+  newNode.innerHTML = `${person}님의 인물정보를 시각화한div`;
+
+  person_box.appendChild(newNode);
+}
