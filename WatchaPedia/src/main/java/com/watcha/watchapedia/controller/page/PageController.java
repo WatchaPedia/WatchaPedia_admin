@@ -34,14 +34,19 @@ public class PageController {
         return new ModelAndView("/1_notice/Notice_View");
     }
 
+    @GetMapping(path="/notice_write")
+    public ModelAndView notice_write(){
+        return new ModelAndView("/1_notice/Notice_Write");
+    }
+
     @GetMapping(path="/qna")
     public ModelAndView qna(){
         return new ModelAndView("/2_qna/QnA");
     }
 
-    @GetMapping(path="/qna_edit")
-    public ModelAndView qnaedit(){
-        return new ModelAndView("/2_qna/QnA_Edit");
+    @GetMapping(path="/qna_reply")
+    public ModelAndView qnareply(){
+        return new ModelAndView("/2_qna/QnA_Reply");
     }
 
     @GetMapping(path="/qna_view")
@@ -54,24 +59,40 @@ public class PageController {
         return new ModelAndView("/3_contents/book/book");
     }
 
-    @GetMapping(path="/contents/movie")
-    public ModelAndView cmovie(){
-        return new ModelAndView("/3_contents/movie/Movie");
+    @GetMapping(path="/contents/bookEdit")
+    public ModelAndView bookEdit(){
+        return new ModelAndView("/3_contents/book/bookEdit");
     }
 
-    @GetMapping(path="/contents/movie_edit")
-    public ModelAndView cmovieedit(){
-        return new ModelAndView("/3_contents/movie/Movie_Edit");
+    @GetMapping(path="/contents/movie")
+    public ModelAndView cmovie(){
+        return new ModelAndView("/3_contents/movie/movie");
     }
+
+    @GetMapping(path="/contents/movieEdit")
+    public ModelAndView cmovieeEit(){
+        return new ModelAndView("/3_contents/movie/movieEdit");
+    }
+
 
     @GetMapping(path="/contents/tv")
     public ModelAndView ctv(){
         return new ModelAndView("/3_contents/tv/tv");
     }
 
+    @GetMapping(path="/contents/tvEdit")
+    public ModelAndView tvEdit(){
+        return new ModelAndView("/3_contents/tv/tvEdit");
+    }
+
     @GetMapping(path="/contents/webtoon")
     public ModelAndView cwebtoon(){
         return new ModelAndView("/3_contents/webtoon/webtoon");
+    }
+
+    @GetMapping(path="/contents/webtoonEdit")
+    public ModelAndView webtoonEdit(){
+        return new ModelAndView("/3_contents/webtoon/webtoonEdit");
     }
 
     @GetMapping(path="/comment/report_page")
@@ -109,6 +130,17 @@ public class PageController {
     public ModelAndView characterregister(){
         return new ModelAndView("/5_character/characterregister");
     }
+    @GetMapping(path="/member_detail")
+    public ModelAndView memberdetail(){
+        return new ModelAndView("/6_member/memberdetail");
+    }
+    @GetMapping(path="/member_manage")
+    public ModelAndView membermanage(){
+        return new ModelAndView("/6_member/membermanage");
+    }
+
+
+
     @GetMapping(path="/advertisement_main")
     public ModelAndView admain(){
         return new ModelAndView("/7_advertisement/adMain");
@@ -135,7 +167,15 @@ public class PageController {
         return new ModelAndView("/8_admin/hradmin/searchaccount");
     }
 
+    @GetMapping(path="/admin_myinfo")
+    public ModelAndView myinfo(){
+        return new ModelAndView("/8_admin/admin/Myinfo");
+    }
 
+    @GetMapping(path="/admin_myinfomodify")
+    public ModelAndView myinfomodify(){
+        return new ModelAndView("/8_admin/admin/Myinfomodify");
+    }
 
 
 

@@ -8,17 +8,27 @@
         <meta name="author" content="" />
         <title>Dashboard - SB Admin</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-        <link href="./css/1_notice/Notice_Edit.css" rel="stylesheet"/>
-
-
+        <link href="../css/1_notice/Notice_Edit.css" rel="stylesheet"/>
         <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <script src="./js/Notice_Edit.js"></script>
+        <script src="../js/Notice_Edit.js"></script>
+        <script defer src="../js/toastall.js"></script>
+        <link rel="stylesheet" href="../css/1_notice/toasteditor.css">
+        <style>
+#tarea{
+    width : 500px;
+    height: 400px;
+    resize: none;
+}
+#btnmsg{
+    width : 450px;
+    height: 50px;
+}
 
 
-
+        </style>
     </head>
     <body class="sb-nav-fixed">
     <!-- topbar.html -->
@@ -48,10 +58,29 @@
                             </div>
                             <form action="#" name="regform" id="regform" method="post" onsubmit="return sendit()">
                                 <input type="text"  name="title" class="fo" id = "title"  placeholder="제목" onfocus="this.placeholder=''" onblur="this.placeholder='제목'" >
-                                <div id="editor"></div>
+
+                                <div class="centerdiv">
+                                    <p>
+                                        <span>사진</span>
+                                    </p>
+                                    <p class="imgpdiv">
+                                        <input type="file" onchange="readURL(this);" >
+                                        <br /><br />
+                                        <img id="preview" />
+                                    </p>
+                                    <p>
+                                        <span>내용</span>
+                                    </p>
+                                    <p><textarea id="tarea" placeholder="공지할 내용을 입력해 주세요."> </textarea></p>
+                                    <p>
+                                        <span>버튼</span>
+                                    </p>
+                                    <p><input id="btnmsg"></input><input id="colorpick" type="color"></p>
+                                </div>
+
                                 <div id="btn0">   
-                                    <button id="btn1">작성하기</button>
-                                    <button id="btn2">취소하기</button>
+                                    <button class='butn' id="btn1" onclick="location.href='/notice_write'">수정하기</button>
+                                    <button class='butn' id="btn2" onclick="location.href='/notice'">취소하기</button>
                                 </div>
                             </form>
                         </div>
@@ -65,24 +94,17 @@
 
 
 
+
+
+        <script src="../js/uploadimg.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/Notice_Edit.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/chart-area-demo.js"></script>
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
-        <script>
-        const Editor = toastui.Editor;
+        <script src="../js/datatables-simple-demo.js"></script>
 
-            const editor = new Editor({
-                    el: document.querySelector('#editor'),
-                    height: '600px',
-                    initialEditType: 'markdown',
-                    previewStyle: 'vertical'
-                });
-    
-            editor.getMarkdown();
-        </script>
     </body>
 </html>

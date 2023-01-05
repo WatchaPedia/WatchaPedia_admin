@@ -26,7 +26,6 @@ createApp({
   methods: {
     search_db() {
       console.log(this.search_msg);
-
       //이전 검색 데이터 내용을 지우기
       const person_box = document.getElementById("modal_search_result");
       const child_all = document.querySelectorAll("#modal_search_result > *");
@@ -52,11 +51,11 @@ const file_count = document.getElementById("file_count");
 const total_sizes = document.getElementById("total_size");
 
 inputFile.addEventListener(
-  "change",
-  function (e) {
-    return readURL(this.files);
-  },
-  false
+    "change",
+    function (e) {
+      return readURL(this.files);
+    },
+    false
 );
 
 const readURL = (input) => {
@@ -105,7 +104,7 @@ const readURL = (input) => {
                 <dl>
                     <dt class='total_size_kb'>${total_size}</dt>
                     <dd>${fileLists[i].name} ${
-        Math.round(fileLists[i].size / 1024) + "kb"
+          Math.round(fileLists[i].size / 1024) + "kb"
       } <span onclick="deleteBtn(${i})" style="color: red;cursor: pointer;">[X]</span></dd>
                 </dl>
                 `);
@@ -171,11 +170,11 @@ function deleteBtn(index) {
 const pobtn = document.querySelector("#pobtn");
 
 pobtn.addEventListener(
-  "change",
-  function (e) {
-    return readURL2(this.files);
-  },
-  false
+    "change",
+    function (e) {
+      return readURL2(this.files);
+    },
+    false
 );
 const readURL2 = (input) => {
   // html 에 그리려고 만든 화살표함수
@@ -184,7 +183,7 @@ const readURL2 = (input) => {
     document.getElementById("poBox2").innerHTML = `파일 끌어다 추가하기`;
   } else {
     document.getElementById("poBox2").innerHTML = `<dd>${input[0].name} ${
-      Math.round(input[0].size / 1024) + "kb"
+        Math.round(input[0].size / 1024) + "kb"
     } <span onclick="deleteBtn2()" style="color: red;cursor: pointer;">[X]</span></dd>`;
   }
 
@@ -219,11 +218,11 @@ function deleteBtn2() {
 const babtn = document.querySelector("#babtn");
 
 babtn.addEventListener(
-  "change",
-  function (e) {
-    return readURL3(this.files);
-  },
-  false
+    "change",
+    function (e) {
+      return readURL3(this.files);
+    },
+    false
 );
 const readURL3 = (input) => {
   // html 에 그리려고 만든 화살표함수
@@ -232,7 +231,7 @@ const readURL3 = (input) => {
     document.getElementById("baBox2").innerHTML = `파일 끌어다 추가하기`;
   } else {
     document.getElementById("baBox2").innerHTML = `<dd>${input[0].name} ${
-      Math.round(input[0].size / 1024) + "kb"
+        Math.round(input[0].size / 1024) + "kb"
     } <span onclick="deleteBtn3()" style="color: red;cursor: pointer;">[X]</span></dd>`;
   }
 
@@ -301,6 +300,14 @@ function search() {
 
 // ----------------------------------------------------------------------
 function person_search_visible() {
+  const search_input = document.getElementById("modal_search_bar")
+  search_input.value = ""
+  const person_box = document.getElementById("modal_search_result");
+  const child_all = document.querySelectorAll("#modal_search_result > *");
+  for (i = 0; i < child_all.length; i++) {
+    person_box.removeChild(child_all[i]);
+  }
+
   const person_search_modal = document.getElementById("person_search_modal");
   person_search_modal.classList.add("visible");
 }

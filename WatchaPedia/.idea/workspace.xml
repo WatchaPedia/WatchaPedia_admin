@@ -4,69 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/0_login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/0_login/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice_Edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice_Edit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice_View.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/1_notice/Notice_View.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/bookEdit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/bookEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/Movie.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/Movie.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/Movie_Edit.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movieEdit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movieEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tvEdit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tvEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoonEdit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoonEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/5_character/character_enroll.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/5_character/character_enroll.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/7_advertisement/adMain.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/7_advertisement/adMain.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/accountdetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/accountdetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/createaccount.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/createaccount.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/modifyaccount.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/modifyaccount.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/searchaccount.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/8_admin/hradmin/searchaccount.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Book_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Book_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Notice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Tv_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Tv_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/bookEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/bookEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/Movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/Movie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/Movie_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/Movie_Edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tvEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tvEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoonEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoonEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/reportdetail_comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/reportdetail_comment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/reportdetail_reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/reported/reportdetail_reply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/7_advertisement/adRegist.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/7_advertisement/adRegist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/myInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/myInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/accountdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/accountdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/createaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/createaccount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/modifyaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/modifyaccount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/searchaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/searchaccount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/bookEdit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/bookEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movieEdit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movieEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/tv/tvEdit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/tv/tvEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/webtoon/webtoonEdit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/webtoon/webtoonEdit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Book_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Book_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Movie_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Movie_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Tv_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Tv_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Webtoon_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Webtoon_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/bookEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/bookEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/Movie_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/Movie_Edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movieEdit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tvEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tvEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoonEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoonEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/myInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/myInfo.html" afterDir="false" />
-    </list>
+    <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,38 +43,40 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="JpbToolWindowState">
-    <option name="isToolWindowVisible" value="false" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2JctzGkRj56I0ehE7Y1mzGnZFLa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/AI_CLASS/watchapedia_springproject/WatchaPedia&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;79e953d81b6d1bdc4bacfcc31dcdea0d&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/My Web Sites/song/WatchaPedia",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "55af2693f7d4316ebb50fd3ebd99e9dd",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\watchapedia_springproject\WatchaPedia\src\main\resources\static\css\0_login" />
@@ -146,12 +86,14 @@
       <recent name="$PROJECT_DIR$/src/main/resources/templates/6_member" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\watchapedia_springproject\WatchaPedia\src\main\resources\static\css\4_comment" />
-      <recent name="C:\Users\Administrator\Desktop\watchapedia_springproject\WatchaPedia\src\main\resources\static\assets\img" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin" />
+      <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\templates\1_notice" />
+      <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\static\js" />
+      <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\static\css\1_notice" />
+      <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\templates\7_advertisement" />
+      <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\static\css\7_advertisement" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WatchaPediaApplication">
+  <component name="RunManager" selected="Spring Boot.WatchaPediaApplication (3)">
     <configuration name="WatchaPediaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="com.watcha.WatchaPedia.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.watcha.watchapedia.WatchaPediaApplication" />
@@ -161,6 +103,13 @@
     </configuration>
     <configuration name="WatchaPediaApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="watchapedia_springproject.WatchaPedia.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.watcha.watchapedia.WatchaPediaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WatchaPediaApplication (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="song.WatchaPedia.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.watcha.watchapedia.WatchaPediaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -194,13 +143,27 @@
       <workItem from="1672755745909" duration="1479000" />
       <workItem from="1672788483072" duration="1895000" />
       <workItem from="1672791046661" duration="1371000" />
-      <workItem from="1672801965063" duration="1663000" />
-      <workItem from="1672805097563" duration="33000" />
-      <workItem from="1672806123714" duration="313000" />
+      <workItem from="1672801965063" duration="3214000" />
+      <workItem from="1672815691455" duration="770000" />
+      <workItem from="1672816470869" duration="353000" />
+      <workItem from="1672816958995" duration="172000" />
+      <workItem from="1672817793123" duration="4294000" />
+      <workItem from="1672874322556" duration="1310000" />
+      <workItem from="1672875826308" duration="814000" />
+      <workItem from="1672877077895" duration="62000" />
+      <workItem from="1672877176990" duration="175000" />
+      <workItem from="1672877361970" duration="124000" />
+      <workItem from="1672877498512" duration="28000" />
+      <workItem from="1672877583068" duration="5315000" />
+      <workItem from="1672886798725" duration="7762000" />
+      <workItem from="1672901744136" duration="9088000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/WatchaPedia$WatchaPediaApplication__3_.ic" NAME="WatchaPediaApplication (3) Coverage Results" MODIFIED="1672877449283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

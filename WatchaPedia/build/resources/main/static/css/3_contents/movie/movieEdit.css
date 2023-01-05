@@ -93,9 +93,9 @@ select:visited {
   width: 300px;
 }
 .select2
-  .select2-container
-  .select2-container--default
-  .select2-container--below {
+.select2-container
+.select2-container--default
+.select2-container--below {
   margin: 5px 10px;
   border: 1px solid rgb(255, 255, 255) !important;
   width: 95% !important;
