@@ -66,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/My Web Sites/song/WatchaPedia",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/watchapedia-backend-main",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -79,18 +79,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\templates\3_contents\webtoon" />
       <recent name="C:\Users\Administrator\Desktop\watchapedia_springproject\WatchaPedia\src\main\resources\static\css\0_login" />
       <recent name="C:\Users\Administrator\Desktop\watchapedia_springproject\WatchaPedia\src\main\resources\static\assets\img" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/css/8_admin/admin" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/6_member" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\templates\1_notice" />
+      <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\static\css\3_contents\webtoon" />
       <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\static\js" />
+      <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\templates\3_contents\webtoon" />
+      <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\templates\1_notice" />
       <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\static\css\1_notice" />
-      <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\templates\7_advertisement" />
-      <recent name="C:\My Web Sites\song\WatchaPedia\src\main\resources\static\css\7_advertisement" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.WatchaPediaApplication (3)">
@@ -157,6 +157,11 @@
       <workItem from="1672877583068" duration="5315000" />
       <workItem from="1672886798725" duration="7762000" />
       <workItem from="1672901744136" duration="9088000" />
+      <workItem from="1672912075017" duration="980000" />
+      <workItem from="1672992353744" duration="2800000" />
+      <workItem from="1673058716206" duration="2009000" />
+      <workItem from="1673061827930" duration="2042000" />
+      <workItem from="1673066754929" duration="6209000" />
     </task>
     <servers />
   </component>

@@ -22,6 +22,14 @@ createApp({
         search_person(this.search_msg);
       }
     },
+    result_reset() {
+      const person_box = document.getElementById("modal_search_result");
+      const child_all = document.querySelectorAll("#modal_search_result > *");
+      for (i = 0; i < child_all.length; i++) {
+        person_box.removeChild(child_all[i]);
+      }
+      this.search_msg = "";
+    },
   },
 }).mount(".sb-nav-fixed");
 // ------------------------------------------------------------------------------
@@ -34,11 +42,11 @@ const file_count = document.getElementById("file_count");
 const total_sizes = document.getElementById("total_size");
 
 inputFile.addEventListener(
-    "change",
-    function (e) {
-      return readURL(this.files);
-    },
-    false
+  "change",
+  function (e) {
+    return readURL(this.files);
+  },
+  false
 );
 
 const readURL = (input) => {
@@ -87,7 +95,7 @@ const readURL = (input) => {
                 <dl>
                     <dt class='total_size_kb'>${total_size}</dt>
                     <dd>${fileLists[i].name} ${
-          Math.round(fileLists[i].size / 1024) + "kb"
+        Math.round(fileLists[i].size / 1024) + "kb"
       } <span onclick="deleteBtn(${i})" style="color: red;cursor: pointer;">[X]</span></dd>
                 </dl>
                 `);
@@ -153,11 +161,11 @@ function deleteBtn(index) {
 const pobtn = document.querySelector("#pobtn");
 
 pobtn.addEventListener(
-    "change",
-    function (e) {
-      return readURL2(this.files);
-    },
-    false
+  "change",
+  function (e) {
+    return readURL2(this.files);
+  },
+  false
 );
 const readURL2 = (input) => {
   // html 에 그리려고 만든 화살표함수
@@ -166,7 +174,7 @@ const readURL2 = (input) => {
     document.getElementById("poBox2").innerHTML = `파일 끌어다 추가하기`;
   } else {
     document.getElementById("poBox2").innerHTML = `<dd>${input[0].name} ${
-        Math.round(input[0].size / 1024) + "kb"
+      Math.round(input[0].size / 1024) + "kb"
     } <span onclick="deleteBtn2()" style="color: red;cursor: pointer;">[X]</span></dd>`;
   }
 
@@ -201,11 +209,11 @@ function deleteBtn2() {
 const babtn = document.querySelector("#babtn");
 
 babtn.addEventListener(
-    "change",
-    function (e) {
-      return readURL3(this.files);
-    },
-    false
+  "change",
+  function (e) {
+    return readURL3(this.files);
+  },
+  false
 );
 const readURL3 = (input) => {
   // html 에 그리려고 만든 화살표함수
@@ -214,7 +222,7 @@ const readURL3 = (input) => {
     document.getElementById("baBox2").innerHTML = `파일 끌어다 추가하기`;
   } else {
     document.getElementById("baBox2").innerHTML = `<dd>${input[0].name} ${
-        Math.round(input[0].size / 1024) + "kb"
+      Math.round(input[0].size / 1024) + "kb"
     } <span onclick="deleteBtn3()" style="color: red;cursor: pointer;">[X]</span></dd>`;
   }
 
@@ -281,46 +289,80 @@ function search() {
   window.open("https://www.naver.com/", "", "_blank");
 }
 // ----------------------------------------------------------------------
+
+var ottSave;
+
 function createOtt(ott) {
   console.log(ott);
-  // const naverWebtoon_box = document.getElementById("naverWebtoon_box");
-  // naverWebtoon_box.classList.add("visible");
-  // console.log(naverWebtoon_box);
+  ottSave = ott;
+  console.log(ottSave);
+}
 
-  if (ott == "카카오웹툰") {
+function ottVisible() {
+  if (ottSave == "카카오웹툰") {
     const kakaoWeb_box = document.getElementById("kakaoWeb_box");
     kakaoWeb_box.classList.add("visible");
   }
 
-  if (ott == "네이버웹툰") {
+  if (ottSave == "네이버웹툰") {
     const naverWebtoon_box = document.getElementById("naverWebtoon_box");
     naverWebtoon_box.classList.add("visible");
   }
 
-  if (ott == "레진코믹스") {
+  if (ottSave == "레진코믹스") {
     const reginComics_box = document.getElementById("reginComics_box");
     reginComics_box.classList.add("visible");
   }
-  if (ott == "왓챠") {
+  if (ottSave == "왓챠") {
     const watcha_box = document.getElementById("watcha_box");
     watcha_box.classList.add("visible");
   }
-  if (ott == "카카오페이지") {
+  if (ottSave == "카카오페이지") {
     const kakaoPage_box = document.getElementById("kakaoPage_box");
     kakaoPage_box.classList.add("visible");
   }
-  if (ott == "봄툰") {
+  if (ottSave == "봄툰") {
     const bomtoon_box = document.getElementById("bomtoon_box");
     bomtoon_box.classList.add("visible");
   }
-  if (ott == "리디") {
+  if (ottSave == "리디") {
     const ready_box = document.getElementById("ready_box");
     ready_box.classList.add("visible");
   }
 }
+// ----------------------------------------------------------------------
+const kakaoWeb_box_X = document.getElementById("kakaoWeb_box_X");
+kakaoWeb_box_X.addEventListener("click", pop_out);
+
+const reginComics_box_X = document.getElementById("reginComics_box_X");
+reginComics_box_X.addEventListener("click", pop_out);
+
+const kakaoPage_box_X = document.getElementById("kakaoPage_box_X");
+kakaoPage_box_X.addEventListener("click", pop_out);
+
+const watcha_box_X = document.getElementById("watcha_box_X");
+watcha_box_X.addEventListener("click", pop_out);
+
+const naverWebtoon_box_X = document.getElementById("naverWebtoon_box_X");
+naverWebtoon_box_X.addEventListener("click", pop_out);
+
+const bomtoon_box_X = document.getElementById("bomtoon_box_X");
+bomtoon_box_X.addEventListener("click", pop_out);
+
+function pop_out(e) {
+  e.target.parentNode.parentNode.classList.remove("visible");
+}
 
 // ----------------------------------------------------------------------
 function person_search_visible() {
+  const search_bar = document.getElementById("modal_search_bar");
+  search_bar.value = "";
+  const remove_container = document.getElementById("modal_search_result");
+  const remove_result = document.querySelectorAll("#modal_search_result > *");
+  for (let i = 0; i < remove_result.length; i++) {
+    remove_container.removeChild(remove_result[i]);
+  }
+
   const person_search_modal = document.getElementById("person_search_modal");
   person_search_modal.classList.add("visible");
 }
