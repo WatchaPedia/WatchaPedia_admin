@@ -14,6 +14,6 @@
 }
 
 #btn1, #btn2{
-    border:0.5px solid rgb(241, 241, 241)  !important;
-    font-weight: 700;
+  border: solid 1px;
+    margin: 5px;
 }

@@ -1,141 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Dashboard - SB Admin</title>
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"
+      rel="stylesheet"
+    />
     <link href="../../css/styles.css" rel="stylesheet" />
     <link href="../../css/8_admin/admin/Myinfomodify.css" rel="stylesheet" />
-
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <script>
-        var world = ["아프가니스탄", "올란드 제도", "알바니아", "알제리", "아메리칸사모아", "안도라", "앙골라", "앵귈라", "남극", "앤티가 바부다", "아르헨티나", "아르메니아", "아루바", "오스트레일리아",
-            "오스트리아", "아제르바이잔", "바하마", "바레인", "방글라데시", "바베이도스", "벨라루스", "벨기에", "벨리즈", "베냉", "버뮤다", "부탄", "볼리비아", "보스니아 헤르체고비나", "보츠와나", "부베 섬", "브라질", "영국령 인도양 지역", "브루나이", "불가리아", "부르키나 파소", "부룬디", "캄보디아", "카메룬", "캐나다", "카보베르데", "케이맨 제도", "중앙아프리카 공화국", "차드", "칠레", "중국", "크리스마스섬", "코코스 제도", "콜롬비아", "코모로", "콩고 민주 공화국", "쿡 제도", "코스타리카", "코트디부아르", "크로아티아", "쿠바", "키프로스", "체코", "덴마크", "지부티", "도미니카 연방", "도미니카 공화국", "에콰도르", "이집트", "엘살바도르", "적도 기니", "에리트레아", "에스토니아", "에티오피아", "포클랜드 제도", "페로 제도", "피지", "핀란드", "프랑스", "프랑스령 기아나", "프랑스령 폴리네시아", "프랑스령 남방 및 남극", "가봉", "감비아", "조지아", "독일", "가나", "지브롤터", "그리스", "그린란드", "그레나다", "과들루프", "괌", "과테말라", "건지", "기니", "기니비사우", "가이아나", "아이티", "허드 맥도널드 제도", "바티칸 시국", "온두라스", "홍콩", "헝가리", "아이슬란드", "인도", "인도네시아", "이슬람 공화국", "이라크", "아일랜드섬", "맨섬", "이스라엘", "이탈리아", "자메이카", "일본", "저지섬", "요르단", "카자흐스탄", "케냐", "키리바시", "조선민주주의인민공화국", "대한민국", "쿠웨이트", "키르기스스탄", "라오스", "라트비아", "레바논", "레소토", "라이베리아", "리비아", "리히텐슈타인", "리투아니아", "룩셈부르크", "마카오", "북마케도니아", "마다가스카르", "말라위", "말레이시아", "몰디브", "말리", "몰타", "마셜 제도", "마르티니크", "모리타니", "모리셔스", "마요트", "멕시코", "야프", "몰도바", "모나코", "몽골", "몬테네그로", "몬트세랫", "모로코", "모잠비크", "미얀마", "나미비아", "나우루", "네팔", "네덜란드", "네덜란드령 안틸레스", "누벨칼레도니", "뉴질랜드", "니카라과", "니제르", "나이지리아", "니우에", "노퍽섬", "북마리아나 제도", "노르웨이", "오만", "파키스탄", "팔라우", "팔레스타인 영토", "파나마", "파푸아뉴기니", "파라과이", "페루", "필리핀", "핏케언 제도", "폴란드", "포르투갈", "푸에르토리코", "카타르", "레위니옹", "루마니아", "러시아", "르완다", "르완다", "세인트키츠 네비스", "세인트루시아", "생피에르 미클롱", "세인트빈센트 그레나딘", "사모아", "산마리노", "상투메 프린시페", "사우디아라비아", "세네갈", "세르비아", "세이셸", "시에라리온", "싱가포르", "슬로바키아", "슬로베니아", "솔로몬 제도", "소말리아", "남아프리카 공화국", "사우스조지아 사우스샌드위치 제도", "스페인", "스리랑카", "수단", "수리남", "스발바르 얀마옌 제도", "에스와티니", "스웨덴", "스위스", "시리아", "대만", "타지키스탄", "탄자니아", "태국", "동티모르", "토고", "토켈라우", "통가", "트리니다드 토바고", "튀니지", "터키", "투르크메니스탄", "터크스 케이커스 제도", "투발루", "우간다", "우크라이나", "아랍에미리트", "영국", "미국", "미국령 군소 제도", "우루과이", "우즈베키스탄", "바누아투", "베네수엘라", "베트남", "영국령 버진아일랜드", "미국령 버진아일랜드", "왈리스 푸투나", "서사하라", "예멘", "잠비아", "짐바브웨"]
-
-        $(document).ready(function () {
-            var checkList = [1, 3];
-            $("#myList").select2({
-                width: "100%",
-                templateSelection: function (data, container) {
-                    var selection = $('#myList').select2('data');
-                    var idx = selection.indexOf(data);
-                    console.log(">>Selection", data.text, data.idx, idx);
-                    data.idx = idx;
-
-                    $(container).css("background-color", world[data.idx]);
-                    return data.text;
-                },
-            }).val(checkList).trigger("change");
+    <script defer src="../../js/Myinfomodify.js"></script>
 
 
-            $("#myList").on("select2:select", function (evt) {
-                var element = evt.params.data.element;
-                var $element = $(element);
+<!--    <script-->
+<!--      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"-->
+<!--      crossorigin="anonymous"-->
+<!--    ></script>-->
 
-                $element.detach();
-                $(this).append($element);
-                $(this).trigger("change");
-            });
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+<!--    <link-->
+<!--      rel="stylesheet"-->
+<!--      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"-->
+<!--    />-->
+<!--    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+<!--    <link-->
+<!--      rel="stylesheet"-->
+<!--      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css"-->
+<!--    />-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>-->
+<!--    <link-->
+<!--      rel="stylesheet"-->
+<!--      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"-->
+<!--    />-->
 
-        })
-    </script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<!--    &lt;!&ndash;These jQuery libraries for select2 need to be included&ndash;&gt;-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>-->
 
+<!--    <link-->
+<!--      rel="stylesheet"-->
+<!--      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css"-->
+<!--    />-->
+<!--    <script>-->
+<!--      $(document).ready(function () {-->
+<!--        //Select2-->
+<!--        $(".country").select2({-->
+<!--          maximumSelectionLength: 10,-->
+<!--        });-->
+<!--      });-->
+<!--    </script>-->
+  </head>
 
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--These jQuery libraries for select2 need to be included-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" />
-    <script>
-        $(document).ready(function () {
-            //Select2
-            $(".country").select2({
-                maximumSelectionLength: 10,
-            });
-        });
-    </script>
-
-
-
-
-
-</head>
-
-<body class="sb-nav-fixed">
-<!-- topbar.html -->
-<div th:replace="fragment/topbar :: topbar"></div>
-<!-- topbar.html 끝 -->
-<div id="layoutSidenav">
-    <div id="layoutSidenav_nav">
+  <body class="sb-nav-fixed">
+    <!-- topbar.html -->
+    <div th:replace="fragment/topbar :: topbar"></div>
+    <!-- topbar.html 끝 -->
+    <div id="layoutSidenav">
+      <div id="layoutSidenav_nav">
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-            <!-- sidenav.html -->
-            <div th:replace="fragment/sidenav :: sidenav"></div>
-            <!-- sidenav.html 끝 -->
+          <!-- sidenav.html -->
+          <div th:replace="fragment/sidenav :: sidenav"></div>
+          <!-- sidenav.html 끝 -->
 
-            <!-- sidefooter.html -->
-            <div th:replace="fragment/sidefooter :: sidefooter"></div>
-            <!-- sidefooter.html 끝 -->
+          <!-- sidefooter.html -->
+          <div th:replace="fragment/sidefooter :: sidefooter"></div>
+          <!-- sidefooter.html 끝 -->
         </nav>
-    </div>
+      </div>
 
-
-        <div id="layoutSidenav_content">
-            <main>
-                <form>
-                <div class="container-fluid px-4">
-                    <h2 class="mt-4">내정보</h2>
-                    <div class="card">
-                        <div class="contain">
-                            <div  style="display:flex;">
-    
-                                <div style="margin-top: 11px;">
-                                    <p>기존비밀번호 </p>
-                                    <p>새비밀번호 </p>
-                                    <p>새비밀번호 확인</p>
-                                </div>
-    
-                                <div style="margin-left: 10px;">
-                                    <p><input type="text" name="userid" id="userid" maxlength="20" required></p>
-                                    <p><input type="password" name="userpw" id="userpw" maxlength="20" required></p>
-                                    <p style="margin-top: 10px"><input type="text" name="re_userpw" id="re_userpw" maxlength="20" required></p>
-                                </div>
-    
-                            </div>
-    
-                            <p style="margin-top:25px"><input type="submit" value="변경하기"> <input onclick="location.href='/admin_myinfo'"type="reset" value="취소하기"></p>
-                        </div>
+      <div id="layoutSidenav_content">
+        <main>
+          <form
+            action="./regist.jsp"
+            name="regform"
+            id="regform"
+            method="post"
+            onsubmit="return sendit()"
+          >
+            <div class="container-fluid px-4">
+              <h2 class="mt-4">내정보</h2>
+              <div class="card">
+                <div class="contain">
+                  <div style="display: flex">
+                    <div style="margin-top: 11px">
+                      <p>기존비밀번호</p>
+                      <p>새비밀번호</p>
+                      <p>새비밀번호 확인</p>
                     </div>
+
+                    <div style="margin-left: 10px">
+                      <p>
+                        <input
+                          type="text"
+                          name="userpw"
+                          id="userpw"
+                          maxlength="20"
+                          required
+                        />
+                      </p>
+                      <p>
+                        <input
+                          type="password"
+                          name="reuserpw"
+                          id="reuserpw"
+                          maxlength="20"
+                          required
+                        />
+                      </p>
+                      <p style="margin-top: 10px">
+                        <input
+                          type="password"
+                          name="re_userpw"
+                          id="re_userpw"
+                          maxlength="20"
+                          required
+                        />
+                      </p>
+                    </div>
+                  </div>
+                  <div id="atn"></div>
+                  <p style="margin-top: 25px">
+                    <input type="submit" value="변경하기" id="btn"  />
+                    <input
+                      onclick="location.href='/admin_myinfo'"
+                      type="reset"
+                      value="취소하기"
+                    />
+                  </p>
                 </div>
-                </form>
-            </main>
-        </div>
+              </div>
+            </div>
+          </form>
+        </main>
+      </div>
     </div>
 
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="../../js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/demo/chart-area-demo.js"></script>
     <script src="assets/demo/chart-bar-demo.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"
+      crossorigin="anonymous"
+    ></script>
     <script src="../../js/datatables-simple-demo.js"></script>
-</body>
-
+  </body>
 </html>

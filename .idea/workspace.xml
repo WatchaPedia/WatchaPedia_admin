@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d67f466a-8eee-4cda-ad53-eb8d216548a9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/css/5_character/cropper.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/css/5_character/jsuites.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/5_character/camera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/bg_b1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/bg_button.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/bg_button_left.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/bg_button_right.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/bg_find_h3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/bg_help.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/bg_icon_tool.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/bg_line1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/bg_quote2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/bg_set.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/bg_text_tool.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/bg_tool2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/editor_guideline_698.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/editor_guideline_890.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/ico_extend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/icon_set.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/ko_KR/btn_set.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/ko_KR/bx_set_110302.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/ko_KR/text_tool_set.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/image/text_tool_set2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/js/cropper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/js/jcropper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/js/jsuites.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/js/lemonade.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/js/uploadimg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/5_character/charactermodify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/static/css/1_notice/Notice.css" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/static/css/1_notice/Notice.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/static/css/1_notice/Notice_Edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/static/css/1_notice/Notice_Edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/static/css/1_notice/Notice_View.css" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/static/css/1_notice/Notice_View.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/static/css/5_character/character_enroll.css" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/static/css/5_character/character_enroll.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/static/css/5_character/character_manage.css" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/static/css/5_character/character_manage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/1_notice/Notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/1_notice/Notice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/1_notice/Notice_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/1_notice/Notice_Edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/1_notice/Notice_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/1_notice/Notice_View.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/5_character/characterdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/5_character/characterdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/5_character/charactermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/5_character/charactermanage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/5_character/characterregister.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/5_character/characterregister.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/8_admin/hradmin/accountdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/8_admin/hradmin/accountdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/8_admin/hradmin/createaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/8_admin/hradmin/createaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/8_admin/hradmin/modifyaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/8_admin/hradmin/modifyaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/8_admin/hradmin/searchaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/resources/main/templates/8_admin/hradmin/searchaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/css/1_notice/Notice.css" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/css/1_notice/Notice.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/css/1_notice/Notice_Edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/css/1_notice/Notice_Edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/css/1_notice/Notice_View.css" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/css/1_notice/Notice_View.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/css/5_character/character_enroll.css" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/css/5_character/character_enroll.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/css/5_character/character_manage.css" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/static/css/5_character/character_manage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/1_notice/Notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/1_notice/Notice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/1_notice/Notice_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/1_notice/Notice_Edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/1_notice/Notice_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/1_notice/Notice_View.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/5_character/characterdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/5_character/characterdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/5_character/charactermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/5_character/charactermanage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/5_character/characterregister.html" beforeDir="false" afterPath="$PROJECT_DIR$/WatchaPedia/src/main/resources/templates/5_character/characterregister.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JoGXIOaCTxZreZdVeB8GeBFjXs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/jaewon/Desktop/onedrive/study/프로젝트/watchapedia_springproject"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d67f466a-8eee-4cda-ad53-eb8d216548a9" name="Changes" comment="" />
+      <created>1672737061221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672737061221</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -34,6 +34,11 @@ public class PageController {
         return new ModelAndView("/1_notice/Notice_View");
     }
 
+    @GetMapping(path="/notice_write")
+    public ModelAndView notice_write(){
+        return new ModelAndView("/1_notice/Notice_Write");
+    }
+
     @GetMapping(path="/qna")
     public ModelAndView qna(){
         return new ModelAndView("/2_qna/QnA");
@@ -54,25 +59,75 @@ public class PageController {
         return new ModelAndView("/3_contents/book/book");
     }
 
+    @GetMapping(path="/contents/book_edit")
+    public ModelAndView bookEdit(){
+        return new ModelAndView("/3_contents/book/book_edit");
+    }
+
+    @GetMapping(path="/contents/book_write")
+    public ModelAndView bookWrite(){
+        return new ModelAndView("/3_contents/book/book_write");
+    }
+    @GetMapping(path="/contents/book_detail")
+    public ModelAndView bookDetail(){
+        return new ModelAndView("/3_contents/book/book_detail");
+    }
+
     @GetMapping(path="/contents/movie")
-    public ModelAndView cmovie(){
-        return new ModelAndView("/3_contents/movie/Movie");
+    public ModelAndView movie(){
+        return new ModelAndView("/3_contents/movie/movie");
     }
 
     @GetMapping(path="/contents/movie_edit")
-    public ModelAndView cmovieedit(){
-        return new ModelAndView("/3_contents/movie/Movie_Edit");
+    public ModelAndView movieEdit(){
+        return new ModelAndView("/3_contents/movie/movie_edit");
+    }
+    @GetMapping(path="/contents/movie_write")
+    public ModelAndView movieWrite(){
+        return new ModelAndView("/3_contents/movie/movie_write");
+    }
+    @GetMapping(path="/contents/movie_detail")
+    public ModelAndView movieDetail(){
+        return new ModelAndView("/3_contents/movie/movie_detail");
     }
 
+
     @GetMapping(path="/contents/tv")
-    public ModelAndView ctv(){
+    public ModelAndView tv(){
         return new ModelAndView("/3_contents/tv/tv");
+    }
+
+    @GetMapping(path="/contents/tv_edit")
+    public ModelAndView tvEdit(){
+        return new ModelAndView("/3_contents/tv/tv_edit");
+    }
+    @GetMapping(path="/contents/tv_write")
+    public ModelAndView tvWrite(){
+        return new ModelAndView("/3_contents/tv/tv_write");
+    }
+    @GetMapping(path="/contents/tv_detail")
+    public ModelAndView tvDetail(){
+        return new ModelAndView("/3_contents/tv/tv_detail");
     }
 
     @GetMapping(path="/contents/webtoon")
     public ModelAndView cwebtoon(){
         return new ModelAndView("/3_contents/webtoon/webtoon");
     }
+
+    @GetMapping(path="/contents/webtoon_edit")
+    public ModelAndView webtoonEdit(){
+        return new ModelAndView("/3_contents/webtoon/webtoon_edit");
+    }
+    @GetMapping(path="/contents/webtoon_write")
+    public ModelAndView webtoonWrite(){
+        return new ModelAndView("/3_contents/webtoon/webtoon_write");
+    }
+    @GetMapping(path="/contents/webtoon_detail")
+    public ModelAndView webtoonDetail(){
+        return new ModelAndView("/3_contents/webtoon/webtoon_detail");
+    }
+
 
     @GetMapping(path="/comment/report_page")
     public ModelAndView report(){

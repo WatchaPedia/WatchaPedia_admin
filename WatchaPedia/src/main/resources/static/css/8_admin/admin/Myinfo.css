@@ -41,7 +41,7 @@
   .ith{
     border : 1px solid black;
     width: 150px;
-    background-color: rgb(206, 201, 201);
+    background-color: #ddd;
   }
   .card {
     position: relative;
@@ -69,3 +69,6 @@
     margin-top: 10px;
     margin-left: 30px;
   }
+button{
+    border: solid 1px;
+}
