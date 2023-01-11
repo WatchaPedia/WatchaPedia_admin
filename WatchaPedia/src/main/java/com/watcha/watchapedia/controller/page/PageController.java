@@ -1,12 +1,22 @@
 package com.watcha.watchapedia.controller.page;
 
+import com.watcha.watchapedia.dto.UserDto;
+import com.watcha.watchapedia.dto.response.UserResponse;
+import com.watcha.watchapedia.model.entity.User;
+import com.watcha.watchapedia.model.repository.UserRepository;
+import com.watcha.watchapedia.service.UserService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("")
+@RequiredArgsConstructor
 public class PageController {
 
     @GetMapping(path="")
@@ -59,55 +69,30 @@ public class PageController {
         return new ModelAndView("/3_contents/book/book");
     }
 
-    @GetMapping(path="/contents/book_edit")
+    @GetMapping(path="/contents/bookEdit")
     public ModelAndView bookEdit(){
-        return new ModelAndView("/3_contents/book/book_edit");
-    }
-
-    @GetMapping(path="/contents/book_write")
-    public ModelAndView bookWrite(){
-        return new ModelAndView("/3_contents/book/book_write");
-    }
-    @GetMapping(path="/contents/book_detail")
-    public ModelAndView bookDetail(){
-        return new ModelAndView("/3_contents/book/book_detail");
+        return new ModelAndView("/3_contents/book/bookEdit");
     }
 
     @GetMapping(path="/contents/movie")
-    public ModelAndView movie(){
+    public ModelAndView cmovie(){
         return new ModelAndView("/3_contents/movie/movie");
     }
 
-    @GetMapping(path="/contents/movie_edit")
-    public ModelAndView movieEdit(){
-        return new ModelAndView("/3_contents/movie/movie_edit");
-    }
-    @GetMapping(path="/contents/movie_write")
-    public ModelAndView movieWrite(){
-        return new ModelAndView("/3_contents/movie/movie_write");
-    }
-    @GetMapping(path="/contents/movie_detail")
-    public ModelAndView movieDetail(){
-        return new ModelAndView("/3_contents/movie/movie_detail");
+    @GetMapping(path="/contents/movieEdit")
+    public ModelAndView cmovieeEit(){
+        return new ModelAndView("/3_contents/movie/movieEdit");
     }
 
 
     @GetMapping(path="/contents/tv")
-    public ModelAndView tv(){
+    public ModelAndView ctv(){
         return new ModelAndView("/3_contents/tv/tv");
     }
 
-    @GetMapping(path="/contents/tv_edit")
+    @GetMapping(path="/contents/tvEdit")
     public ModelAndView tvEdit(){
-        return new ModelAndView("/3_contents/tv/tv_edit");
-    }
-    @GetMapping(path="/contents/tv_write")
-    public ModelAndView tvWrite(){
-        return new ModelAndView("/3_contents/tv/tv_write");
-    }
-    @GetMapping(path="/contents/tv_detail")
-    public ModelAndView tvDetail(){
-        return new ModelAndView("/3_contents/tv/tv_detail");
+        return new ModelAndView("/3_contents/tv/tvEdit");
     }
 
     @GetMapping(path="/contents/webtoon")
@@ -115,19 +100,10 @@ public class PageController {
         return new ModelAndView("/3_contents/webtoon/webtoon");
     }
 
-    @GetMapping(path="/contents/webtoon_edit")
+    @GetMapping(path="/contents/webtoonEdit")
     public ModelAndView webtoonEdit(){
-        return new ModelAndView("/3_contents/webtoon/webtoon_edit");
+        return new ModelAndView("/3_contents/webtoon/webtoonEdit");
     }
-    @GetMapping(path="/contents/webtoon_write")
-    public ModelAndView webtoonWrite(){
-        return new ModelAndView("/3_contents/webtoon/webtoon_write");
-    }
-    @GetMapping(path="/contents/webtoon_detail")
-    public ModelAndView webtoonDetail(){
-        return new ModelAndView("/3_contents/webtoon/webtoon_detail");
-    }
-
 
     @GetMapping(path="/comment/report_page")
     public ModelAndView report(){
@@ -164,16 +140,40 @@ public class PageController {
     public ModelAndView characterregister(){
         return new ModelAndView("/5_character/characterregister");
     }
-    @GetMapping(path="/member_detail")
-    public ModelAndView memberdetail(){
-        return new ModelAndView("/6_member/memberdetail");
-    }
-    @GetMapping(path="/member_manage")
-    public ModelAndView membermanage(){
-        return new ModelAndView("/6_member/membermanage");
+
+    // 멤버 디테일
+    final UserRepository userRepository;
+    @GetMapping(path="/member/{userIdx}")
+    public String memberdetail(@PathVariable Long userIdx, ModelMap map){
+        Optional<User> user = userRepository.findById(userIdx);
+        UserResponse userResponse = UserResponse.from(UserDto.from(user.get()));
+        map.addAttribute("user", userResponse);
+        return "/6_member/memberdetail";
     }
 
+    // 멤버 리스트
+    final UserService userService;
+    @GetMapping(path="/member")
+    public String membermanage(ModelMap map){
+        List<UserResponse> users = userService.searchUsers().stream().map(UserResponse::from).toList();
+        map.addAttribute("users", users);
+        return "/6_member/membermanage";
+    }
 
+    // 유저 인플루언서 수정
+    @GetMapping("/member/{userIdx}/{userType}")
+    public String updateUser(
+             @PathVariable Long userIdx,
+             @PathVariable String userType){
+        Optional<User> user = userRepository.findById(userIdx);
+        user.ifPresent(
+                selectUser -> {
+                    selectUser.setUserType(userType);
+                    userRepository.save(selectUser);
+                }
+        );
+        return "redirect:/member/"+userIdx;
+    }
 
     @GetMapping(path="/advertisement_main")
     public ModelAndView admain(){

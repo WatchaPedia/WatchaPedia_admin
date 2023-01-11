@@ -4,7 +4,7 @@ import com.watcha.watchapedia.model.entity.Movie;
 import com.watcha.watchapedia.model.network.Header;
 import com.watcha.watchapedia.model.network.request.MovieApiRequest;
 import com.watcha.watchapedia.model.network.response.MovieApiResponse;
-import com.watcha.watchapedia.repository.MovieRepository;
+import com.watcha.watchapedia.model.repository.MovieRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

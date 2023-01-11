@@ -1,4 +1,4 @@
-package com.watcha.watchapedia.repository;
+package com.watcha.watchapedia.model.repository;
 
 import com.watcha.watchapedia.model.entity.AdminUser;
 import com.watcha.watchapedia.model.entity.Movie;
