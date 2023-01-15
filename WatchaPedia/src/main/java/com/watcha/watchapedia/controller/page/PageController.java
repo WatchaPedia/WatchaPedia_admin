@@ -80,22 +80,21 @@ public class PageController {
 
     @GetMapping("/qna/{qnaIdx}/qnaview")
     public String updateQnaVieW(@PathVariable Long qnaIdx, ModelMap map){
-        QnaResponse qna = QnaResponse.from(qnaService.getQna(qnaIdx));
-        map.addAttribute("qna", qna);
+        QnaResponse qnaResponse = QnaResponse.from(qnaService.getQna(qnaIdx));
+        map.addAttribute("qna", qnaResponse);
         map.addAttribute("formStatus", FormStatus.UPDATE);
         return "/2_qna/QnA_View";
     }
 
 
-    @PostMapping("/qna/{qnaIdx}/qnaview")
+   @PostMapping("/qna/{qnaIdx}/qnaview")
     public String qnaupdate(@ModelAttribute Long qnaIdx, ModelMap map) {
-        QnaResponse qna = QnaResponse.from(qnaService.getQna(qnaIdx));
-        map.addAttribute("qna", qna);
+        QnaResponse qnaResponse = QnaResponse.from(qnaService.getQna(qnaIdx));
+        map.addAttribute("qna", qnaResponse);
         map.addAttribute("formStatus", FormStatus.UPDATE);
         return "/2_qna/QnA_View";
 //        return "redirect:/board/" + boardDTO.getId();
     }
-
 
     @GetMapping(path="/contents/book")
     public ModelAndView cbook(){

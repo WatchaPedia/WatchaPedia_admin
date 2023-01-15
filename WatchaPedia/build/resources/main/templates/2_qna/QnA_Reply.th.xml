@@ -9,6 +9,7 @@
     </attr>
 
     <attr sel="#QQ"/>
-    <attr sel="form" th:action="'/qna/' + ${qna.qnaIdx} + '/qnaview'" th:method="post">
+    <attr sel="form" th:action="'/qna/' + ${qna.qnaIdx} + '/qnaview'">
+        <attr sel="#QBox" th:value="${qna.qnaDtext}"/>
     </attr>
 </thlogic>

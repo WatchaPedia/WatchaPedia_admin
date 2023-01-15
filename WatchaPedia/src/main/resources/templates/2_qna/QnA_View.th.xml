@@ -7,7 +7,7 @@
         <attr sel=".qna-file" th:text="'첨부파일 : '+${qna.qnaFile}"/>
         <attr sel=".qna-atext" th:text="'설명 : '+${qna.qnaAtext}"/>
         <attr sel=".qna-status" th:text="'알림 이메일 주소 : '+${qna.qnaStatus}"/>
-        <attr sel="#QBox" th:text="${qna.qnaDtext}">/>
+        <attr sel="#QBox  " th:text="${qna.qnaDtext}">/>
 
     </attr>
 </thlogic>

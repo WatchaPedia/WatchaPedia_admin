@@ -49,9 +49,9 @@
                                 <p class="qna-atext">설명 : </p>
                                 <p class="qna-status">알림 이메일 주소 : </p>
                             </div>
-                            <form id="QQ" method="post">
+                            <form id="QQ" action="QnA_View.th.xml" >
                                 답변:
-                                <input type="text" id="QBox" style="width: 100%; height: 250px;" class="Qna_answer">
+                                <input type="text" id="QBox" name="QBox" style="width: 100%; height: 250px;" class="Qna_answer" th:value="*{qnaDtext}">
                                 <div id="btn0">
                                     <button id="btn1" type="submit">답변완료</button>
                                     <button id="btn2" onclick="location.href='/qna'">뒤로가기</button>

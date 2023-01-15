@@ -12,6 +12,7 @@ import java.util.Objects;
 @Builder
 @Data
 @ToString(callSuper = true)
+
 public class Qna {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
