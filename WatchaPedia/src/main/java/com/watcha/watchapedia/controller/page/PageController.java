@@ -2,8 +2,14 @@ package com.watcha.watchapedia.controller.page;
 
 import com.watcha.watchapedia.dto.UserDto;
 import com.watcha.watchapedia.dto.response.UserResponse;
+import com.watcha.watchapedia.model.dto.QnaDto;
+import com.watcha.watchapedia.model.entity.Qna;
 import com.watcha.watchapedia.model.entity.User;
+import com.watcha.watchapedia.model.entity.type.FormStatus;
+import com.watcha.watchapedia.model.network.response.QnaResponse;
+import com.watcha.watchapedia.model.repository.QnaRepository;
 import com.watcha.watchapedia.model.repository.UserRepository;
+import com.watcha.watchapedia.service.QnaService;
 import com.watcha.watchapedia.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -49,20 +55,47 @@ public class PageController {
         return new ModelAndView("/1_notice/Notice_Write");
     }
 
+    private final QnaService qnaService;
     @GetMapping(path="/qna")
-    public ModelAndView qna(){
-        return new ModelAndView("/2_qna/QnA");
+    public String qna(ModelMap map){
+        map.addAttribute("qnas", qnaService.searchQnas());
+        return "/2_qna/QnA";
     }
 
-    @GetMapping(path="/qna_reply")
-    public ModelAndView qnareply(){
-        return new ModelAndView("/2_qna/QnA_Reply");
+    final QnaRepository qnaRepository;
+    @GetMapping(path="/qna/{qnaIdx}")
+    public String qnadetail(@PathVariable Long qnaIdx, ModelMap map){
+        Optional<Qna> qna = qnaRepository.findById(qnaIdx);
+        QnaResponse qnaResponse = QnaResponse.from(QnaDto.from(qna.get()));
+        map.addAttribute("qna", qnaResponse);
+        return "/2_qna/QnA_Reply";
     }
 
-    @GetMapping(path="/qna_view")
-    public ModelAndView qnaview(){
-        return new ModelAndView("/2_qna/QnA_View");
+    @GetMapping("qnaview")
+    public String QnaView(ModelMap map){
+        map.addAttribute("view" , FormStatus.CREATE);
+        return "/2_qna/QnA_View";
     }
+
+
+    @GetMapping("/qna/{qnaIdx}/qnaview")
+    public String updateQnaVieW(@PathVariable Long qnaIdx, ModelMap map){
+        QnaResponse qna = QnaResponse.from(qnaService.getQna(qnaIdx));
+        map.addAttribute("qna", qna);
+        map.addAttribute("formStatus", FormStatus.UPDATE);
+        return "/2_qna/QnA_View";
+    }
+
+
+    @PostMapping("/qna/{qnaIdx}/qnaview")
+    public String qnaupdate(@ModelAttribute Long qnaIdx, ModelMap map) {
+        QnaResponse qna = QnaResponse.from(qnaService.getQna(qnaIdx));
+        map.addAttribute("qna", qna);
+        map.addAttribute("formStatus", FormStatus.UPDATE);
+        return "/2_qna/QnA_View";
+//        return "redirect:/board/" + boardDTO.getId();
+    }
+
 
     @GetMapping(path="/contents/book")
     public ModelAndView cbook(){

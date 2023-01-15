@@ -1,4 +1,4 @@
-#title{
+#ntcTitle{
     width: 100%; border:0.5px solid rgb(241, 241, 241);
     padding-left:16px;
 }
@@ -7,10 +7,12 @@
     display: flex;
     margin: 0px 10px;
     justify-content: end;
-
 }
 
-
+#butn{
+    border:0.5px solid rgb(241, 241, 241);
+    margin-left:10px;
+}
 .tox-statusbar__branding{
     display: none;
 }
@@ -39,7 +41,12 @@
 #preview{
     width: 100%;
 }
+
 .butn{
     border:solid 1px ;
     margin: 5px;
 }
+
+/*#ntcBtnColor{*/
+/*    visible: hidden;*/
+/*}*/
