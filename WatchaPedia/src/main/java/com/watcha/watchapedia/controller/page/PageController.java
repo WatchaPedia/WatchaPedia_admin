@@ -2,13 +2,18 @@ package com.watcha.watchapedia.controller.page;
 
 import com.watcha.watchapedia.dto.UserDto;
 import com.watcha.watchapedia.dto.response.UserResponse;
+import com.watcha.watchapedia.model.dto.CommentDto;
 import com.watcha.watchapedia.model.dto.QnaDto;
+import com.watcha.watchapedia.model.entity.Comment;
 import com.watcha.watchapedia.model.entity.Qna;
 import com.watcha.watchapedia.model.entity.User;
 import com.watcha.watchapedia.model.entity.type.FormStatus;
+import com.watcha.watchapedia.model.network.response.CommentResponse;
 import com.watcha.watchapedia.model.network.response.QnaResponse;
+import com.watcha.watchapedia.model.repository.CommentRepository;
 import com.watcha.watchapedia.model.repository.QnaRepository;
 import com.watcha.watchapedia.model.repository.UserRepository;
+import com.watcha.watchapedia.service.CommentService;
 import com.watcha.watchapedia.service.QnaService;
 import com.watcha.watchapedia.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -152,13 +157,21 @@ public class PageController {
         return new ModelAndView("/4_comment/reported/reportdetail_reply");
     }
 
-    @GetMapping(path="/comment/search_detail")
-    public ModelAndView commentsearchdetail(){
-        return new ModelAndView("/4_comment/search/commentSearchDetail");
-    }
+    private final CommentService commentService;
     @GetMapping(path="/comment/search_list")
-    public ModelAndView commentsearchlist(){
-        return new ModelAndView("/4_comment/search/commentSearchList");
+    public String comment(ModelMap map){
+        map.addAttribute("comments", commentService.searchComments());
+        return "/4_comment/search/commentSearchList";
+    }
+
+
+    final CommentRepository commentRepository;
+    @GetMapping(path="/comment/{commentIdx}")
+    public String commentdetail(@PathVariable Long commentIdx, ModelMap map){
+        Optional<Comment> comment = commentRepository.findById(commentIdx);
+        CommentResponse commentResponse = CommentResponse.from(CommentDto.from(comment.get()));
+        map.addAttribute("comment", commentResponse);
+        return "/4_comment/search/commentSearchDetail";
     }
     @GetMapping(path="/character_detail")
     public ModelAndView characterdetail(){
