@@ -8,6 +8,7 @@ import com.watcha.watchapedia.model.entity.Comment;
 import com.watcha.watchapedia.model.entity.Qna;
 import com.watcha.watchapedia.model.entity.User;
 import com.watcha.watchapedia.model.entity.type.FormStatus;
+import com.watcha.watchapedia.model.network.request.QnaRequest;
 import com.watcha.watchapedia.model.network.response.CommentResponse;
 import com.watcha.watchapedia.model.network.response.QnaResponse;
 import com.watcha.watchapedia.model.repository.CommentRepository;
@@ -76,7 +77,7 @@ public class PageController {
         return "/2_qna/QnA_Reply";
     }
 
-    @GetMapping("qnaview")
+    @GetMapping("/qnaview")
     public String QnaView(ModelMap map){
         map.addAttribute("view" , FormStatus.CREATE);
         return "/2_qna/QnA_View";
@@ -85,21 +86,26 @@ public class PageController {
 
     @GetMapping("/qna/{qnaIdx}/qnaview")
     public String updateQnaVieW(@PathVariable Long qnaIdx, ModelMap map){
-        QnaResponse qnaResponse = QnaResponse.from(qnaService.getQna(qnaIdx));
-        map.addAttribute("qna", qnaResponse);
+        QnaResponse qna = QnaResponse.from(qnaService.getQna(qnaIdx));
+        map.addAttribute("qna", qna);
         map.addAttribute("formStatus", FormStatus.UPDATE);
         return "/2_qna/QnA_View";
+    }
+
+    @PostMapping ("/qnaview")
+    public String postqnaview(QnaRequest qnaRequest) {
+        qnaService.saveQna(qnaRequest.toDto());
+        return "redirect:/qna";
     }
 
 
    @PostMapping("/qna/{qnaIdx}/qnaview")
-    public String qnaupdate(@ModelAttribute Long qnaIdx, ModelMap map) {
-        QnaResponse qnaResponse = QnaResponse.from(qnaService.getQna(qnaIdx));
-        map.addAttribute("qna", qnaResponse);
-        map.addAttribute("formStatus", FormStatus.UPDATE);
-        return "/2_qna/QnA_View";
-//        return "redirect:/board/" + boardDTO.getId();
-    }
+   public String updateQna(@PathVariable Long qnaIdx, QnaRequest qnaRequest){
+
+        qnaService.updateQna(qnaIdx, qnaRequest.toDto());
+//        return "redirect:/qna/"+ qnaIdx;
+       return "/2_qna/QnA_View";
+   }
 
     @GetMapping(path="/contents/book")
     public ModelAndView cbook(){

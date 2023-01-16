@@ -11,12 +11,40 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/034f4b50-04ff-4f8b-9f20-eb34e677fb3c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/034f4b50-04ff-4f8b-9f20-eb34e677fb3c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e6fd6ab1-4f34-455d-86cb-2bcd9613c449.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e6fd6ab1-4f34-455d-86cb-2bcd9613c449/storage_v2/_src_/schema/aidev.7SaIBQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e6fd6ab1-4f34-455d-86cb-2bcd9613c449/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e6fd6ab1-4f34-455d-86cb-2bcd9613c449/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e6fd6ab1-4f34-455d-86cb-2bcd9613c449/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e6fd6ab1-4f34-455d-86cb-2bcd9613c449/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/QnaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/QnaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_Reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_Reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_Reply.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_Reply.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Comment$CommentBuilder.class.uniqueId8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Comment.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentDto.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentRepository.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentRequest.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentResponse.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentService.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/spring-configuration-metadata.json.uniqueId1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/dto/QnaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/dto/QnaDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/QnaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/QnaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.th.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,12 +111,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Public/Downloads/watchapedia_springproject/WatchaPedia/src/main/resources/templates/4_comment/search",
+    "last_opened_file_path": "C:/Users/gnstj/OneDrive/바탕 화면/송훈섭/watchapedia_springproject/WatchaPedia",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "a9845ed5cb4f555d8bf3130cbca3cb05",
+    "spring.configuration.checksum": "a76983afbf8cf4a11aae498b4e1085af",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -130,8 +158,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.WatchaPediaApplication (2)">
+  <component name="RunManager" selected="Spring Boot.WatchaPediaApplication (1)">
     <configuration name="WatchaPediaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="DEBUG_MODE" value="true" />
       <module name="com.watcha.WatchaPedia.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.watcha.watchapedia.WatchaPediaApplication" />
       <method v="2">
@@ -152,6 +181,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.WatchaPediaApplication" />
+      <item itemvalue="Spring Boot.WatchaPediaApplication (1)" />
+      <item itemvalue="Spring Boot.WatchaPediaApplication (2)" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -179,6 +213,7 @@
       <workItem from="1673431189350" duration="261000" />
       <workItem from="1673738842977" duration="12126000" />
       <workItem from="1673825188006" duration="6154000" />
+      <workItem from="1673869365806" duration="8587000" />
     </task>
     <servers />
   </component>
