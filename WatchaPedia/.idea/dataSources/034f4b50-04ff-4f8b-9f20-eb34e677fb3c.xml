@@ -1664,16 +1664,16 @@ watcha1234|schema||admin||UPDATE|G</Grants>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="392" parent="316" name="comm_img">
+    <column id="392" parent="316" name="comm_username">
       <DasType>varchar(100)|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="393" parent="316" name="comm_username">
-      <DasType>varchar(100)|0s</DasType>
+    <column id="393" parent="316" name="comm_detext">
+      <DasType>varchar(1000)|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="394" parent="316" name="comm_detext">
-      <DasType>varchar(1000)|0s</DasType>
+    <column id="394" parent="316" name="comm_img">
+      <DasType>varchar(2000)|0s</DasType>
       <Position>10</Position>
     </column>
     <index id="395" parent="316" name="PRIMARY">

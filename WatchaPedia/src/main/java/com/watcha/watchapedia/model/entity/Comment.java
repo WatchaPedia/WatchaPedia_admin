@@ -26,6 +26,7 @@ public class Comment {
     private Long commContentIdx; // qna 등록
     @Column(length = 200)
     private LocalDateTime commRegDate; // qna 상태
+    @Column(length = 2000)
     private String commImg;
     private String commDetext;
     private String commUsername;
