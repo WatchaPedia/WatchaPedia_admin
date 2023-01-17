@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<thlogic>
+    <attr sel="#tv-table" th:remove="all-but-first">
+        <attr sel=".tv-tr" th:each="tv : ${tvs}">
+            <attr sel="td.tv-idx" th:text="${tv.tvIdx}"></attr>
+            <attr sel="td.tv-title" th:text="${tv.tvTitle}"/>
+            <attr sel="td.tv-channel" th:text="${tv.tvChannel}"/>
+            <attr sel="td.tv-making-date" th:text="${tv.tvMakingDate}"/>
+            <attr sel="td.tv-genre" th:text="${tv.tvGenre}" />
+            <attr sel="td.tv-country" th:text="${tv.tvCountry}"/>
+        </attr>
+    </attr>
+</thlogic>

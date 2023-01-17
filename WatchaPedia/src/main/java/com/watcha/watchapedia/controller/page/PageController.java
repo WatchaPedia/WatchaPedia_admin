@@ -16,6 +16,7 @@ import com.watcha.watchapedia.model.repository.QnaRepository;
 import com.watcha.watchapedia.model.repository.UserRepository;
 import com.watcha.watchapedia.service.CommentService;
 import com.watcha.watchapedia.service.QnaService;
+import com.watcha.watchapedia.service.TvService;
 import com.watcha.watchapedia.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -128,10 +129,15 @@ public class PageController {
     }
 
 
+
+
+    private final TvService tvService;
     @GetMapping(path="/contents/tv")
-    public ModelAndView ctv(){
-        return new ModelAndView("/3_contents/tv/tv");
+    public String tv(ModelMap map){
+        map.addAttribute("tvs", tvService.searchTvs());
+        return "/3_contents/tv/tv";
     }
+
 
     @GetMapping(path="/contents/tvEdit")
     public ModelAndView tvEdit(){

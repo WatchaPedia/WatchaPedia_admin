@@ -35,8 +35,10 @@ public class QnaService {
     }
 
     public void saveQna(QnaDto dto){
-        qnaRepository.findById(dto.qnaIdx());
-        qnaRepository.save(dto.toEntity());
+        Qna qna = qnaRepository.getReferenceById(dto.qnaIdx());
+//        qnaRepository.save(dto.toEntity());
+        qnaRepository.save(qna);
+
     }
 
 
@@ -44,7 +46,7 @@ public class QnaService {
         try{
             Qna qna = qnaRepository.getReferenceById(qnaIdx);
             if(dto.qnaDtext() != null) { qna.setQnaDtext(dto.qnaDtext());}
-//            if(dto.qnaUserid() != null) { qna.setQnaUserid(dto.qnaUserid());}
+            if(dto.qnaUserid() != null) { qna.setQnaUserid(dto.qnaUserid());}
         }catch(EntityNotFoundException e){
             log.warn("게시글 업데이트 실패. 게시글을 찾을 수 없음 - dto: {}", dto);
         }
