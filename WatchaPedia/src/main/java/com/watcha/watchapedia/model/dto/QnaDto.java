@@ -12,23 +12,24 @@ public record QnaDto(
         String qnaDtext
 ) {
     public static QnaDto of(
-            Long qnaIdx,
+
             String qnaText, Long qnaUserIdx, String qnaUserid,
             LocalDateTime qnaRegDate, String qnaAttach, String qnaStatus,
+            Long qnaAuserIdx,
             String qnaAuserid, String qnaAtext,   LocalDateTime qnaAregDate,
             String qnaAnswer, String qnaName, String qnaFile,
             String qnaDtext
     ){
 
-        return new QnaDto(qnaIdx, qnaText, qnaUserIdx, qnaUserid,
-                qnaRegDate,qnaAttach,qnaStatus,null,qnaAuserid,qnaAtext, qnaAregDate, qnaAnswer,qnaName,qnaFile,qnaDtext
+        return new QnaDto(null, qnaText, qnaUserIdx, qnaUserid,
+                qnaRegDate,qnaAttach,qnaStatus,qnaAuserIdx,qnaAuserid,qnaAtext, qnaAregDate, qnaAnswer,qnaName,qnaFile,qnaDtext
         );
     }
 
     public static QnaDto of(
             Long qnaIdx, String qnaText, Long qnaUserIdx, String qnaUserid,
             LocalDateTime qnaRegDate, String qnaAttach, String qnaStatus,
-            Long qnaAuserIdx, String qnaAuserid, String qnaAtext,   LocalDateTime qnaAregDate,
+            Long qnaAuserIdx, String qnaAuserid, String qnaAtext, LocalDateTime qnaAregDate,
             String qnaAnswer, String qnaName, String qnaFile,
             String qnaDtext
     ){

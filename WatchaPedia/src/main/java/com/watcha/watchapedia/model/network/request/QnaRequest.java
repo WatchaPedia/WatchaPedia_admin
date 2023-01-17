@@ -23,6 +23,7 @@ public record QnaRequest(
     }
 
     public QnaDto toDto() {
+        System.out.println();
         return QnaDto.of(
                 qnaIdx, qnaText, qnaUserIdx, qnaUserid,
                 qnaRegDate,qnaAttach,qnaStatus,qnaAuserIdx,qnaAuserid,qnaAtext, qnaAregDate, qnaAnswer,qnaName,qnaFile,qnaDtext

@@ -101,11 +101,9 @@ public class PageController {
 
 
    @PostMapping("/qna/{qnaIdx}/qnaview")
-   public String updateQna(@PathVariable Long qnaIdx, QnaRequest qnaRequest){
-
-        qnaService.updateQna(qnaIdx, qnaRequest.toDto());
-//        return "redirect:/qna/"+ qnaIdx;
-       return "/2_qna/QnA_View";
+   public String updateQna(@PathVariable Long qnaIdx, @RequestParam(required = false)String qnaText){
+        qnaService.updateQna(qnaIdx, qnaText);
+       return "redirect:/qna/{qnaIdx}/qnaview";
    }
 
     @GetMapping(path="/contents/book")

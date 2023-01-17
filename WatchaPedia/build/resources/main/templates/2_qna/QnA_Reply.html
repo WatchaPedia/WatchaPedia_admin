@@ -41,8 +41,9 @@
                         Q&A
                     </div>
                     <div class="card-body">
-                        <div>문의 내용
+                        <div>
                             <div id="QnABox">
+                                <p class="qna-text">문의 내용 : </p>
                                 <p class="qna-userid">사용자 : </p>
                                 <p class="qna-reg-date"><time id="qna-reg-date">문의 날짜 : </time></p>
                                 <p class="qna-file">첨부파일 : </p>
@@ -52,7 +53,7 @@
 <!--                            <form id="QQ" th:action="'/qna/' + ${qna.qnaIdx} + '/qnaview'" th:object="${qna}" method="post" value="put">-->
                             <form id="QQ">
                                 답변:
-                                <input type="text" id="QBox" style="width: 100%; height: 250px;" class="Qna_answer"  required >
+                                <input type="text" id="QBox" style="width: 100%; height: 250px;" class="Qna_answer" name="qnaText"  required >
                                 <div id="btn0">
                                     <button id="btn1" type="submit">답변완료</button>
                                     <button id="btn2" onclick="location.href='/qna'">뒤로가기</button>

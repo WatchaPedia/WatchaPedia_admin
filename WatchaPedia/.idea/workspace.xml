@@ -5,32 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/dto/TvDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Tv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/TvRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/TvResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/TvRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/TvService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv.th.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/034f4b50-04ff-4f8b-9f20-eb34e677fb3c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/034f4b50-04ff-4f8b-9f20-eb34e677fb3c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/QnaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/QnaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_Reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_Reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_Reply.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_Reply.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.th.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QnaService.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/spring-configuration-metadata.json.uniqueId2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/dto/QnaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/dto/QnaDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/QnaRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/QnaRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/QnaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/QnaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.th.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +94,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Public/Downloads/watchapedia_springproject/WatchaPedia",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/study/Spring/day5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -202,7 +197,7 @@
       <workItem from="1673738842977" duration="12126000" />
       <workItem from="1673825188006" duration="6154000" />
       <workItem from="1673869365806" duration="8587000" />
-      <workItem from="1673912512580" duration="7657000" />
+      <workItem from="1673912512580" duration="14419000" />
     </task>
     <servers />
   </component>
