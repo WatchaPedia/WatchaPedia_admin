@@ -29,16 +29,16 @@ public class Qna {
     private Long qnaAuserIdx; // 응답 번호
     @Column(length = 200)
     private String qnaAuserid; // 응답 아이디
-    private String qnaAtext; // 응답 내용
+    private String qnaAtext; // 설명
     private LocalDateTime qnaAregDate; // 응답 날짜
     @Column(length = 200)
     private String qnaAnswer; // 답변여부
     @Column(length = 100)
-    private String qnaName; // 답변여부
+    private String qnaName; // qna 이메일
     @Column(length = 2000)
-    private String qnaFile;
+    private String qnaFile; // 첨부파일
     @Column(length = 2000)
-    private String qnaDtext;
+    private String qnaDtext; // 답변 내용
 
     protected Qna() {
     }

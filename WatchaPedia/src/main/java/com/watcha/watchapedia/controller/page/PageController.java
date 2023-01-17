@@ -62,6 +62,7 @@ public class PageController {
         return new ModelAndView("/1_notice/Notice_Write");
     }
 
+    // qna 리스트
     private final QnaService qnaService;
     @GetMapping(path="/qna")
     public String qna(ModelMap map){
@@ -69,6 +70,7 @@ public class PageController {
         return "/2_qna/QnA";
     }
 
+    // qna 리스트 답글 작성 부분
     final QnaRepository qnaRepository;
     @GetMapping(path="/qna/{qnaIdx}")
     public String qnadetail(@PathVariable Long qnaIdx, ModelMap map){
@@ -78,18 +80,10 @@ public class PageController {
         return "/2_qna/QnA_Reply";
     }
 
+    // qna 답글 완료 부분
     @GetMapping("/qnaview")
     public String QnaView(ModelMap map){
         map.addAttribute("view" , FormStatus.CREATE);
-        return "/2_qna/QnA_View";
-    }
-
-
-    @GetMapping("/qna/{qnaIdx}/qnaview")
-    public String updateQnaVieW(@PathVariable Long qnaIdx, ModelMap map){
-        QnaResponse qna = QnaResponse.from(qnaService.getQna(qnaIdx));
-        map.addAttribute("qna", qna);
-        map.addAttribute("formStatus", FormStatus.UPDATE);
         return "/2_qna/QnA_View";
     }
 
@@ -99,12 +93,25 @@ public class PageController {
         return "redirect:/qna";
     }
 
+    // qna 답글 완료 데이터 보내기
+    @GetMapping("/qna/{qnaIdx}/qnaview")
+    public String updateQnaVieW(@PathVariable Long qnaIdx, ModelMap map){
+        QnaResponse qna = QnaResponse.from(qnaService.getQna(qnaIdx));
+        map.addAttribute("qna", qna);
+        map.addAttribute("formStatus", FormStatus.UPDATE);
+        return "/2_qna/QnA_View";
+    }
 
+    // qna 답글 완료 데이터 보내기
    @PostMapping("/qna/{qnaIdx}/qnaview")
    public String updateQna(@PathVariable Long qnaIdx, @RequestParam(required = false)String qnaText){
         qnaService.updateQna(qnaIdx, qnaText);
        return "redirect:/qna/{qnaIdx}/qnaview";
    }
+    /*   @RequestParam Spring MVC에서 쿼리 스트링 정보를 쉽게 가져오는데 사용할 수 있다,
+    적용된 필드가 없으면 에러가 발생할 수 있지만 @RequestParam(required = false)를 사용하여
+    required 속성을 추가하면 해당 필드가 쿼리스트링에 존재하지 않아도 예외가 발생하지 않는다
+     */
 
     @GetMapping(path="/contents/book")
     public ModelAndView cbook(){
@@ -128,7 +135,7 @@ public class PageController {
 
 
 
-
+    // Tv 리스트 출력
     private final TvService tvService;
     @GetMapping(path="/contents/tv")
     public String tv(ModelMap map){
@@ -167,6 +174,7 @@ public class PageController {
         return new ModelAndView("/4_comment/reported/reportdetail_reply");
     }
 
+    // comment 리스트 출력
     private final CommentService commentService;
     @GetMapping(path="/comment/search_list")
     public String comment(ModelMap map){
@@ -174,7 +182,7 @@ public class PageController {
         return "/4_comment/search/commentSearchList";
     }
 
-
+    // commentDetail 출력 (내용, 이미지)
     final CommentRepository commentRepository;
     @GetMapping(path="/comment/{commentIdx}")
     public String commentdetail(@PathVariable Long commentIdx, ModelMap map){
