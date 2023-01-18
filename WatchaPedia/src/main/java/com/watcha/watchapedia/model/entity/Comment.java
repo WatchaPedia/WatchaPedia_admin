@@ -27,9 +27,9 @@ public class Comment {
     @Column(length = 200)
     private LocalDateTime commRegDate; // qna 상태
     @Column(length = 2000)
-    private String commImg;
-    private String commDetext;
-    private String commUsername;
+    private String commImg; // qna 상세 페이지 이미지
+    private String commDetext; // qna 상세 페이지 내용
+    private String commUsername; // 코멘트 유저 이름
 
 
 

@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity(name = "tbTv")
@@ -48,21 +47,21 @@ public class Tv {
                String tvCountry, String tvAge, String tvPeople, String tvSummary,
                String tvWatch, String tvGallery, String tvVideo,
                String tvBackImg) {
-        this.tvIdx = tvIdx;
-        this.tvThumbnail = tvThumbnail;
-        this.tvTitle = tvTitle;
+        this.tvIdx = tvIdx; // 번호
+        this.tvThumbnail = tvThumbnail; // 섬네일
+        this.tvTitle = tvTitle; // 제목
         this.tvTitleOrg = tvTitleOrg;
-        this.tvMakingDate = tvMakingDate;
-        this.tvChannel = tvChannel;
-        this.tvGenre = tvGenre;
-        this.tvCountry = tvCountry;
+        this.tvMakingDate = tvMakingDate; // 만들어진 날짜
+        this.tvChannel = tvChannel; // 채널
+        this.tvGenre = tvGenre; // 장르
+        this.tvCountry = tvCountry; // 국가
         this.tvAge = tvAge;
-        this.tvPeople = tvPeople;
-        this.tvSummary = tvSummary;
-        this.tvWatch = tvWatch;
-        this.tvGallery = tvGallery;
-        this.tvVideo = tvVideo;
-        this.tvBackImg = tvBackImg;
+        this.tvPeople = tvPeople; // 출연진
+        this.tvSummary = tvSummary; // 요약
+        this.tvWatch = tvWatch; // 시청
+        this.tvGallery = tvGallery; // 사진
+        this.tvVideo = tvVideo; // 영상
+        this.tvBackImg = tvBackImg; // 이미지
     }
 
     public static Tv of(Long tvIdx, String tvThumbnail, String tvTitle, String tvTitleOrg,

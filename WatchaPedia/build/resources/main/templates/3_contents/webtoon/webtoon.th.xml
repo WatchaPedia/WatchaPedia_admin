@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thlogic>
+    <attr sel="#datatablesSimple" th:object="${webtoon}">
+        <attr sel="#webtoon-body" th:remove="all-but-first">
+            <attr sel="#webtoonlist" th:each="webtoons:${webtoon}">
+                <attr sel="#web_idx" th:text="${webtoons.webIdx}"/>
+                <attr sel="#web_title" th:href="${webtoondetail}" th:text="${webtoons.webTitle}"/>
+                <attr sel="#web_writer" th:text="${webtoons.webWriter}"/>
+                <attr sel="#web_ser_detail" th:text="${webtoons.webSerDetail}"/>
+                <attr sel="#web_ser_day" th:text="${webtoons.webSerDay}"/>
+                <attr sel="#web_genre" th:text="${webtoons.webGenre}"/>
+            </attr>
+        </attr>
+    </attr>
+</thlogic>

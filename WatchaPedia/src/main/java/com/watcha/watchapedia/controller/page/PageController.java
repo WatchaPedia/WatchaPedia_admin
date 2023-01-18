@@ -4,6 +4,7 @@ import com.watcha.watchapedia.dto.UserDto;
 import com.watcha.watchapedia.dto.response.UserResponse;
 import com.watcha.watchapedia.model.dto.CommentDto;
 import com.watcha.watchapedia.model.dto.QnaDto;
+import com.watcha.watchapedia.model.dto.WebtoonDto;
 import com.watcha.watchapedia.model.entity.Comment;
 import com.watcha.watchapedia.model.entity.Qna;
 import com.watcha.watchapedia.model.entity.User;
@@ -14,12 +15,10 @@ import com.watcha.watchapedia.model.network.response.QnaResponse;
 import com.watcha.watchapedia.model.repository.CommentRepository;
 import com.watcha.watchapedia.model.repository.QnaRepository;
 import com.watcha.watchapedia.model.repository.UserRepository;
-import com.watcha.watchapedia.service.CommentService;
-import com.watcha.watchapedia.service.QnaService;
-import com.watcha.watchapedia.service.TvService;
-import com.watcha.watchapedia.service.UserService;
+import com.watcha.watchapedia.service.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -111,6 +110,7 @@ public class PageController {
     /*   @RequestParam Spring MVC에서 쿼리 스트링 정보를 쉽게 가져오는데 사용할 수 있다,
     적용된 필드가 없으면 에러가 발생할 수 있지만 @RequestParam(required = false)를 사용하여
     required 속성을 추가하면 해당 필드가 쿼리스트링에 존재하지 않아도 예외가 발생하지 않는다
+    String qnaText를 html 부분 name = qnaText로 두고 해당 정보를 qnaview로 넘겨줄 수 있다
      */
 
     @GetMapping(path="/contents/book")
@@ -149,9 +149,12 @@ public class PageController {
         return new ModelAndView("/3_contents/tv/tvEdit");
     }
 
+    private final WebtoonDtoService webtoonDtoService;
     @GetMapping(path="/contents/webtoon")
-    public ModelAndView cwebtoon(){
-        return new ModelAndView("/3_contents/webtoon/webtoon");
+    public String cwebtoon(Model model){
+        List<WebtoonDto> webtoonList = webtoonDtoService.list();
+        model.addAttribute("webtoon", webtoonList);
+        return "/3_contents/webtoon/webtoon";
     }
 
     @GetMapping(path="/contents/webtoonEdit")
