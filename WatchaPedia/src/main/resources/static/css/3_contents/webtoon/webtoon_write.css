@@ -212,7 +212,7 @@ img {
 .card {
   display: flex;
   width: 100%;
-  height: 770px;
+  height: 600px;
 }
 
 #inputbox,
@@ -224,7 +224,7 @@ img {
   display: flex;
   padding: 5px !important;
 }
-#content {
+#webSummary {
   margin: 0 auto 0 10px;
   width: 95%;
   height: 80px;
@@ -322,7 +322,7 @@ img {
 .conBox2 {
   display: flex;
   margin: 0 auto;
-  height: 400px;
+
 }
 
 #po,
@@ -331,9 +331,8 @@ img {
 }
 
 #poBox {
-  margin: 5px 10px;
   width: 95%;
-  height: 140px;
+  height: 175px;
   border: 1px solid rgb(228, 223, 223);
 }
 #pobtn {
@@ -360,15 +359,14 @@ img {
 
 #poBox2 {
   margin: 1px auto;
-  width: 320px;
-  height: 70px;
+  width: 80%;
+  height: 90px;
   border: 1px solid rgb(228, 223, 223);
 }
 
 #baBox {
-  margin: 5px 10px;
   width: 95%;
-  height: 140px;
+  height: 175px;
   border: 1px solid rgb(228, 223, 223);
 }
 
@@ -397,15 +395,15 @@ img {
 
 #baBox2 {
   margin: 1px auto;
-  width: 320px;
-  height: 70px;
+  width: 80%;
+  height: 90px;
   border: 1px solid rgb(228, 223, 223);
 }
 
 #MBox {
   display: flex;
-  width: 12%;
-  margin: 0px auto;
+  justify-content: center;
+  margin:10px;
 }
 
 #btn1,
@@ -424,7 +422,7 @@ img {
 
 #wgo {
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 39px;
 }
 
 #wgo > div:first-child {
@@ -654,4 +652,10 @@ label{
 
 #btn1, #btn2{
   border: solid 1px black;
+}
+
+#into{
+  width: 100px;
+  padding: 5px;
+  margin: 0 1%;
 }

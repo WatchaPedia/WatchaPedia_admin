@@ -9,8 +9,8 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
+  thymeleaf3.decoupled-logic: true
 server:
-  port: 8888
+  port: 8123
 
 

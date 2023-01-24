@@ -63,16 +63,25 @@
                                             <th>제작국가</th>
                                         </tr>
                                     </tfoot>
-                                    <tbody id="itemList">
-                                        <tr v-for="dto in itemList">
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                    <tbody id="movietbody" th:remove="all-but-first">
+                                        <tr id="movietr" th:each="movie : ${movies}">
+                                            <td id="movIdx" th:text="${movie.movIdx}">Tiger Nixon</td>
+                                            <td id="movTitle" th:text="${movie.movTitle}">System Architect</td>
+                                            <td id="movPeople" th:text="${movie.movPeople}">Edinburgh</td>
+                                            <td id="movMakingDate" th:text="${movie.movMakingDate}">61</td>
+                                            <td id="movGenre" th:text="${movie.movGenre}">2011/04/25</td>
+                                            <td id="movCountry" th:text="${movie.movCountry}">$320,800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>63</td>
+                                            <td>2011/07/25</td>
+                                            <td>$170,750</td>
                                         </tr>
                                     </tbody>
+
                                 </table>
                             </div>
                             <div id="MBox">

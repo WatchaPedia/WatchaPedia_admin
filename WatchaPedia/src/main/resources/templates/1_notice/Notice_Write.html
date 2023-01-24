@@ -8,25 +8,25 @@
         <meta name="author" content="" />
         <title>Dashboard - SB Admin</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <link href="../css/styles.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-        <link href="/css/1_notice/Notice_Write.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="/css/1_notice/Notice_Write.css">
+
         <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <script src="/js/Notice_Write.js"></script>
         <style>
-            #tarea{
+            #ntcText{
                 width : 500px;
                 height: 400px;
                 resize: none;
             }
-            #btnmsg{
+            #ntcBtnText{
                 width : 450px;
                 height: 50px;
             }
-
-
         </style>
+
     </head>
     <body class="sb-nav-fixed">
     <!-- topbar.html -->
@@ -54,32 +54,31 @@
                                 <i class="fas fa-table me-1"></i>
                                 공지사항
                             </div>
-                            <form action="#" name="regform" id="regform" method="post" onsubmit="return sendit()">
-                                <input type="text"  name="title" class="fo" id = "title"  placeholder="제목" onfocus="this.placeholder=''" onblur="this.placeholder='제목'" >
+                            <form action="/noticeOk"  id="frm" method="post" enctype="multipart/form-data">
+                                <input type="text" class="fo" name="ntcTitle" id = "ntcTitle"  placeholder="제목을 입력하세요." onfocus="this.placeholder=''" onblur="this.placeholder='제목'" >
 
                                 <div class="centerdiv">
                                     <p>
                                     <span>사진</span>
                                     </p>
                                     <p class="imgpdiv">
-                                        <input type="file" onchange="readURL(this);" >
+                                        <input type="file" id="file" name="file" onchange="readURL(this);" >
                                         <br /><br />
                                         <img id="preview" />
                                     </p>
                                     <p>
                                     <span>내용</span>
                                     </p>
-                                    <p><textarea id="tarea" placeholder="공지할 내용을 입력해 주세요."> </textarea></p>
+                                    <p><textarea id="ntcText" name="ntcText" placeholder="공지할 내용을 입력해 주세요."> </textarea></p>
                                     <p>
                                     <span>버튼</span>
                                     </p>
-                                    <p><input id="btnmsg"></input><input id="colorpick" type="color"></p>
+                                    <p><input type="text" name="ntcBtnText" id="ntcBtnText"  /><input id="spoid" type="color"/></p>
+                                    <input type="text" name="ntcBtnColor" id="ntcBtnColor" hidden/>
                                 </div>
-
-
                             </form>
                             <div id="btn0">
-                                <button class='butn' id="btn1" onclick="location.href='/notice'">작성하기</button>
+                                <button class='butn' id="btn1" onclick="submitCheck()">작성하기</button>
                                 <button class='butn' id="btn2" onclick="location.href='/notice'">취소하기</button>
                             </div>
                         </div>
@@ -97,13 +96,13 @@
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="../js/scripts.js"></script>
-        <script src="../js/Notice_Write.js"></script>
+        <script src="/js/scripts.js"></script>
+        <script defer src="/js/Notice_Write.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/chart-area-demo.js"></script>
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="../js/datatables-simple-demo.js"></script>
+        <script src="/js/datatables-simple-demo.js"></script>
 
     </body>
 </html>

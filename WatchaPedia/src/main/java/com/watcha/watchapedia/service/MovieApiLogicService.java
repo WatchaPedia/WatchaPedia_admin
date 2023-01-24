@@ -4,7 +4,7 @@ import com.watcha.watchapedia.model.entity.Movie;
 import com.watcha.watchapedia.model.network.Header;
 import com.watcha.watchapedia.model.network.request.MovieApiRequest;
 import com.watcha.watchapedia.model.network.response.MovieApiResponse;
-import com.watcha.watchapedia.repository.MovieRepository;
+import com.watcha.watchapedia.model.repository.MovieRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +29,7 @@ public class MovieApiLogicService extends BaseService<MovieApiRequest, MovieApiR
                 .movAge(movie.getMovAge())
                 .movPeople(movie.getMovPeople())
                 .movSummary(movie.getMovSummary())
-                .movGallery(movie.getMovGenre())
+                .movGallery(movie.getMovGallery())
                 .movVideo(movie.getMovVideo())
                 .movWatch(movie.getMovWatch())
                 .movBackImg(movie.getMovBackImg())
@@ -51,7 +51,7 @@ public class MovieApiLogicService extends BaseService<MovieApiRequest, MovieApiR
                 .movAge(movieApiRequest.getMovAge())
                 .movPeople(movieApiRequest.getMovPeople())
                 .movSummary(movieApiRequest.getMovSummary())
-                .movGallery(movieApiRequest.getMovGenre())
+                .movGallery(movieApiRequest.getMovGallery())
                 .movVideo(movieApiRequest.getMovVideo())
                 .movWatch(movieApiRequest.getMovWatch())
                 .movBackImg(movieApiRequest.getMovBackImg())
@@ -109,11 +109,11 @@ public class MovieApiLogicService extends BaseService<MovieApiRequest, MovieApiR
 
     public Header<List<MovieApiResponse>> search(){
         List<Movie> movies = baseRepository.findAll();
-        List<MovieApiResponse> userApiResponses = movies.stream().map(
+        List<MovieApiResponse> movieApiResponse = movies.stream().map(
                 movie -> response(movie)).collect(Collectors.toList());
 
 
-        return Header.OK(userApiResponses);
+        return Header.OK(movieApiResponse);
     }
 
 

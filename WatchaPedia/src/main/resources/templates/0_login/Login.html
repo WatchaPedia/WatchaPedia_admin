@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../../css/0_login/Login.css" />
-    <script defer src="../../js/Login.js"></script>
+    <link rel="stylesheet" href="/css/0_login/Login.css" />
+    <script defer src="/js/Login.js"></script>
     <script src="https://unpkg.com/vue@3"></script>
   </head>
 
@@ -15,7 +15,7 @@
       <section>
         <div id="icon">
           <a href="Login.html"
-            ><img src="../../assets/img/그림1.png" alt="메인"
+            ><img src="/assets/img/그림1.png" alt="메인"
           /></a>
         </div>
 
@@ -23,7 +23,7 @@
           <div id="bor2">
             <div>
               <p id="main">
-                <img src="../../assets/img/그림2.png" alt="" />Admin Login
+                <img src="/assets/img/그림2.png" alt="" />Admin Login
               </p>
             </div>
             <hr />
@@ -32,16 +32,16 @@
               name="regform"
               id="regform"
               method="post"
-              onsubmit="return sendit()"
+              action="/loginOk"
             >
               <div id="bor3">
                 <div class="te"><p>관리자 아이디</p></div>
                 <div>
                   <input
                     type="text"
-                    name="Adminid"
+                    name="adminId"
                     class="fo"
-                    id="Adminid"
+                    id="adminId"
                     placeholder="아이디를 입력하세요."
                     onfocus="this.placeholder=''"
                     onblur="this.placeholder='아이디를 입력하세요'"
@@ -53,9 +53,9 @@
                 <div>
                   <input
                     type="password"
-                    name="Adminpw"
+                    name="adminPw"
                     class="fo"
-                    id="Adminpw"
+                    id="adminPw"
                     placeholder="비밀번호를 입력하세요"
                     onfocus="this.placeholder=''"
                     onblur="this.placeholder='비밀번호를 입력하세요'"

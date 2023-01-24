@@ -92,7 +92,7 @@
             <div class="container-fluid px-4">
                 <h1 class="mt-4">영화</h1>
 
-                <div class="card mb-4">
+                <div class="card">
                     <div class="card-header">
                         <i class="fas fa-table me-1"></i>
                         영화
@@ -449,6 +449,7 @@
                                         style="margin: 10px 0 0 0"
                                 />
                                 <select
+                                        id="movGenre"
                                         class="country"
                                         multiple="true"
                                         style="
@@ -459,7 +460,7 @@
                         border-left-width: 0px;
                         border: 1px solid rgb(255, 255, 255);
                       "
-                                        id="movGenre"
+
                                 >
                                     <option value="" disabled hidden>장르</option>
                                     <option value="액션">액션</option>
@@ -516,7 +517,7 @@
                                 <select name="age" class="inBox1" id="movAge" onchange="changeValue(this)">
                                     <option value="" disabled selected>연령등급</option>
                                     <option value="전체 관람가">전체관람가</option>
-                                    <option value="12세 관람가">12세 관람가</option>가
+                                    <option value="12세 관람가">12세 관람가</option>
                                     <option value="15세 관람가">15세 관람가</option>
                                     <option value="청소년 관람불가">청소년 관람불가</option>
                                     <option value="제한 상영가">제한 상영가</option>
@@ -542,18 +543,156 @@
                             <div>
                                 <input type="text" id="movSummary" placeholder="내용" />
                             </div>
+                            <div id="wgo">
+                                <div>감상가능한 곳</div>
+                                <div class="wgo2">
+                                    <div class="wBox_1">
+                                        <div class="wBox2">
+                                            <div>
+                                                <select
+                                                        name="platform"
+                                                        id="platform"
+                                                        onchange="createOtt(this.value)"
+                                                        class="vBox3"
+                                                >
+                                                    <option value="" disabled selected>플랫폼</option>
+                                                    <option value="티빙">티빙</option>
+                                                    <option value="웨이브">웨이브</option>
+                                                    <option value="디즈니플러스">디즈니플러스</option>
+                                                    <option value="왓챠">왓챠</option>
+                                                    <option value="넷플릭스">넷플릭스</option>
+                                                    <option value="쿠팡플레이">쿠팡플레이</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <input
+                                                        type="text"
+                                                        placeholder="URL주소"
+                                                        class="wBox3"
+                                                        id="vurl"
+                                                />
+                                            </div>
+                                        </div>
+                                        <img
+                                                onclick="ottVisible()"
+                                                id="ott_plus_icon"
+                                                src="/assets/img/plus_outline_icon.png"
+                                                alt=""
+                                        />
+                                    </div>
+                                    <div class="wBox_2">
+                                        <div id="tving_box">
+                                            <img
+                                                    class="ott_img"
+                                                    src="https://an2-img.amz.wtchn.net/image/v2/AmxtezC90nGQwOmwj0MCPA.png?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKd0lqb2lMM1l5TDNOMGIzSmxMM1ZwYldGblpTOHhOalV3TXpRMk9UQXhNVE0xTlRBNU16TTRJbjAudWd0X0VwOHg1ZDBnZTBTRjhiNkhrUG52Qzd5cndhRnl6bEt2dEZzVGhzTQ"
+                                                    alt=""
+                                            />
+                                            <div class="ott_name">티빙
+                                                <input type="hidden" id="tving_url" value="">
+                                            </div>
+                                            <div id="tving_box_X" onclick="delval('tving_url')">
+                                                <img
+                                                        class="x_icon"
+                                                        src="/assets/img/x_icon.png"
+                                                        alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div id="wave_box">
+                                            <img
+                                                    class="ott_img"
+                                                    src="https://an2-glx.amz.wtchn.net/images/ex_wavve_logo_square.png"
+                                                    alt=""
+                                            />
+                                            <div class="ott_name">웨이브
+                                                <input type="hidden" id="wave_url" value=""></div>
+                                            <div id="wave_box_X" onclick="delval('wave_url')">
+                                                <img
+                                                        class="x_icon"
+                                                        src="/assets/img/x_icon.png"
+                                                        alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div id="disney_box">
+                                            <img
+                                                    class="ott_img"
+                                                    src="https://an2-img.amz.wtchn.net/image/v2/ryWIr0pNWgEBU-qIsDRsYw.png?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKd0lqb2lMM1l5TDNOMGIzSmxMM1ZwYldGblpTOHhOalF5TURZME16SXlPVEUxT0RJNE9EazFJbjAuVEM5ZjBaTnBlUmM5MklUTWdVakxmM3BieElmaTFHLTNWc0d2RUxqa3FDSQ"
+                                                    alt=""
+                                            />
+                                            <div class="ott_name">디즈니+
+                                                <input type="hidden" id="disney_url" value=""></div>
+                                            <div id="disney_box_X" onclick="delval('disney_url')">
+                                                <img
+                                                        class="x_icon"
+                                                        src="/assets/img/x_icon.png"
+                                                        alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div id="watcha_box">
+                                            <img
+                                                    class="ott_img"
+                                                    src="https://an2-glx.amz.wtchn.net/images/ex_watcha_logo_square.png"
+                                                    alt=""
+                                            />
+                                            <div class="ott_name">왓챠
+                                                <input type="hidden" id="watcha_url" value=""></div>
+                                            <div id="watcha_box_X" onclick="delval('watcha_url')">
+                                                <img
+                                                        class="x_icon"
+                                                        src="/assets/img/x_icon.png"
+                                                        alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div id="netflix_box">
+                                            <img
+                                                    class="ott_img"
+                                                    src="https://an2-glx.amz.wtchn.net/images/ex_netflix_logo_square.png"
+                                                    alt=""
+                                            />
+                                            <div class="ott_name">넷플릭스
+                                                <input type="hidden" id="netflix_url" value=""></div>
+                                            <div id="netflix_box_X" onclick="delval('netflix_url')">
+                                                <img
+                                                        class="x_icon"
+                                                        src="/assets/img/x_icon.png"
+                                                        alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div id="coupang_box">
+                                            <img
+                                                    class="ott_img"
+                                                    src="https://play-lh.googleusercontent.com/K0qCnn2q_LsH9MlnkWjnsQ22p52G8c3KH6WdnxIdcUdUwlwxpdpOX_34GWGxQQtA504b"
+                                                    alt=""
+                                            />
+                                            <div class="ott_name">쿠팡플레이
+                                                <input type="hidden" id="coupang_url" value=""></div>
+                                            <div id="coupang_box_X" onclick="delval('coupang_url')">
+                                                <img
+                                                        class="x_icon"
+                                                        src="/assets/img/x_icon.png"
+                                                        alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div id="conBox">
                                 <div class="conzone">
                                     갤러리
-                                    <div class="card1">
-                                        <div id="margin_little">
-                                            <div id="blank_container">
+                                    <div class="card1" >
+                                        <div id="margin_little" >
+                                            <div id="blank_container" >
                                                 <label for="inputFile">파일 선택</label>
                                                 <input
                                                         type="file"
                                                         accept=".jpg, .jpeg, .png, .gif"
                                                         id="inputFile"
-                                                        multiple
+
                                                 />
                                                 <div id="total_file_info">
                                                     <span id="file_count">선택된 파일 없음</span>
@@ -562,31 +701,34 @@
                                                     >KB
                                                 </div>
                                             </div>
-                                            <div id="resultFile">
-                                                <p class="file">파일 끌어다 추가하기</p>
+                                            <div id="resultFile" >
+                                                <p class="file" >파일 끌어다 추가하기</p>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
                                 <div class="conzone">
                                     동영상
                                     <div id="vBox">
-                                        <div class="vBox1">
-                                            <div>
-                                                <input
-                                                        type="text"
-                                                        placeholder="제목(ex.메인예고편, 현장예고편)"
-                                                        class="vBox2"
-                                                />
+                                            <div class="vBox1">
+                                                    <div>
+                                                        <input
+                                                                type="text"
+                                                                placeholder="제목(ex.메인예고편, 현장예고편)"
+                                                                class="vBox2"
+                                                                id="vt0"
+                                                        />
+                                                    </div>
+                                                    <div>
+                                                        <input
+                                                                type="text"
+                                                                placeholder="URL주소"
+                                                                class="vBox2"
+                                                                id="vu0"
+                                                        />
+                                                    </div>
                                             </div>
-                                            <div>
-                                                <input
-                                                        type="text"
-                                                        placeholder="URL주소"
-                                                        class="vBox2"
-                                                />
-                                            </div>
-                                        </div>
                                         <div id="only_flex_box">
                                             <div id="plus" onclick="add()" type="button">
                                                 <img
@@ -597,7 +739,7 @@
                                             </div>
                                             <div id="minus" onclick="minus()" type="button">
                                                 <img
-                                                        id="plus_img"
+                                                        id="minus_img"
                                                         src="../../assets/img/minus_outline_icon.png"
                                                         alt=""
                                                 />
@@ -617,15 +759,18 @@
                             >
                             <div id="poBox">
                                 <label for="pobtn">파일 선택 </label>
+                                <!--당겼을때 출력-->
                                 <input
                                         type="file"
                                         accept=".jpg, .jpeg, .png, .gif"
                                         id="pobtn"
+                                        onchange="readLink(this);"
                                 />
                                 <div id="poBox2">
                                     <p class="file">파일 끌어다 추가하기</p>
                                 </div>
                             </div>
+
                         </div>
                         <div id="ba">
                             배경사진
@@ -633,12 +778,13 @@
                                     style="color: red; font-size: smaller; margin: 0 0 0 37%"
                             >*1개의 파일만 등록가능합니다.</span
                             >
-                            <div id="baBox">
-                                <label for="babtn">파일 선택 </label>
+                            <div id="baBox" >
+                                <label for="babtn">파일 선택</label>
                                 <input
                                         type="file"
                                         accept=".jpg, .jpeg, .png, .gif"
                                         id="babtn"
+                                        onchange="readLink1(this);"
                                 />
                                 <div id="baBox2">
                                     <p class="file">파일 끌어다 추가하기</p>

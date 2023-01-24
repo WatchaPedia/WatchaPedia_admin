@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class MovieApiRequest {
-    private String movIdx;
+    private Long movIdx;
     private String movThumbnail;
     private String movTitle;
     private String movTitleOrg;
