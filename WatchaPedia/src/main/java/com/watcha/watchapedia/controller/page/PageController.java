@@ -4,19 +4,21 @@ import com.watcha.watchapedia.dto.UserDto;
 import com.watcha.watchapedia.dto.response.UserResponse;
 import com.watcha.watchapedia.model.dto.CommentDto;
 import com.watcha.watchapedia.model.dto.QnaDto;
-import com.watcha.watchapedia.model.dto.WebtoonDto;
 import com.watcha.watchapedia.model.entity.Comment;
 import com.watcha.watchapedia.model.entity.Qna;
 import com.watcha.watchapedia.model.entity.User;
 import com.watcha.watchapedia.model.entity.type.FormStatus;
+import com.watcha.watchapedia.model.network.Header;
 import com.watcha.watchapedia.model.network.request.QnaRequest;
 import com.watcha.watchapedia.model.network.response.CommentResponse;
+import com.watcha.watchapedia.model.network.response.MovieApiResponse;
 import com.watcha.watchapedia.model.network.response.QnaResponse;
 import com.watcha.watchapedia.model.repository.CommentRepository;
 import com.watcha.watchapedia.model.repository.QnaRepository;
 import com.watcha.watchapedia.model.repository.UserRepository;
 import com.watcha.watchapedia.service.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -30,6 +32,17 @@ import java.util.Optional;
 @RequestMapping("")
 @RequiredArgsConstructor
 public class PageController {
+    @Autowired
+    public MovieApiLogicService movieApiLogicService;
+
+    @Autowired
+    public TvApiLogicService tvApiLogicService;
+
+    @Autowired
+    public BookApiLogicService bookApiLogicService;
+
+    @Autowired
+    public WebtoonApiLogicService webtoonApiLogicService;
 
     @GetMapping(path="")
     public ModelAndView index(){
@@ -114,53 +127,95 @@ public class PageController {
      */
 
     @GetMapping(path="/contents/book")
-    public ModelAndView cbook(){
-        return new ModelAndView("/3_contents/book/book");
+    public ModelAndView book(){
+        ModelAndView view = new ModelAndView("/3_contents/book/book");
+        view.addObject("books",bookApiLogicService.bookList());
+        return view;
+    }
+    @GetMapping(path="/contents/book_edit")
+    public ModelAndView bookEdit(){
+        return new ModelAndView("/3_contents/book/book_edit");
     }
 
-    @GetMapping(path="/contents/bookEdit")
-    public ModelAndView bookEdit(){
-        return new ModelAndView("/3_contents/book/bookEdit");
+    @GetMapping(path="/contents/book_write")
+    public ModelAndView bookWrite(){
+        return new ModelAndView("/3_contents/book/book_write");
     }
+    @GetMapping(path="/contents/book_detail")
+    public ModelAndView bookDetail(){
+        return new ModelAndView("/3_contents/book/book_detail");
+    }
+
+
 
     @GetMapping(path="/contents/movie")
-    public ModelAndView cmovie(){
-        return new ModelAndView("/3_contents/movie/movie");
+    public ModelAndView movie(){
+        ModelAndView view = new ModelAndView("/3_contents/movie/movie");
+        view.addObject("movies",movieApiLogicService.movieList());
+        return view;
+    }
+    @GetMapping(path="/contents/movie_edit")
+    public ModelAndView movieEdit(){
+        return new ModelAndView("/3_contents/movie/movie_edit");
+    }
+    @GetMapping(path="/contents/movie_write")
+    public ModelAndView movieWrite(){
+        return new ModelAndView("/3_contents/movie/movie_write");
+    }
+    @GetMapping(path="/contents/movie_detail/{movIdx}")
+    public ModelAndView movieDetail(@PathVariable Long movIdx){
+        ModelAndView view = new ModelAndView("/3_contents/movie/movie_detail");
+        Header<MovieApiResponse> api = movieApiLogicService.read(movIdx);
+        view.addObject("movie",api.getData());
+        return view;
     }
 
-    @GetMapping(path="/contents/movieEdit")
-    public ModelAndView cmovieeEit(){
-        return new ModelAndView("/3_contents/movie/movieEdit");
-    }
 
-
-
-    // Tv 리스트 출력
-    private final TvService tvService;
     @GetMapping(path="/contents/tv")
-    public String tv(ModelMap map){
-        map.addAttribute("tvs", tvService.searchTvs());
-        return "/3_contents/tv/tv";
+    public ModelAndView tv(){
+        ModelAndView view = new ModelAndView("/3_contents/tv/tv");
+        view.addObject("tvs",tvApiLogicService.tvList());
+        return view;
     }
-
-
-    @GetMapping(path="/contents/tvEdit")
+    @GetMapping(path="/contents/tv_edit")
     public ModelAndView tvEdit(){
-        return new ModelAndView("/3_contents/tv/tvEdit");
+        return new ModelAndView("/3_contents/tv/tv_edit");
+    }
+    @GetMapping(path="/contents/tv_write")
+    public ModelAndView tvWrite(){
+        return new ModelAndView("/3_contents/tv/tv_write");
+    }
+    @GetMapping(path="/contents/tv_detail")
+    public ModelAndView tvDetail(){
+        return new ModelAndView("/3_contents/tv/tv_detail");
     }
 
-    private final WebtoonDtoService webtoonDtoService;
+
+
     @GetMapping(path="/contents/webtoon")
-    public String cwebtoon(Model model){
-        List<WebtoonDto> webtoonList = webtoonDtoService.list();
-        model.addAttribute("webtoon", webtoonList);
-        return "/3_contents/webtoon/webtoon";
+    public ModelAndView webtoon(){
+        ModelAndView view = new ModelAndView("/3_contents/webtoon/webtoon");
+        view.addObject("webtoons",webtoonApiLogicService.webtoonList());
+        return view;
+
+    }
+    @GetMapping(path="/contents/webtoon_edit")
+    public ModelAndView webtoonEdit(){
+        return new ModelAndView("/3_contents/webtoon/webtoon_edit");
+    }
+    @GetMapping(path="/contents/webtoon_write")
+    public ModelAndView webtoonWrite(){
+        return new ModelAndView("/3_contents/webtoon/webtoon_write");
+    }
+    @GetMapping(path="/contents/webtoon_detail")
+    public ModelAndView webtoonDetail(){
+        return new ModelAndView("/3_contents/webtoon/webtoon_detail");
     }
 
-    @GetMapping(path="/contents/webtoonEdit")
-    public ModelAndView webtoonEdit(){
-        return new ModelAndView("/3_contents/webtoon/webtoonEdit");
-    }
+
+
+
+
 
     @GetMapping(path="/comment/report_page")
     public ModelAndView report(){

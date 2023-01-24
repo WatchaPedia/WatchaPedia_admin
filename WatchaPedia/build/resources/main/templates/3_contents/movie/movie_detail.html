@@ -43,6 +43,11 @@
                             <div class="card-body">
                                 <iframe src="https://pedia.watcha.com/ko-KR/contents/mOk7BJO" frameborder="0"></iframe>
                             </div>
+                            <div>
+                                <td th:if="${movie.movGallery} != null"  th:each="image : ${#strings.arraySplit(movie.movGallery, '|')}">
+                                    <img th:src="${image}" alt="">
+                                </td>
+                            </div>
                         </div>
                         <div id="MBox">
                             <button class="btn0" id="btn1" onclick="location.href='/contents/movie_edit'">수정하기</button>

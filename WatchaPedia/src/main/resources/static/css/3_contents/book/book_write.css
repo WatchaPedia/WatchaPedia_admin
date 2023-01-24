@@ -220,7 +220,7 @@ img {
   display: flex;
   padding: 5px !important;
 }
-#content {
+#bookSummary {
   margin: 0 auto 0 10px;
   width: 95%;
   height: 200px;
@@ -272,6 +272,119 @@ img {
     align-items: center;
     justify-content: center; */
 }
+/*------------------------------------------------*/
+/*구매가능한곳*/
+#wgo {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#wgo > div:first-child {
+  margin-left: 10px;
+}
+
+.wgo2 {
+  margin: 0 auto 0 0;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+}
+
+.wBox_2 {
+  margin: 10px;
+  border: 1px solid rgb(228, 223, 223);
+  width: 50%;
+  height: 130px;
+  overflow: auto;
+}
+
+.wBox_1 {
+  margin: 10px;
+  border: 1px solid rgb(228, 223, 223);
+  width: 50%;
+  height: 130px;
+  padding-right: 10px;
+}
+
+.wBox2 {
+  margin: 10px;
+  border: 1px solid rgb(228, 223, 223);
+  width: 95%;
+  height: 80px;
+  padding-top: 15px;
+  padding-right: 10px;
+}
+
+.wBox3 {
+  margin: 5px 10px;
+  width: 95%;
+  border: 1px solid rgb(228, 223, 223);
+}
+
+#plus_img {
+  position: relative;
+}
+#minus_img {
+  position: relative;
+}
+
+#ott_plus_icon {
+  position: relative;
+}
+
+#only_flex_box {
+  display: flex;
+  justify-content: center;
+}
+
+#aladin_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#aladin_box.visible {
+  display: flex;
+}
+
+#yes24_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#yes24_box.visible {
+  display: flex;
+}
+
+#kyobo_box {
+  display: none;
+  margin: 3px 2px;
+}
+
+#kyobo_box.visible {
+  display: flex;
+}
+
+.ott_img {
+  position: static;
+  margin: initial;
+  width: 40px;
+}
+
+.ott_name {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  width: 80%;
+  margin: 0 4px 0 7px;
+  border-bottom: 1px solid rgb(188, 188, 188);
+}
+
+.x_icon {
+  position: static;
+  margin: initial;
+  width: 20px;
+}
+
 /* ------------------------------------------------- */
 #vBox {
   border: 1px solid rgb(228, 223, 223);
@@ -314,7 +427,10 @@ img {
   width: 95%;
   border: 1px solid rgb(228, 223, 223);
 }
-
+#platform{
+  width:95%;
+  margin-left: 10px;
+}
 /* -------------------------------- */
 .conBox2 {
   display: flex;
@@ -401,8 +517,8 @@ img {
 
 #MBox {
   display: flex;
-  width: 12%;
-  margin: 0px auto;
+  justify-content: center;
+  margin:10px;
 }
 
 #btn1,
@@ -433,13 +549,13 @@ img {
   margin: 0 0 0 10px;
 }
 
-#cate {
+#bookContentIdx {
   width: 95%;
   height: 130px;
   overflow: auto;
   border: 1px solid rgb(228, 223, 223);
 }
-#boinfo {
+#bookPubSummary {
   width: 95%;
   height: 130px;
   overflow: auto;

@@ -42,9 +42,9 @@ createApp({
 }).mount(".sb-nav-fixed");
 
 // ------------------------------------------------------------------------------
+//갤러리
 let fileLists = []; // 전체 파일 리스트 객체
 const exte = ["jpg", "jpeg", "png", "gif"]; // 확장명
-
 const inputFile = document.querySelector("#inputFile");
 const resultFile = document.querySelector("#resultFile");
 const file_count = document.getElementById("file_count");
@@ -53,16 +53,19 @@ const total_sizes = document.getElementById("total_size");
 inputFile.addEventListener(
     "change",
     function (e) {
+      console.log('this.files 출력')
+      console.log(this.files)
       return readURL(this.files);
     },
     false
 );
 
 const readURL = (input) => {
+
   if (fileLists.length == 0) {
     // 최초 파일 업로드
     for (let i = 0; i < input.length; i++) {
-      fileLists.push(input[i]);
+      fileLists.push(input[i]);0
     }
   } else {
     // 리스트에 추가적으로 파일 업로드
@@ -90,8 +93,8 @@ const readURL = (input) => {
     total_size += Math.round(fileLists[i].size / 1024);
 
     //File정보를 읽을 수 있는 FileReader 호출
-    const reader = new FileReader();
-
+    const reader = new FileReader(fileLists[i]);
+    let base64data
     //File 불러오기가 끝나면 실행될 함수
     reader.onload = function (e) {
       const img = new Image();
@@ -99,18 +102,22 @@ const readURL = (input) => {
       // image파일의 blob 이 생성됨. blob -> 바이너리 오브젝트
       img.src = e.target.result;
 
+
       // 생성된 데이터를 템플릿 문자열에 넣어준다.
       return (resultFile.innerHTML += `
                 <dl>
                     <dt class='total_size_kb'>${total_size}</dt>
                     <dd>${fileLists[i].name} ${
           Math.round(fileLists[i].size / 1024) + "kb"
-      } <span onclick="deleteBtn(${i})" style="color: red;cursor: pointer;">[X]</span></dd>
+      } <span onclick="deleteBtn(${i})" style="color: red;cursor: pointer;">[X]
+        <input type="hidden" id="base(${i})" value="${img.src}">
+                    </span></dd>
                 </dl>
                 `);
     };
     // readAsDataURL은 Blob, File 을 읽을 수 있다.
     reader.readAsDataURL(fileLists[i]);
+
   }
 
   file_count.innerHTML = `파일 <span style="color: red;"> ${fileLists.length} </span> 개`;
@@ -128,7 +135,7 @@ resultFile.ondrop = (e) => {
 
   // 드롭된 파일 데이터를 파일 리스트에 넣음. (중복 제거, 다중파일 업로드 가능)
   var data = e.dataTransfer.files;
-  console.log(data);
+
   for (let i = 0; i < data.length; i++) {
     var isExist = false;
     var isExistExt = false;
@@ -176,25 +183,32 @@ pobtn.addEventListener(
     },
     false
 );
-const readURL2 = (input) => {
-  // html 에 그리려고 만든 화살표함수
 
+
+
+let posterimg;
+let backgroundimg;
+let galleryimgs;
+
+//포스터이미지
+const readURL2 = (input) => {
+  // html 에 그리려고 만든 화살표함수터
   if (input.length == 0) {
     document.getElementById("poBox2").innerHTML = `파일 끌어다 추가하기`;
   } else {
     document.getElementById("poBox2").innerHTML = `<dd>${input[0].name} ${
         Math.round(input[0].size / 1024) + "kb"
-    } <span onclick="deleteBtn2()" style="color: red;cursor: pointer;">[X]</span></dd>`;
+    } <span onclick="deleteBtn2()" style="color: red;cursor: pointer;">[X]
+        <input type="hidden" id="base">
+</span></dd>`;
   }
-
-  console.log(input);
 };
 
 poBox2.ondrop = (e) => {
   e.preventDefault();
 
   var data = e.dataTransfer.files;
-  console.log(data);
+  readLink(e.dataTransfer); //@@@@@@@@@@@@@@@@@@@@@@@@당겨오기nice
 
   if (pobtn.files.length != 0) {
     pobtn.value = ""; // input  태그에서 받은 값
@@ -207,6 +221,7 @@ poBox2.ondragover = (e) => {
   e.preventDefault(); // 이 부분이 없으면 ondrop 이벤트가 발생하지 않습니다.
 };
 
+
 function deleteBtn2() {
   // 파일 리스트에서 인덱스에 부합한 배열 제거
   pobtn.value = "";
@@ -215,6 +230,7 @@ function deleteBtn2() {
   readURL2(pobtn.files);
 }
 //------------------------------------------------------------------------
+//배경사진
 const babtn = document.querySelector("#babtn");
 
 babtn.addEventListener(
@@ -222,6 +238,8 @@ babtn.addEventListener(
     function (e) {
       return readURL3(this.files);
     },
+
+
     false
 );
 const readURL3 = (input) => {
@@ -232,18 +250,19 @@ const readURL3 = (input) => {
   } else {
     document.getElementById("baBox2").innerHTML = `<dd>${input[0].name} ${
         Math.round(input[0].size / 1024) + "kb"
-    } <span onclick="deleteBtn3()" style="color: red;cursor: pointer;">[X]</span></dd>`;
+    } <span onclick="deleteBtn3()" style="color: red;cursor: pointer;">[X]
+    <input type="hidden" id="base3">
+</span></dd>`;
   }
 
-  console.log(input);
 };
 
 baBox2.ondrop = (e) => {
   e.preventDefault();
 
   var data = e.dataTransfer.files;
-  console.log(data);
-
+  console.log(e.dataTransfer)
+  readLink1(e.dataTransfer)
   if (babtn.files.length != 0) {
     babtn.value = ""; // input  태그에서 받은 값
   }
@@ -264,19 +283,20 @@ function deleteBtn3() {
 }
 
 // ----------------------------------------------------------------------
+let idnum=0;
 function add() {
   const vBox = document.getElementById("vBox");
 
   const plusAndminus = document.getElementById("only_flex_box");
 
   const newNode = document.createElement("p");
-
+  idnum+=1;
   newNode.innerHTML += `<div class="vBox1">
       <div>
-        <input type="text" placeholder="제목(ex.메인예고편, 현장예고편)" class="vBox2">
+        <input type="text" placeholder="제목(ex.메인예고편, 이재원 촬영감독 현장예고편)" class="vBox2" id="vt${idnum}">
       </div>
       <div>
-        <input type="text" placeholder="URL주소"  class="vBox2">
+        <input type="text" placeholder="URL주소"  class="vBox2" id="vu${idnum}">
       </div>
     </div>`; // 파일명 출력
 
@@ -285,11 +305,10 @@ function add() {
 
 function minus() {
   const vBox = document.getElementById("vBox");
-  console.log(vBox);
-
   const removeNode = document.querySelector("#vBox > p");
-  console.log(removeNode);
-
+  if(idnum=!1){
+    idnum-=1
+  }
   vBox.removeChild(removeNode);
 }
 
@@ -299,6 +318,88 @@ function search() {
 }
 
 // ----------------------------------------------------------------------
+//전역변수 배열에 select해서 넘어온 ott명 저장
+let ottSave = "";
+
+
+function createOtt(ott) {
+  console.log(ott);
+  ottSave = ott;
+}
+
+function ottVisible() {
+  if (ottSave == "티빙") {
+    const tving_box = document.getElementById("tving_box");
+    tving_box.classList.add("visible");
+
+    const tving_url = document.getElementById("tving_url");
+    let videourl = document.getElementById("vurl").value;
+    tving_url.value=videourl;
+  }
+  if (ottSave == "웨이브") {
+    const wave_box = document.getElementById("wave_box");
+    wave_box.classList.add("visible");
+    const wave_url = document.getElementById("wave_url");
+    let videourl = document.getElementById("vurl").value;
+    wave_url.value=videourl;
+  }
+  if (ottSave == "디즈니플러스") {
+    const disney_box = document.getElementById("disney_box");
+    disney_box.classList.add("visible");
+    const disney_url = document.getElementById("disney_url");
+    let videourl = document.getElementById("vurl").value;
+    disney_url.value=videourl;
+  }
+  if (ottSave == "왓챠") {
+    const watcha_box = document.getElementById("watcha_box");
+    watcha_box.classList.add("visible");
+    const watcha_url = document.getElementById("watcha_url");
+    let videourl = document.getElementById("vurl").value;
+    watcha_url.value=videourl;
+  }
+  if (ottSave == "넷플릭스") {
+    const netflix_box = document.getElementById("netflix_box");
+    netflix_box.classList.add("visible");
+    const netflix_url = document.getElementById("netflix_url");
+    let videourl = document.getElementById("vurl").value;
+    netflix_url.value=videourl;
+  }
+  if (ottSave == "쿠팡플레이") {
+    const coupang_box = document.getElementById("coupang_box");
+    coupang_box.classList.add("visible");
+    const coupang_url = document.getElementById("coupang_url");
+    let videourl = document.getElementById("vurl").value;
+    coupang_url.value=videourl;
+  }
+}
+
+// ----------------------------------------------------------------------
+// 티빙 박스 none으로 만들기
+const tving_box_X = document.getElementById("tving_box_X");
+tving_box_X.addEventListener("click", pop_out);
+
+const wave_box_X = document.getElementById("wave_box_X");
+wave_box_X.addEventListener("click", pop_out);
+
+const disney_box_X = document.getElementById("disney_box_X");
+disney_box_X.addEventListener("click", pop_out);
+
+const watcha_box_X = document.getElementById("watcha_box_X");
+watcha_box_X.addEventListener("click", pop_out);
+
+const netflix_box_X = document.getElementById("netflix_box_X");
+netflix_box_X.addEventListener("click", pop_out);
+
+const coupang_box_X = document.getElementById("coupang_box_X");
+coupang_box_X.addEventListener("click", pop_out);
+
+function pop_out(e) {
+  e.target.parentNode.parentNode.classList.remove("visible");
+}
+function delval(str){
+  document.getElementById(str).value=null;
+}
+//-------------------------------------------
 function person_search_visible() {
   const search_input = document.getElementById("modal_search_bar")
   search_input.value = ""
@@ -585,7 +686,7 @@ $(document).ready(function () {
         templateSelection: function (data, container) {
           var selection = $("#myList").select2("data");
           var idx = selection.indexOf(data);
-          console.log(">>Selection", data.text, data.idx, idx);
+          // console.log(">>Selection", data.text, data.idx, idx);
           data.idx = idx;
           $(container).css("background-color", world[data.idx]);
           return data.text;
@@ -603,21 +704,83 @@ $(document).ready(function () {
   });
 });
 //-------------------------------------------------------------------
+//포스터
+function readLink(input) {
+  if (input.files && input.files[0]) {
+    let reader = new FileReader();
+    reader.onload = function (e) {
+      $('#falseinput').attr('src', e.target.result);
+      $('#base').val(e.target.result);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+//배경사진
+function readLink1(input) {
+  if (input.files && input.files[0]) {
+    let reader = new FileReader();
+    reader.onload = function (e) {
+      $('#falseinput').attr('src', e.target.result);
+      $('#base3').val(e.target.result);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+//갤러리
+function readLinks(input) {
+    if (input.files && input.files[0]) {
+      let reader = new FileReader();
+      reader.onload = function (e) {
+        $('#falseinput').attr('src', e.target.result);
+        //$('#base('+i+')').val(e.target.result);
+        $(`#base(${i})`).val(20);
+      };
+      reader.readAsDataURL(input.files[0]);
+    }
+
+}
+
+//-------------------------------------------------------------------
 
     function sendit(){
-
       let movThumbnail;
-      let movTitle = document.querySelector("#movTitle").value;
-      let movTitleOrg = document.querySelector("#movTitleOrg").value;
-      let movMakingDate =document.querySelector("#movMakingDate").value;
+      let movBackImg;
+      let gallerynum = 0;
+
+      try{
+        movThumbnail=document.querySelector("#base").value;
+        console.log('포스터'+movThumbnail.value);
+      }catch (exception){
+        movThumbnail=null;
+      }
+
+      try{
+        movBackImg=document.querySelector("#base3").value;
+        console.log('배경사진'+movBackImg.value);
+      }catch (exception){
+        movBackImg=null;
+      }
+
+      try{
+        gallerynum = parseInt(document.querySelector("#file_count>span").innerHTML)
+      }catch (exception){
+      }
+
+
+      let movTitle = document.querySelector("#movTitle");
+      let movTitleOrg = document.querySelector("#movTitleOrg");
+      let movMakingDate =document.querySelector("#movMakingDate");
 
 
       let myList = document.querySelectorAll("#myList + span li");
       let myList1;
       myList.forEach((element) => {
-        myList1 += ','+element.title;
+        myList1 += '/'+element.title;
       });
       let movCountry = myList1.substring(10,myList1.length-1)
+
 
       let mygenre = document.querySelectorAll("#movGenre + span li");
       let mygenre1;
@@ -625,24 +788,158 @@ $(document).ready(function () {
         mygenre1 += ','+element.title;
       });
       let movGenre = mygenre1.substring(10,mygenre1.length-1)
-      let movAge= $("#movAge option:selected").val();
-      let movPeople;
-      let movTime = document.querySelector("#movTime").value;
-      let movSummary = document.querySelector("#movSummary").value;
-      let movGallery;
-      let movVideo;
-      let movWatch;
-      let movBackImg;
 
-      console.log('제목'+movTitle);
-      console.log('원제목'+movTitleOrg);
-      console.log('개봉일'+movMakingDate);
+
+      let movAge= $("#movAge option:selected");
+      let movPeople;
+      let movTime = document.querySelector("#movTime");
+      let movSummary = document.querySelector("#movSummary");
+
+
+
+      let movGallery = null;
+      if(gallerynum==1){
+        movGallery = document.getElementById("base(0)").value
+      }
+      else if(gallerynum>1){
+        for(let i=0;i<gallerynum;i++){
+          baseid = "base("+i+")"
+          movGallery += document.getElementById(baseid).value + "|"
+        }
+        movGallery=movGallery.substring(4,movGallery.length-1);
+      }
+
+
+      let movVideo=null;
+      if(idnum!=0){
+        for(let i=0;i<=idnum;i++){
+          vt="vt"+i
+          vu="vu"+i
+          if(document.getElementById(vt).value==""){
+            window.alert('빈칸이 있으면 안됩니다');
+            movVideo=null;
+            return false;
+          }
+          if(document.getElementById(vu).value==""){
+            window.alert('빈칸이 있으면 안됩니다');
+            movVideo=null;
+            return false;
+          }
+          movVideo+=(document.getElementById(vu).value)+','+(document.getElementById(vt).value)+'|';
+        }
+      movVideo=movVideo.substring(4,movVideo.length-1);
+      }else {
+        if (document.getElementById("vt0").value == "" && document.getElementById("vu0").value != "") {
+          window.alert('빈칸이 있으면 안됩니다');
+          movVideo = null;
+          return false;
+        } else if (document.getElementById("vt0").value != "" && document.getElementById("vu0").value == "") {
+          window.alert('빈칸이 있으면 안됩니다');
+          movVideo = null;
+          return false;
+        } else if (document.getElementById("vt0").value != "" && document.getElementById("vu0").value != "") {
+          movVideo = (document.getElementById("vu0").value + "," + document.getElementById("vt0").value);
+        }
+      }
+
+
+
+      let movWatch=null;
+      let watchlist=["tving_url","wave_url","disney_url","watcha_url","netflix_url","coupang_url"];
+      let tempcntnum=0;
+      for(let watch of watchlist){
+        let watch_value = document.getElementById(watch).value
+        if(watch_value!=""&&watch_value!=null){
+          tempcntnum+=1;
+          movWatch+=watch_value+",";
+        }
+      }
+      if(tempcntnum>0){
+        movWatch=movWatch.substring(4,movWatch.length-1);
+      }
+
+      console.log('제목'+movTitle.value);
+      console.log('원제목'+movTitleOrg.value);
+      console.log('개봉일'+movMakingDate.value);
       console.log('국가'+movCountry);
       console.log('장르'+movGenre);
-      console.log('상영시간'+movTime);
-      console.log('나이'+movAge);
-      console.log('내용'+movSummary);
+      console.log('상영시간'+movTime.value);
+      console.log('나이'+movAge.val());
+      console.log('내용'+movSummary.value);
+      console.log('갤러리 사진갯수' + gallerynum);
+      console.log('동영상제목' + movVideo);
+      console.log('감상가능한곳' + movWatch);
 
 
+
+      if(movTitle.value == ''){
+        alert('표기할 영화제목을 입력하세요');
+        return false;
+      }
+      if(movTitleOrg.value == ''){
+        alert('원제를 입력하세요');
+        return false;
+      }
+      if(movMakingDate.value == ''){
+        alert('개봉날짜를 입력하세요');
+        return false;
+      }
+      if(movCountry == '/'){
+        alert('국가를 입력하세요');
+        return false;
+      }
+      if(movGenre == ','){
+        alert('장르를 입력하세요');
+        return false;
+      }
+      if(movTime.value == ''){
+        alert('상영시간을 입력하세요');
+        return false;
+      }
+      if(movAge.val() == ''){
+        alert('연령 등급을 입력하세요');
+        return false;
+      }
+
+      fetch('http://localhost:8888/api/movie', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          "transaction_time":`${new Date()}`,
+          "resultCode":"ok",
+          "description":"정상",
+          "data":{
+            "movAge":`${movAge.val()}`,
+            "movBackImg":movBackImg,
+            "movCountry":`${movCountry}`,
+            "movGenre":`${movGenre}`,
+            "movGallery":movGallery,
+            "movMakingDate":`${movMakingDate.value}`,
+            "movPeople":`mrpark`,
+            "movSummary":`${movSummary.value}`,
+            "movThumbnail":movThumbnail,
+            "movTime":`${movTime.value}`,
+            "movTitle":`${movTitle.value}`,
+            "movTitleOrg":`${movTitleOrg.value}`,
+            "movVideo":movVideo,
+            "movWatch":movWatch
+          }
+        }),
+      })
+          .then((res) => {
+            alert('등록성공')
+            //location.href='/contents/movie';
+            return;
+          })
+          // .then((data) => {
+          //   console.log(data.json());
+          //   return;
+          // })
+          .catch((err) => {
+            alert('에러!!');
+            location.reload();
+            return;
+          });
 
     }
+
