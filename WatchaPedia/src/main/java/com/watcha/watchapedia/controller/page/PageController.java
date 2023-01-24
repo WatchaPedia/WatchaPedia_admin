@@ -25,6 +25,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Optional;
 
@@ -44,6 +46,22 @@ public class PageController {
     @Autowired
     public WebtoonApiLogicService webtoonApiLogicService;
 
+    //로그인을 하지 않고 url로 관리페이지로 뚥고 들어오는 것을 방지 (로그인으로 돌려보냄)
+    public ModelAndView loginCheck(HttpServletRequest request){
+        HttpSession session = request.getSession(false);
+        String id = null;
+        String name = null;
+
+        if(session == null){
+            System.out.println("세션이 없습니다");
+            return new ModelAndView("/0_login/Login");
+        }else{
+            id = (String) session.getAttribute("id");
+            name = (String) session.getAttribute("name");
+        }
+        return null;
+    }
+
     @GetMapping(path="")
     public ModelAndView index(){
         return new ModelAndView("/index");
@@ -60,8 +78,16 @@ public class PageController {
     }
 
     @GetMapping(path="/notice_edit")
-    public ModelAndView notice_edit(){
+    public ModelAndView notice_edit(HttpServletRequest request){
+        // 로그인 Check 시작!
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
+        // 로그인 Check 끝!
+
         return new ModelAndView("/1_notice/Notice_Edit");
+
     }
 
     @GetMapping(path="/notice_view")
@@ -70,7 +96,13 @@ public class PageController {
     }
 
     @GetMapping(path="/notice_write")
-    public ModelAndView notice_write(){
+    public ModelAndView notice_write(HttpServletRequest request){
+        // 로그인 Check 시작!
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
+        // 로그인 Check 끝!
         return new ModelAndView("/1_notice/Notice_Write");
     }
 
@@ -133,7 +165,13 @@ public class PageController {
         return view;
     }
     @GetMapping(path="/contents/book_edit")
-    public ModelAndView bookEdit(){
+    public ModelAndView bookEdit(HttpServletRequest request){
+        // 로그인 Check 시작!
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
+        // 로그인 Check 끝!
         return new ModelAndView("/3_contents/book/book_edit");
     }
 
