@@ -5,22 +5,87 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/NoticeApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/config/ThymeleafConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/MovieApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/TvApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/WebtoonApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/ifs/CrudInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/dto/CommentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/dto/QnaDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/AdminUser.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Advertise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Movie.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Notice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/AdminApiRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/AdvertiseApiRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/NoticeApiRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/AdminApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/AdvertiseApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/NoticeApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Qna.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Tv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Webtoon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/type/FormStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/CommentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/MovieApiRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/QnaRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/TvApiRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/UserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/WebtoonApiRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/CommentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/MovieApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/QnaResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/TvApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/WebtoonApiResponse.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/AdminRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/AdvertiseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/MovieRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/NoticeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/AdminApiLogicService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/AdvertiseApiLogicService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/NoticeApiLogicService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/AdminRegist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/QnaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/TvRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/WebtoonRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/BookApiLogicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/MovieApiLogicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/QnaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/TvApiLogicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/WebtoonApiLogicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/book_detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/book_edit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/book_write.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movie_write.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/tv/tv_detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/tv/tv_edit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/tv/tv_write.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/webtoon/webtoon_detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/webtoon/webtoon_edit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/webtoon/webtoon_write.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/Book_Write.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/Movie_Write.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/Tv_Write.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/Webtoon_Write.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA.th.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.th.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.th.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book_write.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movie_write.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv_write.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoon_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoon_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoon_write.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.th.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchList.th.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/6_member/memberdetail.th.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/6_member/membermanage.th.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
@@ -30,50 +95,149 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/230110_2138_backup.WatchaPedia.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/AI_CLASS.watchaPediaBackUp.WatchaPedia.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/AI_CLASS.watchapedia_springproject.WatchaPedia.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Desktop.WatchaPedia.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Git_clone_folder.watchaPediaBackUp.WatchaPedia.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/song.WatchaPedia.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/watchaPediaBackUp.WatchaPedia.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/WatchaPediaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/WatchaPediaApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/CrudController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/CrudController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/CrudInterface.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/api/AdminApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/api/AdminApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/api/BookApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/api/BookApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/api/NoticeApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/api/NoticeApiController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/controller/page/PageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/AdminUser$AdminUserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/AdminUser$AdminUserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/AdminUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/AdminUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/AdminUserApiLogicService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movie_detail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movie_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/createaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/createaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/config/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/config/BaseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/Book$BookBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/Book$BookBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/TbAdminUser$TbAdminUserBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/TbAdminUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/TbAdvertise$TbAdvertiseBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/TbAdvertise.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/TbNotice$TbNoticeBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/entity/TbNotice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/Header$HeaderBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/Header$HeaderBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/Header.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/Header.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/Pagination$PaginationBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/Pagination.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/request/BookApiRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/request/BookApiRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/request/NoticeApiRequest$NoticeApiRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/request/NoticeApiRequest$NoticeApiRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/request/NoticeApiRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/request/NoticeApiRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/response/BookApiResponse$BookApiResponseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/response/BookApiResponse$BookApiResponseBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/response/BookApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/model/network/response/BookApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/repository/AdminRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/repository/AdvertiseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/repository/BookRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/repository/TbNoticeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/AdminApiLogicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/AdminApiLogicService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/AdvertiseApiLogicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/AdvertiseApiLogicService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/BaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/BaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/BookService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/NoticeApiLogicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/watcha/watchapedia/service/NoticeApiLogicService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/bookEdit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movie.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movieEdit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tvEdit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoonEdit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/AdminRegist.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/AdminRegist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Book_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Book_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Tv_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Tv_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/0_login/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/0_login/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_Reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_Reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/bookEdit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movie.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movieEdit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tv.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tvEdit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoon.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoonEdit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/search/commentSearchDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/search/commentSearchDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/search/commentSearchList.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/search/commentSearchList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/6_member/membermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/6_member/membermanage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/fragment/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment/sidenav.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/fragment/sidenav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/fragment/topbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Movie$MovieBuilder.class.uniqueId7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Movie.class.uniqueId19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieApiController.class.uniqueId16" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieApiLogicService.class.uniqueId14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieApiRequest$MovieApiRequestBuilder.class.uniqueId8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieApiRequest.class.uniqueId12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieRepository.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Tv$TvBuilder.class.uniqueId5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Tv.class.uniqueId10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TvDto.class.uniqueId15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TvRepository.class.uniqueId11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TvRequest.class.uniqueId6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TvResponse.class.uniqueId13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TvService.class.uniqueId20" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Webtoon$WebtoonBuilder.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Webtoon.class.uniqueId17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/WebtoonDto.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/WebtoonDtoService.class.uniqueId9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/WebtoonRepsitory.class.uniqueId18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/spring-configuration-metadata.json.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/WatchaPediaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/WatchaPediaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/CrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/CrudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/CrudInterface.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/AdminApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/AdminApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/BookApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/BookApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/NoticeApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/NoticeApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/AdminUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/AdminUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/MovieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/AdminUserApiLogicService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/config/Auditable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/config/Auditable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/config/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/config/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/TbAdminUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/TbAdvertise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/TbNotice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/Pagination.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/BookApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/BookApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/NoticeApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/NoticeApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/BookApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/BookApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/repository/AdminRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/repository/AdvertiseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/repository/BookRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/repository/TbNoticeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/AdminApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/AdminApiLogicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/AdvertiseApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/AdvertiseApiLogicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/BookService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/NoticeApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/NoticeApiLogicService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_Write.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_Write.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/createaccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/hradmin/createaccount.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/book.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/book.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/bookEdit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movie.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movieEdit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/tv/tv.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/tv/tv.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/tv/tvEdit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/webtoon/webtoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/webtoon/webtoon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/webtoon/webtoonEdit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/AdminRegist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/AdminRegist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Book_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Book_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Movie_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Movie_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Tv_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Tv_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Webtoon_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Webtoon_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/0_login/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/0_login/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/bookEdit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movie.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movieEdit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tvEdit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoon.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoonEdit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/6_member/memberdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/6_member/memberdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/6_member/membermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/6_member/membermanage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/sidenav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/sidenav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/topbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,35 +312,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelOrder2": "2",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RequestMappingsPanelWidth2": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Git_clone_folder/watchapedia_springproject/WatchaPedia",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "a76983afbf8cf4a11aae498b4e1085af",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelOrder2&quot;: &quot;2&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth2&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Git_clone_folder/watchapedia_springproject/WatchaPedia&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;fb1bdaa5cd4f823fe6b15958170eef3e&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.watcha.watchapedia.model.network.response" />
@@ -259,7 +424,8 @@
       <workItem from="1674541716399" duration="2096000" />
       <workItem from="1674547277287" duration="1986000" />
       <workItem from="1674549290719" duration="3179000" />
-      <workItem from="1674554972688" duration="1224000" />
+      <workItem from="1674554972688" duration="1743000" />
+      <workItem from="1674557244491" duration="159000" />
     </task>
     <servers />
   </component>

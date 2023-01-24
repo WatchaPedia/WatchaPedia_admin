@@ -176,7 +176,13 @@ public class PageController {
     }
 
     @GetMapping(path="/contents/book_write")
-    public ModelAndView bookWrite(){
+    public ModelAndView bookWrite(HttpServletRequest request){
+        // 로그인 Check 시작!
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
+        // 로그인 Check 끝!
         return new ModelAndView("/3_contents/book/book_write");
     }
     @GetMapping(path="/contents/book_detail")
