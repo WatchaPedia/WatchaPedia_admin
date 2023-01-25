@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import java.time.LocalDateTime;
 
 
-@Entity
+@Entity(name = "tbAdminUser")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -25,7 +25,7 @@ public class AdminUser extends BaseEntity implements Auditable {
     private String adminName ;
     private String adminId ;
     private String adminPw ;
+    private String adminNumber;
     private String adminType ;
-    private LocalDateTime adminRegDate;
 
 }
