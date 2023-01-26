@@ -58,10 +58,6 @@ public class PageController {
     @Autowired
     public NoticeApiLogicService noticeApiLogicService;
 
-    //재원 1.4
-    //승균 1.3
-    //이재원 1.2
-
     //로그인을 하지 않고 url로 관리페이지로 뚥고 들어오는 것을 방지 (로그인으로 돌려보냄)
     //* 매개변수 첫번째 : HttpServletRequest 객체
     public ModelAndView loginCheck(HttpServletRequest request){
@@ -199,53 +195,68 @@ public class PageController {
     }
 
     //noticeOk 시작!
-    @PostMapping(path = "/noticeOk")
-    public String noticeOk(MultipartFile file, String ntcTitle, String ntcText, String ntcBtnText, String ntcBtnColor){
-
-        String fileName = file.getOriginalFilename();
-        System.out.println("fileName : " + fileName);
-        String filePath = "C:\\image\\"+fileName;
-
-
-        try {
-            //폴더 생성
-            String folderPath = "C:\\image";
-            File folder = new File(folderPath);
-
-            if(!folder.exists()){
-                folder.mkdir();
-            }
-
-            FileOutputStream fos = new FileOutputStream(filePath);
-            InputStream is = file.getInputStream();
-            int readCount = 0;
-            byte[] buffer = new byte[1024];
-            while((readCount = is.read(buffer)) != -1){
-                fos.write(buffer, 0, readCount);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("Catch문은 탈출했어...");
-
-        NoticeApiRequest noticeApiRequest = NoticeApiRequest.builder()
-                .ntcTitle(ntcTitle)
-                .ntcText(ntcText)
-                .ntcImagepath(filePath)
-                .ntcBtnColor(ntcBtnColor)
-                .ntcBtnText(ntcBtnText)
-                .build();
-
-        noticeApiLogicService.create(Header.OK(noticeApiRequest));
-
-
-
-
-
-        return "redirect:/";
-    }
+//    @PostMapping(path = "/noticeOk")
+//    public String noticeOk(MultipartFile file, String ntcTitle, String ntcText, String ntcBtnText, String ntcBtnColor){
+//
+//        String fileName = file.getOriginalFilename();
+//        System.out.println("fileName : " + fileName);
+//        String filePath = "C:\\image\\"+fileName;
+//
+//
+//        try {
+//            //폴더 생성
+//            String folderPath = "C:\\image";
+//            File folder = new File(folderPath);
+//
+//            if(!folder.exists()){
+//                folder.mkdir();
+//            }
+//
+//            FileOutputStream fos = new FileOutputStream(filePath);
+//            InputStream is = file.getInputStream();
+//            int readCount = 0;
+//            byte[] buffer = new byte[1024];
+//            while((readCount = is.read(buffer)) != -1){
+//                fos.write(buffer, 0, readCount);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        System.out.println("Catch문은 탈출했어...");
+//
+//        NoticeApiRequest noticeApiRequest = NoticeApiRequest.builder()
+//                .ntcTitle(ntcTitle)
+//                .ntcText(ntcText)
+//                .ntcImagepath(filePath)
+//                .ntcBtnColor(ntcBtnColor)
+//                .ntcBtnText(ntcBtnText)
+//                .build();
+//
+//        noticeApiLogicService.create(Header.OK(noticeApiRequest));
+//
+//
+//
+//
+//
+//        return "redirect:/";
+//    }
     //noticeOk 끝!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // qna 리스트
     private final QnaService qnaService;
