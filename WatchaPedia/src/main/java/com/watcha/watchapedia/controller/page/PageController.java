@@ -59,6 +59,7 @@ public class PageController {
     public NoticeApiLogicService noticeApiLogicService;
 
     //승균 1.1
+    //이재원 1.2
 
     //로그인을 하지 않고 url로 관리페이지로 뚥고 들어오는 것을 방지 (로그인으로 돌려보냄)
     //* 매개변수 첫번째 : HttpServletRequest 객체
