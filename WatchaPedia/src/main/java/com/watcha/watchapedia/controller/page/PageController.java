@@ -58,6 +58,7 @@ public class PageController {
     @Autowired
     public NoticeApiLogicService noticeApiLogicService;
 
+    //재원 1.4
     //승균 1.3
     //이재원 1.2
 
