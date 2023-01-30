@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/QnaApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/NoticeStatusApiRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/QnaApiRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/QnaApiResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
@@ -14,9 +18,49 @@
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book_write.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book_write.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movie_write.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movie_write.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movie_write.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movie_write.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movie_write.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movie_write.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/NoticeApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/NoticeApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Notice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/NoticeApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/NoticeApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/NoticeApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/NoticeApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/NoticeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/NoticeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/QnaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/QnaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/NoticeApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/NoticeApiLogicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/QnaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/QnaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_Edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_Edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_View.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_View.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_Write.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/1_notice/Notice_Write.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/2_qna/QnA_Reply.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/2_qna/QnA_Reply.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/book_write.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/book/book_write.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movie_write.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie/movie_write.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Notice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Notice_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Notice_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Notice_View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Notice_View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Notice_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Notice_Write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/QnA_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/QnA_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_Edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_View.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_Write.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/1_notice/Notice_Write.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_Reply.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/2_qna/QnA_View.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/book/book_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movie_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/movie/movie_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/tv/tv_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoon.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoon_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/3_contents/webtoon/webtoon_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,10 +174,10 @@
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.watcha.watchapedia.controller.api" />
-      <recent name="com.watcha.watchapedia.service" />
       <recent name="com.watcha.watchapedia.model.network.response" />
       <recent name="com.watcha.watchapedia.model.network.request" />
+      <recent name="com.watcha.watchapedia.controller.api" />
+      <recent name="com.watcha.watchapedia.service" />
       <recent name="com.watcha.watchapedia.model.entity" />
     </key>
   </component>
@@ -203,7 +247,7 @@
       <workItem from="1674875196490" duration="18024000" />
       <workItem from="1674967723464" duration="4666000" />
       <workItem from="1675038408961" duration="4895000" />
-      <workItem from="1675044562557" duration="1186000" />
+      <workItem from="1675044562557" duration="8754000" />
     </task>
     <servers />
   </component>
