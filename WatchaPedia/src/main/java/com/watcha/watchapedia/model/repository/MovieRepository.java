@@ -11,5 +11,4 @@ import java.util.Optional;
 @RepositoryRestResource
 public interface MovieRepository extends JpaRepository<Movie, Long> {
     Optional<Movie> findByMovIdx(Long movIdx);
-    Movie findTitleByMovIdx(Long movIdx);
 }
