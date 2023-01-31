@@ -13,8 +13,8 @@ import java.util.List;
 @Builder
 public class PersonApiRequest {
     private Long perIdx;
-    private String perName;
-    private String perPhoto;
-    private String perRole;
-    private List<String> appearance;
+//    private String perName;
+//    private String perPhoto;
+//    private String perRole;
+//    private List<String> appearance;
 }

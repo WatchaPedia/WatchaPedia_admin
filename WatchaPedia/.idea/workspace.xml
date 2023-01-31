@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="" />
+    <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,12 +43,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Record" />
         <option value="Kotlin Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -77,7 +79,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/jaewon/Desktop/onedrive/study/프로젝트/myrepo/WatchaPedia/src/main/resources/static/js",
+    "last_opened_file_path": "C:/Git_clone_folder/watchaPediaBackUp/WatchaPedia",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,8 +88,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.27733028",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "a76983afbf8cf4a11aae498b4e1085af",
+    "spring.configuration.checksum": "00e360083269827b22a4c08d28b9a267",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -101,11 +102,11 @@
       <recent name="com.watcha.watchapedia.model.network.response" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/5_character" />
+      <recent name="C:\Git_clone_folder\watchaPediaBackUp\WatchaPedia\src\main\resources\templates\8_admin\hradmin" />
       <recent name="C:\Git_clone_folder\watchapedia_springproject\WatchaPedia\src\main\resources\templates\7_advertisement" />
       <recent name="C:\Git_clone_folder\watchapedia_springproject\WatchaPedia\src\main\resources\static\css\5_character" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/3_contents" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Git_clone_folder\watchapedia_springproject\WatchaPedia\src\main\resources\static\css\7_advertisement" />
@@ -115,12 +116,28 @@
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.watcha.watchapedia.service" />
       <recent name="com.watcha.watchapedia.model.network.response" />
       <recent name="com.watcha.watchapedia.model.network.request" />
       <recent name="com.watcha.watchapedia.controller.api" />
-      <recent name="com.watcha.watchapedia.service" />
       <recent name="com.watcha.watchapedia.model.entity" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="WatchaPediaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Git_clone_folder.watchaPediaBackUp.WatchaPedia.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.watcha.watchapedia.WatchaPediaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -182,6 +199,14 @@
       <workItem from="1674967723464" duration="4666000" />
       <workItem from="1675038408961" duration="4895000" />
       <workItem from="1675044562557" duration="8754000" />
+      <workItem from="1675062121499" duration="6000" />
+      <workItem from="1675062138189" duration="5491000" />
+      <workItem from="1675073738706" duration="6068000" />
+      <workItem from="1675079843582" duration="2179000" />
+      <workItem from="1675124156698" duration="17035000" />
+      <workItem from="1675145924781" duration="746000" />
+      <workItem from="1675147213739" duration="16000" />
+      <workItem from="1675150840873" duration="50000" />
     </task>
     <servers />
   </component>
