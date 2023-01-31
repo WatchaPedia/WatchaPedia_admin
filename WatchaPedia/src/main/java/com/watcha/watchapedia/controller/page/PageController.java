@@ -634,11 +634,17 @@ public class PageController {
     public ModelAndView myinfo(HttpServletRequest request){
         // 로그인 Check 시작!
         ModelAndView loginCheck = loginCheck(request);
+        HttpSession session = request.getSession();
+        Header<AdminApiResponse> api = adminApiLogicService.read((Long)session.getAttribute("adminIdx"));
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/8_admin/admin/Myinfo");
+
+        return loginInfo(request, "/8_admin/admin/Myinfo").addObject(api.getData());
     }
+
+
+
 
     @GetMapping(path="/admin_myinfomodify")
     public ModelAndView myinfomodify(HttpServletRequest request){

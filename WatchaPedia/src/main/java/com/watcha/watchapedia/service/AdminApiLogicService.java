@@ -62,7 +62,8 @@ public class AdminApiLogicService extends BaseService<AdminApiRequest, AdminApiR
 
     @Override
     public Header<AdminApiResponse> read(Long id) {
-        return null;
+        return adminRepository.findById(id).map(admin -> response(admin))
+                .map(Header::OK).orElseGet(()->Header.ERROR("데이터 없음"));
     }
 
     public Header<AdminApiResponse> read(String userid, String userpw) {
