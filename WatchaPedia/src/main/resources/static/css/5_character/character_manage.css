@@ -75,7 +75,12 @@ li {
   border-radius: 5px;
   font-size: 12px;
 }
-
+button {
+  height: 30px;
+  width: 80px;
+  margin: 5px 1125px;
+  border: none;
+}
 .td_flex {
   display: flex;
   justify-content: space-between;
@@ -84,17 +89,3 @@ li {
     position: relative;
     top:100px;
 } */
-
-
-/*등록버튼 우측 정렬*/
-#MBox{
-  display: flex;
-  justify-content: end;
-  padding:15px;
-}
-#btn1{
-
-   border:solid 1px;
-   width: 80px;
- }
-

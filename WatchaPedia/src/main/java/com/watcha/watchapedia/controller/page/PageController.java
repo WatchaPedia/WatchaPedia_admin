@@ -4,17 +4,13 @@ import com.watcha.watchapedia.dto.UserDto;
 import com.watcha.watchapedia.dto.response.UserResponse;
 import com.watcha.watchapedia.model.dto.CommentDto;
 import com.watcha.watchapedia.model.dto.QnaDto;
-import com.watcha.watchapedia.model.entity.Comment;
-import com.watcha.watchapedia.model.entity.Qna;
-import com.watcha.watchapedia.model.entity.User;
+import com.watcha.watchapedia.model.entity.*;
 import com.watcha.watchapedia.model.entity.type.FormStatus;
 import com.watcha.watchapedia.model.network.Header;
 import com.watcha.watchapedia.model.network.request.NoticeApiRequest;
 import com.watcha.watchapedia.model.network.request.QnaRequest;
 import com.watcha.watchapedia.model.network.response.*;
-import com.watcha.watchapedia.model.repository.CommentRepository;
-import com.watcha.watchapedia.model.repository.QnaRepository;
-import com.watcha.watchapedia.model.repository.UserRepository;
+import com.watcha.watchapedia.model.repository.*;
 import com.watcha.watchapedia.service.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +26,7 @@ import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -56,10 +53,11 @@ public class PageController {
     public NoticeApiLogicService noticeApiLogicService;
 
     @Autowired
-    public QnaService qnaService;
+    public final GlobalMethodService globalMethodService;
 
     @Autowired
-    public CharacterApiLogicService characterApiLogicService;
+    public QnaService qnaService;
+
     //로그인을 하지 않고 url로 관리페이지로 뚥고 들어오는 것을 방지 (로그인으로 돌려보냄)
     //* 매개변수 첫번째 : HttpServletRequest 객체
     public ModelAndView loginCheck(HttpServletRequest request){
@@ -490,9 +488,16 @@ public class PageController {
     public String comment(HttpServletRequest request, ModelMap map){
         loginModelInfo(request,map);
         List<CommentResponse> comments = commentService.searchComments().stream().map(CommentResponse::from).toList();
-        map.addAttribute("comments", commentService.searchComments());
+
+        //글로벌메소드
+        //매개변수 : List<CommentResponse>
+        //본인 content_type(movie, tv, book, webtoon)에 해당하는 테이블에서만 select해서 제목을 빠르게 받아옴
+        //List<CommentResponse> 반환
+        comments = globalMethodService.getListTitle(comments);
+        map.addAttribute("comments", comments);
         return "/4_comment/search/commentSearchList";
     }
+
 
     // commentDetail 출력 (내용, 이미지)
     final CommentRepository commentRepository;
@@ -501,17 +506,23 @@ public class PageController {
         loginModelInfo(request,map);
         Optional<Comment> comment = commentRepository.findById(commentIdx);
         CommentResponse commentResponse = CommentResponse.from(CommentDto.from(comment.get()));
+
+
+        //글로벌메소드
+        // 매개변수 : CommentResponse
+        // 0번째 리턴 : postUrl
+        // 1번째 리턴 : title
+        List<String> str = globalMethodService.getPostUrlAndTitle(commentResponse);
+
+        commentResponse = CommentResponse.inserPosterUrl(commentResponse, str.get(0));  //메소드로 받아온 postUrl
+        commentResponse = CommentResponse.insertTitle(commentResponse, str.get(1)); //메소드로 받아온 title
         map.addAttribute("comment", commentResponse);
         return "/4_comment/search/commentSearchDetail";
     }
-
-    @GetMapping(path="/character_detail/{perIdx}")
-    public ModelAndView characterdetail(@PathVariable Long perIdx, HttpServletRequest request){
-        Header<CharacterApiResponse> api = characterApiLogicService.read(perIdx);
-        return loginInfo(request, "/5_character/characterdetail").addObject("character",api.getData());
+    @GetMapping(path="/character_detail")
+    public ModelAndView characterdetail(HttpServletRequest request){
+        return loginInfo(request, "/5_character/characterdetail");
     }
-
-
     @GetMapping(path="/character_manage")
     public ModelAndView charactermanage(HttpServletRequest request){
         // 로그인 Check 시작!
@@ -519,8 +530,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        System.out.println("페이지컨트롤러에는 잘들어오는데");
-        return loginInfo(request, "/5_character/charactermanage").addObject("characters",characterApiLogicService.characterList());
+        return loginInfo(request, "/5_character/charactermanage");
     }
     @GetMapping(path="/character_register")
     public ModelAndView characterregister(HttpServletRequest request){
@@ -531,18 +541,6 @@ public class PageController {
         }
         return loginInfo(request, "/5_character/characterregister");
     }
-    @GetMapping(path="/character_modify/{perIdx}")
-    public ModelAndView charactermodify(@PathVariable Long perIdx,HttpServletRequest request){
-        // 로그인 Check 시작!
-        ModelAndView loginCheck = loginCheck(request);
-        if(loginCheck != null){
-            return loginCheck;
-        }
-        Header<CharacterApiResponse> api = characterApiLogicService.read(perIdx);
-        return loginInfo(request, "/5_character/charactermodify").addObject("character",api.getData());
-    }
-
-
 
     // 멤버 디테일
     final UserRepository userRepository;
@@ -557,6 +555,10 @@ public class PageController {
 
     // 멤버 리스트
     final UserService userService;
+    private final MovieRepository movieRepository;
+    private final TvRepository tvRepository;
+    private final BookRepository bookRepository;
+    private final WebtoonRepository webtoonRepository;
 
     @GetMapping(path="/member")
     public String membermanage(HttpServletRequest request, ModelMap map){
@@ -599,8 +601,10 @@ public class PageController {
     }
 
     @GetMapping(path="/hradmin/accountdetail")
-    public ModelAndView hradminaccountdetail(HttpServletRequest request){
-        return loginInfo(request, "/8_admin/hradmin/accountdetail");
+    public String hradminaccountdetail(@PathVariable Long idx, ModelMap map, HttpServletRequest request){
+        loginModelInfo(request,map);
+        //idx로 관리자회원 상세정부를 가져와서 map에 저장하는 내용
+        return "/8_admin/hradmin/accountdetail";
     }
     @GetMapping(path="/hradmin/createaccount")
     public ModelAndView hradmincreateaccount(HttpServletRequest request){
@@ -620,31 +624,29 @@ public class PageController {
         }
         return loginInfo(request, "/8_admin/hradmin/modifyaccount");
     }
+
+    @Autowired
+    private final AdminService adminService;
     @GetMapping(path="/hradmin/searchaccount")
-    public ModelAndView hradminsearchaccount(HttpServletRequest request){
-        // 로그인 Check 시작!
-        ModelAndView loginCheck = loginCheck(request);
-        if(loginCheck != null){
-            return loginCheck;
-        }
-        return loginInfo(request, "/8_admin/hradmin/searchaccount");
+    public String hradminsearchaccount(HttpServletRequest request, ModelMap map){
+        //로그인 세션정보 전달!
+        loginModelInfo(request,map);
+
+        // admin계정 리스트 전달!
+        List<AdminUserResponse> admins = adminService.findAdmins().stream().map(AdminUserResponse::from).toList();
+        map.addAttribute("admins",admins);
+        return "/8_admin/hradmin/searchaccount";
     }
 
     @GetMapping(path="/admin_myinfo")
     public ModelAndView myinfo(HttpServletRequest request){
         // 로그인 Check 시작!
         ModelAndView loginCheck = loginCheck(request);
-        HttpSession session = request.getSession();
-        Header<AdminApiResponse> api = adminApiLogicService.read((Long)session.getAttribute("adminIdx"));
         if(loginCheck != null){
             return loginCheck;
         }
-
-        return loginInfo(request, "/8_admin/admin/Myinfo").addObject(api.getData());
+        return loginInfo(request, "/8_admin/admin/Myinfo");
     }
-
-
-
 
     @GetMapping(path="/admin_myinfomodify")
     public ModelAndView myinfomodify(HttpServletRequest request){
