@@ -5,66 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/CharacterApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/CharacterApiRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/CharacterApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/CharacterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/CharacterApiLogicService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/CharacterEnroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/CharacterModify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/video/advertisement/ad1.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/5_character/charactermodify.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Like.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/com.watcha.WatchaPedia.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.watcha.WatchaPedia.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/5_character/character_enroll.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/5_character/character_enroll.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/5_character/character_look.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/5_character/character_look.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/5_character/character_manage.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/5_character/character_manage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/AdminRegist.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/AdminRegist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Book_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Book_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Myinfomodify.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Myinfomodify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Notice_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Notice_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/QnA_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/QnA_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/5_character/characterdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/5_character/characterdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/5_character/charactermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/5_character/charactermanage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/5_character/characterregister.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/5_character/characterregister.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/6_member/membermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/6_member/membermanage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/6_member/membermanage.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/6_member/membermanage.th.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/Myinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/Myinfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/Myinfomodify.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/admin/Myinfomodify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/AdminApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/AdminApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/page/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/AdminApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/request/AdminApiRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/AdminApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/AdminApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/AdminApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/AdminApiLogicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_enroll.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_enroll.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_look.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_look.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_manage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/5_character/character_manage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/AdminRegist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/AdminRegist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Book_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Book_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Movie_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Movie_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Myinfomodify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Myinfomodify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Notice_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Notice_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/QnA_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/QnA_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Webtoon_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Webtoon_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/5_character/characterdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/5_character/characterdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/5_character/charactermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/5_character/charactermanage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/5_character/characterregister.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/5_character/characterregister.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/6_member/memberdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/6_member/memberdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/6_member/membermanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/6_member/membermanage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/6_member/membermanage.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/6_member/membermanage.th.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/Myinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/Myinfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/Myinfomodify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin/Myinfomodify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PageController.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/spring-configuration-metadata.json.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +67,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -138,13 +94,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/jaewon/Desktop/onedrive/study/프로젝트/WatchaPedia_admin/WatchaPedia/src/main/resources/templates/6_member",
+    "last_opened_file_path": "C:/Git_clone_folder/WatchaPedia_admin/WatchaPedia",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.27733028",
     "spring.configuration.checksum": "00e360083269827b22a4c08d28b9a267",
@@ -161,11 +117,11 @@
       <recent name="com.watcha.watchapedia.model.network.response" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/6_member" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/css/8_admin/admin" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/css/5_character" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/8_admin/admin" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/5_character" />
+      <recent name="C:\Git_clone_folder\watchaPediaBackUp\WatchaPedia\src\main\resources\templates\8_admin\hradmin" />
+      <recent name="C:\Git_clone_folder\watchapedia_springproject\WatchaPedia\src\main\resources\templates\7_advertisement" />
+      <recent name="C:\Git_clone_folder\watchapedia_springproject\WatchaPedia\src\main\resources\static\css\5_character" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css/3_contents/movie" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/3_contents" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Git_clone_folder\watchapedia_springproject\WatchaPedia\src\main\resources\static\css\7_advertisement" />
@@ -176,9 +132,9 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.watcha.watchapedia.service" />
-      <recent name="com.watcha.watchapedia.model.repository" />
       <recent name="com.watcha.watchapedia.model.network.response" />
       <recent name="com.watcha.watchapedia.model.network.request" />
+      <recent name="com.watcha.watchapedia.controller.api" />
       <recent name="com.watcha.watchapedia.model.entity" />
     </key>
   </component>
@@ -191,7 +147,7 @@
   </component>
   <component name="RunManager">
     <configuration name="WatchaPediaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="com.watcha.WatchaPedia.main" />
+      <module name="Git_clone_folder.watchaPediaBackUp.WatchaPedia.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.watcha.watchapedia.WatchaPediaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -265,7 +221,9 @@
       <workItem from="1675124156698" duration="17035000" />
       <workItem from="1675145924781" duration="746000" />
       <workItem from="1675147213739" duration="16000" />
-      <workItem from="1675150840873" duration="50000" />
+      <workItem from="1675150840873" duration="4070000" />
+      <workItem from="1675162479409" duration="2004000" />
+      <workItem from="1675229637892" duration="1779000" />
     </task>
     <servers />
   </component>

@@ -100,7 +100,7 @@
                         <input
                           type="text"
                           name="userpw"
-                          id="oldPw"
+                          id="userpw"
                           maxlength="20"
                           required
                         />
@@ -127,12 +127,10 @@
                   </div>
                   <div id="atn"></div>
                   <p style="margin-top: 25px">
-                    <input type="button"  value="변경하기" id="btn"
-                           th:onclick="|sendit(${adminIdx})|"
-                    />
+                    <input type="submit" value="변경하기" id="btn"  />
                     <input
-                            type="button"
                       onclick="location.href='/admin_myinfo'"
+                      type="reset"
                       value="취소하기"
                     />
                   </p>

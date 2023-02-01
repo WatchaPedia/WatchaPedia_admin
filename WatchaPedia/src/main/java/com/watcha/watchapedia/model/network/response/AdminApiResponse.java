@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class AdminApiResponse {
-     private Long adminIdx;
+     private Long id;
      private String adminName;
      private String adminId;
      private String adminPw;

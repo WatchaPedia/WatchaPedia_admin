@@ -567,18 +567,19 @@ function sendit(){
       }
     }),
   })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.resultCode == 'OK') {
-          alert('등록성공');
-          location.href=`/contents/webtoon'`;
-        } else {
-          alert('등록에 실패하였습니다. 다시한번 확인해주세요')
-        }
+      .then((res) => {
+        alert('등록성공')
+        location.href='/contents/webtoon';
+        return;
       })
+      // .then((data) => {
+      //   console.log(data.json());
+      //   return;
+      // })
       .catch((err) => {
-        alert('에러발생');
+        alert('에러!!');
         location.reload();
+        return;
       });
 
 }
