@@ -358,4 +358,9 @@ gradle-app.setting
 # Java heap dump
 *.hprof
 
+# node_modules/ 디렉토리에 있는 모든 파일을 무시
+WatchaPedia/.gradle/
+WatchaPedia/.idea/
+
+
 # End of https://www.toptal.com/developers/gitignore/api/intellij,intellij+iml,intellij+all,macos,windows,java,gradle

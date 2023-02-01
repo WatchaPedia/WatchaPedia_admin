@@ -58,6 +58,9 @@ public class PageController {
     @Autowired
     public QnaService qnaService;
 
+    @Autowired
+    public CharacterApiLogicService characterApiLogicService;
+
     //로그인을 하지 않고 url로 관리페이지로 뚥고 들어오는 것을 방지 (로그인으로 돌려보냄)
     //* 매개변수 첫번째 : HttpServletRequest 객체
     public ModelAndView loginCheck(HttpServletRequest request){
@@ -133,7 +136,7 @@ public class PageController {
         //일치하는 계정의 data가 있으면 세션 저장!
         if(accountCheck.getData() != null){
             HttpSession session = request.getSession();
-            Long adminIdx = accountCheck.getData().getId();
+            Long adminIdx = accountCheck.getData().getAdminIdx();
             String adminName = accountCheck.getData().getAdminName();
             String adminType = accountCheck.getData().getAdminType();
             session.setAttribute("adminIdx", adminIdx); //해당 관리자의 행적을 기록하기 위한 관리자Idx
@@ -519,9 +522,13 @@ public class PageController {
         map.addAttribute("comment", commentResponse);
         return "/4_comment/search/commentSearchDetail";
     }
-    @GetMapping(path="/character_detail")
-    public ModelAndView characterdetail(HttpServletRequest request){
-        return loginInfo(request, "/5_character/characterdetail");
+    @GetMapping(path="/character_detail/{perIdx}")
+
+    public ModelAndView characterdetail(@PathVariable Long perIdx, HttpServletRequest
+            request){
+        Header<CharacterApiResponse> api = characterApiLogicService.read(perIdx);
+
+        return loginInfo(request, "/5_character/characterdetail").addObject("character",api.getData());
     }
     @GetMapping(path="/character_manage")
     public ModelAndView charactermanage(HttpServletRequest request){
@@ -530,7 +537,8 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/5_character/charactermanage");
+        System.out.println("페이지컨트롤러에는 잘들어오는데");
+        return loginInfo(request, "/5_character/charactermanage").addObject("characters",characterApiLogicService.characterList());
     }
     @GetMapping(path="/character_register")
     public ModelAndView characterregister(HttpServletRequest request){
@@ -541,6 +549,17 @@ public class PageController {
         }
         return loginInfo(request, "/5_character/characterregister");
     }
+    @GetMapping(path="/character_modify/{perIdx}")
+    public ModelAndView charactermodify(@PathVariable Long perIdx,HttpServletRequest request){
+        // 로그인 Check 시작!
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
+        Header<CharacterApiResponse> api = characterApiLogicService.read(perIdx);
+        return loginInfo(request, "/5_character/charactermodify").addObject("character",api.getData());
+    }
+
 
     // 멤버 디테일
     final UserRepository userRepository;
@@ -645,17 +664,23 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/8_admin/admin/Myinfo");
+
+        HttpSession session = request.getSession();
+        Header<AdminApiResponse> api = adminApiLogicService.read((Long)session.getAttribute("adminIdx"));
+        return loginInfo(request, "/8_admin/admin/Myinfo").addObject("myinfo",api.getData());
+
     }
 
-    @GetMapping(path="/admin_myinfomodify")
-    public ModelAndView myinfomodify(HttpServletRequest request){
+
+    @GetMapping(path="/admin_myinfomodify/{adminIdx}")
+    public ModelAndView myinfomodify(HttpServletRequest request,@PathVariable Long adminIdx){
         // 로그인 Check 시작!
         ModelAndView loginCheck = loginCheck(request);
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/8_admin/admin/Myinfomodify");
+        return loginInfo(request, "/8_admin/admin/Myinfomodify").addObject("adminIdx",adminIdx);
     }
 
 }
+

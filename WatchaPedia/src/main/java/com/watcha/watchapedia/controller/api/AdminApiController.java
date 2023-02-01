@@ -7,10 +7,7 @@ import com.watcha.watchapedia.model.network.request.AdminApiRequest;
 import com.watcha.watchapedia.model.network.response.AdminApiResponse;
 import com.watcha.watchapedia.service.AdminApiLogicService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -43,8 +40,9 @@ public class AdminApiController extends CrudController<AdminApiRequest, AdminApi
     }
 
     @Override
-    public Header<AdminApiResponse> update(Header<AdminApiRequest> request) {
-        return super.update(request);
+    @PutMapping("")
+    public Header<AdminApiResponse> update(@RequestBody Header<AdminApiRequest> request) {
+        return adminApiLogicService.update(request);
     }
 
     @Override
