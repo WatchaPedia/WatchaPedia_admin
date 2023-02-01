@@ -13,8 +13,6 @@ import java.util.List;
 public class AdminService {
 
     final AdminRepository adminRepository;
-
-    @Transactional
     public List<AdminUserDto> findAdmins(){
         return adminRepository.findAllByOrderByAdminIdxDesc().stream().map(AdminUserDto::from).toList();
     }

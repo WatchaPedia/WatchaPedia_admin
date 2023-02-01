@@ -103,8 +103,12 @@ public class AdminApiLogicService extends BaseService<AdminApiRequest, AdminApiR
     }
 
     @Override
-    public Header<AdminApiResponse> delete(Long id) {
-        return null;
+    public Header delete(Long id) {
+        Optional<AdminUser> users = adminRepository.findById(id);
+        return users.map(user -> {
+            adminRepository.delete(user);
+            return Header.OK();
+        }).orElseGet(() -> Header.ERROR("데이터 없음"));
     }
 
 
