@@ -364,3 +364,11 @@ WatchaPedia/.idea/
 
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,intellij+iml,intellij+all,macos,windows,java,gradle
+WatchaPedia/.DS_Store
+WatchaPedia/build/.DS_Store
+WatchaPedia/build/classes/java/.DS_Store
+WatchaPedia/build/tmp/.DS_Store
+WatchaPedia/src/.DS_Store
+WatchaPedia/src/main/.DS_Store
+WatchaPedia/src/main/resources/.DS_Store
+WatchaPedia/src/main/resources/static/.DS_Store
