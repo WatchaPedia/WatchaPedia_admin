@@ -16,7 +16,7 @@
     </head>
     <body class="sb-nav-fixed">
     <!-- topbar.html -->
-    <div th:replace="fragment/topbar :: topbar"></div>
+    <div th:replace="fragment/topbar :: topbar(${adminIdx}, ${adminType})"></div>
     <!-- topbar.html 끝 -->
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
@@ -26,7 +26,7 @@
                 <!-- sidenav.html 끝 -->
 
                 <!-- sidefooter.html -->
-                <div th:replace="fragment/sidefooter :: sidefooter"></div>
+                <div th:replace="fragment/sidefooter :: sidefooter(${adminId}, ${adminName})"></div>
                 <!-- sidefooter.html 끝 -->
             </nav>
         </div>
@@ -112,18 +112,6 @@
                     <div id="button">
                     <button  onclick="location.href='/member'">목록으로</button></div>
                 </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
             </div>
         </div>
     </div>

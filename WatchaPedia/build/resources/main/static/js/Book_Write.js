@@ -17,30 +17,136 @@
 
 const { createApp } = Vue;
 
-createApp({
+let searchVue = createApp({
   data() {
     return {
       search_msg: "",
+      itemlist: {},
+      itemlist2: {},
     };
   },
-  methods: {
-    search_db() {
-      console.log(this.search_msg);
+  methods:{
+    chosen(idx){
+      let flag = true
 
-      //이전 검색 데이터 내용을 지우기
-      const person_box = document.getElementById("modal_search_result");
-      const child_all = document.querySelectorAll("#modal_search_result > *");
-      for (i = 0; i < child_all.length; i++) {
-        person_box.removeChild(child_all[i]);
+      for( let i of searchVue.itemlist2){
+        if(idx == i.perIdx){
+          personsArr.push(i)
+        }
       }
 
-      // unfilled : 리턴값에 의해 반복 돌려야함
-      for (i = 0; i < 5; i++) {
-        search_person(this.search_msg);
-      }
-    },
-  },
+      return flag
+    }
+  }
 }).mount(".sb-nav-fixed");
+
+function search_db() {
+  console.log(searchVue.search_msg);
+  //이전 검색 데이터 내용을 지우기
+  const person_box = document.getElementById("modal_search_result");
+  const child_all = document.querySelectorAll("#modal_search_result > *");
+
+  // ajax로 정보 받아오기
+  $.ajax({
+    url: "/api/movie/searchKey",
+    type: "GET",
+    dataType: "json",
+    processData: true,
+    contentType: "application/json; charset=UTF-8",
+    data: {searchKey : searchVue.search_msg},
+    success: function(result){
+      console.log('ajax 정보교환 성공!')
+      for(let i of result.data){
+        if(searchVue.itemlist2.length > 0){
+          for(let j of searchVue.itemlist2){
+            if(i.perIdx == j.perIdx){
+              i.chooseCheck = "chosen";
+            }
+          }
+        }
+      }
+      console.log(result.data);
+      searchVue.itemlist = result.data;
+    },
+    error: function(){
+      console.log("에러발생")
+    }
+  })
+}
+
+let personsArr = [];
+
+function choosePerson(e){
+
+  //버튼에 chosen 클래스 부여하기
+  if(e.innerText == "선택"){
+    e.innerText = "✔️선택됨"
+    //선택을 누른 인물의 큰 박스
+    const chooseBigBox = e.parentNode.parentNode;
+
+    //큰 박스의 자식객체배열을 얻어옴
+    const childArr = chooseBigBox.childNodes;
+
+    //인물의 idx값 추출
+    const perIdx = childArr[0].innerText
+
+    //사진 src값을 추출
+    const perPhoto = childArr[1].firstChild.getAttribute('src');
+
+    //인물의 이름을 추출
+    const perName = childArr[2].firstChild.innerText
+    console.log(perName)
+
+    //인물의 지위?
+    const perRole = childArr[2].childNodes[1].innerText
+
+    const person = {
+      perIdx: childArr[0].innerText,
+      perPhoto: childArr[1].firstChild.getAttribute('src'),
+      perName: childArr[2].firstChild.innerText,
+      perRole: childArr[2].childNodes[1].innerText
+    }
+    console.log(person)
+
+    personsArr.push(person)
+
+    searchVue.itemlist2 = personsArr
+
+  }else{
+    e.innerText = "선택"
+    const idx = e.parentNode.parentNode.childNodes[0].innerText;
+
+    //대입 배열 초기화
+    personsArr = []
+
+    //선택 인물 idx가 아닌 것들로 배열 재구성
+    for( let i of searchVue.itemlist2){
+      if(idx != i.perIdx){
+        personsArr.push(i)
+      }
+    }
+    //배열을 itemlist2에 삽입
+    searchVue.itemlist2 = personsArr
+
+  }
+
+
+}
+
+function minusItemlist2(e){
+  //클릭한 인물의 idx 추출
+  const idx = e.parentNode.firstChild.innerText;
+
+  //대입 배열 초기화
+  personsArr = []
+
+  for( let i of searchVue.itemlist2){
+    if(idx != i.perIdx){
+      personsArr.push(i)
+    }
+  }
+  searchVue.itemlist2 = personsArr
+}
 
 // ------------------------------------------------------------------------------
 
@@ -222,6 +328,9 @@ function search() {
 
 // ----------------------------------------------------------------------
 function person_search_visible() {
+  const search_input = document.getElementById("modal_search_bar")
+  search_input.value = ""
+
   const person_search_modal = document.getElementById("person_search_modal");
   person_search_modal.classList.add("visible");
 }
@@ -229,6 +338,7 @@ function person_search_visible() {
 function search_cancel() {
   const person_search_modal = document.getElementById("person_search_modal");
   person_search_modal.classList.remove("visible");
+  searchVue.itemlist = ""
 }
 
 // ----------------------------------------------------------------------
@@ -402,18 +512,20 @@ function sendit() {
       }
     }),
   })
-      .then((res) => {
-        alert('등록성공')
-        location.href='/contents/book';
-        return;
+
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.resultCode == 'OK') {
+          alert('등록성공');
+          location.href='/contents/book';
+        } else {
+          alert('등록에 실패하였습니다. 다시한번 확인해주세요')
+        }
       })
-      // .then((data) => {
-      //   console.log(data.json());
-      //   return;
-      // })
       .catch((err) => {
-        alert('에러!!');
+        alert('에러발생');
         location.reload();
-        return;
       });
+
+
 }

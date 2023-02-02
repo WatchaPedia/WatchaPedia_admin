@@ -98,11 +98,11 @@ createApp({
             this.noDupl = false
             const adminId = document.getElementById("adminId")
 
-            if(adminId.value.length <= 5){
-                alert('아이디는 6자 이상 입력하셔야 합니다.')
-                adminId.focus()
-                return false
-            }
+            // if(adminId.value.length <= 5){
+            //     alert('아이디는 6자 이상 입력하셔야 합니다.')
+            //     adminId.focus()
+            //     return false
+            // }
 
             //tb_admin_user에서 해당 값과 같은 값이 있는지 비교하는 api 개발
             fetch('http://localhost:9090/api/admin/idCheck', {
@@ -180,16 +180,21 @@ createApp({
                     }
                 })
             })
-                .then((header) => {
-                    alert('등록성공')
-                    location.href='/login';
-                    return;
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.resultCode == 'OK') {
+                        alert('등록성공');
+                        location.href='/login';
+                    } else {
+                        alert('등록에 실패하였습니다. 다시한번 확인해주세요')
+                    }
                 })
                 .catch((err) => {
-                    alert('에러!!')
-                    location.reload()
-                    return;
-                })
+                    alert('에러발생');
+                    location.reload();
+                });
+
+
         }
     }
 }).mount('#main_box')

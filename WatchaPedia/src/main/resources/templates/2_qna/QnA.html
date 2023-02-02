@@ -15,7 +15,7 @@
 </head>
 <body class="sb-nav-fixed">
 <!-- topbar.html -->
-<div th:replace="fragment/topbar :: topbar"></div>
+<div th:replace="fragment/topbar :: topbar(${adminIdx}, ${adminType})"></div>
 <!-- topbar.html 끝 -->
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
@@ -25,7 +25,7 @@
             <!-- sidenav.html 끝 -->
 
             <!-- sidefooter.html -->
-            <div th:replace="fragment/sidefooter :: sidefooter"></div>
+            <div th:replace="fragment/sidefooter :: sidefooter(${adminId}, ${adminName})"></div>
             <!-- sidefooter.html 끝 -->
         </nav>
     </div>
@@ -63,12 +63,12 @@
                             <!--                                    </tfoot>-->
                             <tbody id="qna-table">
                             <tr class="qna-tr ">
-                                <td class="qna-idx">Tiger Nixon</td>
-                                <td class="qna-text"><a>System Architect</a></td>
-                                <td class="qna-userid">Edinburgh</td>
-                                <td class="qna-auserid">61</td>
-                                <td class="qna-regdate">2011/04/25</td>
-                                <td class="qna-dtext">$320,800</td>
+                                <td class="qna-idx"><a></a></td>
+                                <td class="qna-text"><a></a></td>
+                                <td class="qna-userid"><a></a></td>
+                                <td class="qna-auserid"><a></a></td>
+                                <td class="qna-regdate"><a></a></td>
+                                <td class="qna-status"><a></a></td>
                             </tr>
                             <tr>
                                 <td>Garrett Winters</td>

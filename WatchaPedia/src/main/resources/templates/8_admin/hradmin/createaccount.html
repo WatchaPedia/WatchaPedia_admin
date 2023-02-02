@@ -17,7 +17,7 @@
     </head>
     <body class="sb-nav-fixed">
     <!-- topbar.html -->
-    <div th:replace="fragment/topbar :: topbar"></div>
+    <div th:replace="fragment/topbar :: topbar(${adminIdx}, ${adminType})"></div>
     <!-- topbar.html 끝 -->
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
@@ -27,7 +27,7 @@
                 <!-- sidenav.html 끝 -->
 
                 <!-- sidefooter.html -->
-                <div th:replace="fragment/sidefooter :: sidefooter"></div>
+                <div th:replace="fragment/sidefooter :: sidefooter(${adminId}, ${adminName})"></div>
                 <!-- sidefooter.html 끝 -->
             </nav>
         </div>
@@ -76,6 +76,8 @@
                                         <span class="admin_error_msg4" v-if="employeeNo" style="color: indianred">
                                             입력하신 사번은 리스트에 없습니다.
                                         </span>
+
+                                        <!-- 사번은 2066000 ~ 2066099 로 js에서 배열로 지정했음 (콘솔창에 찍힘) -->
                                         <span class="admin_error_msg4" v-if="employeeOk" style="color:cornflowerblue">
                                             사번 확인 완료!
                                         </span>
