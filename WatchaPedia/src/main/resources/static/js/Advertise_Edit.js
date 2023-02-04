@@ -136,7 +136,7 @@ function pastel(){
   //console.log(`ntcBtnColor에 담은 값 : ${ntcBtnColor.value}`);
 }
 
-function sendit(){
+function sendit(adIdx){
   let adTitle = document.querySelector("#adTitle");
   let adDescription = document.querySelector("#adDescription");
   let adVideoSource = document.querySelector("#adVideoSource");
@@ -265,13 +265,14 @@ function sendit(){
 
 
   fetch('http://localhost:9090/api/advertise', {
-    method: 'POST',
+    method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       "transaction_time":`${new Date()}`,
       "resultCode":"ok",
       "description":"정상",
       "data":{
+        "adIdx":`${adIdx}`,
         "adTitle":`${adTitle.value}`,
         "adDescription":`${adDescription.value}`,
         "adVideoSource":`${adVideoSource.value}`,

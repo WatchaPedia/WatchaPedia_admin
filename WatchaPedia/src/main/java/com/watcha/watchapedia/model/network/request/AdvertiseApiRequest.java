@@ -5,8 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -23,5 +21,5 @@ public class AdvertiseApiRequest {
     private String adBtnText;
     private String adClient;
     private String adClientLogoimage;
-    private LocalDateTime endDate;
+    private String endDate;
 }
