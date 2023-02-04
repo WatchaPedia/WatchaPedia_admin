@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/dto/RelikeDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Relike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/4_comment/search/commentSearchDetail.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/4_comment/search/commentSearchDetail.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/dto/RecommentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/dto/RecommentDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Recomment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Recomment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/RecommentResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/network/response/RecommentResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/reported/report_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/reported/report_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/4_comment/search/commentSearchDetail.th.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +62,9 @@
         <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Kotlin Class" />
-        <option value="Class" />
         <option value="Record" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -85,7 +98,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Git_clone_folder/watchaPediaBackUp/WatchaPedia",
+    "last_opened_file_path": "C:/Git_clone_folder/WatchaPedia_admin/WatchaPedia",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,7 +107,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.27733028",
-    "spring.configuration.checksum": "00e360083269827b22a4c08d28b9a267",
+    "spring.configuration.checksum": "2fca29e9e73eb02d35a5c5f34fe525dd",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -122,11 +135,11 @@
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.watcha.watchapedia.model.dto" />
       <recent name="com.watcha.watchapedia.model.network.response" />
       <recent name="com.watcha.watchapedia.model.network.request" />
       <recent name="com.watcha.watchapedia.service" />
       <recent name="com.watcha.watchapedia.controller.api" />
-      <recent name="com.watcha.watchapedia.model.entity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -232,6 +245,7 @@
       <workItem from="1675398726196" duration="2102000" />
       <workItem from="1675400859385" duration="24129000" />
       <workItem from="1675473619521" duration="58000" />
+      <workItem from="1675473792909" duration="4118000" />
     </task>
     <servers />
   </component>
