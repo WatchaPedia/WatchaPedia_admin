@@ -465,6 +465,10 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
+
+        //넘겨야할 ResponseDto 정보
+        //댓글*대댓글 작성자 / 컨텐츠제목 / 신고시간 / 스포일러 건수 / 부적절 건수 / 처리여부 / 댓글유형
+
         return loginInfo(request, "/4_comment/reported/report_page");
     }
 
