@@ -68,19 +68,19 @@
                                 </div>
 
                                 <!-- 버튼누를시 생성 -->
-                                <hr>
-                                <div class="report_result">
+                                <div class="report_result" th:if="${report.status} != '대기중'">
+                                    <hr>
                                     <p>
                                         <span>처리내용 : </span>
-                                        <span>문제없음 처리</span>
+                                        <span class="processResult">문제없음 처리</span>
                                     </p>
                                     <p>
                                         <span>처리일시 : </span>
-                                        <span>2022-05-26 오후 11:24 </span>
+                                        <span class="processDate">2022-05-26 오후 11:24 </span>
                                     </p>
                                     <p>
                                         <span>관리자 : </span>
-                                        <span>이재원</span>
+                                        <span class="adminId">이재원</span>
                                     </p>
                                 </div>
 

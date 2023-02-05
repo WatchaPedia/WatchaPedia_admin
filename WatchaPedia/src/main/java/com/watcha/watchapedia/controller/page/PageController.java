@@ -485,7 +485,8 @@ public class PageController {
             if(r.reportProcessing().equals("대기중")){
                 waitList.add(r);
             }else{
-                completeList.add(r);
+                String[] status = r.reportProcessing().split(",");
+                completeList.add(ReportResponseDto.from(r,status[0]));
             }
         }
 
@@ -503,7 +504,13 @@ public class PageController {
         }
         Report report = reportRepository.getReferenceById(reportId);
 
-        return loginInfo(request, "/4_comment/reported/reportdetail_comment").addObject("report", report);
+        if(report.getReportProcessing() == null){
+            report.setReportProcessing("대기중");
+        }
+
+        ReportDetailDto reportDetailDto = ReportDetailDto.from(report);
+
+        return loginInfo(request, "/4_comment/reported/reportdetail_comment").addObject("report", reportDetailDto);
     }
 
     @GetMapping(path="/comment/reportdetail_reply")
