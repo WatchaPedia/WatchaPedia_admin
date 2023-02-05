@@ -455,7 +455,8 @@ public class PageController {
 
 
 
-
+    private final ReportApiLogicService reportApiLogicService;
+    private final ReportRepository reportRepository;
 
 
     @GetMapping(path="/comment/report_page")
@@ -466,20 +467,43 @@ public class PageController {
             return loginCheck;
         }
 
-        //넘겨야할 ResponseDto 정보
-        //댓글*대댓글 작성자 / 컨텐츠제목 / 신고시간 / 스포일러 건수 / 부적절 건수 / 처리여부 / 댓글유형
+        List<ReportDto> reportDtos = reportApiLogicService.findAllReport();
+        List<ReportResponseDto> responseDtos = new ArrayList<>();
+        for(ReportDto r : reportDtos){
+            if(r.reportCommType().equals("comm")){
+                String comm = "댓글";
+                responseDtos.add(ReportResponseDto.from(r, comm));
+            }else{
+                String recomm = "대댓글";
+                responseDtos.add(ReportResponseDto.from(r, recomm));
+            }
+        }
+        //대기중, 처리완료에 따른 List 생성 (th:if로 하려고 했는데 BootStrap 표 CSS가 깨짐)
+        List<ReportResponseDto> waitList = new ArrayList<>();
+        List<ReportResponseDto> completeList = new ArrayList<>();
+        for(ReportResponseDto r : responseDtos){
+            if(r.reportProcessing().equals("대기중")){
+                waitList.add(r);
+            }else{
+                completeList.add(r);
+            }
+        }
 
-        return loginInfo(request, "/4_comment/reported/report_page");
+        return loginInfo(request, "/4_comment/reported/report_page")
+                .addObject("waitList", waitList)
+                .addObject("completeList",completeList);
     }
 
-    @GetMapping(path="/comment/reportdetail_comment")
-    public ModelAndView reportdetailcomment(HttpServletRequest request){
+    @GetMapping(path="/comment/reportdetail_comment/{reportId}")
+    public ModelAndView reportdetailcomment(@PathVariable Long reportId, HttpServletRequest request){
         // 로그인 Check 시작!
         ModelAndView loginCheck = loginCheck(request);
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/4_comment/reported/reportdetail_comment");
+        Report report = reportRepository.getReferenceById(reportId);
+
+        return loginInfo(request, "/4_comment/reported/reportdetail_comment").addObject("report", report);
     }
 
     @GetMapping(path="/comment/reportdetail_reply")
@@ -489,6 +513,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
+        characterApiLogicService.characterList();
         return loginInfo(request, "/4_comment/reported/reportdetail_reply");
     }
 
@@ -622,7 +647,7 @@ public class PageController {
     }
 
     // 유저 인플루언서 수정
-    @GetMapping("/member/{userIdx}/{userType}")
+    @GetMapping("/member/{findAllReportx}/{userType}")
     public String updateUser(
              @PathVariable Long userIdx,
              @PathVariable String userType,
@@ -721,7 +746,7 @@ public class PageController {
         loginModelInfo(request,map);
 
         // admin계정 리스트 전달!
-        List<AdminUserResponse> admins = adminService.findAdmins().stream().map(AdminUserResponse::from).toList();
+        List<AdminUserResponse> admins = adminService.findAllReport().stream().map(AdminUserResponse::from).toList();
         map.addAttribute("admins",admins);
         return "/8_admin/hradmin/searchaccount";
     }

@@ -19,8 +19,6 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userIdx;
     @Column(length =100)
-    private String userId;
-    @Column(length =100)
     private String userPw;
     private Long userSsn1;
     private Long userSsn2;
@@ -51,8 +49,7 @@ public class User {
 
     protected User() {}
 
-    public User(String userId, String userPw, Long userSsn1, Long userSsn2, String userEmail, String userName) {
-        this.userId = userId;
+    public User(String userPw, Long userSsn1, Long userSsn2, String userEmail, String userName) {
         this.userPw = userPw;
         this.userSsn1 = userSsn1;
         this.userSsn2 = userSsn2;
@@ -74,11 +71,11 @@ public class User {
 //        );
 //    }
     public static User of(
-            String userId, String userPw, Long userSsn1, Long userSsn2, String userEmail,
+            String userPw, Long userSsn1, Long userSsn2, String userEmail,
             String userName
     ) {
         return new User(
-                userId,userPw,userSsn1,userSsn2,userEmail, userName
+                userPw,userSsn1,userSsn2,userEmail, userName
         );
     }
 
