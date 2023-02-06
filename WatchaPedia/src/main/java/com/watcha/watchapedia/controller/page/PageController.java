@@ -513,15 +513,22 @@ public class PageController {
         return loginInfo(request, "/4_comment/reported/reportdetail_comment").addObject("report", reportDetailDto);
     }
 
-    @GetMapping(path="/comment/reportdetail_reply")
-    public ModelAndView reportdetailreply(HttpServletRequest request){
+    @GetMapping(path="/comment/reportdetail_reply/{reportId}")
+    public ModelAndView reportdetailreply(@PathVariable Long reportId, HttpServletRequest request){
         // 로그인 Check 시작!
         ModelAndView loginCheck = loginCheck(request);
         if(loginCheck != null){
             return loginCheck;
         }
-        characterApiLogicService.characterList();
-        return loginInfo(request, "/4_comment/reported/reportdetail_reply");
+        Report report = reportRepository.getReferenceById(reportId);
+
+        if(report.getReportProcessing() == null){
+            report.setReportProcessing("대기중");
+        }
+
+        ReportDetailDto reportDetailDto = ReportDetailDto.from(report);
+
+        return loginInfo(request, "/4_comment/reported/reportdetail_reply").addObject("report", reportDetailDto);
     }
 
     // comment 리스트 출력
