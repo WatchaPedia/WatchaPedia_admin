@@ -1039,7 +1039,7 @@ function readLinks(input) {
 
       let movAge= $("#movAge option:selected");
 
-      let people=document.querySelectorAll(".person");
+      let people=document.querySelectorAll(".hiddenBox");
       let movPeople;
       people.forEach(function(person) {
         movPeople += ',' + person.childNodes[0].data;
