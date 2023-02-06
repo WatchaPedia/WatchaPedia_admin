@@ -148,6 +148,7 @@ function sendit(){
   let adImagesource;
   let adClientLogoimage;
 
+
   try{
     adImagesource=document.querySelector("#base").value;
   }catch (exception){
@@ -212,7 +213,6 @@ function sendit(){
   console.log('광고이미지'+adImagesource);
   console.log('클라인트로고이미지'+adClientLogoimage);
   console.log('광고종료날짜'+endDate.value);
-
 
 
   if(adTitle.value == ''){
@@ -283,6 +283,7 @@ function sendit(){
         "adClientLogoimage":adClientLogoimage,
         "endDate":`${endDate.value}`,
         "adStatus":'미등록'
+
       }
     }),
   })

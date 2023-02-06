@@ -1038,7 +1038,18 @@ function readLinks(input) {
 
 
       let movAge= $("#movAge option:selected");
+
+      let people=document.querySelectorAll(".person");
       let movPeople;
+      people.forEach(function(person) {
+        movPeople += ',' + person.childNodes[0].data;
+      });
+      try{
+        movPeople = movPeople.substring(10,movPeople.length)
+      }catch{
+        movPeople = null;
+      }
+
       let movTime = document.querySelector("#movTime");
       let movSummary = document.querySelector("#movSummary");
 
@@ -1116,6 +1127,7 @@ function readLinks(input) {
       console.log('갤러리 사진갯수' + gallerynum);
       console.log('동영상제목' + movVideo);
       console.log('감상가능한곳' + movWatch);
+      console.log('등장인물' + movPeople);
 
 
 
@@ -1147,6 +1159,10 @@ function readLinks(input) {
         alert('연령 등급을 입력하세요');
         return false;
       }
+      if(movPeople==null){
+        alert('인물을 등록해주세요');
+        return false;
+      }
 
       fetch('http://localhost:9090/api/movie', {
         method: 'POST',
@@ -1162,7 +1178,7 @@ function readLinks(input) {
             "movGenre":`${movGenre}`,
             "movGallery":movGallery,
             "movMakingDate":`${movMakingDate.value}`,
-            "movPeople":`mrpark`,
+            "movPeople":movPeople,
             "movSummary":`${movSummary.value}`,
             "movThumbnail":movThumbnail,
             "movTime":`${movTime.value}`,

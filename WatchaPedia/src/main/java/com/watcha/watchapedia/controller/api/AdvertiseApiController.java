@@ -21,13 +21,13 @@ public class AdvertiseApiController extends CrudController<AdvertiseApiRequest, 
     public Header<AdvertiseApiResponse> create(@RequestBody Header<AdvertiseApiRequest> request) {
         System.out.println(request.getData());
         return advertiseApiLogicService.create(request);
-
     }
 
+
     @Override
-    @GetMapping("{ntcIdx}")
-    public Header<AdvertiseApiResponse> read(@PathVariable(name="ntcIdx") Long ntcIdx) {
-        return advertiseApiLogicService.read(ntcIdx);
+    @GetMapping("{adIdx}")
+    public Header<AdvertiseApiResponse> read(@PathVariable(name="adIdx") Long adIdx) {
+        return advertiseApiLogicService.read(adIdx);
     }
 
 
