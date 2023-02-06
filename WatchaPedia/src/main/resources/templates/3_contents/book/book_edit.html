@@ -52,11 +52,33 @@
     <input
             id="modal_search_bar"
             v-model="search_msg"
-            @change="search_db"
+            onchange="search_db()"
             placeholder="예) 박찬욱, 손현주, 이성민"
     />
-    <div id="modal_search_result"></div>
-    <div id="person_search_cancel" onclick="search_cancel()">취소</div>
+    <div id="modal_search_result">
+      <!--     검색결과 반복틀 시작!      -->
+      <div class="onePersonBigBox" v-for="person in itemlist">
+        <div hidden>{{person.perIdx}}</div>
+        <div class="profileBox">
+          <img :src=`${person.perPhoto}` class="personSimg"></div>
+        <div class="contentBox">
+          <b>{{person.perName}}</b>
+          <p>{{person.perRole}}</p>
+          <div class="appearBoxes">
+            <div v-for="appear in person.appearance">{{appear}}</div>
+          </div>
+        </div>
+        <div class="chooseBtnBox">
+          <button v-if="person.chooseCheck == null" class="chooseBtn" onclick="choseCheck(this)">선택</button>
+          <button v-if="person.chooseCheck != null" class="chooseBtn" onclick="choseCheck(this)">✔️선택됨</button>
+        </div>
+      </div>
+    </div>
+    <div v-if="modalInnerBtn" id="person_search_cancel" onclick="search_cancel()">선택완료</div>
+    <div v-if="!modalInnerBtn" class="flexCenterCenter">
+      <div class="btn_css" onclick="choosePerson(this)">추가하기</div>
+      <div class="btn_css" onclick="goBackList()">뒤로가기</div>
+    </div>
   </div>
 </div>
 <body class="sb-nav-fixed">
@@ -205,22 +227,49 @@
               <div>
                 <input type="text" id="bookSummary" placeholder="내용" />
               </div>
-            </div>
 
+
+
+
+            </div>
             <div id="inputbox2">
-              <div>
-                출연/제작
-                <p>
-                  <button
-                          type="button"
-                          onclick="person_search_visible()"
-                          id="Mbtn"
-                  >
-                    인물검색
-                  </button>
-                </p>
+              <div class="conBox">
+                <div>
+                  출연/제작
+                  <p>
+                    <button
+                            type="button"
+                            onclick="person_search_visible()"
+                            id="Mbtn"
+                    >
+                      인물검색
+                    </button>
+                  </p>
+                </div>
+                <div id="authorBox">
+                  <div class="onePersonSmallBox" v-for="person in itemlist2">
+                    <div hidden class="hiddenBox" v-if="person.perJob != '감독'&&person.perCasting != ''">{{person.perIdx}}({{person.perJob}} | {{person.perCasting}})</div>
+                    <div hidden class="hiddenBox" v-if="person.perJob != '감독'&&person.perCasting == ''">{{person.perIdx}}({{person.perJob}})</div>
+                    <div hidden class="hiddenBox" v-if="person.perJob == '감독'">{{person.perIdx}}({{person.perJob}})</div>
+                    <div class="smallProfileBox">
+                      <img :src=`${person.perPhoto}` class="smallPersonSimg">
+                    </div>
+                    <div class="smallContentBox">
+                      <b>{{person.perName}}</b>
+                      <p v-if="person.perJob != '감독'&&person.perCasting != ''">({{person.perJob}} | {{person.perCasting}})</p>
+                      <p v-if="person.perJob != '감독'&&person.perCasting == ''">({{person.perJob}})</p>
+                      <p v-if="person.perJob == '감독'">({{person.perJob}})</p>
+                    </div>
+                    <div onclick="minusItemlist2(this)" type="button">
+                      <img
+                              class="minus_button"
+                              src="/assets/img/x_icon.png"
+                              alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div id="authorBox">이곳은 인물이 추가 됩니다.</div>
               <div class="conBox">
                 <div class="caBox">
                   목차
@@ -234,6 +283,93 @@
                   출판사 제공 책 소개
                   <div class="content2">
                     <input type="text" id="bookPubSummary" />
+                  </div>
+                </div>
+              </div>
+              <div id="wgo">
+                <div>구매가능한 곳</div>
+                <div class="wgo2">
+                  <div class="wBox_1">
+                    <div class="wBox2">
+                      <div>
+                        <select
+                                name="platform"
+                                id="platform"
+                                onchange="createOtt(this.value)"
+                                class="vBox3"
+                        >
+                          <option value="" disabled selected>온라인서점</option>
+                          <option value="알라딘">알라딘</option>
+                          <option value="Yes24">Yes24</option>
+                          <option value="교보문고">교보문고</option>
+                        </select>
+                      </div>
+                      <div>
+                        <input
+                                type="text"
+                                placeholder="URL주소"
+                                class="wBox3"
+                                id="vurl"
+                        />
+                      </div>
+                    </div>
+                    <img
+                            onclick="ottVisible()"
+                            id="ott_plus_icon"
+                            src="/assets/img/plus_outline_icon.png"
+                            alt=""
+                    />
+                  </div>
+                  <div class="wBox_2">
+                    <div id="aladin_box">
+                      <img
+                              class="ott_img"
+                              src="https://an2-glx.amz.wtchn.net/images/ex_aladin_logo_square.png"
+                              alt=""
+                      />
+                      <div class="ott_name">알라딘
+                        <input type="hidden" id="aladin_url" value="">
+                      </div>
+                      <div id="aladin_box_X" onclick="delval('aladin_url')">
+                        <img
+                                class="x_icon"
+                                src="/assets/img/x_icon.png"
+                                alt=""
+                        />
+                      </div>
+                    </div>
+                    <div id="yes24_box">
+                      <img
+                              class="ott_img"
+                              src="https://an2-glx.amz.wtchn.net/images/ex_yes24_logo_square.png"
+                              alt=""
+                      />
+                      <div class="ott_name">Yes24
+                        <input type="hidden" id="yes24_url" value=""></div>
+                      <div id="yes24_box_X" onclick="delval('yes24_url')">
+                        <img
+                                class="x_icon"
+                                src="/assets/img/x_icon.png"
+                                alt=""
+                        />
+                      </div>
+                    </div>
+                    <div id="kyobo_box">
+                      <img
+                              class="ott_img"
+                              src="https://an2-glx.amz.wtchn.net/images/ex_kyobo_logo_square.png"
+                              alt=""
+                      />
+                      <div class="ott_name">교보문고
+                        <input type="hidden" id="kyobo_url" value=""></div>
+                      <div id="kyobo_box_X" onclick="delval('kyobo_url')">
+                        <img
+                                class="x_icon"
+                                src="/assets/img/x_icon.png"
+                                alt=""
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -278,97 +414,11 @@
                 </div>
               </div>
             </div>
-            <div id="wgo">
-              <div>구매가능한 곳</div>
-              <div class="wgo2">
-                <div class="wBox_1">
-                  <div class="wBox2">
-                    <div>
-                      <select
-                              name="platform"
-                              id="platform"
-                              onchange="createOtt(this.value)"
-                              class="vBox3"
-                      >
-                        <option value="" disabled selected>온라인서점</option>
-                        <option value="알라딘">알라딘</option>
-                        <option value="Yes24">Yes24</option>
-                        <option value="교보문고">교보문고</option>
-                      </select>
-                    </div>
-                    <div>
-                      <input
-                              type="text"
-                              placeholder="URL주소"
-                              class="wBox3"
-                              id="vurl"
-                      />
-                    </div>
-                  </div>
-                  <img
-                          onclick="ottVisible()"
-                          id="ott_plus_icon"
-                          src="/assets/img/plus_outline_icon.png"
-                          alt=""
-                  />
-                </div>
-                <div class="wBox_2">
-                  <div id="aladin_box">
-                    <img
-                            class="ott_img"
-                            src="https://an2-glx.amz.wtchn.net/images/ex_aladin_logo_square.png"
-                            alt=""
-                    />
-                    <div class="ott_name">알라딘
-                      <input type="hidden" id="aladin_url" value="">
-                    </div>
-                    <div id="aladin_box_X" onclick="delval('aladin_url')">
-                      <img
-                              class="x_icon"
-                              src="/assets/img/x_icon.png"
-                              alt=""
-                      />
-                    </div>
-                  </div>
-                  <div id="yes24_box">
-                    <img
-                            class="ott_img"
-                            src="https://an2-glx.amz.wtchn.net/images/ex_yes24_logo_square.png"
-                            alt=""
-                    />
-                    <div class="ott_name">Yes24
-                      <input type="hidden" id="yes24_url" value=""></div>
-                    <div id="yes24_box_X" onclick="delval('yes24_url')">
-                      <img
-                              class="x_icon"
-                              src="/assets/img/x_icon.png"
-                              alt=""
-                      />
-                    </div>
-                  </div>
-                  <div id="kyobo_box">
-                    <img
-                            class="ott_img"
-                            src="https://an2-glx.amz.wtchn.net/images/ex_kyobo_logo_square.png"
-                            alt=""
-                    />
-                    <div class="ott_name">교보문고
-                      <input type="hidden" id="kyobo_url" value=""></div>
-                    <div id="kyobo_box_X" onclick="delval('kyobo_url')">
-                      <img
-                              class="x_icon"
-                              src="/assets/img/x_icon.png"
-                              alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
         <div id="MBox">
-          <button id="btn1 " onclick="sendit()">수정하기</button>
+          <button id="btn1 " th:onclick="|sendit(${book.bookIdx})|">수정하기</button>
           <button id="btn2" onclick="location.href='/contents/book'">취소하기</button>
         </div>
       </div>

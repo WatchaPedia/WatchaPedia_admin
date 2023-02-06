@@ -53,23 +53,45 @@
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css"
   />
-
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body class="sb-nav-fixed">
-  <div id="person_search_modal">
-    <div id="person_modal_bigbox">
-      <div class="modal_big_title"><div>인물검색</div></div>
-      <input
-              id="modal_search_bar"
-              v-model="search_msg"
-              @change="search_db"
-              placeholder="예) 박찬욱, 손현주, 이성민"
-      />
-      <div id="modal_search_result"></div>
-      <div id="person_search_cancel" onclick="search_cancel()">취소</div>
+<div id="person_search_modal">
+  <div id="person_modal_bigbox">
+    <div class="modal_big_title"><div>인물검색</div></div>
+    <input
+            id="modal_search_bar"
+            v-model="search_msg"
+            onchange="search_db()"
+            placeholder="예) 박찬욱, 손현주, 이성민"
+    />
+    <div id="modal_search_result">
+      <!--     검색결과 반복틀 시작!      -->
+      <div class="onePersonBigBox" v-for="person in itemlist">
+        <div hidden>{{person.perIdx}}</div>
+        <div class="profileBox">
+          <img :src=`${person.perPhoto}` class="personSimg"></div>
+        <div class="contentBox">
+          <b>{{person.perName}}</b>
+          <p>{{person.perRole}}</p>
+          <div class="appearBoxes">
+            <div v-for="appear in person.appearance">{{appear}}</div>
+          </div>
+        </div>
+        <div class="chooseBtnBox">
+          <button v-if="person.chooseCheck == null" class="chooseBtn" onclick="choseCheck(this)">선택</button>
+          <button v-if="person.chooseCheck != null" class="chooseBtn" onclick="choseCheck(this)">✔️선택됨</button>
+        </div>
+      </div>
+    </div>
+    <div v-if="modalInnerBtn" id="person_search_cancel" onclick="search_cancel()">선택완료</div>
+    <div v-if="!modalInnerBtn" class="flexCenterCenter">
+      <div class="btn_css" onclick="choosePerson(this)">추가하기</div>
+      <div class="btn_css" onclick="goBackList()">뒤로가기</div>
     </div>
   </div>
+</div>
 
 
 <!-- topbar.html -->
@@ -597,7 +619,31 @@
                   </button>
                 </p>
               </div>
-              <div id="authorBox"></div>
+
+              <div id="authorBox">
+                <div class="onePersonSmallBox" v-for="person in itemlist2">
+                  <div hidden class="hiddenBox" v-if="person.perJob != '감독'&&person.perCasting != ''">{{person.perIdx}}({{person.perJob}} | {{person.perCasting}})</div>
+                  <div hidden class="hiddenBox" v-if="person.perJob != '감독'&&person.perCasting == ''">{{person.perIdx}}({{person.perJob}})</div>
+                  <div hidden class="hiddenBox" v-if="person.perJob == '감독'">{{person.perIdx}}({{person.perJob}})</div>
+                  <div class="smallProfileBox">
+                    <img :src=`${person.perPhoto}` class="smallPersonSimg">
+                  </div>
+                  <div class="smallContentBox">
+                    <b>{{person.perName}}</b>
+                    <p v-if="person.perJob != '감독'&&person.perCasting != ''">({{person.perJob}} | {{person.perCasting}})</p>
+                    <p v-if="person.perJob != '감독'&&person.perCasting == ''">({{person.perJob}})</p>
+                    <p v-if="person.perJob == '감독'">({{person.perJob}})</p>
+                  </div>
+                  <div onclick="minusItemlist2(this)" type="button">
+                    <img
+                            class="minus_button"
+                            src="/assets/img/x_icon.png"
+                            alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+
             </div>
 
             <div id="inputbox2">
@@ -794,14 +840,14 @@
                       <div id="plus" onclick="add()" type="button">
                         <img
                                 id="plus_img"
-                                src="../../assets/img/plus_outline_icon.png"
+                                src="/assets/img/plus_outline_icon.png"
                                 alt=""
                         />
                       </div>
                       <div id="minus" onclick="minus()" type="button">
                         <img
                                 id="minus_img"
-                                src="../../assets/img/minus_outline_icon.png"
+                                src="/assets/img/minus_outline_icon.png"
                                 alt=""
                         />
                       </div>
@@ -853,7 +899,7 @@
           </div>
         </div>
         <div id="MBox">
-          <button id="btn1" onclick="sendit()">등록하기</button>
+          <button id="btn1" th:onclick="|sendit(${tv.tvIdx})|">수정하기</button>
           <button id="btn2"onclick="location.href='/contents/tv'">취소하기</button>
         </div>
       </div>
@@ -866,7 +912,6 @@
         crossorigin="anonymous"
 ></script>
 <script src="/js/scripts.js"></script>
-<script defer src="/js/Tv_Edit.js"></script>
 <script
         src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
         crossorigin="anonymous"
