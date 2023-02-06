@@ -520,6 +520,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
+
         Report report = reportRepository.getReferenceById(reportId);
 
         if(report.getReportProcessing() == null){

@@ -1,16 +1,18 @@
 package com.watcha.watchapedia.controller.api;
 
 import com.watcha.watchapedia.controller.CrudController;
+import com.watcha.watchapedia.model.entity.AdminUser;
 import com.watcha.watchapedia.model.entity.Report;
 import com.watcha.watchapedia.model.network.Header;
+import com.watcha.watchapedia.model.network.request.AdminApiRequest;
+import com.watcha.watchapedia.model.network.request.AdminJustIdxRequest;
 import com.watcha.watchapedia.model.network.request.ReportApiRequest;
+import com.watcha.watchapedia.model.network.response.AdminApiResponse;
 import com.watcha.watchapedia.model.network.response.ReportApiResponse;
+import com.watcha.watchapedia.service.AdminApiLogicService;
 import com.watcha.watchapedia.service.ReportApiLogicService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

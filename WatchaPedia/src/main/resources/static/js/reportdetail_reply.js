@@ -1,6 +1,3 @@
-const big_container = document.querySelector(".card-body");
-console.log(big_container);
-
 function blind_result() {
   const reportIdx = document.getElementById('hiddenIdx').innerText;
   const processAdmin = document.getElementById('hiddenSessionAdmin').innerText;
@@ -29,6 +26,14 @@ function blind_result() {
       }
 
   )
+
+
+  const spoiler_btn = document.getElementById("spoiler_btn");
+  const noproblem_btn = document.getElementById("noproblem_btn");
+  const blinder_btn = document.getElementById("blinder_btn");
+  blinder_btn.classList.add("selected");
+  spoiler_btn.classList.remove("selected");
+  noproblem_btn.classList.remove("selected");
 }
 
 function spoiler_result() {
@@ -57,6 +62,7 @@ function spoiler_result() {
         alert('업데이트 실패!')
         history.go()
       }
+
   )
 }
 
@@ -86,5 +92,6 @@ function noproblem_result() {
         alert('업데이트 실패!')
         history.go()
       }
+
   )
 }
