@@ -664,19 +664,19 @@ public class PageController {
     // 유저 인플루언서 수정
     @GetMapping("/member/{findAllReportx}/{userType}")
     public String updateUser(
-             @PathVariable Long userIdx,
+             @PathVariable Long findAllReportx,
              @PathVariable String userType,
              ModelMap map,
              HttpServletRequest request){
         loginModelInfo(request,map);
-        Optional<User> user = userRepository.findById(userIdx);
+        Optional<User> user = userRepository.findById(findAllReportx);
         user.ifPresent(
                 selectUser -> {
                     selectUser.setUserType(userType);
                     userRepository.save(selectUser);
                 }
         );
-        return "redirect:/member/"+userIdx;
+        return "redirect:/member/"+findAllReportx;
     }
 
 

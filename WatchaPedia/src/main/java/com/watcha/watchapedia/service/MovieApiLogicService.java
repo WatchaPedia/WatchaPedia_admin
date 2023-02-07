@@ -6,6 +6,8 @@ import com.watcha.watchapedia.model.network.request.MovieApiRequest;
 import com.watcha.watchapedia.model.network.response.MovieApiResponse;
 import com.watcha.watchapedia.model.repository.MovieRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,6 +17,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class MovieApiLogicService extends BaseService<MovieApiRequest, MovieApiResponse, Movie>{
     private final MovieRepository movieRepository;
+
 
     private MovieApiResponse response(Movie movie){
         MovieApiResponse movieApiResponse = MovieApiResponse.builder()
@@ -60,6 +63,35 @@ public class MovieApiLogicService extends BaseService<MovieApiRequest, MovieApiR
         return Header.OK(response(newMovie));
     }
 
+    public Header<List<MovieApiResponse>> cr(Header<MovieApiRequest> request) {
+        MovieApiRequest movieApiRequest = request.getData();
+        Movie movie = Movie.builder()
+                .movThumbnail(movieApiRequest.getMovThumbnail())
+                .movTitle(movieApiRequest.getMovTitle())
+                .movTitleOrg(movieApiRequest.getMovTitleOrg())
+                .movMakingDate(movieApiRequest.getMovMakingDate())
+                .movCountry(movieApiRequest.getMovCountry())
+                .movGenre(movieApiRequest.getMovGenre())
+                .movTime(movieApiRequest.getMovTime())
+                .movAge(movieApiRequest.getMovAge())
+                .movPeople(movieApiRequest.getMovPeople())
+                .movSummary(movieApiRequest.getMovSummary())
+                .movGallery(movieApiRequest.getMovGallery())
+                .movVideo(movieApiRequest.getMovVideo())
+                .movWatch(movieApiRequest.getMovWatch())
+                .movBackImg(movieApiRequest.getMovBackImg())
+                .build();
+        Long newMovie = baseRepository.save(movie).getMovIdx();
+        System.out.println("새로등록된 영화의 idx= " + newMovie);
+
+        List<Movie> movies = baseRepository.findById(newMovie).stream().toList();
+        List<MovieApiResponse> movieApiResponse = movies.stream().map(
+                mov -> response(mov)).collect(Collectors.toList());
+
+        return Header.OK(movieApiResponse);
+    }
+
+
 
 
     @Override
@@ -83,12 +115,12 @@ public class MovieApiLogicService extends BaseService<MovieApiRequest, MovieApiR
                             movie.setMovGenre(movieApiRequest.getMovGenre());
                             movie.setMovTime(movieApiRequest.getMovTime());
                             movie.setMovAge(movieApiRequest.getMovAge());
-                            movie.setMovPeople(movieApiRequest.getMovPeople());
-                            movie.setMovSummary(movieApiRequest.getMovSummary());
-                            movie.setMovGallery(movieApiRequest.getMovGallery());
-                            movie.setMovVideo(movieApiRequest.getMovVideo());
-                            movie.setMovWatch(movieApiRequest.getMovWatch());
-                            movie.setMovBackImg(movieApiRequest.getMovBackImg());
+                            if(movieApiRequest.getMovPeople()!=null){movie.setMovPeople(movieApiRequest.getMovPeople());}
+                            if(movieApiRequest.getMovSummary()!=null){movie.setMovSummary(movieApiRequest.getMovSummary());}
+                            if(movieApiRequest.getMovGallery()!=null){movie.setMovGallery(movieApiRequest.getMovGallery());}
+                            if(movieApiRequest.getMovVideo()!=null){movie.setMovVideo(movieApiRequest.getMovVideo());}
+                            if(movieApiRequest.getMovWatch()!=null){movie.setMovWatch(movieApiRequest.getMovWatch());}
+                            if(movieApiRequest.getMovBackImg()!=null){movie.setMovBackImg(movieApiRequest.getMovBackImg());}
                             return movie;
                         }).map(movie -> movieRepository.save(movie))
                 .map(movie -> response(movie))

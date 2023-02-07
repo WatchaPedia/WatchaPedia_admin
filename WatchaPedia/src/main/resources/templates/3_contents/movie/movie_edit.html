@@ -120,11 +120,12 @@
                                         placeholder="표기할 영화제목"
                                         class="inBox1"
                                         id="movTitle"
+                                        th:value="${movie.movTitle}"
                                 />
                             </div>
 
                             <div>
-                                <input type="text" placeholder="원제" class="inBox1" id="movTitleOrg"/>
+                                <input type="text" placeholder="원제" class="inBox1" th:value="${movie.movTitleOrg}" id="movTitleOrg"/>
                             </div>
 
                             <div>
@@ -524,6 +525,7 @@
                                         placeholder="상영시간(분단위 ex.55.75 127)"
                                         class="inBox1"
                                         id="movTime"
+                                        th:value="${movie.movTime}"
                                 />
                             </div>
                             <!-- 드롭다운 -->
@@ -579,7 +581,7 @@
 
                         <div id="inputbox2">
                             <div>
-                                <input type="text" id="movSummary" placeholder="내용" />
+                                <input type="text" id="movSummary" placeholder="내용" th:value="${movie.movSummary}"/>
                             </div>
                             <div id="wgo">
                                 <div>감상가능한 곳</div>

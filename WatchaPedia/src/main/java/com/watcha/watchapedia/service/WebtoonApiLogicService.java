@@ -77,19 +77,19 @@ public class WebtoonApiLogicService extends BaseService<WebtoonApiRequest, Webto
         System.out.println(webtoons);
         return webtoons.map(
                         webtoon -> {
-                            webtoon.setWebThumbnail(webtoonApiRequest.getWebThumbnail());
+                            if(webtoonApiRequest.getWebThumbnail()!=null){webtoon.setWebThumbnail(webtoonApiRequest.getWebThumbnail());}
                             webtoon.setWebTitle(webtoonApiRequest.getWebTitle());
                             webtoon.setWebTitleOrg(webtoonApiRequest.getWebTitleOrg());
                             webtoon.setWebWriter(webtoonApiRequest.getWebWriter());
                             webtoon.setWebGenre(webtoonApiRequest.getWebGenre());
-                            webtoon.setWebSerDetail(webtoonApiRequest.getWebSerDetail());
-                            webtoon.setWebSerDay(webtoonApiRequest.getWebSerDay());
-                            webtoon.setWebSerPeriod(webtoonApiRequest.getWebSerPeriod());
-                            webtoon.setWebAge(webtoonApiRequest.getWebAge());
-                            webtoon.setWebSummary(webtoonApiRequest.getWebSummary());
-                            webtoon.setWebPeople(webtoonApiRequest.getWebPeople());
-                            webtoon.setWebWatch(webtoonApiRequest.getWebWatch());
-                            webtoon.setWebBackImg(webtoonApiRequest.getWebBackImg());
+                            if(webtoonApiRequest.getWebSerDetail()!=null){webtoon.setWebSerDetail(webtoonApiRequest.getWebSerDetail());}
+                            if(webtoonApiRequest.getWebSerDay()!=null){webtoon.setWebSerDay(webtoonApiRequest.getWebSerDay());}
+                            if(webtoonApiRequest.getWebSerPeriod()!=null){webtoon.setWebSerPeriod(webtoonApiRequest.getWebSerPeriod());}
+                            if(webtoonApiRequest.getWebAge()!=null){webtoon.setWebAge(webtoonApiRequest.getWebAge());}
+                            if(webtoonApiRequest.getWebSummary()!=null){webtoon.setWebSummary(webtoonApiRequest.getWebSummary());}
+                            if(webtoonApiRequest.getWebPeople()!=null){webtoon.setWebPeople(webtoonApiRequest.getWebPeople());}
+                            if(webtoonApiRequest.getWebWatch()!=null){webtoon.setWebWatch(webtoonApiRequest.getWebWatch());}
+                            if(webtoonApiRequest.getWebBackImg()!=null){webtoon.setWebBackImg(webtoonApiRequest.getWebBackImg());}
                             return webtoon;
                         }).map(webtoon -> webtoonRepository.save(webtoon))
                 .map(webtoon -> response(webtoon))

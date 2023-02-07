@@ -13,7 +13,15 @@
     margin: 10px 45%;
 }
 
-#btn1, #btn2{
+#btn1{
+    border:0.5px solid rgb(241, 241, 241);
+    font-weight: 700;
+}
+#btn2{
+    display: flex;
+    justify-content: center;
+}
+.btn2{
     border:0.5px solid rgb(241, 241, 241);
     font-weight: 700;
 }

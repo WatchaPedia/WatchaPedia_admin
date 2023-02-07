@@ -76,13 +76,13 @@ public class AdvertiseApiLogicService extends BaseService<AdvertiseApiRequest, A
                             ad.setAdDescription(advertiseApiRequest.getAdDescription());
                             ad.setAdStatus(advertiseApiRequest.getAdStatus());
                             ad.setAdVideosource(advertiseApiRequest.getAdVideosource());
-                            ad.setAdImagesource(advertiseApiRequest.getAdImagesource());
-                            ad.setAdBtnColor(advertiseApiRequest.getAdBtnColor());
+                            if(advertiseApiRequest.getAdImagesource()!=null){ad.setAdImagesource(advertiseApiRequest.getAdImagesource());}
+                            if(advertiseApiRequest.getAdBtnColor()!=null){ad.setAdBtnColor(advertiseApiRequest.getAdBtnColor());}
                             ad.setAdBtnLink(advertiseApiRequest.getAdBtnLink());
                             ad.setAdBtnText(advertiseApiRequest.getAdBtnText());
                             ad.setAdClient(advertiseApiRequest.getAdClient());
-                            ad.setAdClientLogoimage(advertiseApiRequest.getAdClientLogoimage());
-                            ad.setEndDate(advertiseApiRequest.getEndDate());
+                            if(advertiseApiRequest.getAdClientLogoimage()!=null){ad.setAdClientLogoimage(advertiseApiRequest.getAdClientLogoimage());}
+                            if(advertiseApiRequest.getEndDate()!=null){ad.setEndDate(advertiseApiRequest.getEndDate());}
                             return ad;
                         }).map(ad -> advertiseRepository.save(ad))
                 .map(ad -> response(ad))

@@ -116,15 +116,16 @@
                             placeholder="표기할 웹툰명"
                             class="inBox1"
                             id="webTitle"
+                            th:value="${webtoon.webTitle}"
 
                     />
                   </div>
                   <div>
-                    <input type="text" placeholder="원제" class="inBox1" id="webTitleOrg"/>
+                    <input type="text" placeholder="원제" th:value="${webtoon.webTitleOrg}"class="inBox1" id="webTitleOrg"/>
                   </div>
 
                   <div>
-                    <input type="text" placeholder="작가" class="inBox1" id="webWriter"/>
+                    <input type="text" placeholder="작가" th:value="${webtoon.webWriter}"class="inBox1" id="webWriter"/>
                   </div>
 
                   <div

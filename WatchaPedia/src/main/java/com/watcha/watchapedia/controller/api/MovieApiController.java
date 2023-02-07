@@ -19,11 +19,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MovieApiController extends CrudController<MovieApiRequest, MovieApiResponse, Movie> {
     private final MovieApiLogicService movieApiLogicService;
-    @Override
+
     @PostMapping("") // http://localhost:8888/api/movie (post)
-    public Header<MovieApiResponse> create(@RequestBody Header<MovieApiRequest> request) {
-        System.out.println(request.getData());
-        return movieApiLogicService.create(request);
+    public Header<List<MovieApiResponse>> creat(@RequestBody Header<MovieApiRequest> request) {
+        System.out.println("apimovie create reqeustgetdata"+request.getData());
+        return movieApiLogicService.cr(request);
     }
 
     @Override

@@ -79,20 +79,20 @@ public class TvApiLogicService extends BaseService<TvApiRequest, TvApiResponse, 
         System.out.println(tvs);
         return tvs.map(
                         tv -> {
-                            tv.setTvChannel((tvApiRequest.getTvChannel()));
+                            if(tvApiRequest.getTvChannel()!=null){tv.setTvChannel((tvApiRequest.getTvChannel()));}
                             tv.setTvGenre(tvApiRequest.getTvGenre());
                             tv.setTvAge(tvApiRequest.getTvAge());
-                            tv.setTvGallery(tvApiRequest.getTvGallery());
+                            if(tvApiRequest.getTvGallery()!=null){tv.setTvGallery(tvApiRequest.getTvGallery());}
                             tv.setTvCountry(tvApiRequest.getTvCountry());
                             tv.setTvIdx(tvApiRequest.getTvIdx());
-                            tv.setTvPeople(tvApiRequest.getTvPeople());
-                            tv.setTvSummary(tvApiRequest.getTvSummary());
+                            if(tvApiRequest.getTvPeople()!=null){tv.setTvPeople(tvApiRequest.getTvPeople());}
+                            if(tvApiRequest.getTvSummary()!=null){tv.setTvSummary(tvApiRequest.getTvSummary());}
                             tv.setTvTitle(tvApiRequest.getTvTitle());
-                            tv.setTvThumbnail(tvApiRequest.getTvThumbnail());
-                            tv.setTvBackImg(tvApiRequest.getTvBackImg());
-                            tv.setTvVideo(tvApiRequest.getTvVideo());
-                            tv.setTvWatch(tvApiRequest.getTvWatch());
-                            tv.setTvMakingDate(tvApiRequest.getTvMakingDate());
+                            if(tvApiRequest.getTvThumbnail()!=null){tv.setTvThumbnail(tvApiRequest.getTvThumbnail());}
+                            if(tvApiRequest.getTvBackImg()!=null){tv.setTvBackImg(tvApiRequest.getTvBackImg());}
+                            if(tvApiRequest.getTvVideo()!=null){tv.setTvVideo(tvApiRequest.getTvVideo());}
+                            if(tvApiRequest.getTvWatch()!=null){tv.setTvWatch(tvApiRequest.getTvWatch());}
+                            if(tvApiRequest.getTvMakingDate()!=null){tv.setTvMakingDate(tvApiRequest.getTvMakingDate());}
                             return tv;
                         }).map(tv -> tvRepository.save(tv))
                 .map(tv -> response(tv))

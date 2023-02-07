@@ -59,9 +59,41 @@ public class CharacterApiLogicService extends BaseService<CharacterApiRequest, C
         System.out.println(characters);
         return characters.map(
                         character -> {
-                            character.setPerBiography(characterApiRequest.getPerBiography());
-                            character.setPerName(characterApiRequest.getPerName());
-                            character.setPerPhoto(characterApiRequest.getPerPhoto());
+                            System.out.println(request.getData().getPerTv());
+                            System.out.println(request.getData().getPerBook());
+                            System.out.println(request.getData().getPerMovie());
+                            System.out.println(request.getData().getPerWebtoon());
+
+                            if (request.getData().getPerTv()!=null){
+                                if(character.getPerTv()==null){
+                                    character.setPerTv(characterApiRequest.getPerTv());
+                                }else{
+                                    character.setPerTv(character.getPerTv()+","+characterApiRequest.getPerTv());
+                                }
+                            }else if(request.getData().getPerBook()!=null){
+                                if(character.getPerBook()==null){
+                                    character.setPerBook(characterApiRequest.getPerBook());
+                                }else{
+                                    character.setPerBook(character.getPerBook()+","+characterApiRequest.getPerBook());
+                                }
+                            }else if(request.getData().getPerMovie()!=null){
+                                if(character.getPerMov()==null){
+                                    character.setPerMov(characterApiRequest.getPerMovie());
+                                }else{
+                                    character.setPerMov(character.getPerMov()+","+characterApiRequest.getPerMovie());
+                                }
+                            }else if(request.getData().getPerWebtoon()!=null){
+                                if(character.getPerWebtoon()==null){
+                                    character.setPerWebtoon(characterApiRequest.getPerWebtoon());
+                                }else{
+                                    character.setPerWebtoon(character.getPerTv()+","+characterApiRequest.getPerWebtoon());
+                                }
+                            }else{
+                                if(characterApiRequest.getPerBiography()!=null){character.setPerBiography(characterApiRequest.getPerBiography());}
+                                if(characterApiRequest.getPerName()!=null){character.setPerName(characterApiRequest.getPerName());}
+                                if(characterApiRequest.getPerPhoto()!=null){character.setPerPhoto(characterApiRequest.getPerPhoto());}
+                            }
+
                             return character;
                         }).map(character -> characterRepository.save(character))
                 .map(character -> response(character))

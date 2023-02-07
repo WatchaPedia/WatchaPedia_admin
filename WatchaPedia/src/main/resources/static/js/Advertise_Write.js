@@ -254,10 +254,6 @@ function sendit(){
     alert('버튼텍스트를 입력하세요');
     return false;
   }
-  if(adBtnText==null){
-    alert('버튼텍스트를 입력하세요');
-    return false;
-  }
   if(endDate.value==''){
     alert('종료날짜를 입력하세요');
     return false;

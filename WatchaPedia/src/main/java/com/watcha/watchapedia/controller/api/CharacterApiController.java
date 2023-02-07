@@ -36,6 +36,7 @@ public class CharacterApiController extends CrudController<CharacterApiRequest, 
     }
 
 
+
     @Override
     @DeleteMapping("{id}")
     public Header<CharacterApiResponse> delete(@PathVariable Long id) {

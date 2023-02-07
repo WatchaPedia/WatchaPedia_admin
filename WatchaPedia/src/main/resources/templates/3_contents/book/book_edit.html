@@ -117,15 +117,16 @@
                         placeholder="표기할 책제목"
                         class="inBox1"
                         id="bookTitle"
+                        th:value="${book.bookTitle}"
                 />
               </div>
 
               <div>
-                <input type="text" placeholder="부제" class="inBox1" id="bookTitleSub" />
+                <input type="text" placeholder="부제" class="inBox1" id="bookTitleSub" th:value="${book.bookTitleSub}"/>
               </div>
 
               <div>
-                <input type="text" placeholder="작가" class="inBox1" id="bookWriter"/>
+                <input type="text" placeholder="작가" class="inBox1" id="bookWriter" th:value="${book.bookWriter}"/>
               </div>
 
               <div
@@ -209,7 +210,7 @@
               </div>
 
               <div>
-                <input type="text" placeholder="페이지" class="inBox1" id="bookPage" />
+                <input type="text" placeholder="페이지" class="inBox1" id="bookPage" th:value="${book.bookPage}"/>
               </div>
 
               <!-- 드롭다운 -->
@@ -225,7 +226,7 @@
               </div>
 
               <div>
-                <input type="text" id="bookSummary" placeholder="내용" />
+                <input type="text" id="bookSummary" placeholder="내용" th:value="${book.bookSummary}"/>
               </div>
 
 
@@ -274,7 +275,7 @@
                 <div class="caBox">
                   목차
                   <div class="content2">
-                    <input type="text" id="bookContentIdx" />
+                    <input type="text" id="bookContentIdx" th:value="${book.bookContentIdx}" />
                   </div>
                 </div>
               </div>
@@ -282,7 +283,7 @@
                 <div class="caBox">
                   출판사 제공 책 소개
                   <div class="content2">
-                    <input type="text" id="bookPubSummary" />
+                    <input type="text" id="bookPubSummary" th:value="${book.bookPubSummary}"/>
                   </div>
                 </div>
               </div>

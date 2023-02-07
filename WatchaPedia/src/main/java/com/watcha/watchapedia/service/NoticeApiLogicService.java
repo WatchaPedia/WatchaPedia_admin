@@ -74,9 +74,10 @@ public class NoticeApiLogicService extends BaseService<NoticeApiRequest, NoticeA
                         notice -> {
                             notice.setNtcTitle(noticeApiRequest.getNtcTitle());
                             notice.setNtcText(noticeApiRequest.getNtcText());
+                            if(noticeApiRequest.getNtcImagepath()!=null){notice.setNtcImagepath(noticeApiRequest.getNtcImagepath());}
                             notice.setNtcBtnText(noticeApiRequest.getNtcBtnText());
                             notice.setNtcBtnLink(noticeApiRequest.getNtcBtnLink());
-                            notice.setNtcBtnColor(noticeApiRequest.getNtcBtnColor());
+                            if(noticeApiRequest.getNtcBtnColor()!=null){notice.setNtcBtnColor(noticeApiRequest.getNtcBtnColor());}
                             return notice;
                         }).map(notice -> baseRepository.save(notice))
                 .map(notice -> response(notice))

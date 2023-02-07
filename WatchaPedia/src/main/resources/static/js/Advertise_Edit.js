@@ -234,34 +234,30 @@ function sendit(adIdx){
         alert('내용을 입력하세요');
         return false;
     }
-    if(adClient.value==null){
-        alert('클라이언트를 입력하세요');
-        return false;
-    }
-    if(adClientLogoimage==null){
-        alert('클라이언트 로고이미지를 등록하세요');
-        return false;
-    }
-    if(adBtnColor==null){
-        alert('버튼색상을 선택하세요');
-        return false;
-    }
-    if(adBtnLink==null){
-        alert('버튼링크를 입력하세요');
-        return false;
-    }
-    if(adBtnText==null){
-        alert('버튼텍스트를 입력하세요');
-        return false;
-    }
-    if(adBtnText==null){
-        alert('버튼텍스트를 입력하세요');
-        return false;
-    }
-    if(endDate.value==''){
-        alert('종료날짜를 입력하세요');
-        return false;
-    }
+    // if(adClient.value==null){
+    //     alert('클라이언트를 입력하세요');
+    //     return false;
+    // }
+    // if(adClientLogoimage==null){
+    //     alert('클라이언트 로고이미지를 등록하세요');
+    //     return false;
+    // }
+    // if(adBtnColor==null){
+    //     alert('버튼색상을 선택하세요');
+    //     return false;
+    // }
+    // if(adBtnLink==null){
+    //     alert('버튼링크를 입력하세요');
+    //     return false;
+    // }
+    // if(adBtnText==null){
+    //     alert('버튼텍스트를 입력하세요');
+    //     return false;
+    // }
+    // if(endDate.value==''){
+    //     alert('종료날짜를 입력하세요');
+    //     return false;
+    // }
 
 
     fetch('http://localhost:9090/api/advertise', {

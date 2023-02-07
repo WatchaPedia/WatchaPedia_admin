@@ -75,101 +75,101 @@
                         광고등록
                     </div>
 
-                    <input type="text" th:value="${advertise.adTitle}"class="fo" name="adTitle" id = "adTitle"  placeholder="제목을 입력하세요." onfocus="this.placeholder=''" onblur="this.placeholder='제목'" >
+                        <input type="text" class="fo" name="adTitle" id = "adTitle" th:value="${advertise.adTitle}"  placeholder="제목을 입력하세요." onfocus="this.placeholder=''" onblur="this.placeholder='제목'" >
 
-                    <div class="centerdiv">
-                        <div class="conBox2">
-                            <div id="po">
-                                <span>사진</span>
-                                <div id="poBox">
-                                    <label for="pobtn">파일 선택 </label>
-                                    <!--당겼을때 출력-->
+                        <div class="centerdiv">
+                            <div class="conBox2">
+                                <div id="po">
+                                    <span>사진</span>
+                                    <div id="poBox">
+                                        <label for="pobtn">파일 선택 </label>
+                                        <!--당겼을때 출력-->
+                                        <input
+                                                type="file"
+                                                accept=".jpg, .jpeg, .png, .gif"
+                                                id="pobtn"
+                                                onchange="readLink(this);"
+                                        />
+                                        <div id="poBox2">
+                                            <p class="file">파일 끌어다 추가하기</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>동영상링크</span>
+                                    <div>
+                                        <input id="adVideoSource"type="text">
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="ddiv">
+                                <span>내용</span>
+                                <div>
+                                    <input th:value="${advertise.adDescription}" id="adDescription" name="adDescription" placeholder="광고할 내용을 입력해 주세요.">
+                                </div>
+                            </div>
+
+                            <div id="bba" class="ddiv">
+                                <span>광고주명</span>
+                                <p>
+                                    <input id="adClient"type="text" th:value="${advertise.adClient}">
+                                </p>
+
+                                <span>광고주 로고이미지</span>
+                                <div id="baBox" >
+                                    <label for="babtn">파일 선택</label>
                                     <input
                                             type="file"
                                             accept=".jpg, .jpeg, .png, .gif"
-                                            id="pobtn"
-                                            onchange="readLink(this);"
+                                            id="babtn"
+                                            onchange="readLink1(this);"
                                     />
-                                    <div id="poBox2">
+                                    <div id="baBox2">
                                         <p class="file">파일 끌어다 추가하기</p>
                                     </div>
                                 </div>
+
                             </div>
-                            <div>
-                                <span>동영상링크</span>
+
+
+
+                            <div class="ddiv">
+                                <span>버튼</span>
                                 <div>
-                                    <input  th:value="${advertise.adVideoSource}" id="adVideoSource"type="text">
+                                    <input type="text" name="adBtnText" id="adBtnText" th:value="${advertise.adBtnText}"/>
+                                    <input id="spoid" type="color" value="#FE3F6F"/>
+                                    <input type="text" name="adBtnColor" id="adBtnColor" hidden/>
+                                </div>
+                            </div>
+                            <div id="btnlinkdiv" class="ddiv">
+                                <span>버튼 연결 링크</span>
+                                <div>
+                                    <input type="text" id="adBtnLink" th:value="${advertise.adBtnLink}">
                                 </div>
                             </div>
 
-                        </div>
-
-                        <div class="ddiv">
-                            <span>내용</span>
-                            <div>
-                                <input id="adDescription" th:value="${advertise.adDescription}" name="adDescription" placeholder="광고할 내용을 입력해 주세요.">
-                            </div>
-                        </div>
-
-                        <div id="bba" class="ddiv">
-                            <span>광고주명</span>
-                            <p>
-                                <input id="adClient" th:value="${advertise.adClient}"  type="text">
-                            </p>
-
-                            <span>광고주 로고이미지</span>
-                            <div id="baBox" >
-                                <label for="babtn">파일 선택</label>
-                                <input
-                                        type="file"
-                                        accept=".jpg, .jpeg, .png, .gif"
-                                        id="babtn"
-                                        onchange="readLink1(this);"
-                                />
-                                <div id="baBox2">
-                                    <p class="file">파일 끌어다 추가하기</p>
-                                </div>
+                            <div class="ddiv" >
+                                <span>광고 종료 날짜</span>
+                               <div>
+                                    <input
+                                            type="date"
+                                            data-placeholder="종료 날짜"
+                                            aria-required="true"
+                                            value="{startDateValue}"
+                                            className="{styles.selectDay}"
+                                            onChange="{StartDateValueHandler}"
+                                            required
+                                            class="inBox1"
+                                            id="endDate"
+                                    />
+                               </div>
                             </div>
 
                         </div>
-
-
-
-                        <div class="ddiv">
-                            <span>버튼</span>
-                            <div>
-                                <input type="text" name="adBtnText" id="adBtnText" />
-                                <input id="spoid" type="color" value="#FE3F6F"/>
-                                <input type="text" name="adBtnColor" id="adBtnColor" hidden/>
-                            </div>
-                        </div>
-                        <div id="btnlinkdiv" class="ddiv">
-                            <span>버튼 연결 링크</span>
-                            <div>
-                                <input  th:value="${advertise.adBtnLink}"  type="text" id="adBtnLink">
-                            </div>
-                        </div>
-
-                        <div class="ddiv" >
-                            <span>광고 종료 날짜</span>
-                            <div>
-                                <input
-                                        type="date"
-                                        data-placeholder="종료 날짜"
-                                        aria-required="true"
-                                        value="{startDateValue}"
-                                        className="{styles.selectDay}"
-                                        onChange="{StartDateValueHandler}"
-                                        required
-                                        class="inBox1"
-                                        id="endDate"
-                                />
-                            </div>
-                        </div>
-
-                    </div>
                     <div id="btn0">
-                        <button class='butn' id="btn1" th:onclick="|submitCheck(${advertise.adIdx})|">수정하기</button>
+                        <button class='butn' id="btn1" th:onclick="|sendit(${advertise.adIdx})|">수정하기</button>
                         <button class='butn' id="btn2" onclick="location.href='/advertisement'">취소하기</button>
                     </div>
                 </div>

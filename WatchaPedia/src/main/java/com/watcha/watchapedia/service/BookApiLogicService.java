@@ -84,12 +84,12 @@ public class BookApiLogicService extends BaseService<BookApiRequest, BookApiResp
                             book.setBookPage(bookApiRequest.getBookPage());
                             book.setBookAge(bookApiRequest.getBookAge());
                             book.setBookSummary(bookApiRequest.getBookSummary());
-                            book.setBookPeople(bookApiRequest.getBookPeople());
-                            book.setBookContentIdx(bookApiRequest.getBookContentIdx());
-                            book.setBookPubSummary(bookApiRequest.getBookPubSummary());
-                            book.setBookThumbnail(bookApiRequest.getBookThumbnail());
-                            book.setBookBackImg(bookApiRequest.getBookBackImg());
-                            book.setBookBuy(bookApiRequest.getBookBuy());
+                            if(bookApiRequest.getBookPeople()!=null){book.setBookPeople(bookApiRequest.getBookPeople());}
+                            if(bookApiRequest.getBookContentIdx()!=null){book.setBookContentIdx(bookApiRequest.getBookContentIdx());}
+                            if(bookApiRequest.getBookPubSummary()!=null){book.setBookPubSummary(bookApiRequest.getBookPubSummary());}
+                            if(bookApiRequest.getBookThumbnail()!=null){book.setBookThumbnail(bookApiRequest.getBookThumbnail());}
+                            if(bookApiRequest.getBookBackImg()!=null){book.setBookBackImg(bookApiRequest.getBookBackImg());}
+                            if(bookApiRequest.getBookBuy()!=null){book.setBookBuy(bookApiRequest.getBookBuy());}
                             return book;
                         }).map(book -> bookRepository.save(book))
                 .map(book -> response(book))

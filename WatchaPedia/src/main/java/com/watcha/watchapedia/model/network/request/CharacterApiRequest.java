@@ -14,4 +14,10 @@ public class CharacterApiRequest {
     private String perName;
     private String perPhoto;
     private String perBiography;
+    private String perMovie;
+    private String perWebtoon;
+    private String perBook;
+    private String perTv;
+
+
 }

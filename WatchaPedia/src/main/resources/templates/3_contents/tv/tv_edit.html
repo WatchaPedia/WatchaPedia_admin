@@ -129,12 +129,13 @@
                         placeholder="표기할 프로그램명"
                         class="inBox1"
                         id="tvTitle"
+                        th:value="${tv.tvTitle}"
 
                 />
               </div>
 
               <div>
-                <input type="text" placeholder="원제" class="inBox1" id="tvTitleOrg" />
+                <input type="text" placeholder="원제" class="inBox1" id="tvTitleOrg" th:value="${tv.tvTitleOrg}"/>
               </div>
 
               <div>
@@ -648,11 +649,11 @@
 
             <div id="inputbox2">
               <div>
-                <input type="text" id="tvSummary" placeholder="내용" />
+                <input type="text" id="tvSummary" placeholder="내용" th:value="${tv.tvSummary}"/>
               </div>
               <div id="wgo">
                 <div>감상가능한 곳</div>
-                <div class="wgo2"상>
+                <div class="wgo2">
                   <div class="wBox_1">
                     <div class="wBox2">
                       <div>

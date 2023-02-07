@@ -991,62 +991,63 @@ function readLinks(input) {
 
 //-------------------------------------------------------------------
 
-    function sendit(){
+    function sendit() {
       let movThumbnail;
       let movBackImg;
       let gallerynum = 0;
 
-      try{
-        movThumbnail=document.querySelector("#base").value;
-        console.log('포스터'+movThumbnail.value);
-      }catch (exception){
-        movThumbnail=null;
+      try {
+        movThumbnail = document.querySelector("#base").value;
+        console.log('포스터' + movThumbnail.value);
+      } catch (exception) {
+        movThumbnail = null;
       }
 
-      try{
-        movBackImg=document.querySelector("#base3").value;
-        console.log('배경사진'+movBackImg.value);
-      }catch (exception){
-        movBackImg=null;
+      try {
+        movBackImg = document.querySelector("#base3").value;
+        console.log('배경사진' + movBackImg.value);
+      } catch (exception) {
+        movBackImg = null;
       }
 
-      try{
+      try {
         gallerynum = parseInt(document.querySelector("#file_count>span").innerHTML)
-      }catch (exception){
+      } catch (exception) {
       }
 
 
       let movTitle = document.querySelector("#movTitle");
       let movTitleOrg = document.querySelector("#movTitleOrg");
-      let movMakingDate =document.querySelector("#movMakingDate");
+      let movMakingDate = document.querySelector("#movMakingDate");
 
 
       let myList = document.querySelectorAll("#myList + span li");
       let myList1;
       myList.forEach((element) => {
-        myList1 += '/'+element.title;
+        myList1 += '/' + element.title;
       });
-      let movCountry = myList1.substring(10,myList1.length-1)
+      let movCountry = myList1.substring(10, myList1.length - 1)
 
 
       let mygenre = document.querySelectorAll("#movGenre + span li");
       let mygenre1;
       mygenre.forEach((element) => {
-        mygenre1 += ','+element.title;
+        mygenre1 += ',' + element.title;
       });
-      let movGenre = mygenre1.substring(10,mygenre1.length-1)
+      let movGenre = mygenre1.substring(10, mygenre1.length - 1)
 
 
-      let movAge= $("#movAge option:selected");
+      let movAge = $("#movAge option:selected");
 
-      let people=document.querySelectorAll(".hiddenBox");
+      let people = document.querySelectorAll(".hiddenBox");
       let movPeople;
-      people.forEach(function(person) {
+      people.forEach(function (person) {
         movPeople += ',' + person.childNodes[0].data;
+
       });
-      try{
-        movPeople = movPeople.substring(10,movPeople.length)
-      }catch{
+      try {
+        movPeople = movPeople.substring(10, movPeople.length)
+      } catch {
         movPeople = null;
       }
 
@@ -1054,39 +1055,37 @@ function readLinks(input) {
       let movSummary = document.querySelector("#movSummary");
 
 
-
       let movGallery = null;
-      if(gallerynum==1){
+      if (gallerynum == 1) {
         movGallery = document.getElementById("base(0)").value
-      }
-      else if(gallerynum>1){
-        for(let i=0;i<gallerynum;i++){
-          baseid = "base("+i+")"
+      } else if (gallerynum > 1) {
+        for (let i = 0; i < gallerynum; i++) {
+          baseid = "base(" + i + ")"
           movGallery += document.getElementById(baseid).value + "|"
         }
-        movGallery=movGallery.substring(4,movGallery.length-1);
+        movGallery = movGallery.substring(4, movGallery.length - 1);
       }
 
 
-      let movVideo=null;
-      if(idnum!=0){
-        for(let i=0;i<=idnum;i++){
-          vt="vt"+i
-          vu="vu"+i
-          if(document.getElementById(vt).value==""){
+      let movVideo = null;
+      if (idnum != 0) {
+        for (let i = 0; i <= idnum; i++) {
+          vt = "vt" + i
+          vu = "vu" + i
+          if (document.getElementById(vt).value == "") {
             window.alert('빈칸이 있으면 안됩니다');
-            movVideo=null;
+            movVideo = null;
             return false;
           }
-          if(document.getElementById(vu).value==""){
+          if (document.getElementById(vu).value == "") {
             window.alert('빈칸이 있으면 안됩니다');
-            movVideo=null;
+            movVideo = null;
             return false;
           }
-          movVideo+=(document.getElementById(vu).value)+','+(document.getElementById(vt).value)+'|';
+          movVideo += (document.getElementById(vu).value) + ',' + (document.getElementById(vt).value) + '|';
         }
-      movVideo=movVideo.substring(4,movVideo.length-1);
-      }else {
+        movVideo = movVideo.substring(4, movVideo.length - 1);
+      } else {
         if (document.getElementById("vt0").value == "" && document.getElementById("vu0").value != "") {
           window.alert('빈칸이 있으면 안됩니다');
           movVideo = null;
@@ -1101,107 +1100,126 @@ function readLinks(input) {
       }
 
 
-
-      let movWatch=null;
-      let watchlist=["tving_url","wave_url","disney_url","watcha_url","netflix_url","coupang_url"];
-      let tempcntnum=0;
-      for(let watch of watchlist){
+      let movWatch = null;
+      let watchlist = ["tving_url", "wave_url", "disney_url", "watcha_url", "netflix_url", "coupang_url"];
+      let tempcntnum = 0;
+      for (let watch of watchlist) {
         let watch_value = document.getElementById(watch).value
-        if(watch_value!=""&&watch_value!=null){
-          tempcntnum+=1;
-          movWatch+=watch_value+",";
+        if (watch_value != "" && watch_value != null) {
+          tempcntnum += 1;
+          movWatch += watch_value + ",";
         }
       }
-      if(tempcntnum>0){
-        movWatch=movWatch.substring(4,movWatch.length-1);
+      if (tempcntnum > 0) {
+        movWatch = movWatch.substring(4, movWatch.length - 1);
       }
 
-      console.log('제목'+movTitle.value);
-      console.log('원제목'+movTitleOrg.value);
-      console.log('개봉일'+movMakingDate.value);
-      console.log('국가'+movCountry);
-      console.log('장르'+movGenre);
-      console.log('상영시간'+movTime.value);
-      console.log('나이'+movAge.val());
-      console.log('내용'+movSummary.value);
+      console.log('제목' + movTitle.value);
+      console.log('원제목' + movTitleOrg.value);
+      console.log('개봉일' + movMakingDate.value);
+      console.log('국가' + movCountry);
+      console.log('장르' + movGenre);
+      console.log('상영시간' + movTime.value);
+      console.log('나이' + movAge.val());
+      console.log('내용' + movSummary.value);
       console.log('갤러리 사진갯수' + gallerynum);
       console.log('동영상제목' + movVideo);
       console.log('감상가능한곳' + movWatch);
       console.log('등장인물' + movPeople);
 
 
-
-      if(movTitle.value == ''){
+      if (movTitle.value == '') {
         alert('표기할 영화제목을 입력하세요');
         return false;
       }
-      if(movTitleOrg.value == ''){
+      if (movTitleOrg.value == '') {
         alert('원제를 입력하세요');
         return false;
       }
-      if(movMakingDate.value == ''){
+      if (movMakingDate.value == '') {
         alert('개봉날짜를 입력하세요');
         return false;
       }
-      if(movCountry == '/'){
+      if (movCountry == '/') {
         alert('국가를 입력하세요');
         return false;
       }
-      if(movGenre == ','){
+      if (movGenre == ',') {
         alert('장르를 입력하세요');
         return false;
       }
-      if(movTime.value == ''){
+      if (movTime.value == '') {
         alert('상영시간을 입력하세요');
         return false;
       }
-      if(movAge.val() == ''){
+      if (movAge.val() == '') {
         alert('연령 등급을 입력하세요');
         return false;
       }
-      if(movPeople==null){
+      if (movPeople == null) {
         alert('인물을 등록해주세요');
         return false;
       }
 
       fetch('http://localhost:9090/api/movie', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
-          "transaction_time":`${new Date()}`,
-          "resultCode":"ok",
-          "description":"정상",
-          "data":{
-            "movAge":`${movAge.val()}`,
-            "movBackImg":movBackImg,
-            "movCountry":`${movCountry}`,
-            "movGenre":`${movGenre}`,
-            "movGallery":movGallery,
-            "movMakingDate":`${movMakingDate.value}`,
-            "movPeople":movPeople,
-            "movSummary":`${movSummary.value}`,
-            "movThumbnail":movThumbnail,
-            "movTime":`${movTime.value}`,
-            "movTitle":`${movTitle.value}`,
-            "movTitleOrg":`${movTitleOrg.value}작`,
-            "movVideo":movVideo,
-            "movWatch":movWatch
+          "transaction_time": `${new Date()}`,
+          "resultCode": "ok",
+          "description": "정상",
+          "data": {
+            "movAge": `${movAge.val()}`,
+            "movBackImg": movBackImg,
+            "movCountry": `${movCountry}`,
+            "movGenre": `${movGenre}`,
+            "movGallery": movGallery,
+            "movMakingDate": `${movMakingDate.value}`,
+            "movPeople": movPeople,
+            "movSummary": `${movSummary.value}`,
+            "movThumbnail": movThumbnail,
+            "movTime": `${movTime.value}`,
+            "movTitle": `${movTitle.value}`,
+            "movTitleOrg": `${movTitleOrg.value}`,
+            "movVideo": movVideo,
+            "movWatch": movWatch
           }
         }),
-      })
-          .then((response) => response.json())
+      }) .then((response) => response.json())
+          .then((data) => {
+            let movIdx=data.data[0].movIdx
+            let people = document.querySelectorAll(".hiddenBox");
+            people.forEach(function (person) {
+              let idxnum = person.childNodes[0].data.indexOf('(');
+              let num = person.childNodes[0].data.substring(0, idxnum)
+              fetch('http://localhost:9090/api/character', {
+                method: 'PUT',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                  "transaction_time": `${new Date()}`,
+                  "resultCode": "ok",
+                  "description": "정상",
+                  "data": {
+                    "perIdx": num,
+                    "perMovie": movIdx
+                  }
+                })
+              })
+            })
+          })
           .then((data) => {
             if (data.resultCode == 'OK') {
               alert('등록성공');
-              location.href='/contents/movie';
-            } else {
-              alert('등록에 실패하였습니다. 다시한번 확인해주세요')
-            }
-          })
-          .catch((err) => {
-            alert('에러발생');
-            location.reload();
-          });
-
+              location.href='/contents/movie';}})
+          .catch(()=>alert('에러'))
     }
+
+
+
+
+
+
+
+
+
 
