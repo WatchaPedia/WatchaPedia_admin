@@ -1167,30 +1167,30 @@ let tvWatch=null;
     alert('원제를 입력하세요');
     return false;
   }
-  if(tvMakingDate.value == ''){
-    alert('방영날짜를 입력하세요');
-    return false;
-  }
-  if(tvChannel == ','){
-    alert('채널을 입력하세요');
-    return false;
-  }
-  if(tvGenre == ','){
-    alert('장르를 입력하세요');
-    return false;
-  }
-  if(tvCountry == '/'){
-    alert('국가를 입력하세요');
-    return false;
-  }
-  if(tvAge.val() == ''){
-    alert('연령 등급을 입력하세요');
-    return false;
-  }
-  if(tvPeople==null){
-    alert('인물을 등록해주세요');
-    return false;
-  }
+  // if(tvMakingDate.value == ''){
+  //   alert('방영날짜를 입력하세요');
+  //   return false;
+  // }
+  // if(tvChannel == ','){
+  //   alert('채널을 입력하세요');
+  //   return false;
+  // }
+  // if(tvGenre == ','){
+  //   alert('장르를 입력하세요');
+  //   return false;
+  // }
+  // if(tvCountry == '/'){
+  //   alert('국가를 입력하세요');
+  //   return false;
+  // }
+  // if(tvAge.val() == ''){
+  //   alert('연령 등급을 입력하세요');
+  //   return false;
+  // }
+  // if(tvPeople==null){
+  //   alert('인물을 등록해주세요');
+  //   return false;
+  // }
 
 
   fetch('http://localhost:8888/api/tv', {

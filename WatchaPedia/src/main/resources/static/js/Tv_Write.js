@@ -1215,23 +1215,57 @@ let tvWatch=null;
         "tvVideo":tvVideo,
         "tvChannel":tvChannel,
         "tvWatch":tvWatch,
-
       }
     }),
-  })
-      .then((res) => {
-        alert('등록성공')
-        //location.href='/contents/tv';
-        return;
+  }) .then((response) => response.json())
+      .then((data) => {
+        let tvIdx=data.data[0].movIdx
+        let people = document.querySelectorAll(".hiddenBox");
+        people.forEach(function (person) {
+          let idxnum = person.childNodes[0].data.indexOf('(');
+          let num = person.childNodes[0].data.substring(0, idxnum)
+          fetch('http://localhost:9090/api/character', {
+            method: 'PUT',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              "transaction_time": `${new Date()}`,
+              "resultCode": "ok",
+              "description": "정상",
+              "data": {
+                "perIdx": num,
+                "perTv": tvIdx
+              }
+            })
+          })
+        })
       })
-      // .then((data) => {
-      //   console.log(data.json());
-      //   return;
-      // })
-      .catch((err) => {
-        alert('에러!!');
-        location.reload();
-        return;
-      });
-
+      .then((data) => {
+        if (data.resultCode == 'OK') {
+          alert('등록성공');
+          location.href='/contents/tv';}})
+      .catch(()=>alert('에러'))
 }
+
+
+
+
+
+//       }
+//     }),
+//   })
+//       .then((res) => {
+//         alert('등록성공')
+//         //location.href='/contents/tv';
+//         return;
+//       })
+//       // .then((data) => {
+//       //   console.log(data.json());
+//       //   return;
+//       // })
+//       .catch((err) => {
+//         alert('에러!!');
+//         location.reload();
+//         return;
+//       });
+//
+// }

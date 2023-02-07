@@ -1139,30 +1139,30 @@ function readLinks(input) {
         alert('원제를 입력하세요');
         return false;
       }
-      if(movMakingDate.value == ''){
-        alert('개봉날짜를 입력하세요');
-        return false;
-      }
-      if(movCountry == '/'){
-        alert('국가를 입력하세요');
-        return false;
-      }
-      if(movGenre == ','){
-        alert('장르를 입력하세요');
-        return false;
-      }
+      // if(movMakingDate.value == ''){
+      //   alert('개봉날짜를 입력하세요');
+      //   return false;
+      // }
+      // if(movCountry == '/'){
+      //   alert('국가를 입력하세요');
+      //   return false;
+      // }
+      // if(movGenre == ','){
+      //   alert('장르를 입력하세요');
+      //   return false;
+      // }
       if(movTime.value == ''){
         alert('상영시간을 입력하세요');
         return false;
       }
-      if(movAge.val() == ''){
-        alert('연령 등급을 입력하세요');
-        return false;
-      }
-      if(movPeople==null){
-        alert('인물을 등록해주세요');
-        return false;
-      }
+      // if(movAge.val() == ''){
+      //   alert('연령 등급을 입력하세요');
+      //   return false;
+      // }
+      // if(movPeople==null){
+      //   alert('인물을 등록해주세요');
+      //   return false;
+      // }
 
       fetch('http://localhost:9090/api/movie', {
         method: 'PUT',

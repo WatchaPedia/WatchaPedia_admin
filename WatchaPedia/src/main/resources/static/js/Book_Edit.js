@@ -620,30 +620,30 @@ function sendit(bookIdx) {
     alert('작가를 입력하세요');
     return false;
   }
-  if (bookCategory == ',') {
-    alert('카테고리를 입력하세요');
-    return false;
-  }
-  if (bookAtDate.value == '') {
-    alert('출간일 입력하세요');
-    return false;
-  }
+  // if (bookCategory == ',') {
+  //   alert('카테고리를 입력하세요');
+  //   return false;
+  // }
+  // if (bookAtDate.value == '') {
+  //   alert('출간일 입력하세요');
+  //   return false;
+  // }
   if (bookPage.value == '') {
     alert('페이지를 입력하세요');
     return false;
   }
-  if (bookAge.val() == '') {
-    alert('연령 등급을 입력하세요');
-    return false;
-  }
+  // if (bookAge.val() == '') {
+  //   alert('연령 등급을 입력하세요');
+  //   return false;
+  // }
   if (bookSummary.value == '') {
     alert('내용을 입력하세요');
     return false;
   }
-  if(bookPeople==null){
-    alert('출연/제작을 등록해주세요');
-    return false;
-  }
+  // if(bookPeople==null){
+  //   alert('출연/제작을 등록해주세요');
+  //   return false;
+  // }
 
 
   fetch('http://localhost:8888/api/book', {
@@ -669,6 +669,7 @@ function sendit(bookIdx) {
         "bookContentIdx": `${bookContentIdx.value}`,
         "bookPubSummary": `${bookPubSummary.value}`,
         "bookBuy": bookBuy
+
       }
     }),
   })

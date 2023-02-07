@@ -670,21 +670,55 @@ function sendit() {
         "bookBuy": bookBuy
       }
     }),
-  })
-
-      .then((response) => response.json())
+  }) .then((response) => response.json())
+      .then((data) => {
+        let movIdx=data.data[0].movIdx
+        let people = document.querySelectorAll(".hiddenBox");
+        people.forEach(function (person) {
+          let idxnum = person.childNodes[0].data.indexOf('(');
+          let num = person.childNodes[0].data.substring(0, idxnum)
+          fetch('http://localhost:9090/api/character', {
+            method: 'PUT',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              "transaction_time": `${new Date()}`,
+              "resultCode": "ok",
+              "description": "정상",
+              "data": {
+                "perIdx": num,
+                "perMovie": movIdx
+              }
+            })
+          })
+        })
+      })
       .then((data) => {
         if (data.resultCode == 'OK') {
           alert('등록성공');
-          location.href='/contents/book';
-        } else {
-          alert('등록에 실패하였습니다. 다시한번 확인해주세요')
-        }
-      })
-      .catch((err) => {
-        alert('에러발생');
-        location.reload();
-      });
-
-
+          location.href='/contents/book';}})
+      .catch(()=>alert('에러'))
 }
+//
+//
+//
+//
+// }
+//     }),
+//   })
+//
+//       .then((response) => response.json())
+//       .then((data) => {
+//         if (data.resultCode == 'OK') {
+//           alert('등록성공');
+//           location.href='/contents/book';
+//         } else {
+//           alert('등록에 실패하였습니다. 다시한번 확인해주세요')
+//         }
+//       })
+//       .catch((err) => {
+//         alert('에러발생');
+//         location.reload();
+//       });
+//
+//
+// }

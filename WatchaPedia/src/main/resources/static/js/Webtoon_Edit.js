@@ -677,30 +677,30 @@ function sendit(){
     alert('작가를 입력하세요');
     return false;
   }
-  if(webGenre == ','){
-    alert('장르를 선택하세요');
-    return false;
-  }
-  if(webSerDetail.val() == ''){
-    alert('연재정보를 입력하세요');
-    return false;
-  }
-  if(webSerDay.val() == ''){
-    alert('연재요일을 입력하세요');
-    return false;
-  }
-  if(startday.value == ''){
-    alert('연재 시작일을 입력하세요');
-    return false;
-  }
-  if(webAge.val() == ''){
-    alert('연령 등급을 입력하세요');
-    return false;
-  }
-  if(webPeople==null){
-    alert('인물을 등록해주세요');
-    return false;
-  }
+  // if(webGenre == ','){
+  //   alert('장르를 선택하세요');
+  //   return false;
+  // }
+  // if(webSerDetail.val() == ''){
+  //   alert('연재정보를 입력하세요');
+  //   return false;
+  // }
+  // if(webSerDay.val() == ''){
+  //   alert('연재요일을 입력하세요');
+  //   return false;
+  // }
+  // if(startday.value == ''){
+  //   alert('연재 시작일을 입력하세요');
+  //   return false;
+  // }
+  // if(webAge.val() == ''){
+  //   alert('연령 등급을 입력하세요');
+  //   return false;
+  // }
+  // if(webPeople==null){
+  //   alert('인물을 등록해주세요');
+  //   return false;
+  // }
 
   fetch('http://localhost:8888/api/webtoon', {
     method: 'PUT',
