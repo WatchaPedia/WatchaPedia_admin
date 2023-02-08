@@ -1194,7 +1194,7 @@ function readLinks(input) {
           })
           .then((data) => {
             if (data.resultCode == 'OK') {
-              alert('등록성공');
+              alert('수정성공');
               location.href='/contents/movie';}})
           .catch(()=>alert('에러'))
     }

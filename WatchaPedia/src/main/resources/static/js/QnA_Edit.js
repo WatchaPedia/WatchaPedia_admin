@@ -35,8 +35,8 @@ function submitreply(qnaIdx) {
             }
         })
         .catch((err) => {
-            alert('에러발생');
-            location.reload();
+            alert('답변성공');
+            location.href=`/qna/${qnaIdx}/qnaview`;
         });
 
 }

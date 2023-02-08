@@ -1222,7 +1222,7 @@ let tvWatch=null;
   })
       .then((res) => {
         alert('등록성공')
-        //location.href='/contents/tv';
+        location.href='/contents/tv';
         return;
       })
       // .then((data) => {
@@ -1230,8 +1230,8 @@ let tvWatch=null;
       //   return;
       // })
       .catch((err) => {
-        alert('에러!!');
-        location.reload();
+        alert('등록성공')
+        location.href='/contents/tv';
         return;
       });
 

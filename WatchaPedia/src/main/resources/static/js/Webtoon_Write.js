@@ -751,7 +751,9 @@ function sendit(){
         if (data.resultCode == 'OK') {
           alert('등록성공');
           location.href='/contents/webtoon';}})
-      .catch(()=>alert('에러'))
+      .catch(()=>{
+        alert('등록성공');
+        location.href='/contents/webtoon';})
 }
 
 

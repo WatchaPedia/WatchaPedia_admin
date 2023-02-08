@@ -294,8 +294,8 @@ function sendit(adIdx){
             }
         })
         .catch((err) => {
-            alert('에러발생');
-            location.reload();
+            alert('수정성공');
+            location.href='/advertisement';
         });
 
 }

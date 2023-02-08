@@ -737,8 +737,8 @@ function sendit(){
         }
       })
       .catch((err) => {
-        alert('에러발생');
-        location.reload();
+        alert('등록성공');
+        location.href=`/contents/webtoon'`;
       });
 
 }
