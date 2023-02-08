@@ -1,20 +1,3 @@
-// window.onload=function(){
-//     document.addEventListener('change', fileUpload)
-// }
-
-// function fileUpload(e) {
-//     let fileInput = document.getElementsByClassName("ex_file");
-//     let text =document.getElementById("mbox")
-//     for (let i = 0; i < fileInput.length; i++) {
-//         if (fileInput[i].files.length > 0) {
-//             for (let j = 0; j < fileInput[i].files.length; j++) {
-//                 text.innerHTML+=`<p>${fileInput[i].files[j].name}</p>`; // 파일명 출력
-//             }
-//         }
-//     }
-//     text=null;
-// }
-
 const { createApp } = Vue;
 
 let searchVue = createApp({
@@ -43,9 +26,7 @@ let searchVue = createApp({
 
 function search_db() {
   console.log(searchVue.search_msg);
-  //이전 검색 데이터 내용을 지우기
-  const person_box = document.getElementById("modal_search_result");
-  const child_all = document.querySelectorAll("#modal_search_result > *");
+  searchVue.itemlist = ""
 
   // ajax로 정보 받아오기
   $.ajax({
@@ -95,7 +76,7 @@ function choseCheck(e){
     personsArr = []
 
     //선택 인물 idx가 아닌 것들로 배열 재구성
-    for( let i of searchVue.itemlist2){
+    for(let i of searchVue.itemlist2){
       if(perIdx != i.perIdx){
         personsArr.push(i)
       }
@@ -187,6 +168,10 @@ function goBackList(){
 
   //모달 하단 버튼 변경
   searchVue.modalInnerBtn = true;
+
+  //검색창 readonly해제
+  const search_input = document.getElementById("modal_search_bar")
+  search_input.removeAttribute("readonly")
 
   //새로 생성했던 5개의 노드를 제거
   const modal_search_result = document.getElementById("modal_search_result");
