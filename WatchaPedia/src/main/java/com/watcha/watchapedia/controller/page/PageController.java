@@ -167,12 +167,20 @@ public class PageController {
     @GetMapping(path="")
     public ModelAndView index(HttpServletRequest request){
         //Login한 상태이면, 사용자 정보를 HTML로 넘겨줌
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/index");
     }
 
     //공지사항
     @GetMapping(path="/notice")
     public ModelAndView notice(HttpServletRequest request){
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/1_notice/Notice").addObject("notices",noticeApiLogicService.noticeList());
     }
 
@@ -191,6 +199,10 @@ public class PageController {
     @GetMapping(path="/notice_view/{ntcIdx}")
     public ModelAndView notice_view(@PathVariable Long ntcIdx, HttpServletRequest request){
         Header<NoticeApiResponse> api = noticeApiLogicService.read(ntcIdx);
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/1_notice/Notice_View").addObject("notice",api.getData());
     }
 
@@ -274,6 +286,7 @@ public class PageController {
     @GetMapping(path="/qna")
     public String qna(ModelMap map, HttpServletRequest request){
         loginModelInfo(request,map);
+
         map.addAttribute("qnas", qnaService.searchQnas());
         return "/2_qna/QnA";
     }
@@ -328,6 +341,10 @@ public class PageController {
 
     @GetMapping(path="/contents/book")
     public ModelAndView book(HttpServletRequest request){
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/3_contents/book/book").addObject("books",bookApiLogicService.bookList());
     }
     @GetMapping(path="/contents/book_edit/{bookIdx}")
@@ -356,6 +373,10 @@ public class PageController {
     @GetMapping(path="/contents/book_detail/{bookIdx}")
     public ModelAndView bookDetail(@PathVariable Long bookIdx,HttpServletRequest request){
         Header<BookApiResponse> api = bookApiLogicService.read(bookIdx);
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/3_contents/book/book_detail").addObject("book",api.getData());
     }
 
@@ -363,6 +384,10 @@ public class PageController {
 
     @GetMapping(path="/contents/movie")
     public ModelAndView movie(HttpServletRequest request){
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/3_contents/movie/movie").addObject("movies",movieApiLogicService.movieList());
     }
     @GetMapping(path="/contents/movie_edit/{movIdx}")
@@ -387,12 +412,20 @@ public class PageController {
     @GetMapping(path="/contents/movie_detail/{movIdx}")
     public ModelAndView movieDetail(@PathVariable Long movIdx, HttpServletRequest request){
         Header<MovieApiResponse> api = movieApiLogicService.read(movIdx);
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/3_contents/movie/movie_detail").addObject("movie",api.getData());
     }
 
 
     @GetMapping(path="/contents/tv")
     public ModelAndView tv(HttpServletRequest request){
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/3_contents/tv/tv").addObject("tvs",tvApiLogicService.tvList());
     }
 
@@ -418,6 +451,10 @@ public class PageController {
     @GetMapping(path="/contents/tv_detail/{tvIdx}")
     public ModelAndView tvDetail(@PathVariable Long tvIdx,HttpServletRequest request){
         Header<TvApiResponse> api = tvApiLogicService.read(tvIdx);
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/3_contents/tv/tv_detail").addObject("tv",api.getData());
     }
 
@@ -425,6 +462,10 @@ public class PageController {
 
     @GetMapping(path="/contents/webtoon")
     public ModelAndView webtoon(HttpServletRequest request){
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/3_contents/webtoon/webtoon").addObject("webtoons",webtoonApiLogicService.webtoonList());
 
     }
@@ -450,6 +491,10 @@ public class PageController {
     @GetMapping(path="/contents/webtoon_detail/{webIdx}")
     public ModelAndView webtoonDetail(@PathVariable Long webIdx,HttpServletRequest request){
         Header<WebtoonApiResponse> api = webtoonApiLogicService.read(webIdx);
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/3_contents/webtoon/webtoon_detail").addObject("webtoon",api.getData());
     }
 
@@ -598,7 +643,10 @@ public class PageController {
     @GetMapping(path="/character_detail/{perIdx}")
     public ModelAndView characterdetail(@PathVariable Long perIdx, HttpServletRequest request){
         Header<CharacterApiResponse> api = characterApiLogicService.read(perIdx);
-
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/5_character/characterdetail").addObject("character",api.getData());
     }
     @GetMapping(path="/character_manage")
@@ -683,6 +731,10 @@ public class PageController {
     //광고
     @GetMapping(path="/advertisement")
     public ModelAndView admain(HttpServletRequest request){
+        ModelAndView loginCheck = loginCheck(request);
+        if(loginCheck != null){
+            return loginCheck;
+        }
         return loginInfo(request, "/7_advertisement/Advertisement").addObject("advertises",advertiseApiLogicService.advertiseList());
     }
 
