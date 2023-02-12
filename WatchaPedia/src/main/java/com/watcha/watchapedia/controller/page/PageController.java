@@ -181,7 +181,8 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/1_notice/Notice").addObject("notices",noticeApiLogicService.noticeList());
+        List<NoticeApiResponse> notice = userService.noticeAll();
+        return loginInfo(request, "/1_notice/Notice").addObject("notices",noticeApiLogicService.noticeList()).addObject("notice",notice);
     }
 
 
