@@ -125,7 +125,7 @@ public class PageController {
         //이미 로그인된 상태에서, 로그인 페이지로 들어오면 메인으로 돌려보냄
         HttpSession session = request.getSession(false);
         if(session != null){
-            return loginInfo(request, "/index");
+            return loginInfo(request, "redirect:/notice");
         }
 
         return new ModelAndView("/0_login/Login");
@@ -171,7 +171,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/index");
+        return loginInfo(request, "redirect:/notice");
     }
 
     //공지사항
