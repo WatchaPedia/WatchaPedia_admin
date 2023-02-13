@@ -10,12 +10,8 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Dashboard - SB Admin</title>
-    <link
-            href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"
-            rel="stylesheet"
-    />
-    <link href="../../css/styles.css" rel="stylesheet" />
-    <link href="../../css/3_contents/movie/movie_edit.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="/css/3_contents/movie/movie_edit.css" rel="stylesheet" />
     <script
             src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
             crossorigin="anonymous"
@@ -31,10 +27,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <link
-            rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-    />
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -50,7 +43,6 @@
             //Select2
             $(".country").select2({
                 maximumSelectionLength: 10,
-
             });
         });
     </script>
@@ -63,11 +55,33 @@
         <input
                 id="modal_search_bar"
                 v-model="search_msg"
-                @change="search_db"
+                onchange="search_db()"
                 placeholder="예) 박찬욱, 손현주, 이성민"
         />
-        <div id="modal_search_result"></div>
-        <div id="person_search_cancel" onclick="search_cancel()">취소</div>
+        <div id="modal_search_result">
+            <!--     검색결과 반복틀 시작!      -->
+            <div class="onePersonBigBox" v-for="person in itemlist">
+                <div hidden>{{person.perIdx}}</div>
+                <div class="profileBox">
+                    <img :src=`${person.perPhoto}` class="personSimg"></div>
+                <div class="contentBox">
+                    <b>{{person.perName}}</b>
+                    <p>{{person.perRole}}</p>
+                    <div class="appearBoxes">
+                        <div v-for="appear in person.appearance">{{appear}}</div>
+                    </div>
+                </div>
+                <div class="chooseBtnBox">
+                    <button v-if="person.chooseCheck == null" class="chooseBtn" onclick="choseCheck(this)">선택</button>
+                    <button v-if="person.chooseCheck != null" class="chooseBtn" onclick="choseCheck(this)">✔️선택됨</button>
+                </div>
+            </div>
+        </div>
+        <div v-if="modalInnerBtn" id="person_search_cancel" onclick="search_cancel()">선택완료</div>
+        <div v-if="!modalInnerBtn" class="flexCenterCenter">
+            <div class="btn_css" onclick="choosePerson(this)">추가하기</div>
+            <div class="btn_css" onclick="goBackList()">뒤로가기</div>
+        </div>
     </div>
 </div>
 
@@ -106,11 +120,12 @@
                                         placeholder="표기할 영화제목"
                                         class="inBox1"
                                         id="movTitle"
+                                        th:value="${movie.movTitle}"
                                 />
                             </div>
 
                             <div>
-                                <input type="text" placeholder="원제" class="inBox1" id="movTitleOrg"/>
+                                <input type="text" placeholder="원제" class="inBox1" th:value="${movie.movTitleOrg}" id="movTitleOrg"/>
                             </div>
 
                             <div>
@@ -510,6 +525,7 @@
                                         placeholder="상영시간(분단위 ex.55.75 127)"
                                         class="inBox1"
                                         id="movTime"
+                                        th:value="${movie.movTime}"
                                 />
                             </div>
                             <!-- 드롭다운 -->
@@ -536,12 +552,36 @@
                                     </button>
                                 </p>
                             </div>
-                            <div id="authorBox"></div>
+
+                            <div id="authorBox">
+                                <div class="onePersonSmallBox" v-for="person in itemlist2">
+                                    <div hidden class="hiddenBox" v-if="person.perJob != '감독'&&person.perCasting != ''">{{person.perIdx}}({{person.perJob}} | {{person.perCasting}})</div>
+                                    <div hidden class="hiddenBox" v-if="person.perJob != '감독'&&person.perCasting == ''">{{person.perIdx}}({{person.perJob}})</div>
+                                    <div hidden class="hiddenBox" v-if="person.perJob == '감독'">{{person.perIdx}}({{person.perJob}})</div>
+                                    <div class="smallProfileBox">
+                                        <img :src=`${person.perPhoto}` class="smallPersonSimg">
+                                    </div>
+                                    <div class="smallContentBox">
+                                        <b>{{person.perName}}</b>
+                                        <p v-if="person.perJob != '감독'&&person.perCasting != ''">({{person.perJob}} | {{person.perCasting}})</p>
+                                        <p v-if="person.perJob != '감독'&&person.perCasting == ''">({{person.perJob}})</p>
+                                        <p v-if="person.perJob == '감독'">({{person.perJob}})</p>
+                                    </div>
+                                    <div onclick="minusItemlist2(this)" type="button">
+                                        <img
+                                                class="minus_button"
+                                                src="/assets/img/x_icon.png"
+                                                alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                         <div id="inputbox2">
                             <div>
-                                <input type="text" id="movSummary" placeholder="내용" />
+                                <input type="text" id="movSummary" placeholder="내용" th:value="${movie.movSummary}"/>
                             </div>
                             <div id="wgo">
                                 <div>감상가능한 곳</div>
@@ -733,14 +773,14 @@
                                             <div id="plus" onclick="add()" type="button">
                                                 <img
                                                         id="plus_img"
-                                                        src="../../assets/img/plus_outline_icon.png"
+                                                        src="/assets/img/plus_outline_icon.png"
                                                         alt=""
                                                 />
                                             </div>
                                             <div id="minus" onclick="minus()" type="button">
                                                 <img
                                                         id="minus_img"
-                                                        src="../../assets/img/minus_outline_icon.png"
+                                                        src="/assets/img/minus_outline_icon.png"
                                                         alt=""
                                                 />
                                             </div>
@@ -794,15 +834,37 @@
                     </div>
                 </div>
                 <div id="MBox">
-                    <button id="btn1" onclick="sendit()">수정하기</button>
-                    <button id="btn2" onclick="location.href='/contents/movie'">취소하기</button>
+                    <button id="btn1" th:onclick="|sendit(${movie.movIdx})|">수정하기</button>
+                    <button id="btn2" onclick="history.back()">취소하기</button>
                 </div>
             </div>
         </main>
     </div>
 </div>
 
-<script defer src="../../js/Movie_Edit.js"></script>
+<!--2023-01-30 이재원 주석처리하고 그 아래에 해결코드작성-->
+<!--<script defer src="/js/Movie_Write.js"></script>-->
+<!--<script-->
+<!--        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"-->
+<!--        crossorigin="anonymous"-->
+<!--&gt;</script>-->
+
+<!--<script-->
+<!--        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"-->
+<!--        crossorigin="anonymous"-->
+<!--&gt;</script>-->
+<!--<script src="/assets/demo/chart-area-demo.js"></script>-->
+<!--<script src="/assets/demo/chart-bar-demo.js"></script>-->
+<!--<script-->
+<!--        src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"-->
+<!--        crossorigin="anonymous"-->
+<!--&gt;</script>-->
+<!--<script src="https://code.jquery.com/jquery-3.6.3.min.js"   integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="   crossorigin="anonymous"></script>-->
+<!--<script src="/js/datatables-simple-demo.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+<script defer src="/js/Movie_Edit.js"></script>
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"
@@ -812,12 +874,12 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
         crossorigin="anonymous"
 ></script>
-<script src="assets/demo/chart-area-demo.js"></script>
-<script src="assets/demo/chart-bar-demo.js"></script>
+<script src="/assets/demo/chart-area-demo.js"></script>
+<script src="/assets/demo/chart-bar-demo.js"></script>
 <script
         src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"
         crossorigin="anonymous"
 ></script>
-<script src="../../js/datatables-simple-demo.js"></script>
+<script src="/js/datatables-simple-demo.js"></script>
 </body>
 </html>

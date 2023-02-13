@@ -2,7 +2,7 @@
 <thlogic>
     <attr sel="form.button-wrap" th:method="get" th:action=" ${user.userType}=='인플루언서' ? '/member/' + ${user.userIdx} + '/일반유저' : '/member/' + ${user.userIdx} + '/인플루언서'"/>
     <attr sel="#user-table" th:object="${user}">
-        <attr sel="#user-name" th:text="*{userName}"/>
+        <attr sel="#user-name" th:text="*{userType}=='인플루언서'?*{userName}+' ✓':*{userName}"/>
         <attr sel="#user-type" th:text="*{userType}"/>
         <attr sel="#user-id" th:text="*{userName}"/>
         <attr sel="#user-ssn" th:text="*{userSsn1} + '-' + *{userSsn2}"/>
