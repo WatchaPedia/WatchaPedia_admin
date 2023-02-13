@@ -36,6 +36,8 @@ public class ReportApiController extends CrudController<ReportApiRequest, Report
     @Override
     @PutMapping("/update")
     public Header<ReportApiResponse> update(@RequestBody Header<ReportApiRequest> request) {
+
+
         Long reportIdx = Long.valueOf(request.getData().getReportIdx());
         String updateStatus = request.getData().getUpdateStatus();
         String processAdmin = request.getData().getProcessAdmin();

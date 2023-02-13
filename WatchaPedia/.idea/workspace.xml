@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Spoiler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/SpoilerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
@@ -12,40 +14,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/2_qna/QnA_View.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/2_qna/QnA_View.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book_edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book_edit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book_write.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book_write.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movie_edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movie_edit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv_edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv_edit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv_write.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv_write.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon_edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon_edit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon_write.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon_write.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Book_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Book_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Book_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Book_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Notice_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Notice_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Notice_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Notice_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/QnA_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/QnA_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Tv_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Tv_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Tv_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Tv_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/reportdetail_reply.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/reportdetail_reply.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_Edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book_write.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book_write.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movie_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movie_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movie_write.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movie_write.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tv_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tv_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tv_write.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tv_write.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoon_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoon_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoon_write.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoon_write.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.th.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/accountdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/accountdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment/sidenav.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/fragment/sidenav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/WatchaPediaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/WatchaPediaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/ReportApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/ReportApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/ReportApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/ReportApiLogicService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +95,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Git_clone_folder/WatchaPedia_admin/WatchaPedia",
+    "last_opened_file_path": "C:/Git_clone_folder/WatchaPedia_user/watchPedia_User",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -159,9 +132,9 @@
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.watcha.watchapedia.model.entity" />
       <recent name="com.watcha.watchapedia.model.network.response" />
       <recent name="com.watcha.watchapedia.model.dto" />
-      <recent name="com.watcha.watchapedia.model.entity" />
       <recent name="com.watcha.watchapedia.model.repository" />
       <recent name="com.watcha.watchapedia.service" />
     </key>
@@ -278,6 +251,7 @@
       <workItem from="1675656574627" duration="7000" />
       <workItem from="1675657029810" duration="2072000" />
       <workItem from="1676287335971" duration="4442000" />
+      <workItem from="1676301188759" duration="2891000" />
     </task>
     <servers />
   </component>
