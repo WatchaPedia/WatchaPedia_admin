@@ -181,7 +181,8 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/1_notice/Notice").addObject("notices",noticeApiLogicService.noticeList());
+        List<NoticeApiResponse> notice = userService.noticeAll();
+        return loginInfo(request, "/1_notice/Notice").addObject("notices",noticeApiLogicService.noticeList()).addObject("notice",notice);
     }
 
 
@@ -839,4 +840,13 @@ public class PageController {
         }
         return loginInfo(request, "/8_admin/admin/Myinfomodify").addObject("adminIdx",adminIdx);
     }
+    @GetMapping(path="/hradmin/updateaccount/{adminIdx}")
+    public String updateaccount(@PathVariable Long adminIdx, HttpServletRequest request, ModelMap map){
+        loginModelInfo(request,map);
+        AdminUser adminUser = adminRepository.getReferenceById(adminIdx);
+        AdminUserResponse adminUserResponse = AdminUserResponse.from(AdminUserDto.from(adminUser));
+        map.addAttribute("adminUser", adminUserResponse);
+        return "/8_admin/hradmin/updateaccount";
+    }
+
 }
