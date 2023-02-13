@@ -17,29 +17,280 @@
 
 const { createApp } = Vue;
 
-createApp({
+let searchVue = createApp({
   data() {
     return {
       search_msg: "",
+      itemlist: {},
+      itemlist2: {},
+      modalInnerBtn: true
     };
   },
-  methods: {
-    search_db() {
-      console.log(this.search_msg);
-      //이전 검색 데이터 내용을 지우기
-      const person_box = document.getElementById("modal_search_result");
-      const child_all = document.querySelectorAll("#modal_search_result > *");
-      for (i = 0; i < child_all.length; i++) {
-        person_box.removeChild(child_all[i]);
+  methods:{
+    chosen(idx){
+      let flag = true
+
+      for( let i of searchVue.itemlist2){
+        if(idx == i.perIdx){
+          personsArr.push(i)
+        }
       }
 
-      // unfilled : 리턴값에 의해 반복 돌려야함
-      for (i = 0; i < 5; i++) {
-        search_person(this.search_msg);
-      }
-    },
-  },
+      return flag
+    }
+  }
 }).mount(".sb-nav-fixed");
+
+function search_db() {
+  console.log(searchVue.search_msg);
+  //이전 검색 데이터 내용을 지우기
+  const person_box = document.getElementById("modal_search_result");
+  const child_all = document.querySelectorAll("#modal_search_result > *");
+
+  // ajax로 정보 받아오기
+  $.ajax({
+    url: "/api/movie/searchKey",
+    type: "GET",
+    dataType: "json",
+    processData: true,
+    contentType: "application/json; charset=UTF-8",
+    data: {searchKey : searchVue.search_msg},
+    success: function(result){
+      console.log('ajax 정보교환 성공!')
+      for(let i of result.data){
+          if(searchVue.itemlist2.length > 0){
+            for(let j of searchVue.itemlist2){
+              if(i.perIdx == j.perIdx){
+                i.chooseCheck = "chosen";
+              }
+            }
+          }
+      }
+      console.log(result.data);
+      searchVue.itemlist = result.data;
+    },
+    error: function(){
+      console.log("에러발생")
+    }
+  })
+}
+
+let personsArr = [];
+
+function choseCheck(e){
+  if(e.innerText == "선택"){
+    //검색창에 배역입력할 동안 readonly주기
+    const readOnlyAttr = document.createAttribute("readonly")
+    const modal_searchbar = document.getElementById("modal_search_bar")
+    modal_searchbar.setAttributeNode(readOnlyAttr);
+    //배역을 입력하게 해주는 창으로 변경
+    personRegist(e);
+  }else{
+
+    e.innerText = "선택"
+
+    const perIdx = e.parentNode.parentNode.firstChild.innerText;
+
+    //대입 배열 초기화
+    personsArr = []
+
+    //선택 인물 idx가 아닌 것들로 배열 재구성
+    for( let i of searchVue.itemlist2){
+      if(perIdx != i.perIdx){
+        personsArr.push(i)
+      }
+    }
+    //배열을 itemlist2에 삽입
+    searchVue.itemlist2 = personsArr
+  }
+}
+
+
+//
+function personRegist(e){
+
+  //모달 하단 버튼 변경
+  searchVue.modalInnerBtn = false;
+  console.log(e)
+
+  //선택한 인물 큰 박스 복사한 Node
+  let clone1 = e.parentNode.parentNode.cloneNode();
+  const uniqueId = document.createAttribute("id");
+  uniqueId.value = "uniqueId";
+  clone1.setAttributeNode(uniqueId)
+
+  const Nodes = e.parentNode.parentNode.childNodes;
+
+
+  //"선택" 버튼을 누른 인물의 박스를 복사해옴
+  for(let i in Nodes){
+    if(i >= 3) break;
+    const node = Nodes[i].cloneNode();
+    node.innerHTML = Nodes[i].innerHTML;
+    clone1.appendChild(node);
+  }
+
+  //역할 태그 생성
+  const job = document.createElement("div");
+  const castingAttr = document.createAttribute("style");
+  castingAttr.value = "font-size:18px; font-weight: bold; margin-left:8px; margin-top:15px;"
+  job.innerText = "역할";
+  job.setAttributeNode(castingAttr);
+
+  //input1 태그 생성
+  const input1 = document.createElement("input");
+  const castingInput1 = document.createAttribute("placeholder");
+  castingInput1.value = "예) 감독, 주연, 특별출연, 단역"
+  input1.setAttributeNode(castingInput1);
+  const castingInput2 = document.createAttribute("style");
+  castingInput2.value = "width: 300px; margin-left: 8px;"
+  input1.setAttributeNode(castingInput2);
+  const getId1 = document.createAttribute("id");
+  getId1.value = "perJob";
+  input1.setAttributeNode(getId1);
+
+  //배역이름 태그 생성
+  const casting = document.createElement("div");
+  const castingAttr1 = document.createAttribute("style");
+  castingAttr1.value = "font-size:18px; font-weight: bold; margin-left:8px; margin-top:15px;"
+  casting.innerText = "배역이름";
+  casting.setAttributeNode(castingAttr1);
+
+  //input2 태그 생성
+  const input2 = document.createElement("input");
+  const input2Attr = document.createAttribute("style");
+  input2Attr.value = "width: 300px; margin-left: 8px;"
+  input2.setAttributeNode(input2Attr);
+  const getId = document.createAttribute("id");
+  getId.value = "perCasting"
+  input2.setAttributeNode(getId);
+
+
+  //나머지 Node 숨기기
+  const currentAllNode = document.querySelectorAll(".onePersonBigBox");
+  for(let i of currentAllNode){
+    i.classList.add("none")
+  }
+
+  // //modal_search_result에 클론노드를 집어넣기
+  const modal_search_result = document.getElementById("modal_search_result");
+  modal_search_result.appendChild(clone1);
+  modal_search_result.appendChild(job);
+  modal_search_result.appendChild(input1);
+  modal_search_result.appendChild(casting);
+  modal_search_result.appendChild(input2);
+  //여기까지가 한 인물 정보를 입력하는 모달화면으로 구성 변경한 것
+}
+
+// 배역입력을 취소하고 리스트로 돌아감
+function goBackList(){
+
+  //모달 하단 버튼 변경
+  searchVue.modalInnerBtn = true;
+
+  //새로 생성했던 5개의 노드를 제거
+  const modal_search_result = document.getElementById("modal_search_result");
+  for(let i=0; i < 5; i++){
+    modal_search_result.removeChild(modal_search_result.lastChild);
+  }
+
+  const currentAllNode = document.querySelectorAll(".onePersonBigBox");
+  for(let i of currentAllNode){
+    i.classList.remove("none")
+  }
+
+
+
+}
+
+
+//원래는 블록 클릭이였기 때문에 살짝 바꿔줘야 함
+function choosePerson(e){
+  //검색창 readonly 해제
+  const modal_searchbar = document.getElementById("modal_search_bar")
+  modal_searchbar.removeAttribute("readonly")
+
+  //모달 하단 버튼 변경
+  searchVue.modalInnerBtn = true;
+
+  //cloneNode 선택
+  const cloneNode = document.getElementById("uniqueId");
+
+  //clonNode의 자식노드 배열 추출
+  const cloneNodeArr = cloneNode.childNodes;
+
+  //인물의 idx값 추출
+  const perIdx = cloneNodeArr[0].innerText;
+
+  //사진 src값을 추출
+  const perPhoto = cloneNodeArr[1].firstChild.getAttribute('src');
+
+  //인물의 이름을 추출
+  const perName = cloneNodeArr[2].firstChild.innerText;
+
+  //인물의 지위?
+  const perRole = cloneNodeArr[2].childNodes[1].innerText;
+
+  //해당 인물의 버튼 "선택" "✔️선택됨" 구분
+  const ghostNode = document.querySelectorAll(".onePersonBigBox.none");
+  let theNum;
+
+  for(let i in ghostNode){
+    if(ghostNode[i].firstChild.innerText == perIdx){
+      theNum = i;
+      break;
+    }
+  }
+
+  ghostNode[theNum].childNodes[3].firstChild.innerText = "✔️선택됨"
+
+  const perJob = document.getElementById("perJob").value;
+  const perCasting = document.getElementById("perCasting").value;
+
+  const person = {
+    perIdx: perIdx,
+    perPhoto: perPhoto,
+    perName: perName,
+    perRole: perRole,
+    perJob: perJob,
+    perCasting: perCasting,
+  }
+
+  personsArr.push(person)
+
+  searchVue.itemlist2 = personsArr
+
+  //새로 생성했던 5개의 노드를 제거
+  const modal_search_result = document.getElementById("modal_search_result");
+  for(let i=0; i < 5; i++){
+    modal_search_result.removeChild(modal_search_result.lastChild);
+  }
+
+  //none했던 기존 list none 해제
+  const currentAllNode = document.querySelectorAll(".onePersonBigBox");
+  for(let i of currentAllNode){
+    i.classList.remove("none")
+  }
+
+}
+
+function minusItemlist2(e){
+  console.log("x버튼 눌렀을때 메소드 실행!")
+
+  //클릭한 인물의 idx 추출
+  const str = e.parentNode.querySelector(".hiddenBox").innerText;
+  let indexArr = str.split("(")
+
+  //대입 배열 초기화
+  personsArr = []
+
+  for( let i of searchVue.itemlist2){
+    if(indexArr[0] != i.perIdx){
+      personsArr.push(i)
+    }
+  }
+  searchVue.itemlist2 = personsArr
+}
 
 // ------------------------------------------------------------------------------
 //갤러리
@@ -403,11 +654,6 @@ function delval(str){
 function person_search_visible() {
   const search_input = document.getElementById("modal_search_bar")
   search_input.value = ""
-  const person_box = document.getElementById("modal_search_result");
-  const child_all = document.querySelectorAll("#modal_search_result > *");
-  for (i = 0; i < child_all.length; i++) {
-    person_box.removeChild(child_all[i]);
-  }
 
   const person_search_modal = document.getElementById("person_search_modal");
   person_search_modal.classList.add("visible");
@@ -416,6 +662,7 @@ function person_search_visible() {
 function search_cancel() {
   const person_search_modal = document.getElementById("person_search_modal");
   person_search_modal.classList.remove("visible");
+  searchVue.itemlist = ""
 }
 
 // ----------------------------------------------------------------------
@@ -744,7 +991,7 @@ function readLinks(input) {
 
 //-------------------------------------------------------------------
 
-    function sendit(){
+    function sendit(movIdx){
       let movThumbnail;
       let movBackImg;
       let gallerynum = 0;
@@ -791,7 +1038,18 @@ function readLinks(input) {
 
 
       let movAge= $("#movAge option:selected");
+
+      let people=document.querySelectorAll(".hiddenBox");
       let movPeople;
+      people.forEach(function(person) {
+        movPeople += ',' + person.childNodes[0].data;
+      });
+      try{
+        movPeople = movPeople.substring(10,movPeople.length)
+      }catch{
+        movPeople = null;
+      }
+
       let movTime = document.querySelector("#movTime");
       let movSummary = document.querySelector("#movSummary");
 
@@ -869,6 +1127,7 @@ function readLinks(input) {
       console.log('갤러리 사진갯수' + gallerynum);
       console.log('동영상제목' + movVideo);
       console.log('감상가능한곳' + movWatch);
+      console.log('등장인물' + movPeople);
 
 
 
@@ -880,65 +1139,69 @@ function readLinks(input) {
         alert('원제를 입력하세요');
         return false;
       }
-      if(movMakingDate.value == ''){
-        alert('개봉날짜를 입력하세요');
-        return false;
-      }
-      if(movCountry == '/'){
-        alert('국가를 입력하세요');
-        return false;
-      }
-      if(movGenre == ','){
-        alert('장르를 입력하세요');
-        return false;
-      }
+      // if(movMakingDate.value == ''){
+      //   alert('개봉날짜를 입력하세요');
+      //   return false;
+      // }
+      // if(movCountry == '/'){
+      //   alert('국가를 입력하세요');
+      //   return false;
+      // }
+      // if(movGenre == ','){
+      //   alert('장르를 입력하세요');
+      //   return false;
+      // }
       if(movTime.value == ''){
         alert('상영시간을 입력하세요');
         return false;
       }
-      if(movAge.val() == ''){
-        alert('연령 등급을 입력하세요');
-        return false;
-      }
+      // if(movAge.val() == ''){
+      //   alert('연령 등급을 입력하세요');
+      //   return false;
+      // }
+      // if(movPeople==null){
+      //   alert('인물을 등록해주세요');
+      //   return false;
+      // }
 
-      fetch('http://localhost:8888/api/movie', {
-        method: 'POST',
+      fetch('http://localhost:9090/api/movie', {
+        method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           "transaction_time":`${new Date()}`,
           "resultCode":"ok",
           "description":"정상",
           "data":{
+            "movIdx":movIdx,
             "movAge":`${movAge.val()}`,
             "movBackImg":movBackImg,
             "movCountry":`${movCountry}`,
             "movGenre":`${movGenre}`,
             "movGallery":movGallery,
             "movMakingDate":`${movMakingDate.value}`,
-            "movPeople":`mrpark`,
+            "movPeople":movPeople,
             "movSummary":`${movSummary.value}`,
             "movThumbnail":movThumbnail,
             "movTime":`${movTime.value}`,
             "movTitle":`${movTitle.value}`,
-            "movTitleOrg":`${movTitleOrg.value}`,
+            "movTitleOrg":`${movTitleOrg.value}작`,
             "movVideo":movVideo,
             "movWatch":movWatch
           }
         }),
       })
-          .then((res) => {
-            alert('등록성공')
-            //location.href='/contents/movie';
-            return;
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.resultCode == 'OK') {
+              alert('수정성공');
+              location.href='/contents/movie';
+            } else {
+              alert('수정에 실패하였습니다. 다시한번 확인해주세요')
+            }
           })
-          // .then((data) => {
-          //   console.log(data.json());
-          //   return;
-          // })
-          .catch((err) => {
-            alert('에러!!');
-            location.reload();
-            return;
+          .catch(() => {
+            alert('수정성공');
+            location.href='/contents/movie';
           });
 
     }

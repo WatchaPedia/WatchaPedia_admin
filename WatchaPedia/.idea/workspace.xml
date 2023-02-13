@@ -13,9 +13,39 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/META-INF/spring-configuration-metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/config/PasswordConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/config/PasswordConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/2_qna/QnA_View.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/2_qna/QnA_View.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book_edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book_edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book_write.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/book/book_write.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movie_edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/movie/movie_edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv_edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv_edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv_write.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/tv/tv_write.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon_edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon_edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon_write.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/3_contents/webtoon/webtoon_write.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Book_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Book_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Book_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Book_Write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Movie_Write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Notice_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Notice_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Notice_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Notice_Write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/QnA_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/QnA_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Tv_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Tv_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Tv_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Tv_Write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/Webtoon_Write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/reportdetail_reply.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/reportdetail_reply.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/1_notice/Notice_Edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/2_qna/QnA_View.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book_write.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/book/book_write.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movie_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movie_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movie_write.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/movie/movie_write.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tv_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tv_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tv_write.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/tv/tv_write.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoon_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoon_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoon_write.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/3_contents/webtoon/webtoon_write.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/6_member/memberdetail.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/accountdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/8_admin/hradmin/accountdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment/sidenav.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/fragment/sidenav.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +122,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Git_clone_folder/watchaPediaBackUp/WatchaPedia",
+    "last_opened_file_path": "C:/Git_clone_folder/WatchaPedia_admin/WatchaPedia",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,7 +131,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.27733028",
-    "spring.configuration.checksum": "00e360083269827b22a4c08d28b9a267",
+    "spring.configuration.checksum": "2fca29e9e73eb02d35a5c5f34fe525dd",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -247,6 +277,7 @@
       <workItem from="1675596830706" duration="1920000" />
       <workItem from="1675656574627" duration="7000" />
       <workItem from="1675657029810" duration="2072000" />
+      <workItem from="1676287335971" duration="4442000" />
     </task>
     <servers />
   </component>

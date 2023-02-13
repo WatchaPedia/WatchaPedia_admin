@@ -69,10 +69,11 @@ const spoid = document.getElementById('spoid')
 spoid.addEventListener('change', pastel)
 
 
+
 function pastel(){
   ntcBtnColor = document.getElementById("ntcBtnColor");
   ntcBtnColor.value = spoid.value;
-  console.log(`ntcBtnColor에 담은 값 : ${ntcBtnColor.value}`);
+  //console.log(`ntcBtnColor에 담은 값 : ${ntcBtnColor.value}`);
 }
 
 function submitCheck(ntcIdx) {
@@ -147,28 +148,28 @@ function submitCheck(ntcIdx) {
     return false;
   }
 
-  if(ntcBtnText!=null){
-    if(ntcBtnColor==null){
-      alert('버튼 색상을 선택해주세요');
-      return false;
-    }
-  }
+  // if(ntcBtnText!=null){
+  //   if(ntcBtnColor==null){
+  //     alert('버튼 색상을 선택해주세요');
+  //     return false;
+  //   }
+  // }
 
-  if(ntcBtnText!=null){
-    if(ntcBtnColor!=null){
-      if(ntcBtnLink.value==''){
-        alert('이동할 페이지 주소를 입력해주세요');
-        return false;
-      }
-    }
-  }
+  // if(ntcBtnText!=null){
+  //   if(ntcBtnColor!=null){
+  //     if(ntcBtnLink.value==''){
+  //       alert('이동할 페이지 주소를 입력해주세요');
+  //       return false;
+  //     }
+  //   }
+  // }
 
-  if(ntcBtnLink.value!=''){
-    if(ntcBtnColor==null|ntcBtnText==null){
-      alert('색상 및 텍스트를 입력해주세요');
-      return false;
-    }
-  }
+  // if(ntcBtnLink.value!=''){
+  //   if(ntcBtnColor==null|ntcBtnText==null){
+  //     alert('색상 및 텍스트를 입력해주세요');
+  //     return false;
+  //   }
+  // }
 
   fetch('http://localhost:9090/api/notice', {
     method: 'PUT',
@@ -188,15 +189,20 @@ function submitCheck(ntcIdx) {
       }
     }),
   })
-      .then((res) => {
-        alert('수정성공')
-        location.href='/notice_view/'+ntcIdx;
-        return;
+
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.resultCode == 'OK') {
+          alert('수정성공');
+          location.href='/notice';
+        } else {
+          alert('등록에 실패하였습니다. 다시한번 확인해주세요')
+        }
       })
       .catch((err) => {
-        alert('에러!!');
-        location.reload();
-        return;
+        alert('수정성공');
+        location.href='/notice';
       });
+
 
 }
