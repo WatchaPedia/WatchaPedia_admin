@@ -151,7 +151,7 @@ public class PageController {
             return "redirect:/";
         }else{
             //로그인 실패 => 로그인 페이지로 다시 이동
-            return "redirect:/login";
+            return "forward:/login";
         }
     }
 
