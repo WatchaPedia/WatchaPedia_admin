@@ -4,7 +4,9 @@ import com.watcha.watchapedia.model.entity.Movie;
 import com.watcha.watchapedia.model.network.Header;
 import com.watcha.watchapedia.model.network.request.MovieApiRequest;
 import com.watcha.watchapedia.model.network.response.MovieApiResponse;
+import com.watcha.watchapedia.model.network.response.MovieResponse;
 import com.watcha.watchapedia.model.repository.MovieRepository;
+import com.watcha.watchapedia.model.repository.PersonRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +19,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class MovieApiLogicService extends BaseService<MovieApiRequest, MovieApiResponse, Movie>{
     private final MovieRepository movieRepository;
+    private final PersonRepository personRepository;
 
 
     private MovieApiResponse response(Movie movie){
@@ -149,8 +152,21 @@ public class MovieApiLogicService extends BaseService<MovieApiRequest, MovieApiR
     }
 
 
-    public List<Movie> movieList(){
-        return movieRepository.findAll();
+    public List<MovieResponse> movieList(){
+        List<MovieResponse> movie = movieRepository.findAll().stream().map(mov->{
+            String str = null;
+            if(mov.getMovPeople()!=null){
+                if(mov.getMovPeople().contains("감독")){
+                    str = mov.getMovPeople().split("\\(감독\\)")[0];
+                    if(str.contains(",")) str = str.split(",")[1];
+                }
+            }
+            return MovieResponse.of(mov.getMovIdx(),mov.getMovTitle(),
+                    str!=null?personRepository.getReferenceById(Long.valueOf(str)).getPerName():""
+                    ,mov.getMovMakingDate(),mov.getMovGenre(),mov.getMovCountry()
+            );
+        }).collect(Collectors.toList());
+        return movie;
     }
 }
 

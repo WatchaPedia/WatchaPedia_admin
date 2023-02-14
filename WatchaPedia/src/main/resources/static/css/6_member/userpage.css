@@ -82,4 +82,9 @@ table{
 }
 button{
     border: solid 1px;
+    padding: 3px 15px;
+}
+
+a{
+    text-decoration: none;
 }

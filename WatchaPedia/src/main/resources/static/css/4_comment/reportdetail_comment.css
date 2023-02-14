@@ -11725,4 +11725,9 @@ width: 30px;
 }
 #button_box{
   text-align: center;
+  padding:3px 15px;
+}
+
+.processResult{
+  color: rgb(235,70,112);
 }

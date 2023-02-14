@@ -8,6 +8,10 @@ input[type="date"]:valid::before {
   display: none;
 }
 
+input{
+  padding-left: 10px;
+}
+
 /* ---------------------------------------------------- */
 
 select option[value=""][disabled] {
@@ -97,7 +101,7 @@ select:visited {
 .select2-container--default
 .select2-container--below {
   margin: 5px 10px;
-  border: 1px solid rgb(255, 255, 255) !important;
+  border: 1px solid rgb(228, 223, 223);
   width: 95% !important;
 }
 
@@ -118,8 +122,8 @@ img {
 #Mbtn {
   width: 200px;
   height: 30px;
-  background: url(/image/watch.png) no-repeat 95% 50% #c4c4c4;
-  background-size: contain;
+  background: url(/image/watch.png) no-repeat 95% 50% #9a9a9a;
+  background-size: 20px;
   border: 1px solid rgb(255, 255, 255);
   margin: 5px 10px;
   color: white;
@@ -202,8 +206,8 @@ img {
 
 .file {
   margin: auto 0;
-  width: 250px;
   opacity: 0.5;
+  padding-left: 10px;
 }
 
 /* ---------------------------------------- */
@@ -241,7 +245,6 @@ img {
 }
 #total_file_info {
   position: relative;
-  top: 8px;
   left: 20px;
   width: 130px;
   font-size: 14px;
@@ -268,8 +271,9 @@ img {
   border-radius: 3px;
   color: #fff;
   vertical-align: middle;
-  background-color: #c4c4c4;
+  background-color: #9a9a9a;
   cursor: pointer;
+  border: none;
   /* display: flex;
   align-items: center;
   justify-content: center; */
@@ -306,6 +310,7 @@ img {
 }
 
 .inBox1 {
+  padding:1px 10px;
   margin: 5px 10px;
   width: 95%;
   border: 1px solid rgb(228, 223, 223);
@@ -353,14 +358,15 @@ img {
   border-radius: 3px;
   color: #fff;
   vertical-align: middle;
-  background-color: #c4c4c4;
+  background-color: #9a9a9a;
   cursor: pointer;
   margin: 10px 20px;
+  border: none;
 }
 
 #poBox2 {
   margin: 1px auto;
-  width: 320px;
+  width: 340px;
   height: 80px;
   border: 1px solid rgb(228, 223, 223);
 }
@@ -390,14 +396,15 @@ img {
   border-radius: 3px;
   color: #fff;
   vertical-align: middle;
-  background-color: #c4c4c4;
+  background-color: #9a9a9a;
   cursor: pointer;
   margin: 10px 20px;
+  border: none;
 }
 
 #baBox2 {
   margin: 1px auto;
-  width: 320px;
+  width: 340px;
   height: 80px;
   border: 1px solid rgb(228, 223, 223);
 }
@@ -430,6 +437,7 @@ img {
 #platform{
   margin-left: 10px;
   width:95%;
+  padding: 1px 10px;
 }
 #wgo {
   margin-top: 10px;
@@ -467,7 +475,6 @@ img {
   margin: 10px;
   border: 1px solid rgb(228, 223, 223);
   width: 95%;
-  height: 80px;
   padding-top: 15px;
   padding-right: 10px;
 }
@@ -557,24 +564,25 @@ img {
   font-size: 18px;
   font-weight: 700;
   text-align: center;
-  width: 80%;
-  margin: 0 4px 0 7px;
+  width: 70%;
   border-bottom: 1px solid rgb(188, 188, 188);
+  padding-top:5px;
 }
 
 .x_icon {
   position: static;
   margin: initial;
   width: 20px;
+  margin-top:8px;
 }
 
 /* 인물검색 결과 틀 박스 효과 */
 .onePersonBigBox{
   display: flex;
   width: 580px;
-  height: 100px;
   margin: 8px auto;
   border-bottom: 1px solid darkgray;
+  padding:10px 0;
 }
 
 .onePersonBigBox.none{
@@ -595,10 +603,11 @@ img {
 }
 
 .appearBoxes > div{
-  background-color: darkgray;
+  background-color: #e5e5e5;
   border-radius: 5px;
   margin: auto 5px;
-  padding: 3px;
+  padding: 3px 10px;
+  color: black;
 }
 
 .contentBox{
@@ -607,33 +616,34 @@ img {
 }
 
 .chooseBtnBox{
-  width: 25%;
-  padding-left: 30px;
+  margin: 0 auto;
 }
 
 .chooseBtn{
   margin: 40px auto;
+  border: none;
+  border-radius: 5px;
+  padding: 1px 15px;
 }
 
 .personSimg{
   position: initial;
   width: 100px;
   height: 90px;
-  border: 1px solid black;
   border-radius: 5px;
   margin-left: 5px;
+  border: none;
 }
 
 
 /* 인물검색 모달창 */
 #person_search_modal {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 0;
-  top: 60px;
   width: 100%;
   height: 100%;
-  background-color: rgba(209, 209, 209, 0.4);
+  background-color:rgb(0 0 0 / 55%);
 
 }
 
@@ -643,13 +653,13 @@ img {
 }
 
 #person_modal_bigbox {
-  background-color: rgb(209, 209, 209);
+  background-color: white;
   width: 600px;
-  height: 545px;
   position: relative;
-  left: 40%;
-  top: 25%;
+  top: 18%;
   border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .modal_big_title {
@@ -671,8 +681,7 @@ img {
   width: 98.5%;
   height: 40px;
   background-color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 5px;
+  border: 1px solid gray;
   margin: 5px auto;
   font-size: 17px;
   font-weight: 600;
@@ -681,7 +690,7 @@ img {
 
 #modal_search_result {
   width: 98.5%;
-  height: 403px;
+  height: 500px;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   margin: 3px auto;
@@ -731,7 +740,8 @@ label{
 }
 
 #Mbtn{
-  border: solid 1px black;
+  border-radius: 3px;
+  border: none;
 }
 
 #btn1, #btn2{
@@ -742,13 +752,12 @@ label{
 .onePersonSmallBox{
   display: flex;
   align-items: center;
-  width: 45%;
+  width: 100%;
   height: 70px;
   margin: 5px 10px;
 }
 
 .smallProfileBox{
-  width: 38%;
   height: 97%;
 }
 
@@ -762,8 +771,9 @@ label{
 }
 
 .smallContentBox{
-  width: 50%;
+  width: 80%;
   overflow: hidden;
+  padding-left: 10px;
 }
 
 .smallContentBox > b{
@@ -777,4 +787,8 @@ label{
 .minus_button{
   position: relative;
   top: -10px;
+}
+
+#perJob, #perCasting{
+  padding: 5px 10px;
 }
