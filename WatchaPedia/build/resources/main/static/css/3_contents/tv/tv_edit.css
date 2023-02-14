@@ -8,6 +8,10 @@ input[type="date"]:valid::before {
   display: none;
 }
 
+input{
+  padding-left: 10px;
+}
+
 /* ---------------------------------------------------- */
 
 select option[value=""][disabled] {
@@ -97,7 +101,7 @@ select:visited {
 .select2-container--default
 .select2-container--below {
   margin: 5px 10px;
-  border: 1px solid rgb(255, 255, 255) !important;
+  border: 1px solid rgb(228, 223, 223);
   width: 95% !important;
 }
 
@@ -118,20 +122,21 @@ img {
 #Mbtn {
   width: 200px;
   height: 30px;
-  background: url(../image/watch.png) no-repeat 95% 50% #c4c4c4;
-  background-size: contain;
+  background: url(/image/watch.png) no-repeat 95% 50% #9a9a9a;
+  background-size: 20px;
   border: 1px solid rgb(255, 255, 255);
-  border-radius: 5px;
   margin: 5px 10px;
   color: white;
 }
-
 #authorBox {
   margin: 5px 10px;
   width: 95%;
-  height: 105px;
+  height: 155px;
   border: 1px solid rgb(228, 223, 223);
   overflow: auto;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
 }
 
 /* --------------------------------------- */
@@ -175,6 +180,8 @@ img {
 
 #resultFile {
   flex-direction: column;
+  min-width: 0;
+  background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgb(228, 223, 223);
   border-radius: 0.25rem;
@@ -199,8 +206,8 @@ img {
 
 .file {
   margin: auto 0;
-  width: 250px;
   opacity: 0.5;
+  padding-left: 10px;
 }
 
 /* ---------------------------------------- */
@@ -208,7 +215,7 @@ img {
 .card {
   display: flex;
   width: 100%;
-  height: 770px;
+
 }
 
 #inputbox,
@@ -220,10 +227,10 @@ img {
   display: flex;
   padding: 5px !important;
 }
-#tvSummary {
+#movSummary {
   margin: 0 auto 0 10px;
   width: 95%;
-  height: 50px;
+  height: 93px;
   border: 1px solid rgb(228, 223, 223);
 }
 .total_size_kb {
@@ -236,10 +243,8 @@ img {
   white-space: nowrap;
   overflow: hidden;
 }
-
 #total_file_info {
   position: relative;
-  top: 8px;
   left: 20px;
   width: 130px;
   font-size: 14px;
@@ -266,19 +271,19 @@ img {
   border-radius: 3px;
   color: #fff;
   vertical-align: middle;
-  background-color: #c4c4c4;
+  background-color: #9a9a9a;
   cursor: pointer;
+  border: none;
   /* display: flex;
-    align-items: center;
-    justify-content: center; */
+  align-items: center;
+  justify-content: center; */
 }
 /* ------------------------------------------------- */
 #vBox {
   border: 1px solid rgb(228, 223, 223);
   width: 100%;
   height: 250px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 .vBox1 {
@@ -305,6 +310,7 @@ img {
 }
 
 .inBox1 {
+  padding:1px 10px;
   margin: 5px 10px;
   width: 95%;
   border: 1px solid rgb(228, 223, 223);
@@ -315,15 +321,12 @@ img {
   width: 95%;
   border: 1px solid rgb(228, 223, 223);
 }
-#tvAge{
-  left:0px;
-}
 
 /* -------------------------------- */
 .conBox2 {
   display: flex;
   margin: 0 auto;
-  height: 400px;
+  height: 225px;
 }
 
 #po,
@@ -332,9 +335,10 @@ img {
 }
 
 #poBox {
+  color:gray;
   margin: 5px 10px;
   width: 95%;
-  height: 140px;
+  height: 150px;
   border: 1px solid rgb(228, 223, 223);
 }
 #pobtn {
@@ -354,22 +358,23 @@ img {
   border-radius: 3px;
   color: #fff;
   vertical-align: middle;
-  background-color: #c4c4c4;
+  background-color: #9a9a9a;
   cursor: pointer;
   margin: 10px 20px;
+  border: none;
 }
 
 #poBox2 {
   margin: 1px auto;
-  width: 320px;
-  height: 70px;
+  width: 340px;
+  height: 80px;
   border: 1px solid rgb(228, 223, 223);
 }
 
 #baBox {
   margin: 5px 10px;
   width: 95%;
-  height: 140px;
+  height: 150px;
   border: 1px solid rgb(228, 223, 223);
 }
 
@@ -391,15 +396,16 @@ img {
   border-radius: 3px;
   color: #fff;
   vertical-align: middle;
-  background-color: #c4c4c4;
+  background-color: #9a9a9a;
   cursor: pointer;
   margin: 10px 20px;
+  border: none;
 }
 
 #baBox2 {
   margin: 1px auto;
-  width: 320px;
-  height: 70px;
+  width: 340px;
+  height: 80px;
   border: 1px solid rgb(228, 223, 223);
 }
 
@@ -415,13 +421,23 @@ img {
   border: 0.5px solid rgb(228, 223, 223);
 }
 
-#plusbox {
-  width: 300px;
-  height: auto;
-  margin: 0 auto;
+#plus_img {
+  position: relative;
 }
-/* ------------------------------------ */
+#minus_img {
+  position: relative;
+}
 
+
+#only_flex_box {
+  display: flex;
+  justify-content: center;
+}
+/* 감상가능한곳 */
+#platform{
+  width:95%;
+  padding: 1px 10px;
+}
 #wgo {
   margin-top: 10px;
   margin-bottom: 0px;
@@ -458,7 +474,6 @@ img {
   margin: 10px;
   border: 1px solid rgb(228, 223, 223);
   width: 95%;
-  height: 80px;
   padding-top: 15px;
   padding-right: 10px;
 }
@@ -548,26 +563,87 @@ img {
   font-size: 18px;
   font-weight: 700;
   text-align: center;
-  width: 80%;
-  margin: 0 4px 0 7px;
+  width: 70%;
   border-bottom: 1px solid rgb(188, 188, 188);
+  padding-top:5px;
 }
 
 .x_icon {
   position: static;
   margin: initial;
   width: 20px;
+  margin-top:8px;
 }
+
+/* 인물검색 결과 틀 박스 효과 */
+.onePersonBigBox{
+  display: flex;
+  width: 580px;
+  margin: 8px auto;
+  border-bottom: 1px solid darkgray;
+  padding:10px 0;
+}
+
+.onePersonBigBox.none{
+  display: none;
+  border-bottom: none;
+}
+
+.profileBox{
+  width: 20%;
+  height: 97%;
+  /*background-size: contain;*/
+  /*background-repeat: no-repeat;*/
+}
+
+.appearBoxes{
+  display: flex;
+  justify-content: left;
+}
+
+.appearBoxes > div{
+  background-color: #e5e5e5;
+  border-radius: 5px;
+  margin: auto 5px;
+  padding: 3px 10px;
+  color: black;
+}
+
+.contentBox{
+  width: 60%;
+  overflow: hidden;
+}
+
+.chooseBtnBox{
+  margin: 0 auto;
+}
+
+.chooseBtn{
+  margin: 40px auto;
+  border: none;
+  border-radius: 5px;
+  padding: 1px 15px;
+}
+
+.personSimg{
+  position: initial;
+  width: 100px;
+  height: 90px;
+  border-radius: 5px;
+  margin-left: 5px;
+  border: none;
+}
+
 
 /* 인물검색 모달창 */
 #person_search_modal {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(209, 209, 209, 0.4);
+  background-color:rgb(0 0 0 / 55%);
+
 }
 
 #person_search_modal.visible {
@@ -576,13 +652,13 @@ img {
 }
 
 #person_modal_bigbox {
-  background-color: rgb(209, 209, 209);
+  background-color: white;
   width: 600px;
-  height: 545px;
   position: relative;
-  left: 40%;
-  top: 25%;
+  top: 18%;
   border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .modal_big_title {
@@ -604,8 +680,7 @@ img {
   width: 98.5%;
   height: 40px;
   background-color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 5px;
+  border: 1px solid gray;
   margin: 5px auto;
   font-size: 17px;
   font-weight: 600;
@@ -614,7 +689,7 @@ img {
 
 #modal_search_result {
   width: 98.5%;
-  height: 403px;
+  height: 500px;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   margin: 3px auto;
@@ -636,14 +711,89 @@ img {
   align-items: center;
   cursor: pointer;
 }
+.btn_css{
+  color: white;
+  width: 100px;
+  height: 35px;
+  margin: 6px auto;
+  background-color: rgb(158, 158, 158);
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.flexCenterCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-dark{
+  background-color: #343a40;
+}
 label{
   border: solid 1px black;
 }
 
 #Mbtn{
-  border: solid 1px black;
+  border-radius: 3px;
+  border: none;
 }
 
 #btn1, #btn2{
   border: solid 1px black;
+}
+
+/* 선택된 인물박스 CSS */
+.onePersonSmallBox{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  margin: 5px 10px;
+}
+
+.smallProfileBox{
+  height: 97%;
+}
+
+.smallPersonSimg{
+  position: initial;
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.smallContentBox{
+  width: 80%;
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+.smallContentBox > b{
+  font-size: 16px;
+}
+
+.smallContentBox > p{
+  font-size: 12px;
+}
+
+.minus_button{
+  position: relative;
+  top: -10px;
+}
+
+#perJob, #perCasting{
+  padding: 5px 10px;
+}
+
+#tvSummary{
+  width: 95%;
+  margin: 10px;
+  height: 100px;
 }

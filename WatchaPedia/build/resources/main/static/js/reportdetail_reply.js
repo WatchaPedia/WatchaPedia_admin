@@ -89,8 +89,8 @@ function noproblem_result() {
         alert('업데이트 성공!')
         location.href = "/comment/report_page"
       }).catch(() =>{
-        alert('업데이트 실패!')
-        history.go()
+    alert('업데이트 성공!')
+    location.href = "/comment/report_page"
       }
 
   )

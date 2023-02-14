@@ -11724,3 +11724,11 @@ width: 30px;
 #button_box{
   text-align: center;
 }
+
+.processResult{
+  color: rgb(235,70,112);
+}
+.button_box{
+  text-align: center;
+  padding:3px 15px;
+}

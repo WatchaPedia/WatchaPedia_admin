@@ -522,7 +522,7 @@
                             <div>
                                 <input
                                         type="text"
-                                        placeholder="상영시간(분단위 ex.55.75 127)"
+                                        placeholder="상영시간(ex.1시간 20분 띄어쓰기해주세요)"
                                         class="inBox1"
                                         id="movTime"
                                         th:value="${movie.movTime}"
@@ -736,9 +736,8 @@
                                                 />
                                                 <div id="total_file_info">
                                                     <span id="file_count">선택된 파일 없음</span>
-                                                    &nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp총 용량
-                                                    <span id="total_size" style="color: red">0</span
-                                                    >KB
+                                                    <br>총 용량
+                                                    <span id="total_size" style="color: red">0</span>KB
                                                 </div>
                                             </div>
                                             <div id="resultFile" >

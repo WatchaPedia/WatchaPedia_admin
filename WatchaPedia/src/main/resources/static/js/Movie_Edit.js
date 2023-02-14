@@ -1193,13 +1193,13 @@ function readLinks(input) {
           .then((response) => response.json())
           .then((data) => {
             if (data.resultCode == 'OK') {
-              alert('등록성공');
+              alert('수정성공');
               location.href='/contents/movie';
             } else {
-              alert('등록에 실패하였습니다. 다시한번 확인해주세요')
+              alert('수정에 실패하였습니다. 다시한번 확인해주세요')
             }
           })
-          .catch((err) => {
+          .catch(() => {
             alert('수정성공');
             location.href='/contents/movie';
           });

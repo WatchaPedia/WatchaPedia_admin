@@ -23,12 +23,28 @@
 
 }
 
+button{
+    border:none
+}
+
 #status_btn{
     width:100px;
     height:30px;
+    border-radius: 5px;
 }
 
 #status_btn_active{
     width:100px;
     height:30px;
+}
+#btn1{
+    border: none;
+    padding: 5px 15px;
+    background-color: #969696;
+    color: white;
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
 }

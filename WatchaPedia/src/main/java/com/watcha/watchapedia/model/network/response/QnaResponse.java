@@ -8,12 +8,23 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public record QnaResponse(
-        Long qnaIdx, String qnaText, Long qnaUserIdx, String qnaUserid,
-        LocalDateTime qnaRegDate, String qnaAttach, String qnaStatus,
-        Long qnaAuserIdx, String qnaAuserid, String qnaAtext,   LocalDateTime qnaAregDate,
-        String qnaAnswer, String qnaName, String qnaFile,
+        Long qnaIdx,
+        String qnaText,
+        Long qnaUserIdx,
+        String qnaUserid,
+        LocalDateTime qnaRegDate,
+        String qnaAttach,
+        String qnaStatus,
+        Long qnaAuserIdx,
+        String qnaAuserid,
+        String qnaAtext,
+        LocalDateTime qnaAregDate,
+        String qnaAnswer,
+        String qnaName,
+        String qnaFile,
         String qnaDtext
 )implements Serializable {
+
     public static QnaResponse of(
             Long qnaIdx, String qnaText, Long qnaUserIdx, String qnaUserid,
             LocalDateTime qnaRegDate, String qnaAttach, String qnaStatus,
@@ -25,6 +36,22 @@ public record QnaResponse(
     }
 
     public static QnaResponse from (QnaDto dto){
+
+
+
+
+
+        String atext = dto.qnaAtext();
+        if(dto.qnaAtext() == null){
+            atext = "설명없음";
+        }
+        
+
+        String fileData = dto.qnaFile();
+        if(dto.qnaFile() == null){
+            fileData = "파일없음";
+        }
+
         return new QnaResponse(
                 dto.qnaIdx(),
                 dto.qnaText(),
@@ -35,11 +62,11 @@ public record QnaResponse(
                 dto.qnaStatus(),
                 dto.qnaAuserIdx(),
                 dto.qnaAuserid(),
-                dto.qnaAtext(),
+                atext,
                 dto.qnaAregDate(),
                 dto.qnaAnswer(),
                 dto.qnaName(),
-                dto.qnaFile(),
+                fileData,
                 dto.qnaDtext()
         );
     }

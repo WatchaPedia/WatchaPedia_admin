@@ -561,95 +561,6 @@ img {
   width: 20px;
 }
 
-/* 인물검색 모달창 */
-#person_search_modal {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(209, 209, 209, 0.4);
-}
-
-#person_search_modal.visible {
-  display: block;
-  z-index: 1000;
-}
-
-#person_modal_bigbox {
-  background-color: rgb(209, 209, 209);
-  width: 600px;
-  height: 545px;
-  position: relative;
-  left: 40%;
-  top: 25%;
-  border-radius: 5px;
-}
-
-.modal_big_title {
-  color: white;
-  width: 100%;
-  height: 40px;
-  background-color: rgb(158, 158, 158);
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#modal_search_bar {
-  position: relative;
-  left: 4px;
-  width: 98.5%;
-  height: 40px;
-  background-color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 5px;
-  margin: 5px auto;
-  font-size: 17px;
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#modal_search_result {
-  width: 98.5%;
-  height: 403px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-  margin: 3px auto;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-#person_search_cancel {
-  color: white;
-  width: 20%;
-  height: 35px;
-  margin: 6px auto;
-  background-color: rgb(158, 158, 158);
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-label{
-  border: solid 1px black;
-}
-
-#Mbtn{
-  border: solid 1px black;
-}
-
-#btn1, #btn2{
-  border: solid 1px black;
-}
-
 /* 인물검색 결과 틀 박스 효과 */
 .onePersonBigBox{
   display: flex;
@@ -657,6 +568,11 @@ label{
   height: 100px;
   margin: 8px auto;
   border-bottom: 1px solid darkgray;
+}
+
+.onePersonBigBox.none{
+  display: none;
+  border-bottom: none;
 }
 
 .profileBox{
@@ -779,6 +695,26 @@ label{
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+.btn_css{
+  color: white;
+  width: 100px;
+  height: 35px;
+  margin: 6px auto;
+  background-color: rgb(158, 158, 158);
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.flexCenterCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .bg-dark{
   background-color: #343a40;

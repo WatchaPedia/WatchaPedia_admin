@@ -251,8 +251,8 @@ img {
 #Mbtn {
   width: 200px;
   height: 30px;
-  background: url(/image/watch.png) no-repeat 95% 50% #c4c4c4;
-  background-size: contain;
+  background: url(/image/watch.png) no-repeat 95% 50% #9a9a9a;
+  background-size: 20px;
   border: 1px solid rgb(255, 255, 255);
   margin: 5px 10px;
   color: white;
@@ -362,6 +362,7 @@ img {
   width: 95%;
   height: 200px;
   border: 1px solid rgb(228, 223, 223);
+  padding-left: 10px;
 }
 .total_size_kb {
   display: none;
@@ -456,6 +457,7 @@ img {
   margin: 5px 10px;
   width: 95%;
   border: 1px solid rgb(228, 223, 223);
+  padding: 1px 10px;
 }
 
 #plus_img {
@@ -557,6 +559,7 @@ img {
   margin: 5px 10px;
   width: 95%;
   border: 1px solid rgb(228, 223, 223);
+  padding: 5px 10px;
 }
 
 .selectDay {
@@ -567,6 +570,7 @@ img {
 #platform{
   width:95%;
   margin-left: 10px;
+  padding: 1px 10px;
 }
 /* -------------------------------- */
 .conBox2 {
@@ -603,9 +607,10 @@ img {
   border-radius: 3px;
   color: #fff;
   vertical-align: middle;
-  background-color: #c4c4c4;
+  background-color: #9a9a9a;
   cursor: pointer;
   margin: 10px 20px;
+  border: none;
 }
 
 #poBox2 {
@@ -640,9 +645,10 @@ img {
   border-radius: 3px;
   color: #fff;
   vertical-align: middle;
-  background-color: #c4c4c4;
+  background-color: #9a9a9a;
   cursor: pointer;
   margin: 10px 20px;
+  border: none;
 }
 
 #baBox2 {
@@ -691,12 +697,14 @@ img {
   height: 100px;
   overflow: auto;
   border: 1px solid rgb(228, 223, 223);
+  padding-left: 10px;
 }
 #bookPubSummary {
   width: 95%;
   height: 100px;
   overflow: auto;
   border: 1px solid rgb(228, 223, 223);
+  padding-left: 10px;
 }
 /* 인물검색 결과 틀 박스 효과 */
 .onePersonBigBox{

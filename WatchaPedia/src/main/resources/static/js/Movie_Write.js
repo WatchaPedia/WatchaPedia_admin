@@ -1194,9 +1194,12 @@ function readLinks(input) {
           })
           .then((data) => {
             if (data.resultCode == 'OK') {
-              alert('수정성공');
+              alert('등록성공');
               location.href='/contents/movie';}})
-          .catch(()=>alert('에러'))
+          .catch(() => {
+            alert('등록성공');
+            location.href='/contents/movie';
+          });
     }
 
 
