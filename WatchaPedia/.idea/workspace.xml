@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21855664-2d20-46f1-a4fe-677457cdf09f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/entity/Spoiler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/model/repository/SpoilerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
@@ -14,11 +12,20 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/WatchaPediaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/WatchaPediaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/ReportApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/controller/api/ReportApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/ReportApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/watcha/watchapedia/service/ReportApiLogicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/AdminRegist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/AdminRegist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Advertise.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Advertise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Advertise_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Advertise_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Advertise_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Advertise_Write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/CharacterEnroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/CharacterEnroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/CharacterModify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/CharacterModify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Myinfomodify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Myinfomodify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Notice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Notice_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Notice_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Notice_View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Notice_View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/Notice_Write.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Notice_Write.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/QnA_Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/QnA_Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/reportdetail_reply.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/reportdetail_reply.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +102,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Git_clone_folder/WatchaPedia_user/watchPedia_User",
+    "last_opened_file_path": "C:/Git_clone_folder/WatchaPedia_admin/WatchaPedia",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -252,6 +259,8 @@
       <workItem from="1675657029810" duration="2072000" />
       <workItem from="1676287335971" duration="4442000" />
       <workItem from="1676301188759" duration="2891000" />
+      <workItem from="1676304915014" duration="320000" />
+      <workItem from="1676352511570" duration="534000" />
     </task>
     <servers />
   </component>

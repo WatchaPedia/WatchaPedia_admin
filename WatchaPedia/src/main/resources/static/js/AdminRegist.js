@@ -186,11 +186,10 @@ createApp({
                         alert('등록성공');
                         location.href='/hradmin/searchaccount';
                     } else {
-                        alert('등록에 실패하였습니다. 다시한번 확인해주세요')
+                        console.log('등록에 실패하였습니다. 다시한번 확인해주세요')
                     }
                 })
                 .catch((err) => {
-                    alert('에러발생');
                     location.reload();
                 });
 
