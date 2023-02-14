@@ -24,7 +24,7 @@ function change_status(ntcIdx,ntcStatus) {
             return;
           })
           .catch((err) => {
-            alert('에러!!');
+            console.log('에러!!');
             //location.reload();
             return;
           });
@@ -54,7 +54,7 @@ function change_status(ntcIdx,ntcStatus) {
             return;
           })
           .catch((err) => {
-            alert('에러!!');
+            console.log('에러!!');
             //location.reload();
             return;
           });

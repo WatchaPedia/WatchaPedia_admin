@@ -60,7 +60,7 @@ function sendit(adminIdx) {
         }
       })
       .catch((err) => {
-        alert('에러!!');
+        console.log('에러!!');
         location.reload();
       });
 }
