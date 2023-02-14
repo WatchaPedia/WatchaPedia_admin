@@ -50,7 +50,7 @@
                                 <th>감독</th>
                                 <th>개봉일</th>
                                 <th>장르</th>
-                                <th>제작국가</th>
+                                <th class="col-1">제작국가</th>
                             </tr>
                             </thead>
                             <tfoot>
@@ -65,12 +65,12 @@
                             </tfoot>
                             <tbody id="movietbody" th:remove="all-but-first">
                             <tr id="movietr" th:each="movie : ${movies}">
-                                <td id="movIdx" ><a th:text="${movie.movIdx}" th:href="@{/contents/movie_detail/{id}(id=${movie.movIdx})}"></a></td>
-                                <td id="movTitle" ><a th:text="${movie.movTitle}" th:href="@{/contents/movie_detail/{id}(id=${movie.movIdx})}"></a></td>
-                                <td id="movPeople" ><a th:text="${movie.movPeople}" th:href="@{/contents/movie_detail/{id}(id=${movie.movIdx})}"></a></td>
-                                <td id="movMakingDate" ><a th:text="${movie.movMakingDate}" th:href="@{/contents/movie_detail/{id}(id=${movie.movIdx})}"></a></td>
-                                <td id="movGenre" ><a th:text="${movie.movGenre}" th:href="@{/contents/movie_detail/{id}(id=${movie.movIdx})}"></a></td>
-                                <td id="movCountry" ><a th:text="${movie.movCountry}" th:href="@{/contents/movie_detail/{id}(id=${movie.movIdx})}"></a></td>
+                                <td id="movIdx" ><a th:text="${movie.idx}" th:href="@{/contents/movie_detail/{id}(id=${movie.idx})}"></a></td>
+                                <td id="movTitle" ><a th:text="${movie.title}" th:href="@{/contents/movie_detail/{id}(id=${movie.idx})}"></a></td>
+                                <td id="movPeople" ><a th:text="${movie.director}" th:href="@{/contents/movie_detail/{id}(id=${movie.idx})}"></a></td>
+                                <td id="movMakingDate" ><a th:text="${movie.makingDate}" th:href="@{/contents/movie_detail/{id}(id=${movie.idx})}"></a></td>
+                                <td id="movGenre" ><a th:text="${movie.genre}" th:href="@{/contents/movie_detail/{id}(id=${movie.idx})}"></a></td>
+                                <td id="movCountry" ><a th:text="${movie.country}" th:href="@{/contents/movie_detail/{id}(id=${movie.idx})}"></a></td>
                             </tr>
                             <tr>
                                 <td>Garrett Winters</td>

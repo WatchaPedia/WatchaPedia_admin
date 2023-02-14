@@ -98,3 +98,10 @@ li {
    width: 80px;
  }
 
+a{
+  text-decoration: none;
+}
+
+td{
+  line-height: 70px;
+}

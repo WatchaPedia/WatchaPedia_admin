@@ -5,10 +5,15 @@ form > div:nth-child(3) { font-size: 80%; font-size: large;}
 #comment_movie_poster { width: 10%; float:right; }
 
 #commentdetail { width: 100%; margin-bottom: 3%;}
-.movielikereply { font-size: small; margin-bottom: 2%;}
+.movielikereply { font-size: 15px; margin-bottom: 3.5%;}
 
 .commText{
     width: 90%;
+    font-size: 18px;
+}
+
+#like_reply{
+    margin-bottom: 2%;
 }
 
 
@@ -16,11 +21,22 @@ form > div:nth-child(3) { font-size: 80%; font-size: large;}
 #like_reply {
     display: flex;
     justify-content: flex-start; }
-#photoiddetail { padding-bottom: 7px;}
+#photoiddetail {
+    padding-bottom: 7px;
+    font-size: 20px;
+}
+#commRegDate{
+    margin: 10px 15px;
+}
 
 #cocomment {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 15px;
+}
+button{
+    margin-bottom: 20px;
+    padding: 5px 20px;
 }
 
 #info {
@@ -55,4 +71,8 @@ form > div:nth-child(3) { font-size: 80%; font-size: large;}
 
 button{
     border: solid 1px;
+}
+
+a {
+    text-decoration: none;
 }
