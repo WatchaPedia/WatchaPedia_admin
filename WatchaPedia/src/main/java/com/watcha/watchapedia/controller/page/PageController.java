@@ -71,7 +71,7 @@ public class PageController {
         HttpSession session = request.getSession(false);
         if(session == null){
             System.out.println("세션이 없습니다");
-            return new ModelAndView("/0_login/Login");
+            return new ModelAndView("0_login/Login");
         }else{
             System.out.println("로그인 세션있음");
         }
@@ -125,10 +125,10 @@ public class PageController {
         //이미 로그인된 상태에서, 로그인 페이지로 들어오면 메인으로 돌려보냄
         HttpSession session = request.getSession(false);
         if(session != null){
-            return loginInfo(request, "forward:/notice");
+            return loginInfo(request, "forward:notice");
         }
 
-        return new ModelAndView("/0_login/Login");
+        return new ModelAndView("0_login/Login");
     }
 
     //회원인증 절차 (Servlet 방식)
@@ -148,10 +148,10 @@ public class PageController {
             session.setAttribute("adminName", adminName);
             session.setAttribute("adminType", adminType);   //인사관리자, 일반관리자 기능이 달라서 필요
             //세션을 저장하고 메인화면으로 이동
-            return "redirect:/";
+            return "redirect:";
         }else{
             //로그인 실패 => 로그인 페이지로 다시 이동
-            return "forward:/login";
+            return "forward:login";
         }
     }
 
@@ -160,7 +160,7 @@ public class PageController {
     public String logout(HttpServletRequest request){
         HttpSession session = request.getSession();
         session.invalidate();
-        return "redirect:/";
+        return "redirect:";
     }
 
     //메인화면
@@ -171,7 +171,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "forward:/notice");
+        return loginInfo(request, "forward:notice");
     }
 
     //공지사항
@@ -182,7 +182,7 @@ public class PageController {
             return loginCheck;
         }
         List<NoticeApiResponse> notice = userService.noticeAll();
-        return loginInfo(request, "/1_notice/Notice").addObject("notices",noticeApiLogicService.noticeList()).addObject("notice",notice);
+        return loginInfo(request, "1_notice/Notice").addObject("notices",noticeApiLogicService.noticeList()).addObject("notice",notice);
     }
 
 
@@ -194,7 +194,7 @@ public class PageController {
             return loginCheck;
         }
         Header<NoticeApiResponse> api = noticeApiLogicService.read(ntcIdx);
-        return loginInfo(request, "/1_notice/Notice_Edit").addObject("notice",api.getData());
+        return loginInfo(request, "1_notice/Notice_Edit").addObject("notice",api.getData());
     }
 
     @GetMapping(path="/notice_view/{ntcIdx}")
@@ -204,7 +204,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/1_notice/Notice_View").addObject("notice",api.getData());
+        return loginInfo(request, "1_notice/Notice_View").addObject("notice",api.getData());
     }
 
 
@@ -216,7 +216,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/1_notice/Notice_Write");
+        return loginInfo(request, "1_notice/Notice_Write");
     }
 
     //noticeOk 시작!
@@ -289,7 +289,7 @@ public class PageController {
         loginModelInfo(request,map);
 
         map.addAttribute("qnas", qnaService.searchQnas());
-        return "/2_qna/QnA";
+        return "2_qna/QnA";
     }
 
     // qna 리스트 답글 작성 부분
@@ -300,7 +300,7 @@ public class PageController {
         Optional<Qna> qna = qnaRepository.findById(qnaIdx);
         QnaResponse qnaResponse = QnaResponse.from(QnaDto.from(qna.get()));
         map.addAttribute("qna", qnaResponse);
-        return "/2_qna/QnA_Reply";
+        return "2_qna/QnA_Reply";
     }
 
     // qna 답글 완료 부분
@@ -308,14 +308,14 @@ public class PageController {
     public String QnaView(ModelMap map, HttpServletRequest request){
         loginModelInfo(request,map);
         map.addAttribute("view" , FormStatus.CREATE);
-        return "/2_qna/QnA_View";
+        return "2_qna/QnA_View";
     }
 
     @PostMapping ("/qnaview")
     public String postqnaview(QnaRequest qnaRequest, ModelMap map, HttpServletRequest request) {
         loginModelInfo(request,map);
         qnaService.saveQna(qnaRequest.toDto());
-        return "redirect:/qna";
+        return "redirect:qna";
     }
 
     // qna 답글 완료 데이터 보내기
@@ -325,7 +325,7 @@ public class PageController {
         QnaResponse qna = QnaResponse.from(qnaService.getQna(qnaIdx));
         map.addAttribute("qna", qna);
         map.addAttribute("formStatus", FormStatus.UPDATE);
-        return "/2_qna/QnA_View";
+        return "2_qna/QnA_View";
     }
 
     // qna 답글 완료 데이터 보내기
@@ -346,7 +346,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/3_contents/book/book").addObject("books",bookApiLogicService.bookList());
+        return loginInfo(request, "3_contents/book/book").addObject("books",bookApiLogicService.bookList());
     }
     @GetMapping(path="/contents/book_edit/{bookIdx}")
     public ModelAndView bookEdit(@PathVariable Long bookIdx,HttpServletRequest request){
@@ -357,7 +357,7 @@ public class PageController {
         }
         // 로그인 Check 끝!
         Header<BookApiResponse> api = bookApiLogicService.read(bookIdx);
-        return loginInfo(request, "/3_contents/book/book_edit").addObject("book",api.getData());
+        return loginInfo(request, "3_contents/book/book_edit").addObject("book",api.getData());
 //        return new ModelAndView("/3_contents/book/book_edit");
     }
 
@@ -369,7 +369,7 @@ public class PageController {
             return loginCheck;
         }
         // 로그인 Check 끝!
-        return loginInfo(request, "/3_contents/book/book_write");
+        return loginInfo(request, "3_contents/book/book_write");
     }
     @GetMapping(path="/contents/book_detail/{bookIdx}")
     public ModelAndView bookDetail(@PathVariable Long bookIdx,HttpServletRequest request){
@@ -378,7 +378,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/3_contents/book/book_detail").addObject("book",api.getData());
+        return loginInfo(request, "3_contents/book/book_detail").addObject("book",api.getData());
     }
 
 
@@ -389,7 +389,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/3_contents/movie/movie").addObject("movies",movieApiLogicService.movieList());
+        return loginInfo(request, "3_contents/movie/movie").addObject("movies",movieApiLogicService.movieList());
     }
     @GetMapping(path="/contents/movie_edit/{movIdx}")
     public ModelAndView movieEdit(@PathVariable Long movIdx, HttpServletRequest request){
@@ -399,7 +399,7 @@ public class PageController {
             return loginCheck;
         }
         Header<MovieApiResponse> api = movieApiLogicService.read(movIdx);
-        return loginInfo(request, "/3_contents/movie/movie_edit").addObject("movie",api.getData());
+        return loginInfo(request, "3_contents/movie/movie_edit").addObject("movie",api.getData());
     }
     @GetMapping(path="/contents/movie_write")
     public ModelAndView movieWrite(HttpServletRequest request){
@@ -408,7 +408,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/3_contents/movie/movie_write");
+        return loginInfo(request, "3_contents/movie/movie_write");
     }
     @GetMapping(path="/contents/movie_detail/{movIdx}")
     public ModelAndView movieDetail(@PathVariable Long movIdx, HttpServletRequest request){
@@ -417,7 +417,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/3_contents/movie/movie_detail").addObject("movie",api.getData());
+        return loginInfo(request, "3_contents/movie/movie_detail").addObject("movie",api.getData());
     }
 
 
@@ -427,7 +427,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/3_contents/tv/tv").addObject("tvs",tvApiLogicService.tvList());
+        return loginInfo(request, "3_contents/tv/tv").addObject("tvs",tvApiLogicService.tvList());
     }
 
     @GetMapping(path="/contents/tv_edit/{tvIdx}")
@@ -438,7 +438,7 @@ public class PageController {
             return loginCheck;
         }
         Header<TvApiResponse> api = tvApiLogicService.read(tvIdx);
-        return loginInfo(request, "/3_contents/tv/tv_edit").addObject("tv",api.getData());
+        return loginInfo(request, "3_contents/tv/tv_edit").addObject("tv",api.getData());
     }
     @GetMapping(path="/contents/tv_write")
     public ModelAndView tvWrite(HttpServletRequest request){
@@ -447,7 +447,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/3_contents/tv/tv_write");
+        return loginInfo(request, "3_contents/tv/tv_write");
     }
     @GetMapping(path="/contents/tv_detail/{tvIdx}")
     public ModelAndView tvDetail(@PathVariable Long tvIdx,HttpServletRequest request){
@@ -456,7 +456,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/3_contents/tv/tv_detail").addObject("tv",api.getData());
+        return loginInfo(request, "3_contents/tv/tv_detail").addObject("tv",api.getData());
     }
 
 
@@ -467,7 +467,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/3_contents/webtoon/webtoon").addObject("webtoons",webtoonApiLogicService.webtoonList());
+        return loginInfo(request, "3_contents/webtoon/webtoon").addObject("webtoons",webtoonApiLogicService.webtoonList());
 
     }
     @GetMapping(path="/contents/webtoon_edit/{webIdx}")
@@ -478,7 +478,7 @@ public class PageController {
             return loginCheck;
         }
         Header<WebtoonApiResponse> api = webtoonApiLogicService.read(webIdx);
-        return loginInfo(request, "/3_contents/webtoon/webtoon_edit").addObject("webtoon",api.getData());
+        return loginInfo(request, "3_contents/webtoon/webtoon_edit").addObject("webtoon",api.getData());
     }
     @GetMapping(path="/contents/webtoon_write")
     public ModelAndView webtoonWrite(HttpServletRequest request){
@@ -487,7 +487,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/3_contents/webtoon/webtoon_write");
+        return loginInfo(request, "3_contents/webtoon/webtoon_write");
     }
     @GetMapping(path="/contents/webtoon_detail/{webIdx}")
     public ModelAndView webtoonDetail(@PathVariable Long webIdx,HttpServletRequest request){
@@ -496,7 +496,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/3_contents/webtoon/webtoon_detail").addObject("webtoon",api.getData());
+        return loginInfo(request, "3_contents/webtoon/webtoon_detail").addObject("webtoon",api.getData());
     }
 
 
@@ -536,7 +536,7 @@ public class PageController {
             }
         }
 
-        return loginInfo(request, "/4_comment/reported/report_page")
+        return loginInfo(request, "4_comment/reported/report_page")
                 .addObject("waitList", waitList)
                 .addObject("completeList",completeList);
     }
@@ -556,7 +556,7 @@ public class PageController {
 
         ReportDetailDto reportDetailDto = ReportDetailDto.from(report);
 
-        return loginInfo(request, "/4_comment/reported/reportdetail_comment").addObject("report", reportDetailDto);
+        return loginInfo(request, "4_comment/reported/reportdetail_comment").addObject("report", reportDetailDto);
     }
 
     @GetMapping(path="/comment/reportdetail_reply/{reportId}")
@@ -575,7 +575,7 @@ public class PageController {
 
         ReportDetailDto reportDetailDto = ReportDetailDto.from(report);
 
-        return loginInfo(request, "/4_comment/reported/reportdetail_reply").addObject("report", reportDetailDto);
+        return loginInfo(request, "4_comment/reported/reportdetail_reply").addObject("report", reportDetailDto);
     }
 
     // comment 리스트 출력
@@ -592,7 +592,7 @@ public class PageController {
         //List<CommentResponse> 반환
         comments = globalMethodService.getListTitle(comments);
         map.addAttribute("comments", comments);
-        return "/4_comment/search/commentSearchList";
+        return "4_comment/search/commentSearchList";
     }
 
 
@@ -639,7 +639,7 @@ public class PageController {
         map.addAttribute("comment", commentResponse);
         map.addAttribute("recomment", recommentResponseDtoList);
 
-        return "/4_comment/search/commentSearchDetail";
+        return "4_comment/search/commentSearchDetail";
     }
     @GetMapping(path="/character_detail/{perIdx}")
     public ModelAndView characterdetail(@PathVariable Long perIdx, HttpServletRequest request){
@@ -648,7 +648,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/5_character/characterdetail").addObject("character",api.getData());
+        return loginInfo(request, "5_character/characterdetail").addObject("character",api.getData());
     }
     @GetMapping(path="/character_manage")
     public ModelAndView charactermanage(HttpServletRequest request){
@@ -659,7 +659,7 @@ public class PageController {
         }
         System.out.println("페이지컨트롤러에는 잘들어오는데");
 
-        return loginInfo(request, "/5_character/charactermanage").addObject("characters",characterApiLogicService.characterList());
+        return loginInfo(request, "5_character/charactermanage").addObject("characters",characterApiLogicService.characterList());
 
     }
 
@@ -671,7 +671,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/5_character/characterregister");
+        return loginInfo(request, "5_character/characterregister");
     }
     @GetMapping(path="/character_modify/{perIdx}")
     public ModelAndView charactermodify(@PathVariable Long perIdx,HttpServletRequest request){
@@ -681,7 +681,7 @@ public class PageController {
             return loginCheck;
         }
         Header<CharacterApiResponse> api = characterApiLogicService.read(perIdx);
-        return loginInfo(request, "/5_character/charactermodify").addObject("character",api.getData());
+        return loginInfo(request, "5_character/charactermodify").addObject("character",api.getData());
     }
 
     // 멤버 디테일
@@ -692,7 +692,7 @@ public class PageController {
         Optional<User> user = userRepository.findById(userIdx);
         UserResponse userResponse = UserResponse.from(UserDto.from(user.get()));
         map.addAttribute("user", userResponse);
-        return "/6_member/memberdetail";
+        return "6_member/memberdetail";
     }
 
     // 멤버 리스트
@@ -707,7 +707,7 @@ public class PageController {
         loginModelInfo(request,map);
         List<UserResponse> users = userService.searchUsers().stream().map(UserResponse::from).toList();
         map.addAttribute("users", users);
-        return "/6_member/membermanage";
+        return "6_member/membermanage";
     }
 
     // 유저 인플루언서 수정
@@ -725,7 +725,7 @@ public class PageController {
                     userRepository.save(selectUser);
                 }
         );
-        return "redirect:/member/"+findAllReportx;
+        return "redirect:member/"+findAllReportx;
     }
 
 
@@ -736,7 +736,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/7_advertisement/Advertisement").addObject("advertises",advertiseApiLogicService.advertiseList());
+        return loginInfo(request, "7_advertisement/Advertisement").addObject("advertises",advertiseApiLogicService.advertiseList());
     }
 
     @GetMapping(path="/advertisement_write")
@@ -746,7 +746,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/7_advertisement/Advertisement_Write");
+        return loginInfo(request, "7_advertisement/Advertisement_Write");
     }
 
 
@@ -758,7 +758,7 @@ public class PageController {
             return loginCheck;
         }
         Header<AdvertiseApiResponse> api = advertiseApiLogicService.read(adIdx);
-        return loginInfo(request, "/7_advertisement/Advertisement_Edit").addObject("advertise",api.getData());
+        return loginInfo(request, "7_advertisement/Advertisement_Edit").addObject("advertise",api.getData());
     }
 
 
@@ -770,7 +770,7 @@ public class PageController {
             return loginCheck;
         }
         Header<AdvertiseApiResponse> api = advertiseApiLogicService.read(adIdx);
-        return loginInfo(request, "/7_advertisement/Advertisement_View").addObject("advertise",api.getData());
+        return loginInfo(request, "7_advertisement/Advertisement_View").addObject("advertise",api.getData());
     }
 
 
@@ -781,7 +781,7 @@ public class PageController {
         Optional<AdminUser> adminUser = adminRepository.findById(adminIdx);
         AdminUserResponse adminUserResponse = AdminUserResponse.from(AdminUserDto.from(adminUser.get()));
         map.addAttribute("adminUser", adminUserResponse);
-        return "/8_admin/hradmin/accountdetail";
+        return "8_admin/hradmin/accountdetail";
     }
     @GetMapping(path="/hradmin/createaccount")
     public ModelAndView hradmincreateaccount(HttpServletRequest request){
@@ -790,7 +790,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/8_admin/hradmin/createaccount");
+        return loginInfo(request, "8_admin/hradmin/createaccount");
     }
     @GetMapping(path="/hradmin/modifyaccount")
     public ModelAndView hradminmodifyaccount(HttpServletRequest request){
@@ -801,7 +801,7 @@ public class PageController {
         }
         HttpSession session = request.getSession();
         Header<AdminApiResponse> api = adminApiLogicService.read((Long)session.getAttribute("adminIdx"));
-        return loginInfo(request, "/8_admin/admin/Myinfo").addObject("myinfo",api.getData());
+        return loginInfo(request, "8_admin/admin/Myinfo").addObject("myinfo",api.getData());
     }
 
     @Autowired
@@ -816,7 +816,7 @@ public class PageController {
         // admin계정 리스트 전달!
         List<AdminUserResponse> admins = adminService.findAllReport().stream().map(AdminUserResponse::from).toList();
         map.addAttribute("admins",admins);
-        return "/8_admin/hradmin/searchaccount";
+        return "8_admin/hradmin/searchaccount";
     }
 
     @GetMapping(path="/admin_myinfo")
@@ -828,7 +828,7 @@ public class PageController {
         }
         HttpSession session = request.getSession();
         Header<AdminApiResponse> api = adminApiLogicService.read((Long)session.getAttribute("adminIdx"));
-        return loginInfo(request, "/8_admin/admin/Myinfo").addObject("myinfo",api.getData());
+        return loginInfo(request, "8_admin/admin/Myinfo").addObject("myinfo",api.getData());
     }
 
     @GetMapping(path="/admin_myinfomodify/{adminIdx}")
@@ -838,7 +838,7 @@ public class PageController {
         if(loginCheck != null){
             return loginCheck;
         }
-        return loginInfo(request, "/8_admin/admin/Myinfomodify").addObject("adminIdx",adminIdx);
+        return loginInfo(request, "8_admin/admin/Myinfomodify").addObject("adminIdx",adminIdx);
     }
     @GetMapping(path="/hradmin/updateaccount/{adminIdx}")
     public String updateaccount(@PathVariable Long adminIdx, HttpServletRequest request, ModelMap map){
@@ -846,7 +846,7 @@ public class PageController {
         AdminUser adminUser = adminRepository.getReferenceById(adminIdx);
         AdminUserResponse adminUserResponse = AdminUserResponse.from(AdminUserDto.from(adminUser));
         map.addAttribute("adminUser", adminUserResponse);
-        return "/8_admin/hradmin/updateaccount";
+        return "8_admin/hradmin/updateaccount";
     }
 
 }

@@ -31,7 +31,7 @@ function submitreply(qnaIdx) {
                 alert('답변성공');
                 location.href=`/qna/${qnaIdx}/qnaview`;
             } else {
-                alert('답변등록에 실패하였습니다. 다시한번 확인해주세요')
+                console.log('답변등록에 실패하였습니다. 다시한번 확인해주세요')
             }
         })
         .catch((err) => {

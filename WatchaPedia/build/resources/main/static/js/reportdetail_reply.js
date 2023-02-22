@@ -18,10 +18,8 @@ function blind_result() {
   })
       .then(response => response.json())
       .then(data => {
-        alert('업데이트 성공!')
         location.href = "/comment/report_page"
       }).catch(() =>{
-        alert('업데이트 실패!')
         history.go()
       }
 
@@ -56,10 +54,8 @@ function spoiler_result() {
   })
       .then(response => response.json())
       .then(data => {
-        alert('업데이트 성공!')
         location.href = "/comment/report_page"
       }).catch(() =>{
-        alert('업데이트 실패!')
         history.go()
       }
 
@@ -86,10 +82,8 @@ function noproblem_result() {
   })
       .then(response => response.json())
       .then(data => {
-        alert('업데이트 성공!')
         location.href = "/comment/report_page"
       }).catch(() =>{
-    alert('업데이트 성공!')
     location.href = "/comment/report_page"
       }
 
