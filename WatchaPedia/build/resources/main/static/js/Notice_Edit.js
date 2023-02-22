@@ -196,7 +196,7 @@ function submitCheck(ntcIdx) {
           alert('수정성공');
           location.href='/notice';
         } else {
-          alert('등록에 실패하였습니다. 다시한번 확인해주세요')
+          console.log('등록에 실패하였습니다. 다시한번 확인해주세요')
         }
       })
       .catch((err) => {
