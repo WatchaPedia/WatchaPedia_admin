@@ -1,7 +1,7 @@
 function delntc(ntcIdx){
     let a= confirm('해당 공지글을 삭제하시겠습니까?')
     if(a){
-        fetch('http://localhost:9090/api/notice/'+ntcIdx, {
+        fetch('/api/notice/'+ntcIdx, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

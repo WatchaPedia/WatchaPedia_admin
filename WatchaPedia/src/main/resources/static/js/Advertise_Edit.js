@@ -260,7 +260,7 @@ function sendit(adIdx){
     // }
 
 
-    fetch('http://localhost:9090/api/advertise', {
+    fetch('/api/advertise', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

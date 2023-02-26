@@ -34,7 +34,7 @@ function sendit(adminIdx) {
     return false;
   }
 
-  fetch('http://localhost:9090/api/admin', {
+  fetch('/api/admin', {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({

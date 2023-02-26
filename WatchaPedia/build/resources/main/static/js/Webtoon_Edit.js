@@ -702,7 +702,7 @@ function sendit(){
   //   return false;
   // }
 
-  fetch('http://localhost:8888/api/webtoon', {
+  fetch('/api/webtoon', {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({

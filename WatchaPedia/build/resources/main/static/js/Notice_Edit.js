@@ -171,7 +171,7 @@ function submitCheck(ntcIdx) {
   //   }
   // }
 
-  fetch('http://localhost:9090/api/notice', {
+  fetch('/api/notice', {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({

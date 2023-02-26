@@ -5,7 +5,7 @@ function change_status(ntcIdx,ntcStatus) {
   if(ntcStatus=='등록'){
     let a = confirm("등록하시겠습니까?");
     if(a){
-      fetch('http://localhost:9090/api/notice/statusupdate', {
+      fetch('/api/notice/statusupdate', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -35,7 +35,7 @@ function change_status(ntcIdx,ntcStatus) {
     let a = confirm("등록해제하시겠습니까?")
     if(a){
       console.log(ntcIdx+ntcStatus);
-      fetch('http://localhost:9090/api/notice/statusupdate', {
+      fetch('/api/notice/statusupdate', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

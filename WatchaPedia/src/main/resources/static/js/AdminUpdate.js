@@ -65,7 +65,7 @@ createApp({
                 this.employeeDupl = false
             }
 
-            fetch('http://localhost:9090/api/admin/employeeCheck', {
+            fetch('/api/admin/employeeCheck', {
                 method: 'POST',
                 headers: {'content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -105,7 +105,7 @@ createApp({
             }
 
             //tb_admin_user에서 해당 값과 같은 값이 있는지 비교하는 api 개발
-            fetch('http://localhost:9090/api/admin/idCheck', {
+            fetch('/api/admin/idCheck', {
                 method: 'POST',
                 headers: {'content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -161,7 +161,7 @@ createApp({
             }
 
 
-            fetch('http://localhost:9090/api/admin/updateaccount', {
+            fetch('/api/admin/updateaccount', {
                 method: 'POST',
                 headers: {'content-Type': 'application/json'},
                 body: JSON.stringify({

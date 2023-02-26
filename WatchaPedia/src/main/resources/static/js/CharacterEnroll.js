@@ -94,7 +94,7 @@ function sendit(){
     }
 
 
-    fetch('http://localhost:9090/api/character', {
+    fetch('/api/character', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

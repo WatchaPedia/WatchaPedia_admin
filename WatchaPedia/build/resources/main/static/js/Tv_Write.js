@@ -1193,7 +1193,7 @@ let tvWatch=null;
   }
 
 
-  fetch('http://localhost:8888/api/tv', {
+  fetch('/api/tv', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -1224,7 +1224,7 @@ let tvWatch=null;
         people.forEach(function (person) {
           let idxnum = person.childNodes[0].data.indexOf('(');
           let num = person.childNodes[0].data.substring(0, idxnum)
-          fetch('http://localhost:9090/api/character', {
+          fetch('/api/character', {
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

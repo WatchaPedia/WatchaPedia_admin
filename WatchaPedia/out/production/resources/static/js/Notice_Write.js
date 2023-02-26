@@ -53,7 +53,7 @@ function submitCheck(){
 
   console.log('출력확인 끝!')
 
-  // fetch('http://localhost:9090/api/notice', {
+  // fetch('/api/notice', {
   //   method: 'POST',
   //   headers: { 'Content-Type': 'application/json' },
   //   body: JSON.stringify({

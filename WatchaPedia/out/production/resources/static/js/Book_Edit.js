@@ -377,7 +377,7 @@ function sendit() {
   }
 
 
-  fetch('http://localhost:8888/api/book', {
+  fetch('/api/book', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({

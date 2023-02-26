@@ -2,7 +2,7 @@ function blind_result() {
   const reportIdx = document.getElementById('hiddenIdx').innerText;
   const processAdmin = document.getElementById('hiddenSessionAdmin').innerText;
   const updateStatus = "블라인드";
-  fetch('http://localhost:9090/api/report/update', {
+  fetch('/api/report/update', {
     method: 'PUT',
     headers: {'content-Type': 'application/json'},
     body: JSON.stringify({
@@ -38,7 +38,7 @@ function spoiler_result() {
   const reportIdx = document.getElementById('hiddenIdx').innerText;
   const processAdmin = document.getElementById('hiddenSessionAdmin').innerText;
   const updateStatus = "스포일러";
-  fetch('http://localhost:9090/api/report/update', {
+  fetch('/api/report/update', {
     method: 'PUT',
     headers: {'content-Type': 'application/json'},
     body: JSON.stringify({
@@ -66,7 +66,7 @@ function noproblem_result() {
   const reportIdx = document.getElementById('hiddenIdx').innerText;
   const processAdmin = document.getElementById('hiddenSessionAdmin').innerText;
   const updateStatus = "문제없음";
-  fetch('http://localhost:9090/api/report/update', {
+  fetch('/api/report/update', {
     method: 'PUT',
     headers: {'content-Type': 'application/json'},
     body: JSON.stringify({

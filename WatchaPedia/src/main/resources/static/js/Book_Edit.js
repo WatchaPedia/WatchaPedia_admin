@@ -646,7 +646,7 @@ function sendit(bookIdx) {
   // }
 
 
-  fetch('http://localhost:8888/api/book', {
+  fetch('/api/book', {
     method: 'PUT',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({

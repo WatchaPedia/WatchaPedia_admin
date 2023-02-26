@@ -1193,7 +1193,7 @@ let tvWatch=null;
   // }
 
 
-  fetch('http://localhost:8888/api/tv', {
+  fetch('/api/tv', {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({

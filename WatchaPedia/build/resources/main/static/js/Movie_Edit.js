@@ -1164,7 +1164,7 @@ function readLinks(input) {
       //   return false;
       // }
 
-      fetch('http://localhost:9090/api/movie', {
+      fetch('/api/movie', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -1146,7 +1146,7 @@ function readLinks(input) {
         return false;
       }
 
-      fetch('http://localhost:9090/api/movie', {
+      fetch('/api/movie', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -1177,7 +1177,7 @@ function readLinks(input) {
             people.forEach(function (person) {
               let idxnum = person.childNodes[0].data.indexOf('(');
               let num = person.childNodes[0].data.substring(0, idxnum)
-              fetch('http://localhost:9090/api/character', {
+              fetch('/api/character', {
                 method: 'PUT',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({

@@ -2,7 +2,7 @@ function change_status(adIdx,adStatus) {
     if(adStatus=='등록'){
         let a = confirm("등록하시겠습니까?");
         if(a){
-            fetch('http://localhost:9090/api/advertise/statusupdate', {
+            fetch('/api/advertise/statusupdate', {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -32,7 +32,7 @@ function change_status(adIdx,adStatus) {
         let a = confirm("등록해제하시겠습니까?")
         if(a){
             console.log(adIdx+adStatus);
-            fetch('http://localhost:9090/api/advertise/statusupdate', {
+            fetch('/api/advertise/statusupdate', {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
