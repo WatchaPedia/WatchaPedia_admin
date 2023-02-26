@@ -37,6 +37,7 @@ createApp({
                 this.pwOkText = true
             }
         },
+        
         reEmplCheck(){
             this.employeeOk = false
             this.employeeNo = false
