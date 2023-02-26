@@ -37,7 +37,7 @@ createApp({
                 this.pwOkText = true
             }
         },
-        
+
         reEmplCheck(){
             this.employeeOk = false
             this.employeeNo = false
@@ -65,7 +65,7 @@ createApp({
                 this.employeeOk = false
                 this.employeeDupl = false
             }
-
+            //fetch수정
             fetch('/api/admin/employeeCheck', {
                 method: 'POST',
                 headers: {'content-Type': 'application/json'},
