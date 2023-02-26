@@ -12,7 +12,7 @@ function submitreply(qnaIdx) {
 
 
 
-    fetch(`http://localhost:9090/api/qna/qnaupdate`, {
+    fetch(`/api/qna/qnaupdate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
