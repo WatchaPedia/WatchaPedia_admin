@@ -725,7 +725,7 @@ public class PageController {
                     userRepository.save(selectUser);
                 }
         );
-        return "redirect:member/"+findAllReportx;
+        return "redirect:/member/"+findAllReportx;
     }
 
 
