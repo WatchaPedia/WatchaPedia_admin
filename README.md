@@ -1,5 +1,10 @@
 # WatchaPedia_user
 
+개발 기간 : 2022.12.05 ~ 2023.02.14
+
+통합 개발 환경(IDE) , 배포서버 주소 : http://3.39.37.30:9090/
+
+
 ## :bookmark_tabs: 프로젝트 소개 
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/92245622/218246176-9861429c-31da-4ed2-b09e-c4dbec94bbae.gif)
 
